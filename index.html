@@ -1,760 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Inganathi Driving Academy - Learn K53, road signs, rules of the road and prepare for your learner's licence test.">
-
-    <title>Inganathi Driving Academy | K53 Learner's Licence</title>
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-            background: #f5f7fa;
-            color: #172033;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        button {
-            font-family: inherit;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            background: #071426;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow:
-                0 3px 15px rgba(0,0,0,0.15);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 16px 20px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 21px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            color: #d9ad45;
-        }
-
-        .logo span {
-            display: block;
-            color: white;
-            font-size: 11px;
-            letter-spacing: 2px;
-            margin-top: 2px;
-        }
-
-        nav {
-            display: flex;
-            gap: 22px;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        nav a:hover {
-            color: #d9ad45;
-        }
-
-        .menu-button {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 28px;
-            cursor: pointer;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            background:
-                linear-gradient(
-                    135deg,
-                    #071426 0%,
-                    #102746 55%,
-                    #1b3555 100%
-                );
-
-            color: white;
-            padding: 90px 20px;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns:
-                1.1fr
-                0.9fr;
-
-            gap: 50px;
-            align-items: center;
-        }
-
-        .hero h1 {
-            font-size: clamp(38px, 6vw, 68px);
-            line-height: 1.05;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #d9ad45;
-        }
-
-        .hero p {
-            max-width: 650px;
-            font-size: 18px;
-            color: #d9e2ef;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 23px;
-            border-radius: 8px;
-            font-weight: 800;
-            border: none;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .btn-primary {
-            background: #d9ad45;
-            color: #071426;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background: #e8bf62;
-        }
-
-        .btn-outline {
-            border: 1px solid #d9ad45;
-            color: white;
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: #d9ad45;
-            color: #071426;
-        }
-
-        .hero-card {
-            background:
-                rgba(255,255,255,0.08);
-
-            border:
-                1px solid rgba(255,255,255,0.15);
-
-            border-radius: 20px;
-            padding: 35px;
-            text-align: center;
-        }
-
-        .hero-card-icon {
-            font-size: 75px;
-            margin-bottom: 15px;
-        }
-
-        .hero-card h3 {
-            color: #d9ad45;
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
-
-        /* =========================
-           STATS
-        ========================= */
-
-        .stats {
-            background: white;
-            border-bottom: 1px solid #e5e9ef;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns:
-                repeat(4, 1fr);
-        }
-
-        .stat {
-            padding: 25px 15px;
-            text-align: center;
-            border-right: 1px solid #e5e9ef;
-        }
-
-        .stat:last-child {
-            border-right: none;
-        }
-
-        .stat strong {
-            display: block;
-            color: #071426;
-            font-size: 27px;
-        }
-
-        .stat span {
-            color: #657084;
-            font-size: 13px;
-        }
-
-        /* =========================
-           GENERAL
-        ========================= */
-
-        section {
-            padding: 75px 20px;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 36px;
-            color: #071426;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #687386;
-            max-width: 650px;
-            margin: auto;
-        }
-
-        /* =========================
-           CARDS
-        ========================= */
-
-        .cards {
-            display: grid;
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 28px;
-            border: 1px solid #e4e8ee;
-            box-shadow:
-                0 8px 25px rgba(7,20,38,0.05);
-
-            transition: 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow:
-                0 15px 35px rgba(7,20,38,0.10);
-        }
-
-        .card-icon {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            color: #071426;
-        }
-
-        .card p {
-            color: #697486;
-            font-size: 14px;
-        }
-
-        /* =========================
-           SIGNS
-        ========================= */
-
-        .sign-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .sign-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            border: 1px solid #e4e8ee;
-        }
-
-        .sign-icon {
-            width: 85px;
-            height: 85px;
-            margin: 0 auto 15px;
-
-            border-radius: 50%;
-
-            background: #071426;
-            color: #d9ad45;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 38px;
-        }
-
-        .sign-card h3 {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        .sign-card p {
-            color: #687386;
-            font-size: 13px;
-        }
-
-        /* =========================
-           TEST SECTION
-        ========================= */
-
-        .test-section {
-            background: #eef2f6;
-        }
-
-        .test-wrapper {
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .test-box {
-            background: white;
-            border-radius: 18px;
-            padding: 35px;
-
-            box-shadow:
-                0 12px 35px rgba(7,20,38,0.08);
-        }
-
-        .test-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .question-counter {
-            font-weight: 700;
-            color: #687386;
-        }
-
-        .score-display {
-            font-weight: 800;
-            color: #071426;
-        }
-
-        .progress {
-            height: 8px;
-            background: #e4e8ee;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background: #d9ad45;
-            transition: width 0.3s;
-        }
-
-        .question-number {
-            color: #d9ad45;
-            font-weight: 900;
-            font-size: 13px;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        .question-text {
-            font-size: 24px;
-            font-weight: 800;
-            line-height: 1.3;
-            margin-bottom: 25px;
-            color: #071426;
-        }
-
-        .answers {
-            display: grid;
-            gap: 12px;
-        }
-
-        .answer {
-            width: 100%;
-            padding: 17px 18px;
-
-            background: #f8fafc;
-            border: 2px solid #e1e6ed;
-
-            border-radius: 10px;
-
-            text-align: left;
-            cursor: pointer;
-
-            font-size: 15px;
-            font-weight: 600;
-
-            transition: 0.2s;
-        }
-
-        .answer:hover {
-            border-color: #d9ad45;
-            background: #fffaf0;
-        }
-
-        .answer.selected {
-            border-color: #d9ad45;
-            background: #fff5d9;
-        }
-
-        .test-actions {
-            margin-top: 25px;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .next-btn {
-            background: #071426;
-            color: white;
-            border: none;
-            padding: 13px 25px;
-            border-radius: 8px;
-            font-weight: 800;
-            cursor: pointer;
-        }
-
-        .next-btn:disabled {
-            opacity: 0.45;
-            cursor: not-allowed;
-        }
-
-        /* =========================
-           LOADING
-        ========================= */
-
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #687386;
-        }
-
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #e5e9ef;
-            border-top-color: #d9ad45;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-            margin: 0 auto 15px;
-        }
-
-        @keyframes spin {
-
-            to {
-                transform: rotate(360deg);
-            }
-
-        }
-
-        /* =========================
-           RESULTS
-        ========================= */
-
-        .result-box {
-            text-align: center;
-            padding: 35px;
-        }
-
-        .result-score {
-            font-size: 70px;
-            font-weight: 900;
-            color: #d9ad45;
-            margin: 15px 0;
-        }
-
-        .result-box h2 {
-            color: #071426;
-        }
-
-        .result-box p {
-            color: #687386;
-            margin-bottom: 25px;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            background: #071426;
-            color: white;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
-
-        .cta p {
-            color: #cbd5e1;
-            margin-bottom: 25px;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #e4e8ee;
-            text-align: center;
-        }
-
-        .contact-card strong {
-            display: block;
-            margin-bottom: 8px;
-            color: #071426;
-        }
-
-        .contact-card span {
-            color: #687386;
-        }
-
-        /* =========================
-           WHATSAPP
-        ========================= */
-
-        .whatsapp {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-
-            width: 58px;
-            height: 58px;
-
-            border-radius: 50%;
-
-            background: #25D366;
-            color: white;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 30px;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.2);
-
-            z-index: 2000;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #040c17;
-            color: #9aa8ba;
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 13px;
-        }
-
-        footer strong {
-            color: #d9ad45;
-        }
-
-        /* =========================
-           HIDDEN
-        ========================= */
-
-        .hidden {
-            display: none !important;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .hero-container {
-                grid-template-columns: 1fr;
-            }
-
-            .cards {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .sign-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-        }
-
-        @media (max-width: 700px) {
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-
-                background: #071426;
-
-                flex-direction: column;
-                padding: 20px;
-            }
-
-            nav.open {
-                display: flex;
-            }
-
-            .menu-button {
-                display: block;
-            }
-
-            .stats-container {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .stat {
-                border-bottom: 1px solid #e5e9ef;
-            }
-
-            .cards,
-            .sign-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 55px 15px;
-            }
-
-            .hero {
-                padding: 65px 15px;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .question-text {
-                font-size: 20px;
-            }
-
-            .test-box {
-                padding: 22px;
-            }
-
-            .test-top {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Inganathi Driving Academy - K53 learner's licence training, road signs, rules of the road and practice tests.">
+
+<title>Inganathi Driving Academy | K53 Learner's Licence</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+    color:#172033;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+header{
+    background:#071426;
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:1px;
+    color:#d9ad45;
+}
+
+.logo span{
+    display:block;
+    color:#fff;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+nav a{
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+}
+
+nav a:hover{
+    color:#d9ad45;
+}
+
+.menu-button{
+    display:none;
+    background:none;
+    border:0;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.hero{
+    background:linear-gradient(135deg,#071426,#102746 55%,#1b3555);
+    color:#fff;
+    padding:90px 20px;
+}
+
+.hero-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,68px);
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#d9ad45;
+}
+
+.hero p{
+    max-width:650px;
+    font-size:18px;
+    color:#d9e2ef;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 23px;
+    border-radius:8px;
+    font-weight:800;
+    border:0;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:#d9ad45;
+    color:#071426;
+}
+
+.btn-outline{
+    border:1px solid #d9ad45;
+    color:#fff;
+    background:transparent;
+}
+
+.btn-outline:hover{
+    background:#d9ad45;
+    color:#071426;
+}
+
+.hero-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+.hero-card-icon{
+    font-size:75px;
+    margin-bottom:15px;
+}
+
+.hero-card h3{
+    color:#d9ad45;
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.stats{
+    background:#fff;
+    border-bottom:1px solid #e5e9ef;
+}
+
+.stats-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    padding:25px 15px;
+    text-align:center;
+    border-right:1px solid #e5e9ef;
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat strong{
+    display:block;
+    color:#071426;
+    font-size:27px;
+}
+
+.stat span{
+    color:#657084;
+    font-size:13px;
+}
+
+section{
+    padding:75px 20px;
+}
+
+.section-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    color:#071426;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#687386;
+    max-width:650px;
+    margin:auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:15px;
+    padding:28px;
+    border:1px solid #e4e8ee;
+    box-shadow:0 8px 25px rgba(7,20,38,.05);
+}
+
+.card-icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#071426;
+}
+
+.card p{
+    color:#697486;
+    font-size:14px;
+}
+
+.sign-section{
+    background:#eef2f6;
+}
+
+.sign-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.sign-card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    border:1px solid #e4e8ee;
+}
+
+.sign-icon{
+    width:85px;
+    height:85px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:#071426;
+    color:#d9ad45;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+}
+
+.sign-card h3{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.sign-card p{
+    color:#687386;
+    font-size:13px;
+}
+
+.test-section{
+    background:#eef2f6;
+}
+
+.test-wrapper{
+    max-width:900px;
+    margin:auto;
+}
+
+.test-box{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 12px 35px rgba(7,20,38,.08);
+}
+
+.test-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.question-counter{
+    font-weight:700;
+    color:#687386;
+}
+
+.score-display{
+    font-weight:800;
+    color:#071426;
+}
+
+.progress{
+    height:8px;
+    background:#e4e8ee;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:30px;
+}
+
+.progress-bar{
+    height:100%;
+    width:0;
+    background:#d9ad45;
+    transition:.3s;
+}
+
+.question-number{
+    color:#d9ad45;
+    font-weight:900;
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.question-text{
+    font-size:24px;
+    font-weight:800;
+    line-height:1.35;
+    margin-bottom:25px;
+    color:#071426;
+}
+
+.answers{
+    display:grid;
+    gap:12px;
+}
+
+.answer{
+    width:100%;
+    padding:17px 18px;
+    background:#f8fafc;
+    border:2px solid #e1e6ed;
+    border-radius:10px;
+    text-align:left;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.2s;
+}
+
+.answer:hover{
+    border-color:#d9ad45;
+    background:#fffaf0;
+}
+
+.answer.selected{
+    background:#fff6dc;
+    border-color:#d9ad45;
+}
+
+.answer.correct{
+    background:#dcfce7;
+    border-color:#16a34a;
+}
+
+.answer.wrong{
+    background:#fee2e2;
+    border-color:#dc2626;
+}
+
+.answer:disabled{
+    cursor:default;
+}
+
+.test-actions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-top:25px;
+}
+
+.next-btn{
+    background:#071426;
+    color:#fff;
+    border:0;
+    border-radius:8px;
+    padding:13px 24px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.next-btn:disabled{
+    opacity:.4;
+    cursor:not-allowed;
+}
+
+.loading{
+    text-align:center;
+    padding:40px;
+    color:#687386;
+}
+
+.hidden{
+    display:none!important;
+}
+
+.result-box{
+    text-align:center;
+    padding:50px 30px;
+}
+
+.final-score{
+    font-size:65px;
+    font-weight:900;
+    color:#d9ad45;
+    margin:15px 0;
+}
+
+.result-message{
+    color:#687386;
+    margin-bottom:25px;
+    font-size:17px;
+}
+
+.cta{
+    background:#071426;
+    color:#fff;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:25px;
+    color:#d9e2ef;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    background:#fff;
+    border:1px solid #e4e8ee;
+    border-radius:14px;
+    padding:25px;
+    text-align:center;
+}
+
+.contact-card strong{
+    display:block;
+    color:#071426;
+    margin-bottom:8px;
+}
+
+.contact-card span{
+    color:#687386;
+    font-size:14px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    z-index:2000;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+footer{
+    background:#02050e;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+    font-size:13px;
+}
+
+footer p{
+    margin:5px;
+    color:#b8c0cd;
+}
+
+@media(max-width:900px){
+
+    .cards,
+    .sign-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+    }
+
+    .stats-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:700px){
+
+    nav{
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        top:68px;
+        background:#071426;
+        flex-direction:column;
+        align-items:stretch;
+        padding:15px 20px;
+        gap:0;
+    }
+
+    nav.open{
+        display:flex;
+    }
+
+    nav a{
+        padding:13px 5px;
+        border-bottom:1px solid rgba(255,255,255,.1);
+    }
+
+    .menu-button{
+        display:block;
+    }
+
+    .hero{
+        padding:65px 20px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .cards,
+    .sign-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-container{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        border-bottom:1px solid #e5e9ef;
+    }
+
+    .test-box{
+        padding:22px;
+    }
+
+    .question-text{
+        font-size:20px;
+    }
+
+    .test-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .test-actions{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .next-btn{
+        width:100%;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-
     <div class="nav-container">
 
         <a href="#home" class="logo">
@@ -762,37 +645,23 @@
             <span>DRIVING ACADEMY</span>
         </a>
 
-        <button
-            class="menu-button"
-            onclick="toggleMenu()"
-            aria-label="Open menu">
+        <button class="menu-button"
+                onclick="toggleMenu()"
+                aria-label="Open menu">
             ☰
         </button>
 
         <nav id="mainNav">
-
-            <a href="#home">Home</a>
-
-            <a href="#manual">K53 Manual</a>
-
-            <a href="#signs">Road Signs</a>
-
-            <a href="#test">Learner's Test</a>
-
-            <a href="#practice">Practice</a>
-
-            <a href="#contact">Contact</a>
-
+            <a href="#home" onclick="closeMenu()">Home</a>
+            <a href="#manual" onclick="closeMenu()">K53 Manual</a>
+            <a href="#signs" onclick="closeMenu()">Road Signs</a>
+            <a href="#test" onclick="closeMenu()">Learner's Test</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
         </nav>
 
     </div>
-
 </header>
 
-
-<!-- =========================
-     HERO
-========================= -->
 
 <section class="hero" id="home">
 
@@ -807,28 +676,23 @@
 
             <p>
                 Prepare for your South African learner's licence
-                with structured K53 lessons, road signs, rules of
-                the road and realistic practice tests.
+                with K53 lessons, road signs, rules of the road
+                and realistic practice questions.
             </p>
 
             <div class="hero-buttons">
 
-                <a
-                    href="#test"
-                    class="btn btn-primary">
+                <a href="#test" class="btn btn-primary">
                     Start Learner's Test
                 </a>
 
-                <a
-                    href="#manual"
-                    class="btn btn-outline">
-                    Study K53 Manual
+                <a href="#manual" class="btn btn-outline">
+                    Study K53
                 </a>
 
             </div>
 
         </div>
-
 
         <div class="hero-card">
 
@@ -853,17 +717,13 @@
 </section>
 
 
-<!-- =========================
-     STATS
-========================= -->
-
 <div class="stats">
 
     <div class="stats-container">
 
         <div class="stat">
-            <strong>K53</strong>
-            <span>Learning System</span>
+            <strong>236</strong>
+            <span>K53 Questions</span>
         </div>
 
         <div class="stat">
@@ -872,8 +732,8 @@
         </div>
 
         <div class="stat">
-            <strong>FREE</strong>
-            <span>Online Resources</span>
+            <strong>K53</strong>
+            <span>Study Material</span>
         </div>
 
         <div class="stat">
@@ -885,10 +745,6 @@
 
 </div>
 
-
-<!-- =========================
-     MANUAL
-========================= -->
 
 <section id="manual">
 
@@ -910,13 +766,17 @@
 
             <div class="card">
 
-                <div class="card-icon">🚘</div>
+                <div class="card-icon">
+                    🚘
+                </div>
 
-                <h3>Vehicle Controls</h3>
+                <h3>
+                    Vehicle Controls
+                </h3>
 
                 <p>
-                    Learn the controls and basic vehicle
-                    knowledge required for safe driving.
+                    Learn important vehicle controls
+                    and basic driving knowledge.
                 </p>
 
             </div>
@@ -924,13 +784,17 @@
 
             <div class="card">
 
-                <div class="card-icon">🚦</div>
+                <div class="card-icon">
+                    🚦
+                </div>
 
-                <h3>Road Signs</h3>
+                <h3>
+                    Road Signs
+                </h3>
 
                 <p>
                     Learn regulatory, warning,
-                    information and temporary road signs.
+                    information and temporary signs.
                 </p>
 
             </div>
@@ -938,12 +802,16 @@
 
             <div class="card">
 
-                <div class="card-icon">🛣️</div>
+                <div class="card-icon">
+                    🛣️
+                </div>
 
-                <h3>Rules of the Road</h3>
+                <h3>
+                    Rules of the Road
+                </h3>
 
                 <p>
-                    Understand important road rules,
+                    Understand important rules,
                     markings and safe driving principles.
                 </p>
 
@@ -952,13 +820,17 @@
 
             <div class="card">
 
-                <div class="card-icon">📝</div>
+                <div class="card-icon">
+                    📝
+                </div>
 
-                <h3>Learner's Test</h3>
+                <h3>
+                    Practice Test
+                </h3>
 
                 <p>
-                    Test your knowledge with questions
-                    from the available K53 question bank.
+                    Test yourself using the
+                    Inganathi K53 question bank.
                 </p>
 
             </div>
@@ -970,11 +842,7 @@
 </section>
 
 
-<!-- =========================
-     ROAD SIGNS
-========================= -->
-
-<section id="signs" style="background:#eef2f6;">
+<section id="signs" class="sign-section">
 
     <div class="section-container">
 
@@ -983,8 +851,8 @@
             <h2>Road Signs</h2>
 
             <p>
-                Get familiar with the different types
-                of road signs you may encounter.
+                Understand the main categories of
+                South African road signs.
             </p>
 
         </div>
@@ -998,11 +866,13 @@
                     ⛔
                 </div>
 
-                <h3>Regulatory Signs</h3>
+                <h3>
+                    Regulatory Signs
+                </h3>
 
                 <p>
-                    Signs that control what road users
-                    must or must not do.
+                    Signs controlling what road
+                    users must or must not do.
                 </p>
 
             </div>
@@ -1014,11 +884,13 @@
                     ⚠️
                 </div>
 
-                <h3>Warning Signs</h3>
+                <h3>
+                    Warning Signs
+                </h3>
 
                 <p>
-                    Signs warning drivers about
-                    hazards ahead.
+                    Signs warning drivers of
+                    hazards and conditions ahead.
                 </p>
 
             </div>
@@ -1030,7 +902,9 @@
                     ℹ️
                 </div>
 
-                <h3>Information Signs</h3>
+                <h3>
+                    Information Signs
+                </h3>
 
                 <p>
                     Signs providing useful information
@@ -1046,11 +920,13 @@
                     🚧
                 </div>
 
-                <h3>Temporary Signs</h3>
+                <h3>
+                    Temporary Signs
+                </h3>
 
                 <p>
-                    Signs used for temporary road
-                    conditions and roadworks.
+                    Signs used where temporary
+                    road conditions exist.
                 </p>
 
             </div>
@@ -1062,137 +938,118 @@
 </section>
 
 
-<!-- =========================
-     TEST
-========================= -->
+<section id="test" class="test-section">
 
-<section
-    class="test-section"
-    id="test">
-
-    <div class="section-container">
+    <div class="test-wrapper">
 
         <div class="section-title">
 
-            <h2>K53 Learner's Test</h2>
+            <h2>K53 Learner's Practice Test</h2>
 
             <p>
-                Test your knowledge and see how prepared
-                you are.
+                Questions are loaded automatically
+                from the Inganathi question database.
             </p>
 
         </div>
 
 
-        <div class="test-wrapper">
+        <div id="loading" class="test-box loading">
 
-            <div
-                id="loading"
-                class="test-box loading">
+            <h3>
+                Loading K53 questions...
+            </h3>
 
-                <div class="spinner"></div>
+            <p>
+                Please wait.
+            </p>
 
-                <strong>
-                    Loading K53 questions...
-                </strong>
+        </div>
+
+
+        <div id="testArea"
+             class="test-box hidden">
+
+            <div class="test-top">
+
+                <div id="questionCounter"
+                     class="question-counter">
+                    Question 1
+                </div>
+
+                <div id="scoreDisplay"
+                     class="score-display">
+                    Score: 0
+                </div>
 
             </div>
 
 
-            <div
-                id="testArea"
-                class="test-box hidden">
+            <div class="progress">
 
-                <div class="test-top">
-
-                    <div
-                        id="questionCounter"
-                        class="question-counter">
-                        Question 1
-                    </div>
-
-                    <div
-                        id="scoreDisplay"
-                        class="score-display">
-                        Score: 0
-                    </div>
-
+                <div id="progressBar"
+                     class="progress-bar">
                 </div>
 
-
-                <div class="progress">
-
-                    <div
-                        id="progressBar"
-                        class="progress-bar">
-                    </div>
-
-                </div>
+            </div>
 
 
-                <div
-                    id="questionNumber"
-                    class="question-number">
-                    QUESTION 1
-                </div>
+            <div id="questionNumber"
+                 class="question-number">
+                QUESTION 1
+            </div>
 
 
-                <div
-                    id="questionText"
-                    class="question-text">
-                    Loading question...
-                </div>
+            <div id="questionText"
+                 class="question-text">
+                Loading question...
+            </div>
 
 
-                <div
-                    id="answers"
-                    class="answers">
-                </div>
+            <div id="answers"
+                 class="answers">
+            </div>
 
 
-                <div class="test-actions">
+            <div class="test-actions">
 
-                    <button
-                        id="nextBtn"
+                <span>
+                    Select an answer to continue.
+                </span>
+
+                <button id="nextBtn"
                         class="next-btn"
                         onclick="nextQuestion()"
                         disabled>
-
-                        Next Question
-
-                    </button>
-
-                </div>
+                    Next Question
+                </button>
 
             </div>
 
+        </div>
 
-            <!-- RESULTS -->
 
-            <div
-                id="resultArea"
-                class="test-box result-box hidden">
+        <div id="resultArea"
+             class="test-box hidden">
+
+            <div class="result-box">
 
                 <h2>
                     Test Complete
                 </h2>
 
-                <div
-                    id="finalScore"
-                    class="result-score">
+                <div id="finalScore"
+                     class="final-score">
                     0%
                 </div>
 
-                <p id="resultMessage">
-                    Your results will appear here.
+                <p id="resultMessage"
+                   class="result-message">
                 </p>
 
-                <button
-                    class="btn btn-primary"
-                    onclick="restartTest()">
-
-                    Try Again
-
+                <button class="btn btn-primary"
+                        onclick="restartTest()">
+                    Take Test Again
                 </button>
 
             </div>
@@ -1204,93 +1061,6 @@
 </section>
 
 
-<!-- =========================
-     PRACTICE
-========================= -->
-
-<section id="practice">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>Practice Centre</h2>
-
-            <p>
-                More practice means greater confidence.
-            </p>
-
-        </div>
-
-
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="card-icon">📚</div>
-
-                <h3>Rules Practice</h3>
-
-                <p>
-                    Strengthen your knowledge of
-                    important road rules.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">🚦</div>
-
-                <h3>Road Signs Practice</h3>
-
-                <p>
-                    Improve your recognition of
-                    important road signs.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">🚗</div>
-
-                <h3>Vehicle Controls</h3>
-
-                <p>
-                    Revise the controls and vehicle
-                    knowledge section.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">🏆</div>
-
-                <h3>Full K53 Test</h3>
-
-                <p>
-                    Challenge yourself with a
-                    complete learner's test.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================= -->
-
 <section class="cta">
 
     <div class="section-container">
@@ -1300,15 +1070,13 @@
         </h2>
 
         <p>
-            Begin your K53 preparation today.
+            Study the material, practise your questions
+            and prepare with confidence.
         </p>
 
-        <a
-            href="#test"
-            class="btn btn-primary">
-
+        <a href="#test"
+           class="btn btn-primary">
             Start Practice Test
-
         </a>
 
     </div>
@@ -1316,20 +1084,18 @@
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
-
 <section id="contact">
 
     <div class="section-container">
 
         <div class="section-title">
 
-            <h2>Contact Inganathi Driving Academy</h2>
+            <h2>
+                Contact Inganathi Driving Academy
+            </h2>
 
             <p>
-                Have a question? Get in touch with us.
+                Get in touch with Inganathi Driving Academy.
             </p>
 
         </div>
@@ -1339,7 +1105,9 @@
 
             <div class="contact-card">
 
-                <strong>📱 WhatsApp</strong>
+                <strong>
+                    📱 WhatsApp
+                </strong>
 
                 <span>
                     Chat with us for enquiries
@@ -1350,10 +1118,12 @@
 
             <div class="contact-card">
 
-                <strong>📍 South Africa</strong>
+                <strong>
+                    🇿🇦 South Africa
+                </strong>
 
                 <span>
-                    Driving education and K53 preparation
+                    K53 learner's licence preparation
                 </span>
 
             </div>
@@ -1361,10 +1131,12 @@
 
             <div class="contact-card">
 
-                <strong>🚗 Driving Lessons</strong>
+                <strong>
+                    🚗 Driving Academy
+                </strong>
 
                 <span>
-                    Contact us for more information
+                    Learn. Practise. Pass.
                 </span>
 
             </div>
@@ -1376,24 +1148,13 @@
 </section>
 
 
-<!-- =========================
-     WHATSAPP
-========================= -->
-
-<a
-    class="whatsapp"
-    href="https://wa.me/27738468238"
-    target="_blank"
-    aria-label="WhatsApp Inganathi Driving Academy">
-
+<a class="whatsapp"
+   href="https://wa.me/27738468238"
+   target="_blank"
+   aria-label="WhatsApp Inganathi Driving Academy">
     ☎
-
 </a>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -1410,56 +1171,63 @@
 </footer>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
-/* =========================
-   VARIABLES
-========================= */
+/* ================================
+   GLOBAL VARIABLES
+================================ */
 
 let allQuestions = [];
-
 let testQuestions = [];
-
 let currentQuestion = 0;
-
 let score = 0;
-
 let selectedAnswer = null;
+
+
+/*
+   The database contains 236 questions.
+   Each practice test will randomly select
+   20 questions.
+*/
 
 const TEST_LENGTH = 20;
 
 
-/* =========================
+/* ================================
    MOBILE MENU
-========================= */
+================================ */
 
-function toggleMenu() {
+function toggleMenu(){
 
     const nav =
         document.getElementById("mainNav");
 
     nav.classList.toggle("open");
-
 }
 
 
-/* =========================
-   SHUFFLE
-========================= */
+function closeMenu(){
 
-function shuffle(array) {
+    const nav =
+        document.getElementById("mainNav");
+
+    nav.classList.remove("open");
+}
+
+
+/* ================================
+   SHUFFLE
+================================ */
+
+function shuffle(array){
 
     const copy = [...array];
 
-    for (
+    for(
         let i = copy.length - 1;
         i > 0;
         i--
-    ) {
+    ){
 
         const j =
             Math.floor(
@@ -1479,43 +1247,43 @@ function shuffle(array) {
 }
 
 
-/* =========================
-   LOAD QUESTIONS
-========================= */
+/* ================================
+   LOAD QUESTION DATABASE
+================================ */
 
-async function loadQuestions() {
+async function loadQuestions(){
 
-    try {
+    try{
 
         const response =
-            await fetch("./clean_questions.json");
+            await fetch(
+                "clean_questions.json?v=236",
+                {
+                    cache:"no-store"
+                }
+            );
 
-        if (!response.ok) {
+
+        if(!response.ok){
 
             throw new Error(
                 "Could not load clean_questions.json"
             );
         }
 
+
         const data =
             await response.json();
 
+
         /*
-            Support both:
+           Your JSON uses:
 
-            [
-                {...},
-                {...}
-            ]
+           {
+               "questions": [...]
+           }
 
-            and:
-
-            {
-                "questions": [
-                    {...},
-                    {...}
-                ]
-            }
+           This also supports a plain array.
         */
 
         allQuestions =
@@ -1524,15 +1292,21 @@ async function loadQuestions() {
                 : data.questions;
 
 
-        if (
+        if(
             !Array.isArray(allQuestions) ||
             allQuestions.length === 0
-        ) {
+        ){
 
             throw new Error(
-                "Question database is empty."
+                "The question database is empty."
             );
         }
+
+
+        console.log(
+            "K53 questions loaded:",
+            allQuestions.length
+        );
 
 
         document
@@ -1549,13 +1323,11 @@ async function loadQuestions() {
 
         startTest();
 
+    }
 
-    } catch (error) {
+    catch(error){
 
-        console.error(
-            "Question loading error:",
-            error
-        );
+        console.error(error);
 
 
         document
@@ -1566,41 +1338,39 @@ async function loadQuestions() {
                     background:#fff1f2;
                     border:1px solid #fecdd3;
                     color:#9f1239;
-                    padding:20px;
+                    padding:25px;
                     border-radius:12px;
-                    text-align:left;
                 ">
 
-                    <strong>
+                    <h3>
                         Questions could not be loaded.
-                    </strong>
+                    </h3>
 
-                    <br><br>
-
-                    Please make sure
-                    <strong>
-                        clean_questions.json
-                    </strong>
-                    is in the same GitHub repository
-                    as
-                    <strong>
-                        index.html
-                    </strong>.
+                    <p>
+                        Please make sure that
+                        <strong>
+                            clean_questions.json
+                        </strong>
+                        is in the same GitHub repository
+                        as this
+                        <strong>
+                            index.html
+                        </strong>
+                        file.
+                    </p>
 
                 </div>
 
             `;
-
     }
-
 }
 
 
-/* =========================
+/* ================================
    START TEST
-========================= */
+================================ */
 
-function startTest() {
+function startTest(){
 
     testQuestions =
         shuffle(allQuestions).slice(
@@ -1632,24 +1402,130 @@ function startTest() {
 
 
     showQuestion();
-
 }
 
 
-/* =========================
-   SHOW QUESTION
-========================= */
+/* ================================
+   GET QUESTION TEXT
+================================ */
 
-function showQuestion() {
+function getQuestionText(question){
+
+    return (
+        question.question ||
+        question.question_text ||
+        question.text ||
+        question.Question ||
+        "Question"
+    );
+}
+
+
+/* ================================
+   GET ANSWERS
+================================ */
+
+function getAnswers(question){
+
+    /*
+       Your current JSON format is:
+
+       "options": [
+           "Answer A",
+           "Answer B",
+           "Answer C"
+       ],
+
+       "correct": 1
+    */
+
+    if(
+        Array.isArray(question.options)
+    ){
+
+        return question.options.map(
+            function(option,index){
+
+                return {
+
+                    text:String(option),
+
+                    correct:
+                        index ===
+                        Number(question.correct)
+
+                };
+            }
+        );
+    }
+
+
+    /*
+       Compatibility with older
+       question formats.
+    */
+
+    if(
+        Array.isArray(question.answers)
+    ){
+
+        return question.answers.map(
+            function(answer,index){
+
+                if(
+                    typeof answer === "string"
+                ){
+
+                    return {
+
+                        text:answer,
+
+                        correct:
+                            index ===
+                            Number(question.correct)
+
+                    };
+                }
+
+
+                return {
+
+                    text:
+                        answer.text ||
+                        answer.answer ||
+                        answer.option ||
+                        "",
+
+                    correct:
+                        Boolean(
+                            answer.correct ||
+                            answer.isCorrect
+                        )
+
+                };
+            }
+        );
+    }
+
+
+    return [];
+}
+
+
+/* ================================
+   DISPLAY QUESTION
+================================ */
+
+function showQuestion(){
 
     selectedAnswer = null;
 
 
-    const q =
+    const question =
         testQuestions[currentQuestion];
 
 
-    if (!q) {
+    if(!question){
 
         finishTest();
 
@@ -1676,56 +1552,50 @@ function showQuestion() {
     document
         .getElementById("questionText")
         .textContent =
-        getQuestionText(q);
+        getQuestionText(question);
 
 
     const answers =
-        getAnswers(q);
+        getAnswers(question);
 
 
-    const answerContainer =
+    const container =
         document.getElementById("answers");
 
 
-    answerContainer.innerHTML = "";
+    container.innerHTML = "";
 
 
     answers.forEach(
-        function(answer, index) {
+        function(answer,index){
 
             const button =
                 document.createElement("button");
 
 
-            button.className =
-                "answer";
+            button.type = "button";
 
-
-            button.type =
-                "button";
+            button.className = "answer";
 
 
             button.textContent =
-                String.fromCharCode(
-                    65 + index
-                ) +
+                String.fromCharCode(65 + index) +
                 ". " +
                 answer.text;
 
 
             button.onclick =
-                function() {
+                function(){
 
                     selectAnswer(
                         index,
-                        answer
+                        answer,
+                        answers
                     );
-
                 };
 
 
-            answerContainer
-                .appendChild(button);
+            container.appendChild(button);
 
         }
     );
@@ -1741,9 +1611,7 @@ function showQuestion() {
         .textContent =
         currentQuestion ===
         testQuestions.length - 1
-
             ? "Finish Test"
-
             : "Next Question";
 
 
@@ -1754,14 +1622,10 @@ function showQuestion() {
 
 
     const progress =
-        testQuestions.length > 0
-
-            ? (
-                currentQuestion /
-                testQuestions.length
-            ) * 100
-
-            : 0;
+        (
+            currentQuestion /
+            testQuestions.length
+        ) * 100;
 
 
     document
@@ -1769,223 +1633,24 @@ function showQuestion() {
         .style
         .width =
         progress + "%";
-
 }
 
 
-/* =========================
-   GET QUESTION TEXT
-========================= */
-
-function getQuestionText(q) {
-
-    return (
-        q.question ||
-        q.question_text ||
-        q.text ||
-        q.Question ||
-        "Question"
-    );
-
-}
-
-
-/* =========================
-   GET ANSWERS
-========================= */
-
-function getAnswers(q) {
-
-    /*
-        CURRENT FORMAT
-
-        "options": [
-            "Answer A",
-            "Answer B",
-            "Answer C",
-            "Answer D"
-        ],
-
-        "correct": 0
-    */
-
-    if (
-        Array.isArray(q.options)
-    ) {
-
-        return q.options.map(
-            function(option, index) {
-
-                return {
-
-                    text: option,
-
-                    correct:
-                        index ===
-                        Number(q.correct)
-
-                };
-
-            }
-        );
-
-    }
-
-
-    /*
-        OLDER FORMAT
-    */
-
-    if (
-        Array.isArray(q.answers)
-    ) {
-
-        return q.answers.map(
-            function(answer) {
-
-                if (
-                    typeof answer ===
-                    "string"
-                ) {
-
-                    return {
-
-                        text: answer,
-
-                        correct: false
-
-                    };
-
-                }
-
-
-                return {
-
-                    text:
-                        answer.text ||
-                        answer.answer ||
-                        answer.option ||
-                        "",
-
-                    correct:
-                        Boolean(
-                            answer.correct ||
-                            answer.isCorrect
-                        )
-
-                };
-
-            }
-        );
-
-    }
-
-
-    /*
-        A / B / C / D FORMAT
-    */
-
-    const options = [];
-
-
-    [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e"
-    ].forEach(
-        function(letter) {
-
-            if (
-                q[letter] !== undefined
-            ) {
-
-                options.push({
-
-                    text:
-                        q[letter],
-
-                    correct:
-                        q.correct === letter ||
-                        q.answer === letter ||
-                        q.correctAnswer === letter
-
-                });
-
-            }
-
-        }
-    );
-
-
-    if (
-        options.length > 0
-    ) {
-
-        return options;
-
-    }
-
-
-    /*
-        OBJECT OPTIONS
-    */
-
-    if (
-        q.options &&
-        typeof q.options ===
-        "object" &&
-        !Array.isArray(q.options)
-    ) {
-
-        return Object.entries(
-            q.options
-        ).map(
-            function(
-                [
-                    key,
-                    value
-                ]
-            ) {
-
-                return {
-
-                    text: value,
-
-                    correct:
-                        q.correct === key ||
-                        q.answer === key ||
-                        q.correctAnswer === key
-
-                };
-
-            }
-        );
-
-    }
-
-
-    return [];
-
-}
-
-
-/* =========================
+/* ================================
    SELECT ANSWER
-========================= */
+================================ */
 
 function selectAnswer(
     index,
-    answer
-) {
+    answer,
+    answers
+){
 
-    if (
+    if(
         selectedAnswer !== null
-    ) {
+    ){
 
         return;
-
     }
 
 
@@ -1998,14 +1663,51 @@ function selectAnswer(
         );
 
 
+    buttons.forEach(
+        function(button){
+
+            button.disabled = true;
+
+        }
+    );
+
+
     buttons[index]
         .classList
         .add("selected");
 
 
-    if (
-        answer.correct
-    ) {
+    /*
+       Show the correct answer.
+    */
+
+    answers.forEach(
+        function(item,i){
+
+            if(item.correct){
+
+                buttons[i]
+                    .classList
+                    .add("correct");
+            }
+
+        }
+    );
+
+
+    /*
+       Show incorrect selection.
+    */
+
+    if(!answer.correct){
+
+        buttons[index]
+            .classList
+            .add("wrong");
+    }
+
+
+    if(answer.correct){
 
         score++;
 
@@ -2021,50 +1723,46 @@ function selectAnswer(
     document
         .getElementById("nextBtn")
         .disabled = false;
-
 }
 
 
-/* =========================
+/* ================================
    NEXT QUESTION
-========================= */
+================================ */
 
-function nextQuestion() {
+function nextQuestion(){
 
-    if (
+    if(
         selectedAnswer === null
-    ) {
+    ){
 
         return;
-
     }
 
 
     currentQuestion++;
 
 
-    if (
+    if(
         currentQuestion >=
         testQuestions.length
-    ) {
+    ){
 
         finishTest();
 
         return;
-
     }
 
 
     showQuestion();
-
 }
 
 
-/* =========================
+/* ================================
    FINISH TEST
-========================= */
+================================ */
 
-function finishTest() {
+function finishTest(){
 
     document
         .getElementById("testArea")
@@ -2079,16 +1777,12 @@ function finishTest() {
 
 
     const percentage =
-        testQuestions.length > 0
-
-            ? Math.round(
-                (
-                    score /
-                    testQuestions.length
-                ) * 100
-            )
-
-            : 0;
+        Math.round(
+            (
+                score /
+                testQuestions.length
+            ) * 100
+        );
 
 
     document
@@ -2100,25 +1794,25 @@ function finishTest() {
     let message;
 
 
-    if (
+    if(
         percentage >= 80
-    ) {
+    ){
 
         message =
             "Excellent work! You are showing strong K53 knowledge.";
 
     }
 
-    else if (
+    else if(
         percentage >= 60
-    ) {
+    ){
 
         message =
             "Good effort. Keep practising to improve your score.";
 
     }
 
-    else {
+    else{
 
         message =
             "Keep studying the K53 material and try the test again.";
@@ -2136,14 +1830,70 @@ function finishTest() {
         ". " +
         message;
 
+
+    /*
+       Save basic progress locally.
+    */
+
+    saveProgress(
+        percentage
+    );
 }
 
 
-/* =========================
-   RESTART TEST
-========================= */
+/* ================================
+   SAVE PROGRESS
+================================ */
 
-function restartTest() {
+function saveProgress(percentage){
+
+    try{
+
+        const old =
+            JSON.parse(
+                localStorage.getItem(
+                    "inganathiK53Progress"
+                )
+            ) || {
+
+                tests:0,
+                best:0
+
+            };
+
+
+        old.tests =
+            Number(old.tests || 0) + 1;
+
+
+        old.best =
+            Math.max(
+                Number(old.best || 0),
+                percentage
+            );
+
+
+        localStorage.setItem(
+            "inganathiK53Progress",
+            JSON.stringify(old)
+        );
+
+    }
+
+    catch(error){
+
+        console.log(
+            "Progress could not be saved."
+        );
+    }
+}
+
+
+/* ================================
+   RESTART
+================================ */
+
+function restartTest(){
 
     document
         .getElementById("resultArea")
@@ -2159,12 +1909,18 @@ function restartTest() {
 
     startTest();
 
+
+    document
+        .getElementById("test")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
 }
 
 
-/* =========================
+/* ================================
    START APPLICATION
-========================= */
+================================ */
 
 loadQuestions();
 
