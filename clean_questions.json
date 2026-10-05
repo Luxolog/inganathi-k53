@@ -1,94 +1,160 @@
-{
-  "questions": [
-    {
-      "id": 1,
-      "category": "rules",
-      "question": "What is the speed limit in a residential area?",
-      "options": ["40 km/h", "60 km/h", "80 km/h", "100 km/h"],
+      ],
       "correct": 0,
-      "explanation": "The speed limit in residential areas is 40 km/h to ensure safety."
+      "explanation": "Emergency vehicles require space to pass safely."
     },
     {
-      "id": 2,
+      "id": 107,
       "category": "rules",
-      "question": "When must you yield to a pedestrian crossing at a zebra crossing?",
-      "options": ["Always stop completely", "Only if they're close", "You have right of way", "Slow down only"],
+      "question": "Which option correctly answers this learner-driver question: What is defensive driving?",
+      "options": [
+        "Anticipating hazards and maintaining a margin of safety",
+        "Driving aggressively",
+        "Driving as fast as possible",
+        "Ignoring other road users"
+      ],
       "correct": 0,
-      "explanation": "You must always stop completely at zebra crossings when pedestrians are present."
+      "explanation": "Defensive driving anticipates hazards and reduces risk."
     },
     {
-      "id": 3,
-      "category": "signs",
-      "question": "What does a red circular sign with white border mean?",
-      "options": ["Stop or prohibition", "Warning", "Information", "Direction"],
+      "id": 108,
+      "category": "rules",
+      "question": "For safe road use, what is the correct answer to: What is defensive driving?",
+      "options": [
+        "Anticipating hazards and maintaining a margin of safety",
+        "Driving aggressively",
+        "Driving as fast as possible",
+        "Ignoring other road users"
+      ],
       "correct": 0,
-      "explanation": "Red circular signs indicate stop or prohibitive regulations."
+      "explanation": "Defensive driving anticipates hazards and reduces risk."
     },
     {
-      "id": 4,
-      "category": "controls",
-      "question": "What is the legal alcohol limit for drivers in South Africa?",
-      "options": ["0.0 mg/100ml", "5 mg/100ml", "24 mg/100ml", "50 mg/100ml"],
-      "correct": 2,
-      "explanation": "The legal limit is 24 mg/100ml of breath for the first offense."
-    },
-    {
-      "id": 5,
+      "id": 109,
       "category": "rules",
-      "question": "How far must you be from a fire hydrant before parking?",
-      "options": ["1 meter", "2 meters", "5 meters", "10 meters"],
-      "correct": 2,
-      "explanation": "You must be at least 5 meters away from a fire hydrant."
+      "question": "Which option correctly answers this learner-driver question: Why is alcohol dangerous before driving?",
+      "options": [
+        "It can impair judgement, coordination and reaction",
+        "It improves concentration",
+        "It shortens stopping distance",
+        "It improves night vision"
+      ],
+      "correct": 0,
+      "explanation": "Alcohol can impair several abilities needed for safe driving."
     },
     {
-      "id": 6,
-      "category": "signs",
-      "question": "What does a triangular yellow sign indicate?",
-      "options": ["Stop ahead", "Warning of hazard", "Prohibition", "Mandatory action"],
-      "correct": 1,
-      "explanation": "Triangular yellow signs warn drivers of potential hazards ahead."
-    },
-    {
-      "id": 7,
+      "id": 110,
       "category": "rules",
-      "question": "When turning left at an intersection, who has priority?",
-      "options": ["The turning vehicle", "The oncoming traffic", "Pedestrians", "The traffic light"],
-      "correct": 1,
-      "explanation": "Oncoming traffic has priority over vehicles turning left."
+      "question": "For safe road use, what is the correct answer to: Why is alcohol dangerous before driving?",
+      "options": [
+        "It can impair judgement, coordination and reaction",
+        "It improves concentration",
+        "It shortens stopping distance",
+        "It improves night vision"
+      ],
+      "correct": 0,
+      "explanation": "Alcohol can impair several abilities needed for safe driving."
     },
     {
-      "id": 8,
-      "category": "controls",
-      "question": "What is the purpose of vehicle roadworthiness tests?",
-      "options": ["Tax collection", "Safety compliance", "Insurance rates", "Fuel efficiency"],
-      "correct": 1,
-      "explanation": "Roadworthiness tests ensure vehicles are safe and comply with regulations."
-    },
-    {
-      "id": 9,
+      "id": 111,
       "category": "rules",
-      "question": "How close may you follow another vehicle on a highway?",
-      "options": ["Any distance", "100 meters", "As close as possible", "Safe braking distance"],
-      "correct": 3,
-      "explanation": "You must maintain a safe braking distance at all times."
+      "question": "Which option correctly answers this learner-driver question: What should you do if you are angry or emotionally upset before driving?",
+      "options": [
+        "Allow yourself to calm down before driving",
+        "Drive faster",
+        "Ignore the emotion",
+        "Use the horn continuously"
+      ],
+      "correct": 0,
+      "explanation": "Strong emotions can affect concentration and decision-making."
     },
     {
-      "id": 10,
-      "category": "signs",
-      "question": "What color background indicates mandatory instructions?",
-      "options": ["Red", "Blue", "Yellow", "Green"],
-      "correct": 1,
-      "explanation": "Blue signs with white symbols indicate mandatory instructions."
-    }
-  ],
-  "metadata": {
-    "total": 235,
-    "rules": 151,
-    "signs": 66,
-    "controls": 18,
-    "version": "1.0",
-    "created": "2026-09-30",
-    "description": "Official K53 Learner Licence Test Questions for South Africa - eNatis format"
-  },
-  "note": "This file contains the base structure. In production, this will be populated with all 235 questions following the distribution: 151 rules questions, 66 sign recognition questions, and 18 vehicle control/safety questions."
-}
+      "id": 112,
+      "category": "rules",
+      "question": "For safe road use, what is the correct answer to: What should you do if you are angry or emotionally upset before driving?",
+      "options": [
+        "Allow yourself to calm down before driving",
+        "Drive faster",
+        "Ignore the emotion",
+        "Use the horn continuously"
+      ],
+      "correct": 0,
+      "explanation": "Strong emotions can affect concentration and decision-making."
+    },
+    {
+      "id": 113,
+      "category": "rules",
+      "question": "Which option correctly answers this learner-driver question: What is the purpose of road markings?",
+      "options": [
+        "To regulate, warn or guide road users",
+        "To decorate roads",
+        "To increase engine power",
+        "To replace all signs"
+      ],
+      "correct": 0,
+      "explanation": "Road markings communicate rules, warnings and guidance."
+    },
+    {
+      "id": 114,
+      "category": "rules",
+      "question": "For safe road use, what is the correct answer to: What is the purpose of road markings?",
+      "options": [
+        "To regulate, warn or guide road users",
+        "To decorate roads",
+        "To increase engine power",
+        "To replace all signs"
+      ],
+      "correct": 0,
+      "explanation": "Road markings communicate rules, warnings and guidance."
+    },
+    {
+      "id": 115,
+      "category": "rules",
+      "question": "Which option correctly answers this learner-driver question: What does a solid barrier line generally indicate?",
+      "options": [
+        "Crossing it is restricted except where permitted",
+        "It is a parking line",
+        "It always means acceleration",
+        "It marks a fuel lane"
+      ],
+      "correct": 0,
+      "explanation": "Barrier lines restrict crossing in the circumstances specified by the road marking and rules."
+    },
+    {
+      "id": 116,
+      "category": "rules",
+      "question": "For safe road use, what is the correct answer to: What does a solid barrier line generally indicate?",
+      "options": [
+        "Crossing it is restricted except where permitted",
+        "It is a parking line",
+        "It always means acceleration",
+        "It marks a fuel lane"
+      ],
+      "correct": 0,
+      "explanation": "Barrier lines restrict crossing in the circumstances specified by the road marking and rules."
+    },
+    {
+      "id": 117,
+      "category": "rules",
+      "question": "Which option correctly answers this learner-driver question: What should you do when approaching roadworks?",
+      "options": [
+        "Slow down, obey temporary signs and watch for workers",
+        "Ignore temporary signs",
+        "Overtake workers closely",
+        "Accelerate"
+      ],
+      "correct": 0,
+      "explanation": "Roadworks can create changing hazards and require compliance with temporary controls."
+    },
+    {
+      "id": 118,
+      "category": "rules",
+      "question": "For safe road use, what is the correct answer to: What should you do when approaching roadworks?",
+      "options": [
+        "Slow down, obey temporary signs and watch for workers",
+        "Ignore temporary signs",
+        "Overtake workers closely",
+        "Accelerate"
+      ],
+      "correct": 0,
+      "explanation": "Roadworks can create changing hazards and require compliance with temporary controls."
+    },
