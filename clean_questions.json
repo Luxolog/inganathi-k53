@@ -1,160 +1,96 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "category": "rules",
+      "question": "[Question text not present in source]",
+      "options": [
+        "Drive your vehicle on the sidewalk at night.",
+        "Reverse your vehicle only if it is safe to do so.",
+        "Leave the engine of your vehicle idling when you put petrol in it."
       ],
-      "correct": 0,
-      "explanation": "Emergency vehicles require space to pass safely."
+      "correct": 1,
+      "correctLetter": "B",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
     },
     {
-      "id": 107,
+      "id": 2,
       "category": "rules",
-      "question": "Which option correctly answers this learner-driver question: What is defensive driving?",
+      "question": "When you want to change lanes and drive from one lane to the other you must... Only do it when it is safe to do so Switch on your flickers in time to show what you are going to do Use the mirrors of your vehicle to ensure that you know of other traffic around you CHOOSE THE CORRECT COMBINATION",
       "options": [
-        "Anticipating hazards and maintaining a margin of safety",
-        "Driving aggressively",
-        "Driving as fast as possible",
-        "Ignoring other road users"
+        "Only (i) and (ii) are correct",
+        "All of the above are correct",
+        "Only (ii) and (iii) are correct"
       ],
-      "correct": 0,
-      "explanation": "Defensive driving anticipates hazards and reduces risk."
+      "correct": 1,
+      "correctLetter": "B",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
     },
     {
-      "id": 108,
+      "id": 3,
       "category": "rules",
-      "question": "For safe road use, what is the correct answer to: What is defensive driving?",
+      "question": "When may you not overtake another vehicle? When you ... Are nearing the top of hill Are nearing a curve Can only see 100m in front of you because of dust over the road SELECT THE CORRECT COMBINATION",
       "options": [
-        "Anticipating hazards and maintaining a margin of safety",
-        "Driving aggressively",
-        "Driving as fast as possible",
-        "Ignoring other road users"
+        "(i) only is correct",
+        "All of the above is correct",
+        "(i) and (ii) only are correct"
       ],
-      "correct": 0,
-      "explanation": "Defensive driving anticipates hazards and reduces risk."
+      "correct": 1,
+      "correctLetter": "B",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
     },
     {
-      "id": 109,
+      "id": 4,
       "category": "rules",
-      "question": "Which option correctly answers this learner-driver question: Why is alcohol dangerous before driving?",
+      "question": "When are you allowed to drive on the shoulder of a road? Any time if you want to let another vehicle to pass you In daytime when you want to allow another vehicle pass you and its safe When on a freeway with 4 lanes in both directions, you want to drive slower than 120 km/h When you have a flat tyre and you want to park there to change it SELECT THE CORRECT COMBINATION",
       "options": [
-        "It can impair judgement, coordination and reaction",
-        "It improves concentration",
-        "It shortens stopping distance",
-        "It improves night vision"
+        "(i), (iii) and (iv) only are correct",
+        "(ii) and (iv) only are correct",
+        "All of the above are correct"
       ],
-      "correct": 0,
-      "explanation": "Alcohol can impair several abilities needed for safe driving."
+      "correct": 1,
+      "correctLetter": "B",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
     },
     {
-      "id": 110,
+      "id": 5,
       "category": "rules",
-      "question": "For safe road use, what is the correct answer to: Why is alcohol dangerous before driving?",
+      "question": "You may not obtain a learner's licence if... You already have a licence that authorises the driving of the same vehicle class. You are declared unfit to obtain a driving licence for a certain period and that period still prevails. Your licence was suspended temporarily and the suspension has not yet expired. SELECT THE CORRECT COMBINATION",
       "options": [
-        "It can impair judgement, coordination and reaction",
-        "It improves concentration",
-        "It shortens stopping distance",
-        "It improves night vision"
+        "(i), (ii) and (iii) are correct.",
+        "(i) only is correct",
+        "(i) and (iii)"
       ],
       "correct": 0,
-      "explanation": "Alcohol can impair several abilities needed for safe driving."
+      "correctLetter": "A",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
     },
     {
-      "id": 111,
+      "id": 6,
       "category": "rules",
-      "question": "Which option correctly answers this learner-driver question: What should you do if you are angry or emotionally upset before driving?",
+      "question": "At an intersection...",
       "options": [
-        "Allow yourself to calm down before driving",
-        "Drive faster",
-        "Ignore the emotion",
-        "Use the horn continuously"
+        "Vehicles have the right of way over pedestrians.",
+        "You must yield to oncoming traffic if you want to turn right.",
+        "You can use a stop sign as a yield sign if there is no other traffic."
       ],
-      "correct": 0,
-      "explanation": "Strong emotions can affect concentration and decision-making."
+      "correct": 1,
+      "correctLetter": "B",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
     },
     {
-      "id": 112,
+      "id": 7,
       "category": "rules",
-      "question": "For safe road use, what is the correct answer to: What should you do if you are angry or emotionally upset before driving?",
+      "question": "The licence for your vehicle (clearance certificate) is valid for --",
       "options": [
-        "Allow yourself to calm down before driving",
-        "Drive faster",
-        "Ignore the emotion",
-        "Use the horn continuously"
+        "12 months",
+        "90 days.",
+        "21 days."
       ],
       "correct": 0,
-      "explanation": "Strong emotions can affect concentration and decision-making."
-    },
-    {
-      "id": 113,
-      "category": "rules",
-      "question": "Which option correctly answers this learner-driver question: What is the purpose of road markings?",
-      "options": [
-        "To regulate, warn or guide road users",
-        "To decorate roads",
-        "To increase engine power",
-        "To replace all signs"
-      ],
-      "correct": 0,
-      "explanation": "Road markings communicate rules, warnings and guidance."
-    },
-    {
-      "id": 114,
-      "category": "rules",
-      "question": "For safe road use, what is the correct answer to: What is the purpose of road markings?",
-      "options": [
-        "To regulate, warn or guide road users",
-        "To decorate roads",
-        "To increase engine power",
-        "To replace all signs"
-      ],
-      "correct": 0,
-      "explanation": "Road markings communicate rules, warnings and guidance."
-    },
-    {
-      "id": 115,
-      "category": "rules",
-      "question": "Which option correctly answers this learner-driver question: What does a solid barrier line generally indicate?",
-      "options": [
-        "Crossing it is restricted except where permitted",
-        "It is a parking line",
-        "It always means acceleration",
-        "It marks a fuel lane"
-      ],
-      "correct": 0,
-      "explanation": "Barrier lines restrict crossing in the circumstances specified by the road marking and rules."
-    },
-    {
-      "id": 116,
-      "category": "rules",
-      "question": "For safe road use, what is the correct answer to: What does a solid barrier line generally indicate?",
-      "options": [
-        "Crossing it is restricted except where permitted",
-        "It is a parking line",
-        "It always means acceleration",
-        "It marks a fuel lane"
-      ],
-      "correct": 0,
-      "explanation": "Barrier lines restrict crossing in the circumstances specified by the road marking and rules."
-    },
-    {
-      "id": 117,
-      "category": "rules",
-      "question": "Which option correctly answers this learner-driver question: What should you do when approaching roadworks?",
-      "options": [
-        "Slow down, obey temporary signs and watch for workers",
-        "Ignore temporary signs",
-        "Overtake workers closely",
-        "Accelerate"
-      ],
-      "correct": 0,
-      "explanation": "Roadworks can create changing hazards and require compliance with temporary controls."
-    },
-    {
-      "id": 118,
-      "category": "rules",
-      "question": "For safe road use, what is the correct answer to: What should you do when approaching roadworks?",
-      "options": [
-        "Slow down, obey temporary signs and watch for workers",
-        "Ignore temporary signs",
-        "Overtake workers closely",
-        "Accelerate"
-      ],
-      "correct": 0,
-      "explanation": "Roadworks can create changing hazards and require compliance with temporary controls."
-    },
