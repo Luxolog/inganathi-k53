@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Inganathi Driving Academy - K53 learner's licence training, road signs, rules of the road and practice tests.">
-
 <title>Inganathi Driving Academy | K53 Learner's Licence</title>
 
+<meta name="description" content="Inganathi Driving Academy - K53 learner's licence lessons, road signs, manual and online learner's test practice.">
+
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -20,9 +21,9 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7fa;
-    color:#172033;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f6f7;
+    color:#111;
     line-height:1.6;
 }
 
@@ -31,190 +32,192 @@ a{
     color:inherit;
 }
 
-button{
-    font-family:inherit;
-}
+/* =========================
+   TOP BAR
+========================= */
 
-header{
-    background:#071426;
+.topbar{
+    background:#111;
     color:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
+    padding:10px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
 }
 
-.nav-container{
-    max-width:1200px;
-    margin:auto;
-    padding:15px 20px;
+.topbar span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar{
+    background:#fff;
+    min-height:92px;
+    padding:10px 4%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
-    font-size:21px;
-    font-weight:900;
-    letter-spacing:1px;
-    color:#d9ad45;
+    height:70px;
+    width:auto;
+    object-fit:contain;
 }
 
-.logo span{
-    display:block;
-    color:#fff;
-    font-size:11px;
-    letter-spacing:2px;
-}
-
-nav{
+.nav-links{
     display:flex;
-    gap:20px;
     align-items:center;
+    gap:28px;
+    font-weight:bold;
 }
 
-nav a{
-    color:#fff;
-    font-size:14px;
-    font-weight:700;
+.nav-links a{
+    transition:.2s;
 }
 
-nav a:hover{
-    color:#d9ad45;
+.nav-links a:hover{
+    color:#e21b1b;
 }
 
-.menu-button{
-    display:none;
-    background:none;
-    border:0;
-    color:#fff;
-    font-size:30px;
-    cursor:pointer;
+.whatsapp-btn{
+    background:#e21b1b;
+    color:white;
+    padding:13px 20px;
+    border-radius:8px;
+    font-weight:bold;
 }
+
+.whatsapp-btn:hover{
+    background:#b90000;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    background:linear-gradient(135deg,#071426,#102746 55%,#1b3555);
-    color:#fff;
-    padding:90px 20px;
+    min-height:590px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.96) 0%,
+            rgba(255,255,255,.88) 45%,
+            rgba(255,255,255,.15) 100%
+        ),
+        url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    display:flex;
+    align-items:center;
+    padding:70px 5%;
 }
 
-.hero-container{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:50px;
-    align-items:center;
+.hero-content{
+    max-width:720px;
 }
 
 .hero h1{
-    font-size:clamp(38px,6vw,68px);
-    line-height:1.05;
-    margin-bottom:20px;
+    font-size:clamp(45px,6vw,78px);
+    line-height:1.02;
+    margin-bottom:25px;
+    font-weight:900;
 }
 
 .hero h1 span{
-    color:#d9ad45;
+    color:#e21b1b;
 }
 
 .hero p{
-    max-width:650px;
-    font-size:18px;
-    color:#d9e2ef;
-    margin-bottom:30px;
+    font-size:20px;
+    max-width:720px;
+    margin-bottom:32px;
+    color:#222;
 }
 
 .hero-buttons{
     display:flex;
+    gap:15px;
     flex-wrap:wrap;
-    gap:14px;
 }
 
 .btn{
     display:inline-block;
-    padding:14px 23px;
+    padding:17px 28px;
     border-radius:8px;
-    font-weight:800;
-    border:0;
+    font-size:17px;
+    font-weight:bold;
     cursor:pointer;
+    border:none;
 }
 
-.btn-primary{
-    background:#d9ad45;
-    color:#071426;
-}
-
-.btn-outline{
-    border:1px solid #d9ad45;
+.btn-red{
+    background:#e21b1b;
     color:#fff;
-    background:transparent;
 }
 
-.btn-outline:hover{
-    background:#d9ad45;
-    color:#071426;
+.btn-red:hover{
+    background:#b90000;
 }
 
-.hero-card{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:20px;
-    padding:40px;
-    text-align:center;
+.btn-white{
+    background:#fff;
+    color:#111;
+    border:2px solid #111;
 }
 
-.hero-card-icon{
-    font-size:75px;
-    margin-bottom:15px;
+.btn-white:hover{
+    background:#111;
+    color:#fff;
 }
 
-.hero-card h3{
-    color:#d9ad45;
-    font-size:25px;
-    margin-bottom:10px;
-}
+/* =========================
+   STATS
+========================= */
 
 .stats{
     background:#fff;
-    border-bottom:1px solid #e5e9ef;
-}
-
-.stats-container{
-    max-width:1200px;
-    margin:auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
+    border-bottom:1px solid #ddd;
 }
 
 .stat{
-    padding:25px 15px;
     text-align:center;
-    border-right:1px solid #e5e9ef;
+    padding:30px 15px;
+    border-right:1px solid #ddd;
 }
 
 .stat:last-child{
-    border-right:0;
+    border-right:none;
 }
 
 .stat strong{
     display:block;
-    color:#071426;
-    font-size:27px;
+    font-size:36px;
+    color:#e21b1b;
 }
 
 .stat span{
-    color:#657084;
-    font-size:13px;
+    color:#555;
 }
 
-section{
-    padding:75px 20px;
-}
+/* =========================
+   FEATURES
+========================= */
 
-.section-container{
-    max-width:1200px;
-    margin:auto;
+.features-section{
+    padding:70px 5%;
+    background:#f3f4f5;
 }
 
 .section-title{
@@ -223,617 +226,484 @@ section{
 }
 
 .section-title h2{
-    font-size:36px;
-    color:#071426;
+    font-size:42px;
     margin-bottom:10px;
 }
 
 .section-title p{
-    color:#687386;
-    max-width:650px;
-    margin:auto;
+    color:#666;
 }
 
-.cards{
+.features{
+    max-width:1250px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
-.card{
+.feature-card{
     background:#fff;
     border-radius:15px;
-    padding:28px;
-    border:1px solid #e4e8ee;
-    box-shadow:0 8px 25px rgba(7,20,38,.05);
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    transition:.25s;
 }
 
-.card-icon{
-    font-size:38px;
+.feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.feature-icon{
+    font-size:42px;
+    color:#e21b1b;
     margin-bottom:15px;
 }
 
-.card h3{
+.feature-card h3{
+    font-size:23px;
     margin-bottom:10px;
-    color:#071426;
 }
 
-.card p{
-    color:#697486;
-    font-size:14px;
-}
-
-.sign-section{
-    background:#eef2f6;
-}
-
-.sign-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.sign-card{
-    background:#fff;
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
-    border:1px solid #e4e8ee;
-}
-
-.sign-icon{
-    width:85px;
-    height:85px;
-    margin:0 auto 15px;
-    border-radius:50%;
-    background:#071426;
-    color:#d9ad45;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:38px;
-}
-
-.sign-card h3{
-    font-size:16px;
-    margin-bottom:5px;
-}
-
-.sign-card p{
-    color:#687386;
-    font-size:13px;
-}
-
-.test-section{
-    background:#eef2f6;
-}
-
-.test-wrapper{
-    max-width:900px;
-    margin:auto;
-}
-
-.test-box{
-    background:#fff;
-    border-radius:18px;
-    padding:35px;
-    box-shadow:0 12px 35px rgba(7,20,38,.08);
-}
-
-.test-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
+.feature-card p{
+    color:#666;
     margin-bottom:20px;
 }
 
-.question-counter{
-    font-weight:700;
-    color:#687386;
+.feature-link{
+    color:#e21b1b;
+    font-weight:bold;
 }
 
-.score-display{
-    font-weight:800;
-    color:#071426;
-}
+/* =========================
+   TEST SECTION
+========================= */
 
-.progress{
-    height:8px;
-    background:#e4e8ee;
-    border-radius:10px;
-    overflow:hidden;
-    margin-bottom:30px;
-}
-
-.progress-bar{
-    height:100%;
-    width:0;
-    background:#d9ad45;
-    transition:.3s;
-}
-
-.question-number{
-    color:#d9ad45;
-    font-weight:900;
-    font-size:13px;
-    letter-spacing:1px;
-    margin-bottom:10px;
-}
-
-.question-text{
-    font-size:24px;
-    font-weight:800;
-    line-height:1.35;
-    margin-bottom:25px;
-    color:#071426;
-}
-
-.answers{
-    display:grid;
-    gap:12px;
-}
-
-.answer{
-    width:100%;
-    padding:17px 18px;
-    background:#f8fafc;
-    border:2px solid #e1e6ed;
-    border-radius:10px;
-    text-align:left;
-    cursor:pointer;
-    font-size:15px;
-    font-weight:600;
-    transition:.2s;
-}
-
-.answer:hover{
-    border-color:#d9ad45;
-    background:#fffaf0;
-}
-
-.answer.selected{
-    background:#fff6dc;
-    border-color:#d9ad45;
-}
-
-.answer.correct{
-    background:#dcfce7;
-    border-color:#16a34a;
-}
-
-.answer.wrong{
-    background:#fee2e2;
-    border-color:#dc2626;
-}
-
-.answer:disabled{
-    cursor:default;
-}
-
-.test-actions{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
-    margin-top:25px;
-}
-
-.next-btn{
-    background:#071426;
+.test-section{
+    background:#111;
     color:#fff;
-    border:0;
-    border-radius:8px;
-    padding:13px 24px;
-    font-weight:800;
-    cursor:pointer;
+    padding:80px 5%;
 }
 
-.next-btn:disabled{
-    opacity:.4;
-    cursor:not-allowed;
+.test-container{
+    max-width:950px;
+    margin:auto;
 }
 
-.loading{
+.test-intro{
     text-align:center;
-    padding:40px;
-    color:#687386;
+    margin-bottom:35px;
+}
+
+.test-intro h2{
+    font-size:42px;
+}
+
+.test-intro p{
+    color:#ccc;
+}
+
+#loading{
+    background:#fff;
+    color:#111;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+}
+
+#testArea{
+    background:#fff;
+    color:#111;
+    border-radius:15px;
+    padding:35px;
 }
 
 .hidden{
-    display:none!important;
+    display:none !important;
 }
 
-.result-box{
-    text-align:center;
-    padding:50px 30px;
+.progress{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+    color:#666;
 }
 
-.final-score{
-    font-size:65px;
-    font-weight:900;
-    color:#d9ad45;
-    margin:15px 0;
-}
-
-.result-message{
-    color:#687386;
+.question{
+    font-size:25px;
+    font-weight:bold;
     margin-bottom:25px;
-    font-size:17px;
 }
 
-.cta{
-    background:#071426;
+.option{
+    display:block;
+    width:100%;
+    padding:16px;
+    margin-bottom:12px;
+    background:#f3f3f3;
+    border:2px solid #ddd;
+    border-radius:8px;
+    text-align:left;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.option:hover{
+    border-color:#e21b1b;
+}
+
+.option.selected{
+    border-color:#e21b1b;
+    background:#fff0f0;
+}
+
+.option.correct{
+    background:#dff7e5;
+    border-color:#16843b;
+}
+
+.option.incorrect{
+    background:#ffe0e0;
+    border-color:#d00000;
+}
+
+.test-controls{
+    display:flex;
+    justify-content:space-between;
+    margin-top:25px;
+    gap:10px;
+}
+
+.test-controls button{
+    padding:14px 25px;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.next-btn{
+    background:#e21b1b;
     color:#fff;
+}
+
+.next-btn:hover{
+    background:#b90000;
+}
+
+.result{
     text-align:center;
+    padding:30px;
 }
 
-.cta h2{
-    font-size:38px;
-    margin-bottom:10px;
+.result h2{
+    font-size:40px;
+    color:#e21b1b;
 }
 
-.cta p{
-    margin-bottom:25px;
-    color:#d9e2ef;
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#fff;
+    padding:70px 5%;
 }
 
-.contact-grid{
+.contact-container{
+    max-width:1100px;
+    margin:auto;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
     gap:20px;
 }
 
-.contact-card{
-    background:#fff;
-    border:1px solid #e4e8ee;
-    border-radius:14px;
-    padding:25px;
-    text-align:center;
+.contact-box{
+    padding:20px;
+    background:#f5f5f5;
+    border-left:5px solid #e21b1b;
+    border-radius:8px;
 }
 
-.contact-card strong{
+.contact-box strong{
     display:block;
-    color:#071426;
-    margin-bottom:8px;
+    margin-bottom:5px;
 }
 
-.contact-card span{
-    color:#687386;
-    font-size:14px;
-}
-
-.whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25d366;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    z-index:2000;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
-}
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background:#02050e;
+    background:#111;
     color:#fff;
-    text-align:center;
-    padding:30px 20px;
-    font-size:13px;
+    padding:50px 5% 25px;
 }
 
-footer p{
-    margin:5px;
-    color:#b8c0cd;
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:30px;
+    align-items:center;
 }
+
+.footer-logo{
+    max-width:280px;
+    background:#fff;
+    padding:8px;
+    border-radius:8px;
+}
+
+.footer-item{
+    font-size:17px;
+}
+
+.footer-item strong{
+    color:#e21b1b;
+    display:block;
+    margin-bottom:5px;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid #333;
+    margin-top:35px;
+    padding-top:20px;
+    color:#aaa;
+}
+
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+
+.whatsapp-float{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:62px;
+    height:62px;
+    background:#25d366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:2000;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
-    .cards,
-    .sign-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero-container{
-        grid-template-columns:1fr;
-    }
-
-    .stats-container{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .stat:nth-child(2){
-        border-right:0;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:700px){
-
-    nav{
+    .nav-links{
         display:none;
-        position:absolute;
-        left:0;
-        right:0;
-        top:68px;
-        background:#071426;
-        flex-direction:column;
-        align-items:stretch;
-        padding:15px 20px;
-        gap:0;
     }
 
-    nav.open{
-        display:flex;
+    .navbar{
+        justify-content:center;
     }
 
-    nav a{
-        padding:13px 5px;
-        border-bottom:1px solid rgba(255,255,255,.1);
-    }
-
-    .menu-button{
-        display:block;
+    .topbar{
+        justify-content:center;
+        gap:15px;
+        flex-wrap:wrap;
     }
 
     .hero{
-        padding:65px 20px;
+        min-height:550px;
+        padding:55px 7%;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .footer-logo{
+        margin:auto;
+    }
+}
+
+@media(max-width:600px){
+
+    .logo{
+        height:55px;
+    }
+
+    .hero{
+        min-height:600px;
+        background:
+            linear-gradient(
+                rgba(255,255,255,.90),
+                rgba(255,255,255,.90)
+            ),
+            url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80")
+            center/cover;
     }
 
     .hero h1{
         font-size:42px;
     }
 
-    .cards,
-    .sign-grid{
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .features{
         grid-template-columns:1fr;
     }
 
-    .stats-container{
+    .stats{
         grid-template-columns:1fr 1fr;
     }
 
-    .stat{
-        border-bottom:1px solid #e5e9ef;
+    .stat strong{
+        font-size:28px;
     }
 
-    .test-box{
+    .test-section{
+        padding:50px 20px;
+    }
+
+    #testArea{
         padding:22px;
     }
 
-    .question-text{
+    .question{
         font-size:20px;
     }
 
-    .test-top{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .test-actions{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .next-btn{
-        width:100%;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="nav-container">
+<!-- TOP BAR -->
 
-        <a href="#home" class="logo">
-            INGANATHI
-            <span>DRIVING ACADEMY</span>
+<div class="topbar">
+
+    <span>📍 Mthatha, Eastern Cape</span>
+
+    <span>
+        💬 WhatsApp:
+        <a href="https://wa.me/27713264047">
+            +27 71 326 4047
         </a>
-
-        <button class="menu-button"
-                onclick="toggleMenu()"
-                aria-label="Open menu">
-            ☰
-        </button>
-
-        <nav id="mainNav">
-            <a href="#home" onclick="closeMenu()">Home</a>
-            <a href="#manual" onclick="closeMenu()">K53 Manual</a>
-            <a href="#signs" onclick="closeMenu()">Road Signs</a>
-            <a href="#test" onclick="closeMenu()">Learner's Test</a>
-            <a href="#contact" onclick="closeMenu()">Contact</a>
-        </nav>
-
-    </div>
-</header>
-
-
-<section class="hero" id="home">
-
-    <div class="hero-container">
-
-        <div>
-
-            <h1>
-                Learn K53.
-                <span>Pass With Confidence.</span>
-            </h1>
-
-            <p>
-                Prepare for your South African learner's licence
-                with K53 lessons, road signs, rules of the road
-                and realistic practice questions.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#test" class="btn btn-primary">
-                    Start Learner's Test
-                </a>
-
-                <a href="#manual" class="btn btn-outline">
-                    Study K53
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="hero-card">
-
-            <div class="hero-card-icon">
-                🚗
-            </div>
-
-            <h3>
-                Your K53 Journey Starts Here
-            </h3>
-
-            <p>
-                Study smarter. Practise regularly.
-                Build the knowledge and confidence
-                you need before test day.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<div class="stats">
-
-    <div class="stats-container">
-
-        <div class="stat">
-            <strong>236</strong>
-            <span>K53 Questions</span>
-        </div>
-
-        <div class="stat">
-            <strong>24/7</strong>
-            <span>Online Practice</span>
-        </div>
-
-        <div class="stat">
-            <strong>K53</strong>
-            <span>Study Material</span>
-        </div>
-
-        <div class="stat">
-            <strong>100%</strong>
-            <span>Mobile Friendly</span>
-        </div>
-
-    </div>
+    </span>
 
 </div>
 
 
-<section id="manual">
+<!-- NAVIGATION -->
 
-    <div class="section-container">
+<nav class="navbar">
 
-        <div class="section-title">
+    <a href="#home">
 
-            <h2>K53 Learning Centre</h2>
+        <img
+            src="inganathi-logo.jpeg"
+            alt="Inganathi Driving Academy"
+            class="logo"
+        >
 
-            <p>
-                Build your knowledge before attempting
-                the learner's test.
-            </p>
+    </a>
 
-        </div>
+    <div class="nav-links">
 
+        <a href="#home">Home</a>
 
-        <div class="cards">
+        <a href="#manual">K53 Manual</a>
 
-            <div class="card">
+        <a href="#signs">Road Signs</a>
 
-                <div class="card-icon">
-                    🚘
-                </div>
+        <a href="#test">Learner's Test</a>
 
-                <h3>
-                    Vehicle Controls
-                </h3>
+        <a href="#contact">Contact</a>
 
-                <p>
-                    Learn important vehicle controls
-                    and basic driving knowledge.
-                </p>
+    </div>
 
-            </div>
+    <a
+        class="whatsapp-btn"
+        href="https://wa.me/27713264047"
+        target="_blank"
+    >
+        WhatsApp Us
+    </a>
 
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🚦
-                </div>
-
-                <h3>
-                    Road Signs
-                </h3>
-
-                <p>
-                    Learn regulatory, warning,
-                    information and temporary signs.
-                </p>
-
-            </div>
+</nav>
 
 
-            <div class="card">
+<!-- HERO -->
 
-                <div class="card-icon">
-                    🛣️
-                </div>
+<section class="hero" id="home">
 
-                <h3>
-                    Rules of the Road
-                </h3>
+    <div class="hero-content">
 
-                <p>
-                    Understand important rules,
-                    markings and safe driving principles.
-                </p>
+        <h1>
+            Learn K53.<br>
+            <span>Pass With Confidence.</span>
+        </h1>
 
-            </div>
+        <p>
+            Prepare for your South African learner's licence
+            with K53 lessons, road signs, rules of the road
+            and realistic practice questions.
+        </p>
 
+        <div class="hero-buttons">
 
-            <div class="card">
+            <a href="#test" class="btn btn-red">
+                Start Learner's Test →
+            </a>
 
-                <div class="card-icon">
-                    📝
-                </div>
-
-                <h3>
-                    Practice Test
-                </h3>
-
-                <p>
-                    Test yourself using the
-                    Inganathi K53 question bank.
-                </p>
-
-            </div>
+            <a href="#manual" class="btn btn-white">
+                Study K53 →
+            </a>
 
         </div>
 
@@ -842,94 +712,122 @@ footer p{
 </section>
 
 
-<section id="signs" class="sign-section">
+<!-- STATS -->
 
-    <div class="section-container">
+<section class="stats">
 
-        <div class="section-title">
+    <div class="stat">
+        <strong>236</strong>
+        <span>K53 Questions</span>
+    </div>
 
-            <h2>Road Signs</h2>
+    <div class="stat">
+        <strong>24/7</strong>
+        <span>Online Practice</span>
+    </div>
+
+    <div class="stat">
+        <strong>K53</strong>
+        <span>Study Material</span>
+    </div>
+
+    <div class="stat">
+        <strong>100%</strong>
+        <span>Mobile Friendly</span>
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features-section">
+
+    <div class="section-title">
+
+        <h2>Everything You Need To Prepare</h2>
+
+        <p>
+            Learn the rules, understand the signs and test your knowledge.
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature-card" id="manual">
+
+            <div class="feature-icon">📖</div>
+
+            <h3>K53 Manual</h3>
 
             <p>
-                Understand the main categories of
-                South African road signs.
+                Study the K53 learner's licence material
+                with clear explanations and examples.
             </p>
+
+            <a href="#manual" class="feature-link">
+                Read Manual →
+            </a>
 
         </div>
 
 
-        <div class="sign-grid">
+        <div class="feature-card" id="signs">
 
-            <div class="sign-card">
+            <div class="feature-icon">⚠️</div>
 
-                <div class="sign-icon">
-                    ⛔
-                </div>
+            <h3>Road Signs</h3>
 
-                <h3>
-                    Regulatory Signs
-                </h3>
+            <p>
+                Learn South African road signs,
+                their meanings and how they are used.
+            </p>
 
-                <p>
-                    Signs controlling what road
-                    users must or must not do.
-                </p>
+            <a href="#signs" class="feature-link">
+                View Road Signs →
+            </a>
 
-            </div>
+        </div>
 
 
-            <div class="sign-card">
+        <div class="feature-card">
 
-                <div class="sign-icon">
-                    ⚠️
-                </div>
+            <div class="feature-icon">📝</div>
 
-                <h3>
-                    Warning Signs
-                </h3>
+            <h3>Learner's Test</h3>
 
-                <p>
-                    Signs warning drivers of
-                    hazards and conditions ahead.
-                </p>
+            <p>
+                Practise K53 questions and test your
+                knowledge before your official test.
+            </p>
 
-            </div>
+            <a href="#test" class="feature-link">
+                Start Test →
+            </a>
 
-
-            <div class="sign-card">
-
-                <div class="sign-icon">
-                    ℹ️
-                </div>
-
-                <h3>
-                    Information Signs
-                </h3>
-
-                <p>
-                    Signs providing useful information
-                    about the road and surroundings.
-                </p>
-
-            </div>
+        </div>
 
 
-            <div class="sign-card">
+        <div class="feature-card" id="contact">
 
-                <div class="sign-icon">
-                    🚧
-                </div>
+            <div class="feature-icon">📞</div>
 
-                <h3>
-                    Temporary Signs
-                </h3>
+            <h3>Contact Us</h3>
 
-                <p>
-                    Signs used where temporary
-                    road conditions exist.
-                </p>
+            <p>
+                Contact Inganathi Driving Academy
+                for lessons, support or more information.
+            </p>
 
-            </div>
+            <a href="https://wa.me/27713264047"
+               target="_blank"
+               class="feature-link">
+
+                WhatsApp Us →
+
+            </a>
 
         </div>
 
@@ -938,118 +836,64 @@ footer p{
 </section>
 
 
-<section id="test" class="test-section">
+<!-- TEST -->
 
-    <div class="test-wrapper">
+<section class="test-section" id="test">
 
-        <div class="section-title">
+    <div class="test-container">
+
+        <div class="test-intro">
 
             <h2>K53 Learner's Practice Test</h2>
 
             <p>
-                Questions are loaded automatically
-                from the Inganathi question database.
+                Test your knowledge with questions
+                from the Inganathi K53 question database.
             </p>
 
         </div>
 
 
-        <div id="loading" class="test-box loading">
+        <div id="loading">
 
-            <h3>
-                Loading K53 questions...
-            </h3>
+            <h3>Loading K53 questions...</h3>
 
-            <p>
-                Please wait.
-            </p>
+            <p>Please wait.</p>
 
         </div>
 
 
-        <div id="testArea"
-             class="test-box hidden">
-
-            <div class="test-top">
-
-                <div id="questionCounter"
-                     class="question-counter">
-                    Question 1
-                </div>
-
-                <div id="scoreDisplay"
-                     class="score-display">
-                    Score: 0
-                </div>
-
-            </div>
-
+        <div id="testArea" class="hidden">
 
             <div class="progress">
 
-                <div id="progressBar"
-                     class="progress-bar">
-                </div>
+                <span id="questionNumber">
+                    Question 1
+                </span>
 
-            </div>
+                <span id="scoreDisplay">
+                    Score: 0
+                </span>
 
-
-            <div id="questionNumber"
-                 class="question-number">
-                QUESTION 1
             </div>
 
 
             <div id="questionText"
-                 class="question-text">
-                Loading question...
+                 class="question">
             </div>
 
 
-            <div id="answers"
-                 class="answers">
-            </div>
+            <div id="options"></div>
 
 
-            <div class="test-actions">
+            <div class="test-controls">
 
-                <span>
-                    Select an answer to continue.
-                </span>
-
-                <button id="nextBtn"
-                        class="next-btn"
-                        onclick="nextQuestion()"
-                        disabled>
-                    Next Question
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <div id="resultArea"
-             class="test-box hidden">
-
-            <div class="result-box">
-
-                <h2>
-                    Test Complete
-                </h2>
-
-                <div id="finalScore"
-                     class="final-score">
-                    0%
-                </div>
-
-                <p id="resultMessage"
-                   class="result-message">
-                </p>
-
-                <button class="btn btn-primary"
-                        onclick="restartTest()">
-                    Take Test Again
+                <button
+                    id="nextButton"
+                    class="next-btn"
+                    onclick="nextQuestion()"
+                >
+                    Next Question →
                 </button>
 
             </div>
@@ -1061,83 +905,45 @@ footer p{
 </section>
 
 
-<section class="cta">
+<!-- CONTACT -->
 
-    <div class="section-container">
+<section class="contact">
 
-        <h2>
-            Ready to Start Learning?
-        </h2>
+    <div class="contact-container">
 
-        <p>
-            Study the material, practise your questions
-            and prepare with confidence.
-        </p>
+        <div>
 
-        <a href="#test"
-           class="btn btn-primary">
-            Start Practice Test
-        </a>
-
-    </div>
-
-</section>
-
-
-<section id="contact">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>
-                Contact Inganathi Driving Academy
-            </h2>
+            <h2>Contact Inganathi</h2>
 
             <p>
+                Ready to prepare for your learner's licence?
                 Get in touch with Inganathi Driving Academy.
             </p>
 
         </div>
 
 
-        <div class="contact-grid">
+        <div class="contact-info">
 
-            <div class="contact-card">
+            <div class="contact-box">
 
-                <strong>
-                    📱 WhatsApp
-                </strong>
+                <strong>📍 Location</strong>
 
-                <span>
-                    Chat with us for enquiries
-                </span>
+                Mthatha, Eastern Cape
 
             </div>
 
 
-            <div class="contact-card">
+            <div class="contact-box">
 
-                <strong>
-                    🇿🇦 South Africa
-                </strong>
+                <strong>💬 WhatsApp</strong>
 
-                <span>
-                    K53 learner's licence preparation
-                </span>
+                <a href="https://wa.me/27713264047"
+                   target="_blank">
 
-            </div>
+                    +27 71 326 4047
 
-
-            <div class="contact-card">
-
-                <strong>
-                    🚗 Driving Academy
-                </strong>
-
-                <span>
-                    Learn. Practise. Pass.
-                </span>
+                </a>
 
             </div>
 
@@ -1148,143 +954,166 @@ footer p{
 </section>
 
 
-<a class="whatsapp"
-   href="https://wa.me/27738468238"
-   target="_blank"
-   aria-label="WhatsApp Inganathi Driving Academy">
-    ☎
-</a>
-
+<!-- FOOTER -->
 
 <footer>
 
-    <p>
-        © 2026
-        <strong>Inganathi Driving Academy</strong>.
-        All rights reserved.
-    </p>
+    <div class="footer-grid">
 
-    <p>
-        K53 Learner's Licence Preparation
-    </p>
+        <div>
+
+            <img
+                src="inganathi-logo.jpeg"
+                alt="Inganathi Driving Academy"
+                class="footer-logo"
+            >
+
+        </div>
+
+
+        <div class="footer-item">
+
+            <strong>OUR LOCATION</strong>
+
+            Mthatha, Eastern Cape
+
+        </div>
+
+
+        <div class="footer-item">
+
+            <strong>WHATSAPP</strong>
+
+            <a href="https://wa.me/27713264047">
+
+                +27 71 326 4047
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Inganathi Driving Academy.
+        All Rights Reserved.
+
+    </div>
 
 </footer>
 
 
+<!-- FLOATING WHATSAPP -->
+
+<a
+    href="https://wa.me/27713264047"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="WhatsApp Inganathi Driving Academy"
+>
+    ☎
+</a>
+
+
 <script>
 
-/* ================================
-   GLOBAL VARIABLES
-================================ */
+/* ==========================================
+   K53 QUESTION DATABASE
+========================================== */
 
 let allQuestions = [];
+
 let testQuestions = [];
+
 let currentQuestion = 0;
+
 let score = 0;
-let selectedAnswer = null;
 
-
-/*
-   The database contains 236 questions.
-   Each practice test will randomly select
-   20 questions.
-*/
+let answered = false;
 
 const TEST_LENGTH = 20;
 
 
-/* ================================
-   MOBILE MENU
-================================ */
+/* ==========================================
+   LOAD QUESTIONS
+========================================== */
 
-function toggleMenu(){
+async function loadQuestions(){
 
-    const nav =
-        document.getElementById("mainNav");
+    const loading =
+        document.getElementById("loading");
 
-    nav.classList.toggle("open");
-}
-
-
-function closeMenu(){
-
-    const nav =
-        document.getElementById("mainNav");
-
-    nav.classList.remove("open");
-}
-
-
-/* ================================
-   SHUFFLE
-================================ */
-
-function shuffle(array){
-
-    const copy = [...array];
-
-    for(
-        let i = copy.length - 1;
-        i > 0;
-        i--
-    ){
-
-        const j =
-            Math.floor(
-                Math.random() * (i + 1)
-            );
-
-        [
-            copy[i],
-            copy[j]
-        ] = [
-            copy[j],
-            copy[i]
-        ];
-    }
-
-    return copy;
-}
-
-
-/* ================================
-   LOAD QUESTION DATABASE
-================================ */
-
- async function loadQuestions(){
-
-    const loading = document.getElementById("loading");
-
-    try {
+    try{
 
         loading.innerHTML = `
             <h3>Loading K53 questions...</h3>
             <p>Please wait.</p>
         `;
 
+
         const response = await fetch(
-        "clean_questions.json?x=" + Date.now()
+            "clean_questions.json?v=" + Date.now(),
+            {
+                cache:"no-store"
+            }
         );
 
-        if (!response.ok) {
-            throw new Error("Database HTTP error: " + response.status);
+
+        if(!response.ok){
+
+            throw new Error(
+                "Database HTTP error: " +
+                response.status
+            );
+
         }
 
-        const data = await response.json();
 
-        if (Array.isArray(data)) {
+        const data =
+            await response.json();
+
+
+        if(Array.isArray(data)){
+
             allQuestions = data;
-        } else if (Array.isArray(data.questions)) {
-            allQuestions = data.questions;
-        } else {
-            throw new Error("Invalid question database format.");
+
         }
 
-        if (allQuestions.length === 0) {
-            throw new Error("Question database is empty.");
+        else if(
+            data &&
+            Array.isArray(data.questions)
+        ){
+
+            allQuestions =
+                data.questions;
+
         }
 
-        console.log("K53 questions loaded:", allQuestions.length);
+        else{
+
+            throw new Error(
+                "Invalid question database format."
+            );
+
+        }
+
+
+        if(allQuestions.length === 0){
+
+            throw new Error(
+                "Question database is empty."
+            );
+
+        }
+
+
+        console.log(
+            "K53 questions loaded:",
+            allQuestions.length
+        );
+
 
         loading.classList.add("hidden");
 
@@ -1293,143 +1122,138 @@ function shuffle(array){
             .classList
             .remove("hidden");
 
+
         startTest();
 
-    } catch (error) {
 
-        console.error("K53 database error:", error);
+    }
+
+    catch(error){
+
+        console.error(
+            "K53 database error:",
+            error
+        );
+
 
         loading.innerHTML = `
-            <div style="
-                background:#fff1f2;
-                border:1px solid #fecdd3;
-                color:#9f1239;
-                padding:25px;
-                border-radius:12px;
-                text-align:left;
+
+            <h3 style="color:#d00000;">
+                Questions could not be loaded.
+            </h3>
+
+            <p>
+                The K53 question database
+                could not be loaded.
+            </p>
+
+            <p style="
+                margin-top:15px;
+                font-size:13px;
+                color:#777;
             ">
+                Error: ${error.message}
+            </p>
 
-                <h3>Questions could not be loaded.</h3>
-
-                <p>
-                    The K53 question database could not be reached.
-                </p>
-
-                <p style="margin-top:15px;font-size:13px;">
-                    Error: ${error.message}
-                </p>
-
-            </div>
         `;
+
     }
+
 }
 
-loadQuestions();        question.question_text ||
+
+/* ==========================================
+   GET QUESTION TEXT
+========================================== */
+
+function getQuestionText(question){
+
+    return (
+        question.question ||
+        question.question_text ||
         question.text ||
-        question.Question ||
-        "Question"
+        "Question text unavailable."
     );
+
 }
 
 
-/* ================================
-   GET ANSWERS
-================================ */
+/* ==========================================
+   GET OPTIONS
+========================================== */
 
-function getAnswers(question){
+function getOptions(question){
 
-    /*
-       Your current JSON format is:
-
-       "options": [
-           "Answer A",
-           "Answer B",
-           "Answer C"
-       ],
-
-       "correct": 1
-    */
-
-    if(
-        Array.isArray(question.options)
-    ){
-
-        return question.options.map(
-            function(option,index){
-
-                return {
-
-                    text:String(option),
-
-                    correct:
-                        index ===
-                        Number(question.correct)
-
-                };
-            }
-        );
+    if(Array.isArray(question.options)){
+        return question.options;
     }
 
-
-    /*
-       Compatibility with older
-       question formats.
-    */
-
-    if(
-        Array.isArray(question.answers)
-    ){
-
-        return question.answers.map(
-            function(answer,index){
-
-                if(
-                    typeof answer === "string"
-                ){
-
-                    return {
-
-                        text:answer,
-
-                        correct:
-                            index ===
-                            Number(question.correct)
-
-                    };
-                }
-
-
-                return {
-
-                    text:
-                        answer.text ||
-                        answer.answer ||
-                        answer.option ||
-                        "",
-
-                    correct:
-                        Boolean(
-                            answer.correct ||
-                            answer.isCorrect
-                        )
-
-                };
-            }
-        );
+    if(Array.isArray(question.answers)){
+        return question.answers;
     }
-
 
     return [];
+
 }
 
 
-/* ================================
-   DISPLAY QUESTION
-================================ */
+/* ==========================================
+   GET CORRECT ANSWER
+========================================== */
+
+function getCorrectAnswer(question){
+
+    if(typeof question.correct === "number"){
+        return question.correct;
+    }
+
+    if(typeof question.correctIndex === "number"){
+        return question.correctIndex;
+    }
+
+    if(typeof question.answer === "number"){
+        return question.answer;
+    }
+
+    return -1;
+
+}
+
+
+/* ==========================================
+   START TEST
+========================================== */
+
+function startTest(){
+
+    testQuestions =
+        [...allQuestions]
+        .sort(() => Math.random() - 0.5)
+        .slice(
+            0,
+            Math.min(
+                TEST_LENGTH,
+                allQuestions.length
+            )
+        );
+
+
+    currentQuestion = 0;
+
+    score = 0;
+
+    showQuestion();
+
+}
+
+
+/* ==========================================
+   SHOW QUESTION
+========================================== */
 
 function showQuestion(){
 
-    selectedAnswer = null;
+    answered = false;
 
 
     const question =
@@ -1438,216 +1262,183 @@ function showQuestion(){
 
     if(!question){
 
-        finishTest();
+        showResults();
 
         return;
+
     }
 
 
-    document
-        .getElementById("questionCounter")
-        .textContent =
+    const questionText =
+        document.getElementById(
+            "questionText"
+        );
+
+
+    const optionsContainer =
+        document.getElementById(
+            "options"
+        );
+
+
+    const number =
+        document.getElementById(
+            "questionNumber"
+        );
+
+
+    const scoreDisplay =
+        document.getElementById(
+            "scoreDisplay"
+        );
+
+
+    number.textContent =
         "Question " +
         (currentQuestion + 1) +
         " of " +
         testQuestions.length;
 
 
-    document
-        .getElementById("questionNumber")
-        .textContent =
-        "QUESTION " +
-        (currentQuestion + 1);
+    scoreDisplay.textContent =
+        "Score: " + score;
 
 
-    document
-        .getElementById("questionText")
-        .textContent =
+    questionText.textContent =
         getQuestionText(question);
 
 
-    const answers =
-        getAnswers(question);
+    optionsContainer.innerHTML = "";
 
 
-    const container =
-        document.getElementById("answers");
+    const options =
+        getOptions(question);
 
 
-    container.innerHTML = "";
-
-
-    answers.forEach(
-        function(answer,index){
+    options.forEach(
+        (option,index)=>{
 
             const button =
-                document.createElement("button");
+                document.createElement(
+                    "button"
+                );
 
 
-            button.type = "button";
-
-            button.className = "answer";
+            button.className =
+                "option";
 
 
             button.textContent =
-                String.fromCharCode(65 + index) +
-                ". " +
-                answer.text;
+                String.fromCharCode(65 + index)
+                + ". "
+                + option;
 
 
-            button.onclick =
-                function(){
-
-                    selectAnswer(
-                        index,
-                        answer,
-                        answers
-                    );
-                };
+            button.onclick = () =>
+                selectAnswer(
+                    index,
+                    button
+                );
 
 
-            container.appendChild(button);
+            optionsContainer.appendChild(
+                button
+            );
 
         }
     );
 
-
-    document
-        .getElementById("nextBtn")
-        .disabled = true;
-
-
-    document
-        .getElementById("nextBtn")
-        .textContent =
-        currentQuestion ===
-        testQuestions.length - 1
-            ? "Finish Test"
-            : "Next Question";
-
-
-    document
-        .getElementById("scoreDisplay")
-        .textContent =
-        "Score: " + score;
-
-
-    const progress =
-        (
-            currentQuestion /
-            testQuestions.length
-        ) * 100;
-
-
-    document
-        .getElementById("progressBar")
-        .style
-        .width =
-        progress + "%";
 }
 
 
-/* ================================
+/* ==========================================
    SELECT ANSWER
-================================ */
+========================================== */
 
 function selectAnswer(
-    index,
-    answer,
-    answers
+    selectedIndex,
+    selectedButton
 ){
 
-    if(
-        selectedAnswer !== null
-    ){
-
-        return;
-    }
+    if(answered) return;
 
 
-    selectedAnswer = index;
+    answered = true;
+
+
+    const question =
+        testQuestions[currentQuestion];
+
+
+    const correctIndex =
+        getCorrectAnswer(question);
 
 
     const buttons =
         document.querySelectorAll(
-            ".answer"
+            ".option"
         );
 
 
     buttons.forEach(
-        function(button){
+        (button,index)=>{
 
             button.disabled = true;
 
-        }
-    );
 
+            if(index === correctIndex){
 
-    buttons[index]
-        .classList
-        .add("selected");
+                button.classList.add(
+                    "correct"
+                );
 
-
-    /*
-       Show the correct answer.
-    */
-
-    answers.forEach(
-        function(item,i){
-
-            if(item.correct){
-
-                buttons[i]
-                    .classList
-                    .add("correct");
             }
 
         }
     );
 
 
-    /*
-       Show incorrect selection.
-    */
-
-    if(!answer.correct){
-
-        buttons[index]
-            .classList
-            .add("wrong");
-    }
-
-
-    if(answer.correct){
+    if(selectedIndex === correctIndex){
 
         score++;
 
+        selectedButton.classList.add(
+            "correct"
+        );
+
+    }
+
+    else{
+
+        selectedButton.classList.add(
+            "incorrect"
+        );
+
     }
 
 
-    document
-        .getElementById("scoreDisplay")
-        .textContent =
+    document.getElementById(
+        "scoreDisplay"
+    ).textContent =
         "Score: " + score;
 
-
-    document
-        .getElementById("nextBtn")
-        .disabled = false;
 }
 
 
-/* ================================
+/* ==========================================
    NEXT QUESTION
-================================ */
+========================================== */
 
 function nextQuestion(){
 
-    if(
-        selectedAnswer === null
-    ){
+    if(!answered){
+
+        alert(
+            "Please select an answer first."
+        );
 
         return;
+
     }
 
 
@@ -1659,179 +1450,86 @@ function nextQuestion(){
         testQuestions.length
     ){
 
-        finishTest();
-
-        return;
-    }
-
-
-    showQuestion();
-}
-
-
-/* ================================
-   FINISH TEST
-================================ */
-
-function finishTest(){
-
-    document
-        .getElementById("testArea")
-        .classList
-        .add("hidden");
-
-
-    document
-        .getElementById("resultArea")
-        .classList
-        .remove("hidden");
-
-
-    const percentage =
-        Math.round(
-            (
-                score /
-                testQuestions.length
-            ) * 100
-        );
-
-
-    document
-        .getElementById("finalScore")
-        .textContent =
-        percentage + "%";
-
-
-    let message;
-
-
-    if(
-        percentage >= 80
-    ){
-
-        message =
-            "Excellent work! You are showing strong K53 knowledge.";
-
-    }
-
-    else if(
-        percentage >= 60
-    ){
-
-        message =
-            "Good effort. Keep practising to improve your score.";
+        showResults();
 
     }
 
     else{
 
-        message =
-            "Keep studying the K53 material and try the test again.";
+        showQuestion();
 
     }
 
-
-    document
-        .getElementById("resultMessage")
-        .textContent =
-        "You scored " +
-        score +
-        " out of " +
-        testQuestions.length +
-        ". " +
-        message;
-
-
-    /*
-       Save basic progress locally.
-    */
-
-    saveProgress(
-        percentage
-    );
 }
 
 
-/* ================================
-   SAVE PROGRESS
-================================ */
+/* ==========================================
+   RESULTS
+========================================== */
 
-function saveProgress(percentage){
+function showResults(){
 
-    try{
-
-        const old =
-            JSON.parse(
-                localStorage.getItem(
-                    "inganathiK53Progress"
-                )
-            ) || {
-
-                tests:0,
-                best:0
-
-            };
-
-
-        old.tests =
-            Number(old.tests || 0) + 1;
-
-
-        old.best =
-            Math.max(
-                Number(old.best || 0),
-                percentage
-            );
-
-
-        localStorage.setItem(
-            "inganathiK53Progress",
-            JSON.stringify(old)
+    const percentage =
+        Math.round(
+            (score /
+            testQuestions.length) *
+            100
         );
 
-    }
 
-    catch(error){
+    document.getElementById(
+        "testArea"
+    ).innerHTML = `
 
-        console.log(
-            "Progress could not be saved."
-        );
-    }
+        <div class="result">
+
+            <h2>Test Complete!</h2>
+
+            <p style="
+                font-size:22px;
+                margin:20px 0;
+            ">
+
+                You scored
+                <strong>
+                    ${score}
+                </strong>
+                out of
+                <strong>
+                    ${testQuestions.length}
+                </strong>
+
+            </p>
+
+            <p style="
+                font-size:20px;
+                margin-bottom:25px;
+            ">
+
+                ${percentage}%
+
+            </p>
+
+
+            <button
+                class="btn btn-red"
+                onclick="startTest()"
+            >
+
+                Take Another Test
+
+            </button>
+
+        </div>
+
+    `;
+
 }
 
 
-/* ================================
-   RESTART
-================================ */
-
-function restartTest(){
-
-    document
-        .getElementById("resultArea")
-        .classList
-        .add("hidden");
-
-
-    document
-        .getElementById("testArea")
-        .classList
-        .remove("hidden");
-
-
-    startTest();
-
-
-    document
-        .getElementById("test")
-        .scrollIntoView({
-            behavior:"smooth"
-        });
-}
-
-
-/* ================================
-   START APPLICATION
-================================ */
+/* ==========================================
+   START DATABASE LOADING
+========================================== */
 
 loadQuestions();
 
