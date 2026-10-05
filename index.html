@@ -1097,6 +1097,24 @@ function getQuestionText(q) {
 
 function getAnswers(q) {
 
+    // Your question database uses:
+    // "options": ["Answer 1", "Answer 2", ...]
+    // "correct": 0
+
+    if (Array.isArray(q.options)) {
+
+        return q.options.map((option, index) => {
+
+            return {
+                text: option,
+                correct: index === q.correct
+            };
+
+        });
+    }
+
+    // Support older question format
+
     if (Array.isArray(q.answers)) {
 
         return q.answers.map((a, i) => {
@@ -1115,15 +1133,19 @@ function getAnswers(q) {
                     a.answer ||
                     a.option ||
                     "",
+
                 correct:
                     Boolean(
                         a.correct ||
                         a.isCorrect
                     )
             };
+
         });
     }
 
+    return [];
+}
     const options = [];
 
     ["a","b","c","d","e"].forEach(letter => {
