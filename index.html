@@ -1309,142 +1309,61 @@ function shuffle(array){
     }
     catch(error){
 
-        console.error(
-            "K53 database loading error:",
-            error
-        );
+    console.error(
+        "K53 database loading error:",
+        error
+    );
 
-        document
-            .getElementById("loading")
-            .innerHTML = `
+    document
+        .getElementById("loading")
+        .innerHTML = `
 
-                <div style="
-                    background:#fff1f2;
-                    border:1px solid #fecdd3;
-                    color:#9f1239;
-                    padding:25px;
-                    border-radius:12px;
+            <div style="
+                background:#fff1f2;
+                border:1px solid #fecdd3;
+                color:#9f1239;
+                padding:25px;
+                border-radius:12px;
+                text-align:left;
+            ">
+
+                <h3>
+                    Questions could not be loaded.
+                </h3>
+
+                <p>
+                    The K53 question database could not be loaded.
+                </p>
+
+                <p style="
+                    margin-top:15px;
+                    padding:12px;
+                    background:#ffffff;
+                    border-radius:8px;
+                    font-family:monospace;
+                    font-size:13px;
+                    word-break:break-word;
                 ">
+                    Error: ${error.message}
+                </p>
 
-                    <h3>
-                        Questions could not be loaded.
-                    </h3>
+                <p style="
+                    margin-top:15px;
+                    font-size:13px;
+                ">
+                    Database:
+                    raw.githubusercontent.com/Luxolog/inganathi-k53/main/clean_questions.json
+                </p>
 
-                    <p>
-                        The K53 question database could not
-                        be reached.
-                    </p>
+            </div>
 
-                    <p style="
-                        margin-top:10px;
-                        font-size:13px;
-                    ">
-                        Please refresh the page and try again.
-                    </p>
-
-                </div>
-
-            `;
-
-    }
+        `;
 
 }
 
 loadQuestions();
 
 
-        const data =
-            await response.json();
-
-
-        /*
-           Your JSON uses:
-
-           {
-               "questions": [...]
-           }
-
-           This also supports a plain array.
-        */
-
-        allQuestions =
-            Array.isArray(data)
-                ? data
-                : data.questions;
-
-
-        if(
-            !Array.isArray(allQuestions) ||
-            allQuestions.length === 0
-        ){
-
-            throw new Error(
-                "The question database is empty."
-            );
-        }
-
-
-        console.log(
-            "K53 questions loaded:",
-            allQuestions.length
-        );
-
-
-        document
-            .getElementById("loading")
-            .classList
-            .add("hidden");
-
-
-        document
-            .getElementById("testArea")
-            .classList
-            .remove("hidden");
-
-
-        startTest();
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-
-        document
-            .getElementById("loading")
-            .innerHTML = `
-
-                <div style="
-                    background:#fff1f2;
-                    border:1px solid #fecdd3;
-                    color:#9f1239;
-                    padding:25px;
-                    border-radius:12px;
-                ">
-
-                    <h3>
-                        Questions could not be loaded.
-                    </h3>
-
-                    <p>
-                        Please make sure that
-                        <strong>
-                            clean_questions.json
-                        </strong>
-                        is in the same GitHub repository
-                        as this
-                        <strong>
-                            index.html
-                        </strong>
-                        file.
-                    </p>
-
-                </div>
-
-            `;
-    }
-}
 
 
 /* ================================
