@@ -1076,8 +1076,7 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q076-1.png",
-        "assets/road-signs/q076-2.png"
+        "assets/road-signs/q076-1.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -1239,7 +1238,8 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q085-1.png"
+        "assets/road-signs/q085-1.png",
+        "assets/road-signs/q085-2.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -1491,7 +1491,8 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q099-1.png"
+        "assets/road-signs/q099-1.png",
+        "assets/road-signs/q099-2.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -1581,8 +1582,7 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q104-1.png",
-        "assets/road-signs/q104-2.png"
+        "assets/road-signs/q104-1.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -1654,8 +1654,7 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q108-1.png",
-        "assets/road-signs/q108-2.png"
+        "assets/road-signs/q108-1.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -1763,7 +1762,8 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q114-1.png"
+        "assets/road-signs/q114-1.png",
+        "assets/road-signs/q114-2.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -1943,7 +1943,8 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q124-1.png"
+        "assets/road-signs/q124-1.png",
+        "assets/road-signs/q124-2.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -2069,8 +2070,7 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q131-1.png",
-        "assets/road-signs/q131-2.png"
+        "assets/road-signs/q131-1.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -2088,8 +2088,7 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q132-1.png",
-        "assets/road-signs/q132-2.png"
+        "assets/road-signs/q132-1.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -2215,7 +2214,8 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q139-1.png"
+        "assets/road-signs/q139-1.png",
+        "assets/road-signs/q139-2.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -2791,8 +2791,7 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q171-1.png",
-        "assets/road-signs/q171-2.png"
+        "assets/road-signs/q171-1.png"
       ],
       "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
     },
@@ -3752,7 +3751,15 @@
       "questionsWithSourceArtwork": 106,
       "range": "73-178",
       "assetFolder": "assets/road-signs/",
-      "note": "Question wording, options and correct indexes were preserved."
+      "note": "Question wording, options and correct indexes were preserved.",
+      "multiImageQuestions": [
+        85,
+        99,
+        114,
+        124,
+        139,
+        178
+      ]
     }
   }
 }
