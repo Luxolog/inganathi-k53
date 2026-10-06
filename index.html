@@ -52,14 +52,15 @@ button {
 ========================================================= */
 
 header {
-    background: #071426;
+    background: #02050e;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
 
     box-shadow:
-        0 3px 15px rgba(0,0,0,0.15);
+        0 3px 15px rgba(0,0,0,0.18);
+    border-bottom: 3px solid #d50203;
 }
 
 .nav-container {
@@ -75,11 +76,47 @@ header {
     gap: 20px;
 }
 
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 108px;
+    height: 58px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 4px 7px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    overflow: hidden;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.hero-card-logo {
+    width: min(260px, 85%);
+    margin: 0 auto 18px;
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.hero-card-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+}
+
 .logo {
     font-size: 21px;
     font-weight: 900;
     letter-spacing: 1px;
-    color: #d9ad45;
+    color: #d50203;
 }
 
 .logo span {
@@ -105,7 +142,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #d9ad45;
+    color: #d50203;
 }
 
 .menu-button {
@@ -130,9 +167,9 @@ nav a:hover {
     background:
         linear-gradient(
             135deg,
-            #071426 0%,
-            #102746 55%,
-            #1b3555 100%
+            #02050e 0%,
+            #210708 55%,
+            #3a0a0b 100%
         );
 
     color: white;
@@ -163,7 +200,7 @@ nav a:hover {
 }
 
 .hero h1 span {
-    color: #d9ad45;
+    color: #d50203;
 }
 
 .hero p {
@@ -197,16 +234,16 @@ nav a:hover {
 }
 
 .btn-primary {
-    background: #d9ad45;
-    color: #071426;
+    background: #d50203;
+    color: #02050e;
 }
 
 .btn-primary:hover {
-    background: #e8bf62;
+    background: #ef3b3b;
 }
 
 .btn-outline {
-    border: 1px solid #d9ad45;
+    border: 1px solid #d50203;
 
     color: white;
 
@@ -214,8 +251,8 @@ nav a:hover {
 }
 
 .btn-outline:hover {
-    background: #d9ad45;
-    color: #071426;
+    background: #d50203;
+    color: #02050e;
 }
 
 .hero-card {
@@ -239,7 +276,7 @@ nav a:hover {
 }
 
 .hero-card h3 {
-    color: #d9ad45;
+    color: #d50203;
 
     font-size: 25px;
 
@@ -284,7 +321,7 @@ nav a:hover {
 .stat strong {
     display: block;
 
-    color: #071426;
+    color: #02050e;
 
     font-size: 27px;
 }
@@ -318,7 +355,7 @@ section {
 .section-title h2 {
     font-size: 36px;
 
-    color: #071426;
+    color: #02050e;
 
     margin-bottom: 10px;
 }
@@ -368,7 +405,7 @@ section {
 .card h3 {
     margin-bottom: 10px;
 
-    color: #071426;
+    color: #02050e;
 }
 
 .card p {
@@ -413,9 +450,9 @@ section {
 
     border-radius: 50%;
 
-    background: #071426;
+    background: #02050e;
 
-    color: #d9ad45;
+    color: #d50203;
 
     display: flex;
 
@@ -458,7 +495,7 @@ section {
 .sign-filter {
     border: 1px solid #d7dde6;
     background: white;
-    color: #071426;
+    color: #02050e;
     border-radius: 999px;
     padding: 9px 15px;
     font-size: 13px;
@@ -468,9 +505,9 @@ section {
 
 .sign-filter.active,
 .sign-filter:hover {
-    background: #071426;
-    color: #d9ad45;
-    border-color: #071426;
+    background: #02050e;
+    color: #d50203;
+    border-color: #02050e;
 }
 
 .library-search {
@@ -487,7 +524,7 @@ section {
 }
 
 .library-search:focus {
-    border-color: #d9ad45;
+    border-color: #d50203;
     box-shadow: 0 0 0 3px rgba(217,173,69,0.15);
 }
 
@@ -521,7 +558,7 @@ section {
 }
 
 .library-card h4 {
-    color: #071426;
+    color: #02050e;
     font-size: 15px;
     margin-bottom: 5px;
 }
@@ -532,7 +569,7 @@ section {
     font-weight: 900;
     letter-spacing: .6px;
     text-transform: uppercase;
-    color: #8b6a1d;
+    color: #a00000;
     margin-bottom: 7px;
 }
 
@@ -621,7 +658,7 @@ section {
 .score-display {
     font-weight: 800;
 
-    color: #071426;
+    color: #02050e;
 }
 
 .progress {
@@ -641,14 +678,14 @@ section {
 
     width: 0%;
 
-    background: #d9ad45;
+    background: #d50203;
 
     transition:
         width 0.3s;
 }
 
 .question-number {
-    color: #d9ad45;
+    color: #d50203;
 
     font-weight: 900;
 
@@ -668,7 +705,7 @@ section {
 
     margin-bottom: 20px;
 
-    color: #071426;
+    color: #02050e;
 }
 
 
@@ -754,13 +791,13 @@ section {
 }
 
 .answer:hover {
-    border-color: #d9ad45;
+    border-color: #d50203;
 
     background: #fffaf0;
 }
 
 .answer.selected {
-    border-color: #d9ad45;
+    border-color: #d50203;
 
     background: #fff5d9;
 }
@@ -795,7 +832,7 @@ section {
 .diagram-notice strong {
     display: block;
     margin-bottom: 5px;
-    color: #071426;
+    color: #02050e;
 }
 
 .test-actions {
@@ -807,7 +844,7 @@ section {
 }
 
 .next-btn {
-    background: #071426;
+    background: #02050e;
 
     color: white;
 
@@ -849,7 +886,7 @@ section {
         4px solid #e5e9ef;
 
     border-top-color:
-        #d9ad45;
+        #d50203;
 
     border-radius: 50%;
 
@@ -885,13 +922,13 @@ section {
 
     font-weight: 900;
 
-    color: #d9ad45;
+    color: #d50203;
 
     margin: 15px 0;
 }
 
 .result-box h2 {
-    color: #071426;
+    color: #02050e;
 }
 
 .result-box p {
@@ -906,7 +943,7 @@ section {
 ========================================================= */
 
 .cta {
-    background: #071426;
+    background: #02050e;
 
     color: white;
 
@@ -957,7 +994,7 @@ section {
 
     margin-bottom: 8px;
 
-    color: #071426;
+    color: #02050e;
 }
 
 .contact-card span {
@@ -1004,7 +1041,7 @@ section {
 ========================================================= */
 
 footer {
-    background: #040c17;
+    background: #010206;
 
     color: #9aa8ba;
 
@@ -1016,7 +1053,7 @@ footer {
 }
 
 footer strong {
-    color: #d9ad45;
+    color: #d50203;
 }
 
 
@@ -1064,7 +1101,9 @@ footer strong {
         left: 0;
         right: 0;
 
-        background: #071426;
+        background: #02050e;
+
+        border-top: 3px solid #d50203;
 
         flex-direction: column;
 
@@ -1166,13 +1205,11 @@ footer strong {
 
 <div class="nav-container">
 
-<a href="#home" class="logo">
+<a href="#home" class="brand-logo" aria-label="Inganathi Driving Academy">
 
-    INGANATHI
-
-    <span>
-        DRIVING ACADEMY
-    </span>
+    <img
+        src="inganathi-logo.jpeg"
+        alt="Inganathi Driving Academy logo">
 
 </a>
 
@@ -1281,8 +1318,10 @@ footer strong {
 
 <div class="hero-card">
 
-<div class="hero-card-icon">
-    🚗
+<div class="hero-card-logo">
+    <img
+        src="inganathi-logo.jpeg"
+        alt="Inganathi Driving Academy">
 </div>
 
 
@@ -2512,7 +2551,7 @@ function showQuestionDiagram(q) {
         title.style.width = "100%";
         title.style.textAlign = "center";
         title.style.fontWeight = "800";
-        title.style.color = "#071426";
+        title.style.color = "#02050e";
         title.style.marginBottom = "4px";
         title.textContent = "Road sign / road marking diagram";
         container.appendChild(title);
@@ -3093,20 +3132,20 @@ function renderSignVisual(visual, category, name) {
 
     const stroke =
         warning || temporary ? "#111827" :
-        "#d01f2f";
+        "#d50203";
 
     let symbol = "";
 
     switch (visual) {
         case "stop":
             return `<svg viewBox="0 0 120 120" role="img" aria-label="${escapeHtml(name)}">
-                <polygon points="38,6 82,6 114,38 114,82 82,114 38,114 6,82 6,38" fill="#d01f2f"/>
-                <polygon points="41,14 79,14 106,41 106,79 79,106 41,106 14,79 14,41" fill="#d01f2f" stroke="#fff" stroke-width="3"/>
+                <polygon points="38,6 82,6 114,38 114,82 82,114 38,114 6,82 6,38" fill="#d50203"/>
+                <polygon points="41,14 79,14 106,41 106,79 79,106 41,106 14,79 14,41" fill="#d50203" stroke="#fff" stroke-width="3"/>
                 <text x="60" y="67" text-anchor="middle" font-family="Arial" font-size="18" font-weight="900" fill="#fff">STOP</text>
             </svg>`;
         case "yield":
             return `<svg viewBox="0 0 120 120" role="img" aria-label="${escapeHtml(name)}">
-                <polygon points="60,8 112,108 8,108" fill="#fff" stroke="#d01f2f" stroke-width="9"/>
+                <polygon points="60,8 112,108 8,108" fill="#fff" stroke="#d50203" stroke-width="9"/>
             </svg>`;
         case "no-entry":
             symbol=`<line x1="25" y1="60" x2="95" y2="60" stroke="#fff" stroke-width="13" stroke-linecap="round"/>`; break;
@@ -3115,13 +3154,13 @@ function renderSignVisual(visual, category, name) {
         case "min-speed":
             symbol=`<text x="60" y="68" text-anchor="middle" font-family="Arial" font-size="28" font-weight="900" fill="#111827">80</text>`; break;
         case "no-parking":
-            symbol=`<text x="60" y="70" text-anchor="middle" font-family="Arial" font-size="40" font-weight="900" fill="#111827">P</text><line x1="25" y1="95" x2="95" y2="25" stroke="#d01f2f" stroke-width="8"/>`; break;
+            symbol=`<text x="60" y="70" text-anchor="middle" font-family="Arial" font-size="40" font-weight="900" fill="#111827">P</text><line x1="25" y1="95" x2="95" y2="25" stroke="#d50203" stroke-width="8"/>`; break;
         case "no-stopping":
-            symbol=`<line x1="28" y1="28" x2="92" y2="92" stroke="#d01f2f" stroke-width="8"/><line x1="92" y1="28" x2="28" y2="92" stroke="#d01f2f" stroke-width="8"/>`; break;
+            symbol=`<line x1="28" y1="28" x2="92" y2="92" stroke="#d50203" stroke-width="8"/><line x1="92" y1="28" x2="28" y2="92" stroke="#d50203" stroke-width="8"/>`; break;
         case "no-left":
-            symbol=`<path d="M78 82 V55 H42" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M45 38 L25 55 L45 72" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="92" x2="92" y2="28" stroke="#d01f2f" stroke-width="8"/>`; break;
+            symbol=`<path d="M78 82 V55 H42" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M45 38 L25 55 L45 72" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="92" x2="92" y2="28" stroke="#d50203" stroke-width="8"/>`; break;
         case "no-right":
-            symbol=`<path d="M42 82 V55 H78" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M75 38 L95 55 L75 72" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="92" x2="92" y2="28" stroke="#d01f2f" stroke-width="8"/>`; break;
+            symbol=`<path d="M42 82 V55 H78" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M75 38 L95 55 L75 72" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="92" x2="92" y2="28" stroke="#d50203" stroke-width="8"/>`; break;
         case "left-only":
         case "left-turn":
             symbol=`<path d="M72 88 V58 H38" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M41 40 L22 58 L41 76" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>`; break;
@@ -3135,7 +3174,7 @@ function renderSignVisual(visual, category, name) {
         case "one-way":
             symbol=`<path d="M30 60 H88 M70 42 L90 60 L70 78" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>`; break;
         case "no-overtaking":
-            symbol=`<circle cx="46" cy="60" r="16" fill="#111827"/><circle cx="76" cy="60" r="16" fill="#d01f2f"/><line x1="22" y1="94" x2="98" y2="26" stroke="#d01f2f" stroke-width="7"/>`; break;
+            symbol=`<circle cx="46" cy="60" r="16" fill="#111827"/><circle cx="76" cy="60" r="16" fill="#d50203"/><line x1="22" y1="94" x2="98" y2="26" stroke="#d50203" stroke-width="7"/>`; break;
         case "pedestrian-only":
             symbol=`<circle cx="60" cy="35" r="8" fill="#111827"/><path d="M60 45 L60 72 M60 52 L42 64 M60 52 L78 64 M60 72 L45 91 M60 72 L75 91" stroke="#111827" stroke-width="7" stroke-linecap="round"/>`; break;
         case "motorcycle-only":
