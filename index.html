@@ -2291,6 +2291,12 @@ let score = 0;
 
 let selectedAnswer = null;
 
+let candidateDetails = null;
+let resultSubmitted = false;
+const PASS_PERCENTAGE = 80;
+const INSTRUCTOR_EMAIL = "info@uvanofinserv.co.za";
+const RESULT_EMAIL_ENDPOINT = "https://formsubmit.co/ajax/" + INSTRUCTOR_EMAIL;
+
 
 /*
    IMPORTANT:
@@ -2529,6 +2535,14 @@ async function loadQuestions() {
 ========================================================= */
 
 function startTest() {
+
+    if (!candidateDetails) {
+        document.getElementById("candidateArea").classList.remove("hidden");
+        document.getElementById("testArea").classList.add("hidden");
+        return;
+    }
+
+    resultSubmitted = false;
 
     /*
        Use all available questions.
@@ -3139,6 +3153,12 @@ function selectAnswer(
         .getElementById("nextBtn")
         .disabled = false;
 
+    if (currentQuestion === testQuestions.length - 1) {
+        setTimeout(function() {
+            finishTest();
+        }, 350);
+    }
+
 }
 
 
@@ -3184,89 +3204,45 @@ function nextQuestion() {
    FINISH TEST
 ========================================================= */
 
-function finishTest() {
+async function finishTest() {
 
+    if (resultSubmitted || !candidateDetails || !testQuestions.length) return;
 
-    document
-        .getElementById("testArea")
-        .classList
-        .add("hidden");
+    resultSubmitted = true;
 
+    document.getElementById("testArea").classList.add("hidden");
+    document.getElementById("resultArea").classList.remove("hidden");
 
-    document
-        .getElementById("resultArea")
-        .classList
-        .remove("hidden");
+    const percentage = Math.round((score / testQuestions.length) * 100);
+    const passed = percentage >= PASS_PERCENTAGE;
 
+    document.getElementById("finalScore").textContent = percentage + "%";
 
-    const percentage =
-        testQuestions.length > 0
+    const resultStatus = document.getElementById("resultStatus");
+    resultStatus.textContent = passed ? "PASS" : "FAIL";
+    resultStatus.className = "result-status " + (passed ? "pass" : "fail");
 
-            ? Math.round(
-                (
-                    score /
-                    testQuestions.length
-                ) * 100
-            )
+    document.getElementById("resultCandidate").textContent =
+        candidateDetails.name + " " + candidateDetails.surname;
 
-            : 0;
+    document.getElementById("resultMessage").textContent =
+        "You scored " + score + " out of " + testQuestions.length +
+        " (" + percentage + "%). " +
+        (passed
+            ? "You have achieved the 80% pass mark."
+            : "You did not reach the 80% pass mark. Please study the manual and try again.");
 
+    const emailStatus = document.getElementById("resultEmailStatus");
+    emailStatus.className = "result-email-status";
+    emailStatus.textContent = "Sending your result to the instructor...";
 
-    document
-        .getElementById("finalScore")
-        .textContent =
-        percentage + "%";
+    await sendTestResultEmail(percentage, passed);
 
-
-    let message;
-
-
-    if (
-        percentage >= 80
-    ) {
-
-        message =
-            "Excellent work! You are showing strong K53 knowledge.";
-
-    }
-
-    else if (
-        percentage >= 60
-    ) {
-
-        message =
-            "Good effort. Keep practising to improve your score.";
-
-    }
-
-    else {
-
-        message =
-            "Keep studying the K53 material and try the test again.";
-
-    }
-
-
-    document
-        .getElementById("resultMessage")
-        .textContent =
-
-        "You scored " +
-        score +
-        " out of " +
-        testQuestions.length +
-        ". " +
-        message;
-
-    document
-        .getElementById("test")
-        .scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
+    document.getElementById("test").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 }
-
 
 
 /* =========================================================
@@ -3275,28 +3251,122 @@ function finishTest() {
 
 function restartTest() {
 
+    candidateDetails = null;
+    resultSubmitted = false;
 
-    document
-        .getElementById("resultArea")
-        .classList
-        .add("hidden");
+    document.getElementById("resultArea").classList.add("hidden");
+    document.getElementById("testArea").classList.add("hidden");
 
+    const form = document.getElementById("candidateForm");
+    if (form) form.reset();
 
-    document
-        .getElementById("testArea")
-        .classList
-        .remove("hidden");
+    document.getElementById("candidateArea").classList.remove("hidden");
 
-
-    startTest();
-
+    document.getElementById("test").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 }
 
+
+/* =========================================================
+   TEST CANDIDATE / EMAIL RESULT
+========================================================= */
+
+function setupCandidateForm() {
+
+    const form = document.getElementById("candidateForm");
+    if (!form) return;
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("candidateName").value.trim();
+        const surname = document.getElementById("candidateSurname").value.trim();
+        const cellphone = document.getElementById("candidateCellphone").value.trim();
+        const idNumber = document.getElementById("candidateIdNumber").value.trim();
+
+        if (!name || !surname || !cellphone || !idNumber) {
+            alert("Please complete your name, surname, cellphone and ID number before starting the test.");
+            return;
+        }
+
+        candidateDetails = { name, surname, cellphone, idNumber };
+
+        document.getElementById("candidateArea").classList.add("hidden");
+        document.getElementById("resultArea").classList.add("hidden");
+        document.getElementById("testArea").classList.remove("hidden");
+
+        startTest();
+
+        document.getElementById("testArea").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+}
+
+
+async function sendTestResultEmail(percentage, passed) {
+
+    const emailStatus = document.getElementById("resultEmailStatus");
+
+    const submittedAt = new Date().toLocaleString("en-ZA", {
+        dateStyle: "full",
+        timeStyle: "medium"
+    });
+
+    const payload = {
+        _subject: "Inganathi K53 Test Result - " +
+            candidateDetails.name + " " + candidateDetails.surname,
+        _template: "table",
+        _captcha: "true",
+        _honey: "",
+        _url: window.location.href,
+        name: candidateDetails.name,
+        surname: candidateDetails.surname,
+        cellphone: candidateDetails.cellphone,
+        id_number: candidateDetails.idNumber,
+        result: passed ? "PASS" : "FAIL",
+        score: score + " / " + testQuestions.length,
+        percentage: percentage + "%",
+        pass_mark: PASS_PERCENTAGE + "%",
+        submitted_at: submittedAt,
+        test_type: "Inganathi Driving Academy K53 Learner's Test"
+    };
+
+    try {
+        const response = await fetch(RESULT_EMAIL_ENDPOINT, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        const data = await response.json().catch(function() { return {}; });
+
+        if (!response.ok || data.success === false) {
+            throw new Error(data.message || "The result email could not be submitted.");
+        }
+
+        emailStatus.classList.add("success");
+        emailStatus.textContent = "✓ Result sent to the instructor.";
+
+    } catch (error) {
+        console.error("Test result email error:", error);
+        emailStatus.classList.add("error");
+        emailStatus.textContent =
+            "⚠ Your result is displayed above, but the email could not be confirmed. Please contact the instructor.";
+    }
+}
 
 
 /* =========================================================
    ROAD SIGN LIBRARY
 ========================================================= */
+
 
 let roadSignLibrary = [];
 let activeSignCategory = "All";
@@ -3468,6 +3538,7 @@ async function loadRoadSignLibrary() {
 ========================================================= */
 
 loadRoadSignLibrary();
+setupCandidateForm();
 loadQuestions();
 
 
