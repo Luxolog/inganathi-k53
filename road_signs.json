@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "title": "Inganathi South African Road Sign & Road Marking Study Library",
+  "note": "Educational study reference. Terminology and categories were cross-checked against South African Department of Transport SARTSM material and the RTMC Road Traffic Signs chart. This library is not presented as an official government test specification.",
+  "categories": [
+    "Regulatory",
+    "Warning",
+    "Information & Guidance",
+    "Temporary",
+    "Road Markings"
+  ],
+  "signs": [
+    {
+      "category": "Regulatory",
+      "name": "Stop",
+      "meaning": "Come to a complete stop before proceeding when required.",
+      "visual": "stop"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Yield",
+      "meaning": "Give way to traffic that has priority before proceeding.",
+      "visual": "yield"
+    },
+    {
+      "category": "Regulatory",
+      "name": "No entry",
+      "meaning": "Do not enter the roadway from this direction.",
+      "visual": "no-entry"
+    },
+    {
+      "category": "Regulatory",
+      "name": "One-way roadway",
+      "meaning": "Traffic is permitted to travel in the indicated one-way direction.",
+      "visual": "one-way"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Keep right",
+      "meaning": "Keep to the indicated side of the roadway.",
+      "visual": "keep-right"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Proceed left only",
+      "meaning": "Proceed in the indicated left direction.",
+      "visual": "left-only"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Proceed right only",
+      "meaning": "Proceed in the indicated right direction.",
+      "visual": "right-only"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Proceed straight only",
+      "meaning": "Continue straight ahead as indicated.",
+      "visual": "straight-only"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Turn left",
+      "meaning": "Turn left as indicated by the command sign.",
+      "visual": "left-turn"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Turn right",
+      "meaning": "Turn right as indicated by the command sign.",
+      "visual": "right-turn"
+    },
+    {
+      "category": "Regulatory",
+      "name": "No left turn",
+      "meaning": "Turning left is prohibited at the sign.",
+      "visual": "no-left"
+    },
+    {
+      "category": "Regulatory",
+      "name": "No right turn",
+      "meaning": "Turning right is prohibited at the sign.",
+      "visual": "no-right"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Speed limit",
+      "meaning": "Do not exceed the speed shown on the sign.",
+      "visual": "speed-limit"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Minimum speed",
+      "meaning": "Do not drive below the minimum speed shown when the sign applies.",
+      "visual": "min-speed"
+    },
+    {
+      "category": "Regulatory",
+      "name": "No overtaking",
+      "meaning": "Overtaking is prohibited where the sign applies.",
+      "visual": "no-overtaking"
+    },
+    {
+      "category": "Regulatory",
+      "name": "No parking",
+      "meaning": "Parking is prohibited where the sign applies.",
+      "visual": "no-parking"
+    },
+    {
+      "category": "Regulatory",
+      "name": "No stopping",
+      "meaning": "Stopping is prohibited where the sign applies.",
+      "visual": "no-stopping"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Pedestrians only",
+      "meaning": "The indicated part of the road is reserved for pedestrians.",
+      "visual": "pedestrian-only"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Motorcycles only",
+      "meaning": "The indicated part of the road is reserved for motorcycles.",
+      "visual": "motorcycle-only"
+    },
+    {
+      "category": "Regulatory",
+      "name": "Motor cars only",
+      "meaning": "The indicated part of the road is reserved for motor cars.",
+      "visual": "motorcars-only"
+    },
+    {
+      "category": "Warning",
+      "name": "Intersection ahead",
+      "meaning": "Warns of an intersection or junction ahead.",
+      "visual": "warning-junction"
+    },
+    {
+      "category": "Warning",
+      "name": "Bend / curve ahead",
+      "meaning": "Warns that the road alignment changes ahead; reduce speed as appropriate.",
+      "visual": "warning-curve"
+    },
+    {
+      "category": "Warning",
+      "name": "Railway crossing ahead",
+      "meaning": "Warns of a railway level crossing ahead.",
+      "visual": "warning-rail"
+    },
+    {
+      "category": "Warning",
+      "name": "Pedestrians ahead",
+      "meaning": "Warns that pedestrians may be present or crossing ahead.",
+      "visual": "warning-pedestrian"
+    },
+    {
+      "category": "Warning",
+      "name": "Children / school area",
+      "meaning": "Warns of children or a school-related pedestrian hazard ahead.",
+      "visual": "warning-school"
+    },
+    {
+      "category": "Warning",
+      "name": "Roadworks",
+      "meaning": "Warns of roadworks or temporary road conditions ahead.",
+      "visual": "warning-roadworks"
+    },
+    {
+      "category": "Information & Guidance",
+      "name": "Parking",
+      "meaning": "Provides information about a designated parking facility or area.",
+      "visual": "info-parking"
+    },
+    {
+      "category": "Information & Guidance",
+      "name": "Hospital",
+      "meaning": "Provides information about a hospital or medical facility.",
+      "visual": "info-hospital"
+    },
+    {
+      "category": "Information & Guidance",
+      "name": "Public telephone",
+      "meaning": "Provides information about a public telephone facility.",
+      "visual": "info-telephone"
+    },
+    {
+      "category": "Temporary",
+      "name": "Temporary roadworks",
+      "meaning": "Indicates a temporary road condition or roadworks arrangement.",
+      "visual": "temp-roadworks"
+    },
+    {
+      "category": "Temporary",
+      "name": "Temporary direction / detour",
+      "meaning": "Shows a temporary route or direction to follow.",
+      "visual": "temp-detour"
+    },
+    {
+      "category": "Road Markings",
+      "name": "Stop line",
+      "meaning": "A transverse road marking associated with a stop control; stop before the line where required.",
+      "visual": "road-stop-line"
+    },
+    {
+      "category": "Road Markings",
+      "name": "Yield line",
+      "meaning": "A transverse road marking associated with a yield control; give way as required.",
+      "visual": "road-yield-line"
+    },
+    {
+      "category": "Road Markings",
+      "name": "Pedestrian crossing",
+      "meaning": "Marks a pedestrian crossing area and helps identify the crossing location.",
+      "visual": "road-ped-crossing"
+    },
+    {
+      "category": "Road Markings",
+      "name": "Lane direction arrow",
+      "meaning": "Shows the permitted or intended direction of travel from a lane.",
+      "visual": "road-lane-arrow"
+    },
+    {
+      "category": "Road Markings",
+      "name": "Barrier / no-crossing line",
+      "meaning": "A continuous longitudinal marking used to restrict crossing where applicable.",
+      "visual": "road-barrier-line"
+    }
+  ]
+}
