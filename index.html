@@ -438,6 +438,143 @@ section {
 }
 
 
+
+/* =========================================================
+   ROAD SIGN STUDY LIBRARY
+========================================================= */
+
+.sign-library {
+    margin-top: 45px;
+}
+
+.library-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.sign-filter {
+    border: 1px solid #d7dde6;
+    background: white;
+    color: #071426;
+    border-radius: 999px;
+    padding: 9px 15px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.sign-filter.active,
+.sign-filter:hover {
+    background: #071426;
+    color: #d9ad45;
+    border-color: #071426;
+}
+
+.library-search {
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    margin: 0 auto 25px;
+    padding: 13px 16px;
+    border: 1px solid #d7dde6;
+    border-radius: 10px;
+    background: white;
+    font: inherit;
+    outline: none;
+}
+
+.library-search:focus {
+    border-color: #d9ad45;
+    box-shadow: 0 0 0 3px rgba(217,173,69,0.15);
+}
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.library-card {
+    background: white;
+    border: 1px solid #e1e6ed;
+    border-radius: 15px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 7px 22px rgba(7,20,38,0.05);
+}
+
+.library-visual {
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.library-visual svg {
+    width: 118px;
+    height: 118px;
+    max-width: 100%;
+}
+
+.library-card h4 {
+    color: #071426;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.library-card .library-category {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #8b6a1d;
+    margin-bottom: 7px;
+}
+
+.library-card p {
+    color: #687386;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.library-empty {
+    text-align: center;
+    padding: 25px;
+    color: #687386;
+    grid-column: 1 / -1;
+}
+
+.question-image {
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.question-image img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 330px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+    .library-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .library-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* =========================================================
    TEST
 ========================================================= */
@@ -1369,109 +1506,68 @@ footer strong {
 
 <div class="section-container">
 
-
 <div class="section-title">
 
 <h2>
-    Road Signs
+    Road Signs & Road Markings
 </h2>
 
 <p>
-
-    Get familiar with the different types
-    of road signs you may encounter.
-
+    Study South African road signs and markings by category,
+    then practise them in the learner's test.
 </p>
 
 </div>
-
-
 
 <div class="sign-grid">
 
+<div class="sign-card">
+<div class="sign-icon">⛔</div>
+<h3>Regulatory</h3>
+<p>Signs that control, command, prohibit or reserve road use.</p>
+</div>
 
 <div class="sign-card">
-
-<div class="sign-icon">
-    ⛔
+<div class="sign-icon">⚠️</div>
+<h3>Warning</h3>
+<p>Signs that warn road users about hazards and conditions ahead.</p>
 </div>
-
-<h3>
-    Regulatory Signs
-</h3>
-
-<p>
-
-    Signs that control what road users
-    must or must not do.
-
-</p>
-
-</div>
-
-
 
 <div class="sign-card">
-
-<div class="sign-icon">
-    ⚠️
+<div class="sign-icon">ℹ️</div>
+<h3>Information & Guidance</h3>
+<p>Signs that provide information, facilities and route guidance.</p>
 </div>
-
-<h3>
-    Warning Signs
-</h3>
-
-<p>
-
-    Signs warning drivers about
-    hazards ahead.
-
-</p>
-
-</div>
-
-
 
 <div class="sign-card">
-
-<div class="sign-icon">
-    ℹ️
+<div class="sign-icon">🚧</div>
+<h3>Temporary</h3>
+<p>Signs used for temporary traffic conditions, roadworks and diversions.</p>
 </div>
 
-<h3>
-    Information Signs
-</h3>
+</div>
 
+<div class="sign-library">
+
+<div class="section-title" style="margin-top:45px;margin-bottom:25px;">
+<h2 style="font-size:28px;">Study Sign Library</h2>
 <p>
-
-    Signs providing useful information
-    about the road and surroundings.
-
+    Common South African signs and road markings, with the action you should understand before test day.
 </p>
-
 </div>
 
+<input
+    id="signSearch"
+    class="library-search"
+    type="search"
+    placeholder="Search signs, markings or meanings..."
+    aria-label="Search road signs">
 
+<div id="signFilters" class="library-toolbar"></div>
 
-<div class="sign-card">
-
-<div class="sign-icon">
-    🚧
+<div id="signLibraryGrid" class="library-grid">
+    <div class="library-empty">Loading road sign library...</div>
 </div>
-
-<h3>
-    Temporary Signs
-</h3>
-
-<p>
-
-    Signs used for temporary road
-    conditions and roadworks.
-
-</p>
-
-</div>
-
 
 </div>
 
@@ -2396,205 +2492,111 @@ function showQuestion() {
 function showQuestionDiagram(q) {
 
     const container =
-        document.getElementById(
-            "questionImage"
-        );
-
+        document.getElementById("questionImage");
 
     if (!container) {
-
         return;
-
     }
 
-
-    /*
-       Clear previous diagram.
-    */
-
     container.innerHTML = "";
-
-    container.classList.add(
-        "hidden"
-    );
-
+    container.classList.add("hidden");
 
     /*
-       ======================================================
-       QUESTION 171
-       GM6.3 DISABLED PERSONS ROAD MARKING
-       ======================================================
-
-       The question in your database asks:
-
-       "This road marking indicates...?"
-
-       Correct answer:
-
-       B. An area is set aside for disabled persons.
+       Source questionnaire artwork:
+       questions 73-178 are wired to PNG files in
+       assets/road-signs/.
     */
+    if (Array.isArray(q.diagramImages) && q.diagramImages.length > 0) {
 
-    if (
-        Number(q.id) === 171
-    ) {
+        const title = document.createElement("div");
+        title.style.width = "100%";
+        title.style.textAlign = "center";
+        title.style.fontWeight = "800";
+        title.style.color = "#071426";
+        title.style.marginBottom = "4px";
+        title.textContent = "Road sign / road marking diagram";
+        container.appendChild(title);
 
+        let loaded = 0;
+
+        q.diagramImages.forEach(function(src) {
+
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt =
+                "Road sign or road marking diagram for question " +
+                q.id;
+            img.loading = "lazy";
+
+            img.onload = function() {
+                loaded++;
+                container.classList.remove("hidden");
+            };
+
+            img.onerror = function() {
+                img.remove();
+
+                if (
+                    container.querySelectorAll("img").length === 0 &&
+                    !container.querySelector(".diagram-notice")
+                ) {
+                    container.innerHTML = `
+                        <div class="diagram-notice">
+                            <strong>Source diagram not uploaded yet</strong>
+                            Question ${q.id} is already wired to its supplied questionnaire artwork.
+                            Upload the PNG files from <code>assets/road-signs/</code> and the diagram will appear automatically.
+                        </div>
+                    `;
+                    container.classList.remove("hidden");
+                }
+            };
+
+            container.appendChild(img);
+
+        });
+
+        container.classList.remove("hidden");
+        return;
+    }
+
+    /*
+       Legacy fallback retained for question 171.
+    */
+    if (Number(q.id) === 171) {
 
         container.innerHTML = `
-
             <svg
                 viewBox="0 0 500 330"
                 role="img"
                 aria-label="Disabled persons parking road marking">
-
-
-                <!-- ROAD SURFACE -->
-
-                <rect
-                    x="30"
-                    y="20"
-                    width="440"
-                    height="290"
-                    rx="10"
-                    fill="#555555"
-                />
-
-
-                <!-- PARKING BAY -->
-
-                <rect
-                    x="85"
-                    y="50"
-                    width="330"
-                    height="230"
-                    fill="none"
-                    stroke="white"
-                    stroke-width="7"
-                />
-
-
-                <!-- WHEELCHAIR PERSON -->
-
-
-                <!-- HEAD -->
-
-                <circle
-                    cx="245"
-                    cy="105"
-                    r="21"
-                    fill="white"
-                />
-
-
-                <!-- BODY -->
-
-                <path
-                    d="
-                        M230 137
-                        L263 137
-                        L280 185
-                        L250 185
-                        L235 158
-                        Z
-                    "
-                    fill="white"
-                />
-
-
-                <!-- ARM -->
-
-                <line
-                    x1="238"
-                    y1="145"
-                    x2="293"
-                    y2="157"
-                    stroke="white"
-                    stroke-width="12"
-                    stroke-linecap="round"
-                />
-
-
-                <!-- LEG -->
-
-                <line
-                    x1="252"
-                    y1="180"
-                    x2="315"
-                    y2="204"
-                    stroke="white"
-                    stroke-width="12"
-                    stroke-linecap="round"
-                />
-
-
-                <!-- LOWER LEG -->
-
-                <line
-                    x1="315"
-                    y1="204"
-                    x2="328"
-                    y2="236"
-                    stroke="white"
-                    stroke-width="12"
-                    stroke-linecap="round"
-                />
-
-
-                <!-- WHEEL -->
-
-                <circle
-                    cx="232"
-                    cy="221"
-                    r="58"
-                    fill="none"
-                    stroke="white"
-                    stroke-width="12"
-                />
-
-
-                <!-- GM6.3 LABEL -->
-
-                <text
-                    x="250"
-                    y="302"
-                    text-anchor="middle"
-                    fill="white"
-                    font-size="15"
-                    font-family="Arial"
-                    font-weight="bold">
-
-                    GM6.3
-
-                </text>
-
-
+                <rect x="30" y="20" width="440" height="290" rx="10" fill="#555555"/>
+                <rect x="85" y="50" width="330" height="230" fill="none" stroke="white" stroke-width="7"/>
+                <circle cx="245" cy="105" r="21" fill="white"/>
+                <path d="M230 137 L263 137 L280 185 L250 185 L235 158 Z" fill="white"/>
+                <line x1="238" y1="145" x2="293" y2="157" stroke="white" stroke-width="12" stroke-linecap="round"/>
+                <line x1="252" y1="180" x2="315" y2="204" stroke="white" stroke-width="12" stroke-linecap="round"/>
+                <line x1="315" y1="204" x2="328" y2="236" stroke="white" stroke-width="12" stroke-linecap="round"/>
+                <circle cx="232" cy="221" r="58" fill="none" stroke="white" stroke-width="12"/>
+                <text x="250" y="302" text-anchor="middle" fill="white" font-size="15" font-family="Arial" font-weight="bold">GM6.3</text>
             </svg>
-
         `;
-
-
-        container.classList.remove(
-            "hidden"
-        );
-
-
+        container.classList.remove("hidden");
         return;
-
     }
 
-
-    /*
-       ======================================================
-       FUTURE ROAD-SIGN DIAGRAMS
-       ======================================================
-
-       Additional official diagrams will be added here
-       as each question is matched to its correct
-       South African road sign or road marking.
-    */
-
-
+    if (
+        q.answerStatus === "diagram_dependent_provisional_inference" ||
+        /road sign|road marking|this sign|this arrow|this sketch/i.test(getQuestionText(q))
+    ) {
+        container.innerHTML = `
+            <div class="diagram-notice">
+                <strong>Road sign / road marking diagram</strong>
+                The source artwork for this question has not been linked yet.
+            </div>
+        `;
+        container.classList.remove("hidden");
+    }
 }
-
 
 
 /* =========================================================
@@ -3058,9 +3060,236 @@ function restartTest() {
 
 
 /* =========================================================
+   ROAD SIGN LIBRARY
+========================================================= */
+
+let roadSignLibrary = [];
+let activeSignCategory = "All";
+
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function renderSignVisual(visual, category, name) {
+
+    const warning =
+        category === "Warning";
+
+    const temporary =
+        category === "Temporary";
+
+    const road =
+        category === "Road Markings";
+
+    const bg =
+        warning ? "#f4c542" :
+        temporary ? "#f4c542" :
+        "#ffffff";
+
+    const stroke =
+        warning || temporary ? "#111827" :
+        "#d01f2f";
+
+    let symbol = "";
+
+    switch (visual) {
+        case "stop":
+            return `<svg viewBox="0 0 120 120" role="img" aria-label="${escapeHtml(name)}">
+                <polygon points="38,6 82,6 114,38 114,82 82,114 38,114 6,82 6,38" fill="#d01f2f"/>
+                <polygon points="41,14 79,14 106,41 106,79 79,106 41,106 14,79 14,41" fill="#d01f2f" stroke="#fff" stroke-width="3"/>
+                <text x="60" y="67" text-anchor="middle" font-family="Arial" font-size="18" font-weight="900" fill="#fff">STOP</text>
+            </svg>`;
+        case "yield":
+            return `<svg viewBox="0 0 120 120" role="img" aria-label="${escapeHtml(name)}">
+                <polygon points="60,8 112,108 8,108" fill="#fff" stroke="#d01f2f" stroke-width="9"/>
+            </svg>`;
+        case "no-entry":
+            symbol=`<line x1="25" y1="60" x2="95" y2="60" stroke="#fff" stroke-width="13" stroke-linecap="round"/>`; break;
+        case "speed-limit":
+            symbol=`<text x="60" y="68" text-anchor="middle" font-family="Arial" font-size="32" font-weight="900" fill="#111827">60</text>`; break;
+        case "min-speed":
+            symbol=`<text x="60" y="68" text-anchor="middle" font-family="Arial" font-size="28" font-weight="900" fill="#111827">80</text>`; break;
+        case "no-parking":
+            symbol=`<text x="60" y="70" text-anchor="middle" font-family="Arial" font-size="40" font-weight="900" fill="#111827">P</text><line x1="25" y1="95" x2="95" y2="25" stroke="#d01f2f" stroke-width="8"/>`; break;
+        case "no-stopping":
+            symbol=`<line x1="28" y1="28" x2="92" y2="92" stroke="#d01f2f" stroke-width="8"/><line x1="92" y1="28" x2="28" y2="92" stroke="#d01f2f" stroke-width="8"/>`; break;
+        case "no-left":
+            symbol=`<path d="M78 82 V55 H42" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M45 38 L25 55 L45 72" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="92" x2="92" y2="28" stroke="#d01f2f" stroke-width="8"/>`; break;
+        case "no-right":
+            symbol=`<path d="M42 82 V55 H78" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M75 38 L95 55 L75 72" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="92" x2="92" y2="28" stroke="#d01f2f" stroke-width="8"/>`; break;
+        case "left-only":
+        case "left-turn":
+            symbol=`<path d="M72 88 V58 H38" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M41 40 L22 58 L41 76" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>`; break;
+        case "right-only":
+        case "right-turn":
+            symbol=`<path d="M48 88 V58 H82" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/><path d="M79 40 L98 58 L79 76" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>`; break;
+        case "straight-only":
+            symbol=`<path d="M60 92 V28" stroke="#111827" stroke-width="10"/><path d="M43 47 L60 27 L77 47" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>`; break;
+        case "keep-right":
+            symbol=`<path d="M68 92 V35 L48 55" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>`; break;
+        case "one-way":
+            symbol=`<path d="M30 60 H88 M70 42 L90 60 L70 78" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>`; break;
+        case "no-overtaking":
+            symbol=`<circle cx="46" cy="60" r="16" fill="#111827"/><circle cx="76" cy="60" r="16" fill="#d01f2f"/><line x1="22" y1="94" x2="98" y2="26" stroke="#d01f2f" stroke-width="7"/>`; break;
+        case "pedestrian-only":
+            symbol=`<circle cx="60" cy="35" r="8" fill="#111827"/><path d="M60 45 L60 72 M60 52 L42 64 M60 52 L78 64 M60 72 L45 91 M60 72 L75 91" stroke="#111827" stroke-width="7" stroke-linecap="round"/>`; break;
+        case "motorcycle-only":
+            symbol=`<circle cx="42" cy="78" r="13" fill="none" stroke="#111827" stroke-width="6"/><circle cx="80" cy="78" r="13" fill="none" stroke="#111827" stroke-width="6"/><path d="M42 78 L54 52 L70 78 L80 78 M54 52 L70 52 L80 62" fill="none" stroke="#111827" stroke-width="6" stroke-linecap="round"/>`; break;
+        case "motorcars-only":
+            symbol=`<rect x="34" y="55" width="52" height="28" rx="7" fill="none" stroke="#111827" stroke-width="6"/><circle cx="47" cy="85" r="6" fill="#111827"/><circle cx="73" cy="85" r="6" fill="#111827"/>`; break;
+        case "warning-junction":
+            symbol=`<path d="M60 92 V25 M28 58 H92" stroke="#111827" stroke-width="9"/>`; break;
+        case "warning-curve":
+            symbol=`<path d="M42 92 C42 55 78 70 78 28" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/>`; break;
+        case "warning-rail":
+            symbol=`<path d="M30 32 L90 88 M90 32 L30 88 M60 22 V98" stroke="#111827" stroke-width="8"/>`; break;
+        case "warning-pedestrian":
+        case "warning-school":
+            symbol=`<circle cx="60" cy="33" r="8" fill="#111827"/><path d="M60 43 L60 70 M60 50 L42 63 M60 50 L78 63 M60 70 L45 90 M60 70 L75 90" stroke="#111827" stroke-width="7" stroke-linecap="round"/>`; break;
+        case "warning-roadworks":
+        case "temp-roadworks":
+            symbol=`<path d="M42 88 L60 32 L78 88 Z" fill="none" stroke="#111827" stroke-width="7"/><path d="M50 72 H70" stroke="#111827" stroke-width="7"/>`; break;
+        case "info-parking":
+            symbol=`<text x="60" y="76" text-anchor="middle" font-family="Arial" font-size="58" font-weight="900" fill="#fff">P</text>`; break;
+        case "info-hospital":
+            symbol=`<rect x="51" y="25" width="18" height="70" fill="#fff"/><rect x="25" y="51" width="70" height="18" fill="#fff"/>`; break;
+        case "info-telephone":
+            symbol=`<path d="M39 30 C27 40 31 64 51 82 C69 100 92 93 92 81 L75 69 L64 79 C56 74 46 64 41 55 L51 44 Z" fill="#fff"/>`; break;
+        case "temp-detour":
+            symbol=`<path d="M30 75 H82 M65 58 L83 75 L65 92" fill="none" stroke="#111827" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>`; break;
+        default:
+            symbol=`<text x="60" y="68" text-anchor="middle" font-family="Arial" font-size="13" font-weight="800" fill="#111827">SIGN</text>`;
+    }
+
+    if (road) {
+        let roadSymbol = "";
+        if (visual === "road-stop-line") roadSymbol = '<line x1="18" y1="65" x2="102" y2="65" stroke="#fff" stroke-width="10"/>';
+        if (visual === "road-yield-line") roadSymbol = '<line x1="18" y1="60" x2="102" y2="60" stroke="#fff" stroke-width="7"/><path d="M30 48 L40 62 L50 48 L60 62 L70 48 L80 62 L90 48" fill="none" stroke="#fff" stroke-width="5"/>';
+        if (visual === "road-ped-crossing") roadSymbol = '<path d="M22 30 V95 M42 30 V95 M62 30 V95 M82 30 V95" stroke="#fff" stroke-width="10"/>';
+        if (visual === "road-lane-arrow") roadSymbol = '<path d="M60 95 V28 M42 47 L60 28 L78 47" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>';
+        if (visual === "road-barrier-line") roadSymbol = '<line x1="60" y1="18" x2="60" y2="102" stroke="#fff" stroke-width="8"/>';
+        return `<svg viewBox="0 0 120 120" role="img" aria-label="${escapeHtml(name)}"><rect x="6" y="6" width="108" height="108" rx="10" fill="#4b5563"/>${roadSymbol}</svg>`;
+    }
+
+    const shape =
+        warning || temporary
+            ? `<polygon points="60,8 112,108 8,108" fill="${bg}" stroke="${stroke}" stroke-width="7"/>`
+            : `<circle cx="60" cy="60" r="52" fill="${bg}" stroke="${stroke}" stroke-width="8"/>`;
+
+    return `<svg viewBox="0 0 120 120" role="img" aria-label="${escapeHtml(name)}">${shape}${symbol}</svg>`;
+}
+
+function renderSignLibrary() {
+
+    const grid = document.getElementById("signLibraryGrid");
+    const filters = document.getElementById("signFilters");
+    const search = document.getElementById("signSearch");
+
+    if (!grid || !filters) return;
+
+    const categories = ["All"].concat(
+        [...new Set(roadSignLibrary.map(function(item) { return item.category; }))]
+    );
+
+    filters.innerHTML = categories.map(function(category) {
+        return `
+            <button
+                type="button"
+                class="sign-filter ${category === activeSignCategory ? "active" : ""}"
+                onclick="setSignCategory('${escapeHtml(category)}')">
+                ${escapeHtml(category)}
+            </button>
+        `;
+    }).join("");
+
+    const term = search ? search.value.trim().toLowerCase() : "";
+
+    const filtered = roadSignLibrary.filter(function(item) {
+        const categoryMatch =
+            activeSignCategory === "All" ||
+            item.category === activeSignCategory;
+
+        const text =
+            (item.name + " " + item.meaning + " " + item.category)
+                .toLowerCase();
+
+        return categoryMatch && (!term || text.includes(term));
+    });
+
+    if (!filtered.length) {
+        grid.innerHTML =
+            '<div class="library-empty">No matching signs or markings found.</div>';
+        return;
+    }
+
+    grid.innerHTML = filtered.map(function(item) {
+        return `
+            <article class="library-card">
+                <div class="library-visual">
+                    ${renderSignVisual(item.visual, item.category, item.name)}
+                </div>
+                <span class="library-category">${escapeHtml(item.category)}</span>
+                <h4>${escapeHtml(item.name)}</h4>
+                <p>${escapeHtml(item.meaning)}</p>
+            </article>
+        `;
+    }).join("");
+}
+
+function setSignCategory(category) {
+    activeSignCategory = category;
+    renderSignLibrary();
+}
+
+async function loadRoadSignLibrary() {
+
+    try {
+
+        const response = await fetch(
+            "road_signs.json?v=" + Date.now(),
+            { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not load road_signs.json");
+        }
+
+        const data = await response.json();
+        roadSignLibrary = Array.isArray(data.signs) ? data.signs : [];
+
+        renderSignLibrary();
+
+        const search = document.getElementById("signSearch");
+
+        if (search) {
+            search.addEventListener("input", renderSignLibrary);
+        }
+
+    } catch (error) {
+
+        console.error("Road sign library error:", error);
+
+        const grid = document.getElementById("signLibraryGrid");
+
+        if (grid) {
+            grid.innerHTML =
+                '<div class="library-empty">Road sign library could not be loaded.</div>';
+        }
+    }
+}
+
+
+
+/* =========================================================
    START APPLICATION
 ========================================================= */
 
+loadRoadSignLibrary();
 loadQuestions();
 
 
