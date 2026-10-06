@@ -628,6 +628,39 @@ section {
     background: #fff5d9;
 }
 
+.answer.correct {
+    border-color: #15803d;
+    background: #f0fdf4;
+}
+
+.answer.incorrect {
+    border-color: #b91c1c;
+    background: #fef2f2;
+}
+
+.answer.locked {
+    cursor: default;
+}
+
+.diagram-notice {
+    width: 100%;
+    max-width: 560px;
+    margin: 10px auto 30px;
+    padding: 16px 18px;
+    border: 1px solid #f0c36d;
+    border-radius: 12px;
+    background: #fffaf0;
+    color: #6b4b00;
+    font-size: 14px;
+    text-align: center;
+}
+
+.diagram-notice strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #071426;
+}
+
 .test-actions {
     margin-top: 25px;
 
@@ -1019,27 +1052,27 @@ footer strong {
 
 <nav id="mainNav">
 
-    <a href="#home">
+    <a href="#home" onclick="closeMenu()">
         Home
     </a>
 
-    <a href="#manual">
+    <a href="#manual" onclick="closeMenu()">
         K53 Manual
     </a>
 
-    <a href="#signs">
+    <a href="#signs" onclick="closeMenu()">
         Road Signs
     </a>
 
-    <a href="#test">
+    <a href="#test" onclick="closeMenu()">
         Learner's Test
     </a>
 
-    <a href="#practice">
+    <a href="#practice" onclick="closeMenu()">
         Practice
     </a>
 
-    <a href="#contact">
+    <a href="#contact" onclick="closeMenu()">
         Contact
     </a>
 
@@ -1954,6 +1987,15 @@ function toggleMenu() {
 
 }
 
+function closeMenu() {
+
+    const nav =
+        document.getElementById("mainNav");
+
+    nav.classList.remove("open");
+
+}
+
 
 
 /* =========================================================
@@ -2057,6 +2099,25 @@ async function loadQuestions() {
                 "Question database is empty."
             );
 
+        }
+
+        const invalidQuestions =
+            allQuestions.filter(function(q) {
+                return !q ||
+                    !q.question ||
+                    !Array.isArray(q.options) ||
+                    q.options.length !== 3 ||
+                    !Number.isInteger(Number(q.correct)) ||
+                    Number(q.correct) < 0 ||
+                    Number(q.correct) >= q.options.length;
+            });
+
+        if (invalidQuestions.length > 0) {
+            throw new Error(
+                invalidQuestions.length +
+                " question(s) have invalid data. " +
+                "Please check clean_questions.json."
+            );
         }
 
 
@@ -2311,7 +2372,7 @@ function showQuestion() {
         testQuestions.length > 0
 
             ? (
-                currentQuestion /
+                (currentQuestion + 1) /
                 testQuestions.length
             ) * 100
 
@@ -2539,6 +2600,16 @@ function showQuestionDiagram(q) {
 /* =========================================================
    GET QUESTION TEXT
 ========================================================= */
+
+function answersAreCorrect(index, q) {
+
+    if (!q || !Array.isArray(q.options)) {
+        return false;
+    }
+
+    return index === Number(q.correct);
+}
+
 
 function getQuestionText(q) {
 
@@ -2794,12 +2865,28 @@ function selectAnswer(
 
     }
 
+    buttons.forEach(function(button, buttonIndex) {
+        button.classList.add("locked");
 
-    if (
-        answer.correct
-    ) {
+        if (
+            answersAreCorrect(
+                buttonIndex,
+                testQuestions[currentQuestion]
+            )
+        ) {
+            button.classList.add("correct");
+        }
+    });
+
+    if (answer.correct) {
 
         score++;
+
+    } else if (buttons[index]) {
+
+        buttons[index]
+            .classList
+            .add("incorrect");
 
     }
 
@@ -2933,6 +3020,13 @@ function finishTest() {
         testQuestions.length +
         ". " +
         message;
+
+    document
+        .getElementById("test")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
 
 }
 
