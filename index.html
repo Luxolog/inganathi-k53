@@ -1027,6 +1027,30 @@ section {
 
 
 /* =========================================================
+   CANDIDATE DETAILS
+========================================================= */
+.candidate-box{background:white;border-radius:18px;padding:35px;box-shadow:0 12px 35px rgba(7,20,38,.08);margin-bottom:22px}
+.candidate-box h3{color:#02050e;font-size:25px;margin-bottom:8px}
+.candidate-box>p{color:#687386;margin-bottom:24px}
+.candidate-form{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.candidate-field{display:flex;flex-direction:column;gap:7px}
+.candidate-field.full{grid-column:1/-1}
+.candidate-field label{color:#02050e;font-size:13px;font-weight:800}
+.candidate-field input{width:100%;padding:13px 14px;border:1px solid #d7dde6;border-radius:9px;background:#fff;color:#172033;font:inherit;outline:none}
+.candidate-field input:focus{border-color:#d50203;box-shadow:0 0 0 3px rgba(213,2,3,.1)}
+.candidate-notice{margin:18px 0;padding:12px 14px;background:#f8fafc;border-left:4px solid #d50203;color:#687386;font-size:12px;border-radius:0 8px 8px 0}
+.candidate-actions{display:flex;justify-content:flex-end;margin-top:8px}
+.result-status{display:inline-block;padding:10px 22px;border-radius:999px;font-size:18px;font-weight:900;letter-spacing:1px;margin:8px 0 10px}
+.result-status.pass{color:#166534;background:#dcfce7;border:2px solid #86efac}
+.result-status.fail{color:#991b1b;background:#fee2e2;border:2px solid #fca5a5}
+.result-candidate{color:#02050e!important;font-weight:800;margin-bottom:8px!important}
+.result-email-status{font-size:12px;margin-top:12px;margin-bottom:22px!important}
+.result-email-status.success{color:#166534}
+.result-email-status.error{color:#991b1b}
+@media(max-width:700px){.candidate-form{grid-template-columns:1fr}.candidate-field.full{grid-column:auto}.candidate-box,.test-box{padding:24px}}
+
+
+/* =========================================================
    LOADING
 ========================================================= */
 
@@ -1814,6 +1838,38 @@ footer strong {
 
 
 
+<!-- CANDIDATE DETAILS -->
+
+<div id="candidateArea" class="candidate-box hidden">
+<h3>Enter Your Details Before Starting</h3>
+<p>Complete all fields below. Your details will be attached to your test result and sent to the instructor.</p>
+<form id="candidateForm" class="candidate-form" novalidate>
+<div class="candidate-field">
+<label for="candidateName">Name</label>
+<input id="candidateName" name="name" type="text" autocomplete="given-name" required>
+</div>
+<div class="candidate-field">
+<label for="candidateSurname">Surname</label>
+<input id="candidateSurname" name="surname" type="text" autocomplete="family-name" required>
+</div>
+<div class="candidate-field">
+<label for="candidateCellphone">Cellphone</label>
+<input id="candidateCellphone" name="cellphone" type="tel" inputmode="tel" autocomplete="tel" required>
+</div>
+<div class="candidate-field">
+<label for="candidateIdNumber">ID Number</label>
+<input id="candidateIdNumber" name="id_number" type="text" inputmode="numeric" autocomplete="off" minlength="6" maxlength="20" required>
+</div>
+<div class="candidate-field full">
+<div class="candidate-notice">Your information is used to identify your test result. The result email includes your name, surname, cellphone, ID number, score, percentage and PASS/FAIL status.</div>
+</div>
+<div class="candidate-field full candidate-actions">
+<button type="submit" class="btn btn-primary">Start Test</button>
+</div>
+</form>
+</div>
+
+
 <!-- TEST AREA -->
 
 <div
@@ -1921,25 +1977,12 @@ footer strong {
     class="test-box result-box hidden">
 
 
-<h2>
-    Test Complete
-</h2>
-
-
-<div
-    id="finalScore"
-    class="result-score">
-
-    0%
-
-</div>
-
-
-<p id="resultMessage">
-
-    Your results will appear here.
-
-</p>
+<h2>Test Complete</h2>
+<div id="resultStatus" class="result-status">RESULT</div>
+<div id="finalScore" class="result-score">0%</div>
+<p id="resultCandidate" class="result-candidate"></p>
+<p id="resultMessage">Your results will appear here.</p>
+<p id="resultEmailStatus" class="result-email-status"></p>
 
 
 <button
@@ -2413,12 +2456,15 @@ async function loadQuestions() {
 
 
         document
-            .getElementById("testArea")
+            .getElementById("candidateArea")
             .classList
             .remove("hidden");
 
 
-        startTest();
+        document
+            .getElementById("testArea")
+            .classList
+            .add("hidden");
 
 
     }
