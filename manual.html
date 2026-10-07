@@ -511,7 +511,7 @@ function answerPractice(section,selected){
  if(correct)state.score++;
  const fb=document.getElementById("feedback-"+section);
  fb.classList.add("show");
- fb.textContent=correct?"✓ Correct.":"✗ Not correct. The correct answer is "+String.fromCharCode(65+Number(q.correct))+".";
+ fb.innerHTML=(correct?"<strong>✓ Correct.</strong> ":"<strong>✗ Not correct.</strong> The correct answer is <strong>"+String.fromCharCode(65+Number(q.correct))+"</strong>.")+(q.explanation?"<br><br><strong>Why:</strong> "+escapeHtml(q.explanation):"");
  const next=document.getElementById("next-"+section);
  if(next)next.disabled=false;
  const score=document.querySelector("#practice-"+(section==="road_signs"?"signs":section)+" .practice-score");
