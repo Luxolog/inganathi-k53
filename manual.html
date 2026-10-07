@@ -78,6 +78,29 @@ main{max-width:1050px;margin:auto;padding:28px 18px 70px}
 .practice-result .big{font-size:48px;font-weight:900;color:var(--red);margin:7px 0}
 .practice-result p{font-size:13px;color:var(--muted);margin-bottom:14px}
 .practice-result .pass{color:var(--green);font-weight:900}
+.knowledge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.knowledge-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.knowledge-card button{width:100%;border:0;background:#fff;text-align:left;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;color:var(--ink);font-weight:900;font-size:14px}
+.knowledge-card button:hover{background:var(--soft)}
+.knowledge-card button .plus{font-size:20px;color:var(--red);line-height:1}
+.knowledge-content{display:none;padding:0 18px 18px;border-top:1px solid var(--line)}
+.knowledge-card.open .knowledge-content{display:block}
+.knowledge-content h4{font-size:13px;color:var(--ink);margin:16px 0 6px}
+.knowledge-content p,.knowledge-content li{font-size:12px;color:#566174;line-height:1.65}
+.knowledge-content ul,.knowledge-content ol{padding-left:19px;margin:7px 0}
+.knowledge-content li{margin:5px 0}
+.knowledge-content strong{color:#273244}
+.code-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:11px}
+.code-table th,.code-table td{border:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}
+.code-table th{background:var(--ink);color:#fff;font-size:10px}
+.code-table td:first-child{font-weight:900;color:var(--red);white-space:nowrap}
+.source-note{background:#eef6ff;border:1px solid #c9def5;border-radius:9px;padding:11px 13px;margin-top:12px;font-size:11px;color:#40566d}
+.source-note a{color:#174f8a;text-decoration:underline;font-weight:800}
+.learning-path{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:15px 0 20px}
+.learning-step{background:var(--ink);color:#fff;border-radius:9px;padding:12px;font-size:11px;font-weight:800}
+.learning-step span{display:block;color:#ff6b6b;font-size:9px;letter-spacing:1px;margin-bottom:4px}
+@media(max-width:760px){.knowledge-grid{grid-template-columns:1fr}.learning-path{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.learning-path{grid-template-columns:1fr}}
 .controls-note{margin-top:16px}
 footer{background:var(--ink);color:#cbd5e1;text-align:center;padding:24px 18px;font-size:11px}
 @media(max-width:760px){.cards{grid-template-columns:1fr 1fr}.nav{align-items:flex-start}.sign-image{height:250px}.sign-image img{height:220px}}
@@ -90,6 +113,7 @@ footer{background:var(--ink);color:#cbd5e1;text-align:center;padding:24px 18px;f
 <a class="brand" href="index.html"><img src="inganathi-logo.jpeg" alt="Inganathi Driving Academy logo"><span>INGANATHI K53</span></a>
 <nav>
 <a href="index.html">Home</a>
+<button onclick="showSection('knowledge')">Learn First</button>
 <button onclick="showSection('home')">Study Home</button>
 <button onclick="showSection('rules')">Rules</button>
 <button onclick="showSection('signs')">Road Signs</button>
@@ -107,13 +131,218 @@ footer{background:var(--ink);color:#cbd5e1;text-align:center;padding:24px 18px;f
 </section>
 
 <div class="section-switch">
-<button class="switch active" data-section="home" onclick="showSection('home')">Study Home</button>
+<button class="switch active" data-section="knowledge" onclick="showSection('knowledge')">Learn Before You Test</button>
+<button class="switch" data-section="home" onclick="showSection('home')">Study Home</button>
 <button class="switch" data-section="rules" onclick="showSection('rules')">Rules of the Road</button>
 <button class="switch" data-section="signs" onclick="showSection('signs')">Road Signs</button>
 <button class="switch" data-section="controls" onclick="showSection('controls')">Vehicle Controls</button>
 </div>
 
-<section id="panel-home" class="panel active">
+<section id="panel-knowledge" class="panel active">
+<div class="panel-head">
+<h2>Learn Before You Test</h2>
+<p>Build your knowledge first. Read these notes, understand the principles, then practise the questions, road signs and vehicle controls.</p>
+</div>
+
+<div class="notice">
+<strong>How to use this manual</strong>
+Do not rely on memorising answers alone. Learn the meaning behind the rule, sign or vehicle control. The goal is to understand why a safe answer is correct.
+</div>
+
+<div class="learning-path">
+<div class="learning-step"><span>STEP 1</span>Learn the theory</div>
+<div class="learning-step"><span>STEP 2</span>Study signs & controls</div>
+<div class="learning-step"><span>STEP 3</span>Practise questions</div>
+<div class="learning-step"><span>STEP 4</span>Take the full test</div>
+</div>
+
+<div class="knowledge-grid">
+
+<div class="knowledge-card open">
+<button onclick="toggleKnowledge(this)">1. Essential information about booking your test <span class="plus">−</span></button>
+<div class="knowledge-content">
+<h4>What test are you preparing for?</h4>
+<p>This manual is primarily designed to prepare learners for the <strong>learner's licence test</strong>. A learner's licence demonstrates that you have basic knowledge of the motor vehicle and the rules of the road. A learner's licence is generally valid for 24 months and cannot be extended.</p>
+<h4>Before you book</h4>
+<ul>
+<li>Choose the correct learner's licence category for the vehicle you intend to drive.</li>
+<li>Make sure you meet the minimum age requirement for that category.</li>
+<li>Prepare your identification and supporting documents.</li>
+<li>Confirm the current fee, photographs, proof-of-address requirements and booking process with your local Driving Licence Testing Centre (DLTC).</li>
+<li>Complete the required learner's licence application form, commonly known as the <strong>LL1</strong>.</li>
+<li>You will normally undergo an eyesight/vision assessment as part of the process.</li>
+</ul>
+<h4>Typical documents</h4>
+<p>Official requirements can vary by province or DLTC. Common requirements include a South African identity document or accepted identification, photographs, proof of address and the applicable fee. If a document is not in your name, additional proof or an affidavit may be required.</p>
+<h4>On booking day</h4>
+<ol>
+<li>Submit the completed application and supporting documents.</li>
+<li>Pay the applicable application/booking fee.</li>
+<li>Complete the required eyesight test.</li>
+<li>Receive confirmation of the test date and instructions from the DLTC.</li>
+</ol>
+<div class="source-note"><strong>Always verify before travelling:</strong> booking procedures, fees, photographs and proof-of-address requirements can change. Use the official South African Government or your provincial transport authority as the final source. <a href="https://www.gov.za/services/driving-licence/apply-learners-licence" target="_blank" rel="noopener">Official learner's licence information</a>.</div>
+</div>
+</div>
+
+<div class="knowledge-card">
+<button onclick="toggleKnowledge(this)">2. Theoretical knowledge of traffic matters <span class="plus">+</span></button>
+<div class="knowledge-content">
+<h4>What you must understand</h4>
+<p>The theory section is about making safe, lawful decisions on public roads. Learn the rules rather than trying to memorise isolated sentences.</p>
+<ul>
+<li><strong>Road positioning:</strong> understand lane use, keeping left where required, safe lane changes and correct positioning before turns.</li>
+<li><strong>Speed:</strong> know that a posted speed limit is a maximum, not a target. Reduce speed when visibility, weather, traffic, road surface or hazards require it.</li>
+<li><strong>Following distance:</strong> leave enough space to react and stop safely. The two-second method is a useful starting point in good conditions; allow more space in poor conditions.</li>
+<li><strong>Overtaking:</strong> only overtake when it is legal, necessary and safe, with sufficient visibility and space to complete the manoeuvre.</li>
+<li><strong>Intersections:</strong> approach at a controlled speed, obey signs and signals, observe other road users and yield where the rules require it.</li>
+<li><strong>Pedestrians and cyclists:</strong> expect vulnerable road users and give them the care and space they require.</li>
+<li><strong>Emergency vehicles:</strong> respond safely and make way when required; do not create a new hazard while doing so.</li>
+<li><strong>Stopping and parking:</strong> know where stopping or parking is prohibited and why visibility, intersections and pedestrian areas matter.</li>
+<li><strong>Signals:</strong> signal early enough to communicate your intention, but remember that a signal does not give you right of way.</li>
+<li><strong>Alcohol, drugs and fatigue:</strong> never drive when your ability to control a vehicle is impaired.</li>
+</ul>
+</div>
+</div>
+
+<div class="knowledge-card">
+<button onclick="toggleKnowledge(this)">3. Relevant knowledge — before you start the questions <span class="plus">+</span></button>
+<div class="knowledge-content">
+<h4>Know the language of the road</h4>
+<ul>
+<li><strong>Driver:</strong> the person controlling the vehicle.</li>
+<li><strong>Pedestrian:</strong> a person travelling on foot, including someone pushing or otherwise moving with certain mobility aids.</li>
+<li><strong>Roadway/carriageway:</strong> the part of the road intended for vehicular traffic.</li>
+<li><strong>Intersection:</strong> an area where roads meet or cross and where traffic movements interact.</li>
+<li><strong>Shoulder:</strong> the portion alongside the roadway with a defined function under the road rules.</li>
+<li><strong>Traffic lane:</strong> a portion of the roadway intended for a line of moving traffic.</li>
+</ul>
+<h4>Right of way is not permission to be careless</h4>
+<p>Even where another road user must yield to you, you must still take reasonable action to avoid a collision. Defensive driving means continuously observing, anticipating hazards and being prepared for mistakes by others.</p>
+<h4>Observation routine</h4>
+<p>Develop a repeatable routine: <strong>look far ahead → check mirrors → assess blind areas → identify hazards → decide → signal where required → act safely → re-check.</strong></p>
+<h4>Vehicle condition</h4>
+<p>A safe driver also pays attention to tyres, lights, indicators, mirrors, brakes, windscreen visibility, seat belts and other equipment required for safe operation.</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<button onclick="toggleKnowledge(this)">4. Relevant knowledge — continuation 1 <span class="plus">+</span></button>
+<div class="knowledge-content">
+<h4>Road signs and markings</h4>
+<p>Road signs communicate instructions, warnings, restrictions, directions and information. Road markings perform a similar communication function on the road surface.</p>
+<ul>
+<li><strong>Regulatory signs:</strong> tell road users what they must or must not do.</li>
+<li><strong>Warning signs:</strong> alert you to hazards or changes in road conditions ahead.</li>
+<li><strong>Guidance/information signs:</strong> help you navigate and identify destinations, routes or facilities.</li>
+<li><strong>Temporary signs:</strong> communicate temporary traffic conditions, especially around roadworks or hazards.</li>
+<li><strong>Road markings:</strong> include lines, arrows, crossings and other markings that control or guide road use.</li>
+</ul>
+<h4>Learn the action, not just the name</h4>
+<p>When studying a sign, ask three questions: <strong>What does it mean? Where would I see it? What must I do?</strong> This makes sign knowledge easier to apply in the test and on the road.</p>
+<h4>Traffic lights</h4>
+<p>Know the meaning of the different signals and understand that you must obey the traffic control in front of you. Never enter an intersection unless you can do so safely and lawfully.</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<button onclick="toggleKnowledge(this)">5. Relevant knowledge — continuation 2 <span class="plus">+</span></button>
+<div class="knowledge-content">
+<h4>Safe driving in difficult conditions</h4>
+<ul>
+<li><strong>Rain:</strong> reduce speed, increase following distance and be alert for reduced visibility and slippery surfaces.</li>
+<li><strong>Night driving:</strong> manage speed and visibility, use lights correctly and watch for pedestrians and vehicles that are difficult to see.</li>
+<li><strong>Fog or smoke:</strong> reduce speed according to visibility and avoid driving beyond what you can safely see.</li>
+<li><strong>Heavy traffic:</strong> maintain observation and avoid unnecessary lane changes or aggressive manoeuvres.</li>
+<li><strong>Hills and curves:</strong> adjust speed before the hazard, not after you have entered it.</li>
+</ul>
+<h4>Defensive driving principles</h4>
+<ol>
+<li>See the hazard early.</li>
+<li>Predict what could happen.</li>
+<li>Create time and space.</li>
+<li>Communicate your intention.</li>
+<li>Keep an escape option where possible.</li>
+<li>Never allow pressure from another driver to force an unsafe decision.</li>
+</ol>
+<h4>After a collision</h4>
+<p>Know the required legal and safety responsibilities after a road crash. First protect people from further danger, obtain appropriate assistance and comply with reporting and information requirements that apply to the incident.</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<button onclick="toggleKnowledge(this)">6. Categories of licence <span class="plus">+</span></button>
+<div class="knowledge-content">
+<h4>Driving licence categories</h4>
+<p>South Africa uses licence codes to identify the types of vehicles a driver may operate. Older study material may refer to former code names such as Code 8, Code 10 and Code 14, so learners should understand the current terminology.</p>
+<table class="code-table">
+<thead><tr><th>Code</th><th>General category</th><th>Key description</th></tr></thead>
+<tbody>
+<tr><td>A1</td><td>Motorcycle</td><td>Motorcycle with or without a sidecar, up to 125 cc.</td></tr>
+<tr><td>A</td><td>Motorcycle</td><td>Motorcycle with or without a sidecar, above 125 cc.</td></tr>
+<tr><td>B</td><td>Light motor vehicle</td><td>Motor vehicle, including applicable minibus/bus/goods vehicle, with GVM not exceeding 3 500 kg.</td></tr>
+<tr><td>C1</td><td>Medium/heavy vehicle</td><td>Motor vehicle, bus, minibus or goods vehicle with GVM above 3 500 kg and up to 16 000 kg.</td></tr>
+<tr><td>C</td><td>Heavy vehicle</td><td>Motor vehicle, bus or goods vehicle with GVM exceeding 16 000 kg.</td></tr>
+<tr><td>EB</td><td>Light vehicle + trailer/combination</td><td>Specified combinations involving a light motor vehicle and trailer/vehicle within the applicable mass limits.</td></tr>
+<tr><td>EC1</td><td>Medium articulated combination</td><td>Specified articulated or combination vehicles within the applicable 3 500–16 000 kg limits.</td></tr>
+<tr><td>EC</td><td>Heavy articulated combination</td><td>Specified articulated or bus/goods combinations exceeding the applicable heavy-vehicle limits.</td></tr>
+</tbody>
+</table>
+<div class="source-note">The exact vehicle definitions and mass limits are legal requirements. Learners should use the current official government definition when choosing a licence category.</div>
+</div>
+</div>
+
+<div class="knowledge-card">
+<button onclick="toggleKnowledge(this)">7. Summary of the licence codes <span class="plus">+</span></button>
+<div class="knowledge-content">
+<h4>Do not confuse learner's licence codes with driving licence codes</h4>
+<p>Official learner's-licence information also uses a simpler learner test classification: <strong>Code 1</strong> for motorcycles, <strong>Code 2</strong> for light motor vehicles up to the specified mass limit, and <strong>Code 3</strong> for heavy motor vehicles. The driving licence issued after the practical test uses the detailed A/A1/B/C1/C/EB/EC1/EC system.</p>
+<table class="code-table">
+<thead><tr><th>Learner code</th><th>Study meaning</th></tr></thead>
+<tbody>
+<tr><td>Code 1</td><td>Motorcycle category for learner's licence purposes, subject to the applicable engine capacity and age requirements.</td></tr>
+<tr><td>Code 2</td><td>Light motor vehicle category for learner's licence purposes, including vehicles within the applicable 3 500 kg limit.</td></tr>
+<tr><td>Code 3</td><td>Heavy motor vehicle category for learner's licence purposes.</td></tr>
+</tbody>
+</table>
+<h4>Age matters</h4>
+<p>Minimum ages depend on the category. For example, official guidance states that a learner may apply for the relevant motorcycle category from age 16 for a motorcycle not exceeding 125 cc, while the light motor vehicle learner category has a minimum age of 17. Driving licence applications have their own age requirements. Always check the current official requirement for the category you are applying for.</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<button onclick="toggleKnowledge(this)">8. Questions & Answers manual <span class="plus">+</span></button>
+<div class="knowledge-content">
+<h4>How to use the Inganathi question bank</h4>
+<p>The question bank is a <strong>learning tool</strong>. It should reinforce the theory rather than replace it.</p>
+<ul>
+<li><strong>Rules of the Road:</strong> Q1–72.</li>
+<li><strong>Road Signs:</strong> Q73–178, with sign artwork and explanations.</li>
+<li><strong>Vehicle Controls:</strong> Q179–236.</li>
+</ul>
+<h4>Recommended study cycle</h4>
+<ol>
+<li>Read the relevant theory in this manual.</li>
+<li>Study the signs or vehicle-control diagrams for that topic.</li>
+<li>Practise the questions for that section.</li>
+<li>Read the explanation whenever you get an answer wrong.</li>
+<li>Repeat the section until you can explain the correct answer, not merely recognise it.</li>
+<li>Only then move to the full test.</li>
+</ol>
+<h4>When you get an answer wrong</h4>
+<p>Do not simply memorise the correct letter. Identify <strong>what rule, sign, definition or safety principle</strong> caused the correct answer. Then return to the relevant theory section and try the question again.</p>
+<div class="notice"><strong>Important</strong>Practice questions on this site are for learner preparation. The actual learner's licence test is administered by the relevant licensing authority and may not contain the same questions.</div>
+</div>
+</div>
+
+</div>
+
+<div class="source-note">
+<strong>Official-information reminder:</strong> licensing rules, fees, booking systems and administrative requirements can change. This study manual is educational material; for current application requirements, use the official South African Government, RTMC and provincial transport/DLTC information.
+</div>
+</section>
+
+<section id="panel-home" class="panel">
 <div class="panel-head"><h2>Study one section at a time</h2><p>The supplied question bank has 236 questions. The manual is now focused so learners do not have to study everything on one screen.</p></div>
 <div class="cards">
 <div class="card"><h3>Rules of the Road</h3><p>Q1–72. Speed, following distance, overtaking, lane changes, intersections, parking, pedestrians, emergency vehicles and road safety.</p><button class="btn btn-dark" onclick="showSection('rules')">Study Rules</button></div>
@@ -181,6 +410,14 @@ const practiceState={};
 
 function escapeHtml(value){
  return String(value??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
+}
+
+function toggleKnowledge(button){
+ const card=button.closest(".knowledge-card");
+ if(!card)return;
+ card.classList.toggle("open");
+ const plus=button.querySelector(".plus");
+ if(plus)plus.textContent=card.classList.contains("open")?"−":"+";
 }
 
 function showSection(section){
