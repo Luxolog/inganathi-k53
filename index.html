@@ -1924,6 +1924,41 @@ footer strong {
 
 <!-- TEST START -->
 
+<div id="candidateForm" class="candidate-box">
+    <h3>Enter Your Details Before Starting</h3>
+    <p>Please complete all four fields before selecting a test session. All details are mandatory.</p>
+
+    <form class="candidate-form" id="candidateDetailsForm">
+        <div class="candidate-field">
+            <label for="candidateName">Name *</label>
+            <input id="candidateName" name="name" type="text" required autocomplete="given-name" placeholder="Enter your name">
+        </div>
+
+        <div class="candidate-field">
+            <label for="candidateSurname">Surname *</label>
+            <input id="candidateSurname" name="surname" type="text" required autocomplete="family-name" placeholder="Enter your surname">
+        </div>
+
+        <div class="candidate-field">
+            <label for="candidateCellphone">Cellphone Number *</label>
+            <input id="candidateCellphone" name="cellphone" type="tel" required autocomplete="tel" placeholder="Enter your cellphone number">
+        </div>
+
+        <div class="candidate-field">
+            <label for="candidateId">ID Number *</label>
+            <input id="candidateId" name="idNumber" type="text" required inputmode="numeric" autocomplete="off" placeholder="Enter your ID number">
+        </div>
+
+        <div class="candidate-notice full">
+            <strong>Required before the test:</strong> Name, surname, cellphone number and ID number must all be completed before you can choose a test session.
+        </div>
+
+        <div class="candidate-actions full">
+            <button type="submit" class="btn btn-primary">Continue to Test</button>
+        </div>
+    </form>
+</div>
+
 <div id="sessionPicker" class="session-picker hidden">
     <h4>Your 3-Session K53 Test</h4>
     <p>Complete the three sessions strategically. Each session is timed for 60 minutes, and the question order is randomised.</p>
@@ -2562,10 +2597,14 @@ async function loadQuestions() {
 
 
         document
-            .getElementById("sessionPicker")
+            .getElementById("candidateForm")
             .classList
             .remove("hidden");
 
+        document
+            .getElementById("sessionPicker")
+            .classList
+            .add("hidden");
 
         document
             .getElementById("testArea")
@@ -2758,12 +2797,9 @@ function startTimer() {
 
 function startSession(sessionNumber) {
     if (!candidateDetails) {
-        candidateDetails = {
-            name: "Online",
-            surname: "Learner",
-            cellphone: "Not provided",
-            idNumber: "Not provided"
-        };
+        const form = document.getElementById("candidateDetailsForm");
+        if (form) form.reportValidity();
+        return;
     }
 
     if (!sessionPools[sessionNumber] || !sessionPools[sessionNumber].length) {
@@ -2795,16 +2831,9 @@ function startSession(sessionNumber) {
 
 
 function startTest() {
-    candidateDetails = {
-        name: "Online",
-        surname: "Learner",
-        cellphone: "Not provided",
-        idNumber: "Not provided"
-    };
-
-    buildSessionPools();
-
-    document.getElementById("sessionPicker").classList.remove("hidden");
+    const form = document.getElementById("candidateDetailsForm");
+    if (!form || !form.reportValidity()) return;
+    form.requestSubmit();
 }
 
 
@@ -2975,11 +3004,32 @@ function showQuestionDiagram(q) {
     container.classList.add("hidden");
 
     /*
-       Source questionnaire artwork:
-       questions 73-178 are wired to PNG files in
-       assets/road-signs/.
+       Show every supplied diagram/image attached to the question.
+       Road-sign questions can also use the matching road-sign
+       library entry when the image path is stored there.
     */
-    if (Array.isArray(q.diagramImages) && q.diagramImages.length > 0) {
+    let diagramImages = [];
+
+    if (Array.isArray(q.diagramImages)) {
+        diagramImages = q.diagramImages.filter(Boolean);
+    }
+
+    if (!diagramImages.length && Array.isArray(q.images)) {
+        diagramImages = q.images.filter(Boolean);
+    }
+
+    if (!diagramImages.length && Array.isArray(roadSignLibrary) && q.category === "road_signs") {
+        const sign = roadSignLibrary.find(function(item) {
+            return Number(item.questionId) === Number(q.id) ||
+                   Number(item.id) === Number(q.id);
+        });
+
+        if (sign && Array.isArray(sign.images)) {
+            diagramImages = sign.images.filter(Boolean);
+        }
+    }
+
+    if (diagramImages.length > 0) {
 
         const title = document.createElement("div");
         title.style.width = "100%";
@@ -2992,7 +3042,7 @@ function showQuestionDiagram(q) {
 
         let loaded = 0;
 
-        q.diagramImages.forEach(function(src) {
+        diagramImages.forEach(function(src) {
 
             const img = document.createElement("img");
             img.src = src;
@@ -3505,13 +3555,16 @@ function restartTest() {
     document.getElementById("resultArea").classList.add("hidden");
     document.getElementById("testArea").classList.add("hidden");
 
-    const form = document.getElementById("candidateForm");
+    const form = document.getElementById("candidateDetailsForm");
+    const candidateBox = document.getElementById("candidateForm");
     if (form) {
         form.reset();
-        form.classList.remove("hidden");
+    }
+    if (candidateBox) {
+        candidateBox.classList.remove("hidden");
     }
 
-    document.getElementById("sessionPicker").classList.remove("hidden");
+    document.getElementById("sessionPicker").classList.add("hidden");
 
     document.getElementById("test").scrollIntoView({
         behavior: "smooth",
@@ -3525,7 +3578,41 @@ function restartTest() {
 ========================================================= */
 
 function setupCandidateForm() {
-    // Candidate details are intentionally not collected before the practice test.
+    const form = document.getElementById("candidateDetailsForm");
+    const candidateBox = document.getElementById("candidateForm");
+    const sessionPicker = document.getElementById("sessionPicker");
+
+    if (!form) return;
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (!form.reportValidity()) {
+            return;
+        }
+
+        const name = document.getElementById("candidateName").value.trim();
+        const surname = document.getElementById("candidateSurname").value.trim();
+        const cellphone = document.getElementById("candidateCellphone").value.trim();
+        const idNumber = document.getElementById("candidateId").value.trim();
+
+        if (!name || !surname || !cellphone || !idNumber) {
+            form.reportValidity();
+            return;
+        }
+
+        candidateDetails = {
+            name: name,
+            surname: surname,
+            cellphone: cellphone,
+            idNumber: idNumber
+        };
+
+        buildSessionPools();
+
+        if (candidateBox) candidateBox.classList.add("hidden");
+        if (sessionPicker) sessionPicker.classList.remove("hidden");
+    });
 }
 
 
