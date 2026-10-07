@@ -3420,7 +3420,7 @@ async function finishTest(expired = false) {
     document.getElementById("testArea").classList.add("hidden");
     document.getElementById("resultArea").classList.remove("hidden");
 
-    const percentage = Math.round((score / testQuestions.length) * 100);
+
     const passed = percentage >= PASS_PERCENTAGE;
 
     document.getElementById("finalScore").textContent = percentage + "%";
