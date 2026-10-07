@@ -82,7 +82,7 @@ main{max-width:1050px;margin:auto;padding:28px 18px 70px}
 .study-home-within-learning .panel-head{margin-top:0}
 .study-home-within-learning .cards{margin-top:14px}
 .knowledge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start}
-.knowledge-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.knowledge-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;align-self:start;height:max-content}
 .knowledge-card button{width:100%;border:0;background:#fff;text-align:left;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;color:var(--ink);font-weight:900;font-size:14px}
 .knowledge-card button:hover{background:var(--soft)}
 .knowledge-card button .plus{font-size:20px;color:var(--red);line-height:1}
@@ -93,6 +93,10 @@ main{max-width:1050px;margin:auto;padding:28px 18px 70px}
 .knowledge-content ul,.knowledge-content ol{padding-left:19px;margin:7px 0}
 .knowledge-content li{margin:5px 0}
 .knowledge-content strong{color:#273244}
+.qa-topic{border-top:1px solid var(--line);padding:14px 0 2px}
+.qa-topic:first-of-type{border-top:0;padding-top:4px}
+.qa-topic h4{margin-top:0}
+.qa-actions{margin-top:8px}
 .code-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:11px}
 .code-table th,.code-table td{border:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}
 .code-table th{background:var(--ink);color:#fff;font-size:10px}
@@ -326,11 +330,25 @@ Do not rely on memorising answers alone. Learn the meaning behind the rule, sign
 <div class="knowledge-content">
 <h4>How to use the Inganathi question bank</h4>
 <p>The question bank is a <strong>learning tool</strong>. It should reinforce the theory rather than replace it.</p>
-<ul>
-<li><strong>Rules of the Road:</strong> Q1–72.</li>
-<li><strong>Road Signs:</strong> Q73–178, with sign artwork and explanations.</li>
-<li><strong>Vehicle Controls:</strong> Q179–236.</li>
-</ul>
+
+<div class="qa-topic">
+<h4>Rules of the Road — Q1–72</h4>
+<p>Study speed, following distance, overtaking, lane changes, intersections, parking, pedestrians, emergency vehicles and road safety.</p>
+<div class="qa-actions"><button class="btn btn-dark" onclick="showSection('rules')">Study Rules</button></div>
+</div>
+
+<div class="qa-topic">
+<h4>Road Signs — Q73–178</h4>
+<p>Study the 106 road-sign questions with the supplied PNG artwork. Learn each sign one at a time, then practise the same 106-question pool.</p>
+<div class="qa-actions"><button class="btn btn-red" onclick="showSection('signs')">Study Road Signs</button></div>
+</div>
+
+<div class="qa-topic">
+<h4>Vehicle Controls — Q179–236</h4>
+<p>Study motorcycle, light motor vehicle and heavy motor vehicle controls and diagrams before practising the control questions.</p>
+<div class="qa-actions"><button class="btn btn-dark" onclick="showSection('controls')">Study Controls</button></div>
+</div>
+
 <h4>Recommended study cycle</h4>
 <ol>
 <li>Read the relevant theory in this manual.</li>
@@ -338,13 +356,11 @@ Do not rely on memorising answers alone. Learn the meaning behind the rule, sign
 <li>Practise the questions belonging to that section and review the explanations.</li>
 <li>When you are confident across all three sections, take the full 3-session test.</li>
 </ol>
-<div class="cards">
-<div class="card"><h3>Rules of the Road</h3><p>Q1–72. Speed, following distance, overtaking, lane changes, intersections, parking, pedestrians, emergency vehicles and road safety.</p><button class="btn btn-dark" onclick="showSection('rules')">Study Rules</button></div>
-<div class="card"><h3>Road Signs</h3><p>Q73–178. 106 road-sign questions with the supplied PNG artwork. Study the sign one at a time, then practise the same 106-question pool.</p><button class="btn btn-red" onclick="showSection('signs')">Study Road Signs</button></div>
-<div class="card"><h3>Vehicle Controls</h3><p>Q179–236. Motorcycle, light motor vehicle and heavy motor vehicle controls and diagrams.</p><button class="btn btn-dark" onclick="showSection('controls')">Study Controls</button></div>
-</div>
+
 <div class="notice"><strong>Important</strong>The South African learner-driver manual describes Rules of the Road, Road Traffic Signs, and Vehicle and Motorcycle Controls as its three main sections. It also notes that the manual is guidance and not a precise legal interpretation.</div>
 </div>
+</div>
+
 </div>
 
 </section>
