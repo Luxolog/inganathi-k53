@@ -75,9 +75,33 @@ section{padding:65px 20px}
 .control-icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;background:var(--ink);color:var(--red);font-size:28px}
 .control h3{font-size:16px;color:var(--ink);margin-bottom:6px}.control p{font-size:12px;color:var(--muted)}
 .quiz-links{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.quiz-link{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px}.quiz-link h3{color:var(--ink);margin-bottom:6px}.quiz-link p{font-size:13px;color:var(--muted);margin-bottom:14px}
+.chapter-quiz{background:#101522;color:#fff;padding:48px 20px;border-top:1px solid #ffffff10;border-bottom:1px solid #ffffff10}
+.quiz-wrap{max-width:1200px;margin:auto}
+.quiz-kicker{color:#ff5b5b;font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}
+.quiz-title{font-size:28px;margin-bottom:8px}
+.quiz-intro{color:#cbd5e1;margin-bottom:24px}
+.quiz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.quiz-card{background:#fff;color:#172033;border-radius:15px;padding:20px;border:1px solid #e1e6ed}
+.quiz-card h3{font-size:15px;color:#02050e;margin-bottom:13px}
+.quiz-options{display:grid;gap:8px}
+.quiz-option{width:100%;text-align:left;background:#f8fafc;border:1px solid #d7dde6;border-radius:9px;padding:10px 12px;cursor:pointer;font-weight:700;color:#243044}
+.quiz-option:hover{border-color:#d50203;background:#fff5f5}
+.quiz-option.correct{background:#e9f8ee;border-color:#25a55b;color:#116534}
+.quiz-option.wrong{background:#fff0f0;border-color:#d50203;color:#9b0000}
+.quiz-option:disabled{cursor:default;opacity:.98}
+.quiz-feedback{display:none;margin-top:12px;padding:10px 12px;border-radius:9px;background:#f1f4f8;color:#536075;font-size:12px}
+.quiz-feedback.show{display:block}
+.visual-study{margin:25px 0 8px}
+.visual-study h3{text-align:center;color:var(--ink);margin-bottom:14px}
+.visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.visual-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:12px}
+.visual-card img{width:100%;height:145px;object-fit:contain;background:var(--soft);border-radius:9px;margin-bottom:9px}
+.visual-card strong{display:block;color:var(--ink);font-size:13px}
+.visual-card span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+.quiz-score{font-weight:900;color:#fff;margin-top:20px}
 footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}footer p{color:#cbd5e1;font-size:12px;margin:4px}
-@media(max-width:900px){.hero-grid,.cards,.quick-grid,.lesson-nav,.quiz-links{grid-template-columns:1fr 1fr}.sign-grid{grid-template-columns:repeat(2,1fr)}.control-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}}
-@media(max-width:620px){nav{gap:10px}.hero{padding:52px 18px}.hero-grid,.cards,.quick-grid,.lesson-nav,.quiz-links,.sign-grid,.control-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-head h2{font-size:29px}.step:not(:last-child)::after{display:none}.brand img{width:68px;height:40px}}
+@media(max-width:900px){.hero-grid,.cards,.quick-grid,.lesson-nav,.quiz-links,.quiz-grid{grid-template-columns:1fr 1fr}.visual-grid{grid-template-columns:repeat(2,1fr)}.sign-grid{grid-template-columns:repeat(2,1fr)}.control-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}}
+@media(max-width:620px){nav{gap:10px}.hero{padding:52px 18px}.hero-grid,.cards,.quick-grid,.lesson-nav,.quiz-links,.quiz-grid,.visual-grid,.sign-grid,.control-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-head h2{font-size:29px}.step:not(:last-child)::after{display:none}.brand img{width:68px;height:40px}}
 </style>
 </head>
 <body>
@@ -166,6 +190,30 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 </div>
 </section>
 
+<section class="chapter-quiz" id="quiz-rules">
+<div class="quiz-wrap">
+<div class="quiz-kicker">CHAPTER 1 CHECK</div><h2 class="quiz-title">Test Yourself — Rules of the Road</h2>
+<p class="quiz-intro">Answer without looking back at the lesson. Then use the explanation to correct your mistake.</p>
+<div class="quiz-grid">
+<div class="quiz-card"><h3>1. What is the purpose of the two-second following method?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q1')">To measure your fuel consumption</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'rules','q1')">To help maintain a safe following distance</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q1')">To decide when to use headlights</button>
+</div><div class="quiz-feedback" id="fb-rules-q1">The two-second method helps you judge a safe gap behind the vehicle ahead.</div></div>
+<div class="quiz-card"><h3>2. Before changing lanes, what should be part of your observation?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q2')">Only the rear-view mirror</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'rules','q2')">Mirrors, signal, surrounding traffic and the blind spot</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q2')">Accelerate first, then signal</button>
+</div><div class="quiz-feedback" id="fb-rules-q2">The lesson sequence is Mirrors → Signal → Observe → Blind spot → Move.</div></div>
+<div class="quiz-card"><h3>3. What should you do when an emergency vehicle is sounding a siren?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,true,'rules','q3')">Give it right of way when safe to do so</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q3')">Race ahead of it</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q3')">Stop in a position that blocks traffic</button>
+</div><div class="quiz-feedback" id="fb-rules-q3">Make room safely and avoid creating another hazard.</div></div>
+</div><div class="quiz-score" id="score-rules">Score: 0 / 3</div>
+</div>
+</section>
+
 <section id="signs" class="module">
 <div class="wrap">
 <div class="module-head"><div class="num">2</div><div><h2>Road Traffic Signs</h2><p>Learn the meaning and required action — do not rely only on the shape.</p></div></div>
@@ -179,7 +227,40 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <input id="signSearch" class="sign-search" placeholder="Search signs by name, meaning or question number…">
 <div id="signFilters" class="sign-toolbar"></div>
 <div id="signCount" class="sign-count">Loading sign library…</div>
+<div class="visual-study">
+<h3>Study These Signs Visually First</h3>
+<div class="visual-grid">
+<div class="visual-card"><img src="assets/road-signs/q140-1.png" alt="No U-turn sign"><strong>No U-turn</strong><span>Q140 — know the prohibited action.</span></div>
+<div class="visual-card"><img src="assets/road-signs/q144-1.png" alt="Stop control sign"><strong>Stop control</strong><span>Q144 — stop correctly before proceeding.</span></div>
+<div class="visual-card"><img src="assets/road-signs/q149-1.png" alt="Temporary roadworks sign"><strong>Temporary sign</strong><span>Q149 — temporary signs are not optional.</span></div>
+<div class="visual-card"><img src="assets/road-signs/q169-1.png" alt="Keep left sign"><strong>Keep left</strong><span>Q169 — follow the mandatory direction.</span></div>
+</div>
+</div>
 <div id="signGrid" class="sign-grid"></div>
+</div>
+</section>
+
+<section class="chapter-quiz" id="quiz-signs">
+<div class="quiz-wrap">
+<div class="quiz-kicker">CHAPTER 2 CHECK</div><h2 class="quiz-title">Test Yourself — Road Traffic Signs</h2>
+<p class="quiz-intro">Look at the sign, think about its meaning and identify the action required.</p>
+<div class="quiz-grid">
+<div class="quiz-card"><h3>1. What does a temporary road sign tell you?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q1')">It is only a suggestion</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'signs','q1')">Normal road circumstances have changed and the sign must be obeyed</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q1')">It applies only at night</button>
+</div><div class="quiz-feedback" id="fb-signs-q1">The official sign manual explains that temporary signs indicate a change in normal circumstances and require attention to the specific conditions.</div></div>
+<div class="quiz-card"><h3>2. Which group of signs controls or regulates what road users may or must do?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,true,'signs','q2')">Regulatory signs</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q2')">Information signs only</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q2')">Route guidance signs only</button>
+</div><div class="quiz-feedback" id="fb-signs-q2">Regulatory signs regulate and control the actions of road users.</div></div>
+<div class="quiz-card"><h3>3. When studying a sign for the test, what three questions should you ask?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q3')">What colour is it? How big is it? Who made it?</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'signs','q3')">What is it called? What does it mean? What action must I take?</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q3')">Where was it printed? Is it old? Is it new?</button>
+</div><div class="quiz-feedback" id="fb-signs-q3">Use the sign name, purpose/meaning and required driver action as your study framework.</div></div>
+</div><div class="quiz-score" id="score-signs">Score: 0 / 3</div>
 </div>
 </section>
 
@@ -194,6 +275,30 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <div class="card"><h3>Pedestrian crossings</h3><p>Watch for pedestrians and vehicles that have stopped at a crossing. Your source specifically tests the prohibition on passing a vehicle stopped at a pedestrian crossing.</p></div>
 <div class="card"><h3>Arrows & painted areas</h3><p>Lane arrows and painted islands can direct traffic or separate traffic streams. Do not drive through an area where the marking or sign requires you to keep clear.</p></div>
 </div>
+</div>
+</section>
+
+<section class="chapter-quiz" id="quiz-markings">
+<div class="quiz-wrap">
+<div class="quiz-kicker">CHAPTER 3 CHECK</div><h2 class="quiz-title">Test Yourself — Road Markings & Signals</h2>
+<p class="quiz-intro">Road markings can regulate, control and warn traffic. Learn what the marking requires you to do.</p>
+<div class="quiz-grid">
+<div class="quiz-card"><h3>1. What should you do at a stop line when a stop control applies?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,true,'markings','q1')">Stop at the appropriate line and proceed only when safe</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q1')">Drive over it without stopping</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q1')">Use the shoulder to bypass it</button>
+</div><div class="quiz-feedback" id="fb-markings-q1">A stop control requires the driver to stop at the appropriate stop line before proceeding when safe.</div></div>
+<div class="quiz-card"><h3>2. What is the purpose of lane arrows and painted areas?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q2')">They are only decorative</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'markings','q2')">They can direct traffic or separate traffic streams</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q2')">They cancel all road signs</button>
+</div><div class="quiz-feedback" id="fb-markings-q2">Read the road markings together with signs and surrounding traffic.</div></div>
+<div class="quiz-card"><h3>3. Can you pass a vehicle that has stopped at a pedestrian crossing?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q3')">Yes, if you are in a hurry</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'markings','q3')">No — the source material tests this as prohibited</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q3')">Yes, if you sound the hooter</button>
+</div><div class="quiz-feedback" id="fb-markings-q3">The supplied Inganathi material specifically tests the prohibition on passing a vehicle stopped at a pedestrian crossing.</div></div>
+</div><div class="quiz-score" id="score-markings">Score: 0 / 3</div>
 </div>
 </section>
 
@@ -218,6 +323,30 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 </div>
 </section>
 
+<section class="chapter-quiz" id="quiz-controls">
+<div class="quiz-wrap">
+<div class="quiz-kicker">CHAPTER 4 CHECK</div><h2 class="quiz-title">Test Yourself — Vehicle Controls</h2>
+<p class="quiz-intro">You should be able to identify the control and explain its purpose before taking the full test.</p>
+<div class="quiz-grid">
+<div class="quiz-card"><h3>1. What is the main function of the clutch?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,true,'controls','q1')">To disconnect the engine from the transmission / gearbox</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q1')">To steer the vehicle</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q1')">To operate the headlights</button>
+</div><div class="quiz-feedback" id="fb-controls-q1">Your study material defines the clutch as disconnecting the engine from the transmission / gearbox.</div></div>
+<div class="quiz-card"><h3>2. Why do you check mirrors before a manoeuvre?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q2')">Only to check your hairstyle</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'controls','q2')">To monitor traffic behind and around the vehicle</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q2')">To make the vehicle accelerate</button>
+</div><div class="quiz-feedback" id="fb-controls-q2">Mirrors help you monitor traffic behind and around the vehicle.</div></div>
+<div class="quiz-card"><h3>3. When should the parking brake be applied during the emergency-stop sequence taught here?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q3')">Before braking</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'controls','q3')">After the vehicle has stopped</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q3')">While steering sharply</button>
+</div><div class="quiz-feedback" id="fb-controls-q3">The lesson says not to apply the parking brake until the vehicle has stopped.</div></div>
+</div><div class="quiz-score" id="score-controls">Score: 0 / 3</div>
+</div>
+</section>
+
 <section id="hazards" class="module alt">
 <div class="wrap">
 <div class="module-head"><div class="num">5</div><div><h2>Hazard Awareness</h2><p>Good drivers identify hazards before they become emergencies.</p></div></div>
@@ -230,6 +359,30 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <div class="card"><h3>Think ahead</h3><p>Do not only react to what is directly in front of you. Scan for developing hazards, traffic behaviour, pedestrians, road signs and changes in road conditions.</p></div>
 </div>
 <div class="steps"><div class="step">SEE</div><div class="step">IDENTIFY</div><div class="step">ANTICIPATE</div><div class="step">ADJUST</div><div class="step">ACT</div></div>
+</div>
+</section>
+
+<section class="chapter-quiz" id="quiz-hazards">
+<div class="quiz-wrap">
+<div class="quiz-kicker">CHAPTER 5 CHECK</div><h2 class="quiz-title">Test Yourself — Hazard Awareness</h2>
+<p class="quiz-intro">Hazard awareness is about seeing risk early and adjusting before the situation becomes an emergency.</p>
+<div class="quiz-grid">
+<div class="quiz-card"><h3>1. Which is an example of a moving hazard?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,true,'hazards','q1')">A vehicle, person or animal</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q1')">Only a road sign</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q1')">Only a fixed building</button>
+</div><div class="quiz-feedback" id="fb-hazards-q1">Moving hazards can change position or behaviour quickly.</div></div>
+<div class="quiz-card"><h3>2. What should you generally do when wet weather reduces grip or visibility?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q2')">Drive faster to finish sooner</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'hazards','q2')">Reduce speed as required and increase following distance</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q2')">Ignore the road surface</button>
+</div><div class="quiz-feedback" id="fb-hazards-q2">Wet conditions can reduce grip and visibility and may increase stopping distance.</div></div>
+<div class="quiz-card"><h3>3. What is the correct hazard-awareness sequence taught in this manual?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q3')">Act → See → Ignore → Accelerate → Stop</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'hazards','q3')">See → Identify → Anticipate → Adjust → Act</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q3')">Signal → Race → Brake → Turn → Stop</button>
+</div><div class="quiz-feedback" id="fb-hazards-q3">The sequence is SEE → IDENTIFY → ANTICIPATE → ADJUST → ACT.</div></div>
+</div><div class="quiz-score" id="score-hazards">Score: 0 / 3</div>
 </div>
 </section>
 
@@ -251,6 +404,30 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 </div>
 </section>
 
+<section class="chapter-quiz" id="quiz-revision">
+<div class="quiz-wrap">
+<div class="quiz-kicker">CHAPTER 6 CHECK</div><h2 class="quiz-title">Test Yourself — Quick Revision</h2>
+<p class="quiz-intro">If you can answer these confidently, move on to the full Inganathi practice test.</p>
+<div class="quiz-grid">
+<div class="quiz-card"><h3>1. What are the three official core study areas identified in the learner-driver manual?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,true,'revision','q1')">Rules of the Road, Road Traffic Signs, and Vehicle Controls</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q1')">Vehicle sales, insurance and fuel economy</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q1')">Only practical driving skills</button>
+</div><div class="quiz-feedback" id="fb-revision-q1">The official learner-driver manual is divided into those three main sections.</div></div>
+<div class="quiz-card"><h3>2. What should you do if your two-second gap is too short?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q2')">Move closer</button>
+<button class="quiz-option" onclick="checkQuiz(this,true,'revision','q2')">Increase the following gap</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q2')">Overtake immediately</button>
+</div><div class="quiz-feedback" id="fb-revision-q2">If you reach the fixed point before finishing the count, increase the gap.</div></div>
+<div class="quiz-card"><h3>3. What is the best next step after repeatedly getting a question wrong?</h3><div class="quiz-options">
+<button class="quiz-option" onclick="checkQuiz(this,true,'revision','q3')">Return to the relevant manual lesson, then practise again</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q3')">Guess faster</button>
+<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q3')">Skip the topic permanently</button>
+</div><div class="quiz-feedback" id="fb-revision-q3">Use the test to identify weak areas, then return to the study material before retesting.</div></div>
+</div><div class="quiz-score" id="score-revision">Score: 0 / 3</div>
+</div>
+</section>
+
 <section>
 <div class="wrap">
 <div class="section-head"><div class="eyebrow">READY?</div><h2>Now test what you have learned</h2><p>Study first, then use the Inganathi practice test to identify the areas that still need work.</p></div>
@@ -265,8 +442,20 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 </footer>
 
 <script>
-let signs=[],active="All";
+let signs=[],active="All",quizScores={rules:0,signs:0,markings:0,controls:0,hazards:0,revision:0},quizAnswered={};
 const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+function checkQuiz(btn,correct,chapter,q){
+ const key=chapter+"-"+q;
+ if(quizAnswered[key]) return;
+ quizAnswered[key]=true;
+ const options=btn.parentElement.querySelectorAll(".quiz-option");
+ options.forEach(b=>b.disabled=true);
+ btn.classList.add(correct?"correct":"wrong");
+ if(!correct){options.forEach(b=>{if(b.getAttribute("onclick")?.includes("true"))b.classList.add("correct")})}
+ const fb=document.getElementById("fb-"+chapter+"-"+q); if(fb) fb.classList.add("show");
+ if(correct) quizScores[chapter]++;
+ const score=document.getElementById("score-"+chapter); if(score) score.textContent="Score: "+quizScores[chapter]+" / 3";
+}
 function render(){
  const grid=document.getElementById("signGrid"), filters=document.getElementById("signFilters"), term=(document.getElementById("signSearch").value||"").toLowerCase().trim();
  const cats=["All",...new Set(signs.map(x=>x.category).filter(Boolean))];
