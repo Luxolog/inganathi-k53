@@ -481,7 +481,50 @@ section {
 ========================================================= */
 
 .sign-library {
-    margin-top: 45px;
+    margin-top: 24px;
+}
+
+.sign-library-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:min(520px,100%);
+    margin:0 auto 14px;
+    padding:13px 18px;
+    border:1px solid #d7dde6;
+    border-radius:10px;
+    background:#fff;
+    color:#02050e;
+    font-size:13px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.sign-library-toggle:hover{
+    background:#02050e;
+    color:#fff;
+    border-color:#02050e;
+}
+
+.sign-library.collapsed > .section-title,
+.sign-library.collapsed > .library-search,
+.sign-library.collapsed > .sign-result-count,
+.sign-library.collapsed > .library-toolbar,
+.sign-library.collapsed > .library-grid{
+    display:none;
+}
+
+.sign-library:not(.collapsed) > .section-title,
+.sign-library:not(.collapsed) > .library-search,
+.sign-library:not(.collapsed) > .sign-result-count,
+.sign-library:not(.collapsed) > .library-toolbar,
+.sign-library:not(.collapsed) > .library-grid{
+    display:block;
+}
+
+.sign-library:not(.collapsed) > .library-toolbar{
+    display:flex;
 }
 
 .library-toolbar {
@@ -1789,13 +1832,22 @@ footer strong {
     </div>
 </div>
 
-<div class="sign-library">
+<div id="signLibrary" class="sign-library collapsed">
 
-<div class="section-title" style="margin-top:45px;margin-bottom:25px;">
-<h2 style="font-size:28px;">Complete Study Sign Library</h2>
+<button
+    id="signLibraryToggle"
+    type="button"
+    class="sign-library-toggle"
+    aria-expanded="false"
+    onclick="toggleSignLibrary()">
+    <span id="signLibraryToggleText">Show Road Signs</span>
+    <span aria-hidden="true">⌄</span>
+</button>
+
+<div class="section-title" style="margin-top:22px;margin-bottom:18px;">
+<h2 style="font-size:24px;">Road Signs Study</h2>
 <p>
-    Study every road-sign, road-marking and traffic-signal diagram supplied with the Inganathi questionnaire.
-    Each card shows the real source artwork and the key point you need to know.
+    Select a category to show only those signs. Select <strong>All</strong> to show the complete 106-card library.
 </p>
 </div>
 
@@ -3602,6 +3654,17 @@ async function sendTestResultEmail(percentage, passed) {
 
 let roadSignLibrary = [];
 let activeSignCategory = "All";
+
+function toggleSignLibrary(){
+    const library = document.getElementById("signLibrary");
+    const button = document.getElementById("signLibraryToggle");
+    const text = document.getElementById("signLibraryToggleText");
+    if(!library || !button || !text) return;
+
+    const collapsed = library.classList.toggle("collapsed");
+    button.setAttribute("aria-expanded", String(!collapsed));
+    text.textContent = collapsed ? "Show Road Signs" : "Hide Road Signs";
+}
 
 function escapeHtml(value) {
     return String(value)
