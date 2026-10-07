@@ -78,6 +78,9 @@ main{max-width:1050px;margin:auto;padding:28px 18px 70px}
 .practice-result .big{font-size:48px;font-weight:900;color:var(--red);margin:7px 0}
 .practice-result p{font-size:13px;color:var(--muted);margin-bottom:14px}
 .practice-result .pass{color:var(--green);font-weight:900}
+.study-home-within-learning{margin:0 0 24px}
+.study-home-within-learning .panel-head{margin-top:0}
+.study-home-within-learning .cards{margin-top:14px}
 .knowledge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .knowledge-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .knowledge-card button{width:100%;border:0;background:#fff;text-align:left;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;color:var(--ink);font-weight:900;font-size:14px}
@@ -114,7 +117,6 @@ footer{background:var(--ink);color:#cbd5e1;text-align:center;padding:24px 18px;f
 <nav>
 <a href="index.html">Home</a>
 <button onclick="showSection('knowledge')">Learn First</button>
-<button onclick="showSection('home')">Study Home</button>
 <button onclick="showSection('rules')">Rules</button>
 <button onclick="showSection('signs')">Road Signs</button>
 <button onclick="showSection('controls')">Controls</button>
@@ -132,7 +134,6 @@ footer{background:var(--ink);color:#cbd5e1;text-align:center;padding:24px 18px;f
 
 <div class="section-switch">
 <button class="switch active" data-section="knowledge" onclick="showSection('knowledge')">Learn Before You Test</button>
-<button class="switch" data-section="home" onclick="showSection('home')">Study Home</button>
 <button class="switch" data-section="rules" onclick="showSection('rules')">Rules of the Road</button>
 <button class="switch" data-section="signs" onclick="showSection('signs')">Road Signs</button>
 <button class="switch" data-section="controls" onclick="showSection('controls')">Vehicle Controls</button>
@@ -154,6 +155,16 @@ Do not rely on memorising answers alone. Learn the meaning behind the rule, sign
 <div class="learning-step"><span>STEP 2</span>Study signs & controls</div>
 <div class="learning-step"><span>STEP 3</span>Practise questions</div>
 <div class="learning-step"><span>STEP 4</span>Take the full test</div>
+</div>
+
+<div class="study-home-within-learning">
+<div class="panel-head"><h2>Study one section at a time</h2><p>The supplied question bank has 236 questions. The manual is now focused so learners do not have to study everything on one screen.</p></div>
+<div class="cards">
+<div class="card"><h3>Rules of the Road</h3><p>Q1–72. Speed, following distance, overtaking, lane changes, intersections, parking, pedestrians, emergency vehicles and road safety.</p><button class="btn btn-dark" onclick="showSection('rules')">Study Rules</button></div>
+<div class="card"><h3>Road Signs</h3><p>Q73–178. 106 road-sign questions with the supplied PNG artwork. Study the sign one at a time, then practise the same 106-question pool.</p><button class="btn btn-red" onclick="showSection('signs')">Study Road Signs</button></div>
+<div class="card"><h3>Vehicle Controls</h3><p>Q179–236. Motorcycle, light motor vehicle and heavy motor vehicle controls and diagrams.</p><button class="btn btn-dark" onclick="showSection('controls')">Study Controls</button></div>
+</div>
+<div class="notice"><strong>Important</strong>The South African learner-driver manual describes Rules of the Road, Road Traffic Signs, and Vehicle and Motorcycle Controls as its three main sections. It also notes that the manual is guidance and not a precise legal interpretation.</div>
 </div>
 
 <div class="knowledge-grid">
@@ -323,27 +334,7 @@ Do not rely on memorising answers alone. Learn the meaning behind the rule, sign
 <h4>Recommended study cycle</h4>
 <ol>
 <li>Read the relevant theory in this manual.</li>
-<li>Study the signs or vehicle-control diagrams for that topic.</li>
-<li>Practise the questions for that section.</li>
-<li>Read the explanation whenever you get an answer wrong.</li>
-<li>Repeat the section until you can explain the correct answer, not merely recognise it.</li>
-<li>Only then move to the full test.</li>
-</ol>
-<h4>When you get an answer wrong</h4>
-<p>Do not simply memorise the correct letter. Identify <strong>what rule, sign, definition or safety principle</strong> caused the correct answer. Then return to the relevant theory section and try the question again.</p>
-<div class="notice"><strong>Important</strong>Practice questions on this site are for learner preparation. The actual learner's licence test is administered by the relevant licensing authority and may not contain the same questions.</div>
-</div>
-</div>
-
-</div>
-
-<div class="source-note">
-<strong>Official-information reminder:</strong> licensing rules, fees, booking systems and administrative requirements can change. This study manual is educational material; for current application requirements, use the official South African Government, RTMC and provincial transport/DLTC information.
-</div>
-</section>
-
-<section id="panel-home" class="panel">
-<div class="panel-head"><h2>Study one section at a time</h2><p>The supplied question bank has 236 questions. The manual is now focused so learners do not have to study everything on one screen.</p></div>
+<li>Study manual is now focused so learners do not have to study everything on one screen.</p></div>
 <div class="cards">
 <div class="card"><h3>Rules of the Road</h3><p>Q1–72. Speed, following distance, overtaking, lane changes, intersections, parking, pedestrians, emergency vehicles and road safety.</p><button class="btn btn-dark" onclick="showSection('rules')">Study Rules</button></div>
 <div class="card"><h3>Road Signs</h3><p>Q73–178. 106 road-sign questions with the supplied PNG artwork. Study the sign one at a time, then practise the same 106-question pool.</p><button class="btn btn-red" onclick="showSection('signs')">Study Road Signs</button></div>
