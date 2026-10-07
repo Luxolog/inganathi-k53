@@ -1373,6 +1373,25 @@ footer strong {
 
 }
 
+.session-picker{margin-top:24px;padding:24px;border:1px solid #e1e6ee;border-radius:16px;background:#f8fafc}
+.session-picker h4{margin:0 0 7px;color:#02050e;font-size:20px}
+.session-picker>p{color:#687386;margin:0 0 18px}
+.session-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.session-card{border:1px solid #d7dde6;background:#fff;border-radius:14px;padding:18px;text-align:left;cursor:pointer;transition:.2s}
+.session-card:hover{transform:translateY(-2px);border-color:#d50203;box-shadow:0 8px 20px rgba(7,20,38,.08)}
+.session-card strong{display:block;color:#d50203;font-size:16px;margin-bottom:5px}
+.session-card .session-total{display:block;color:#02050e;font-size:24px;font-weight:900;margin:8px 0}
+.session-card span{display:block;color:#687386;font-size:12px;line-height:1.5}
+.session-card em{display:block;color:#02050e;font-size:11px;font-weight:800;margin-top:10px;font-style:normal}
+.timer-display{min-width:92px;text-align:center;background:#02050e;color:#fff;border-radius:9px;padding:9px 12px;font-size:17px;font-weight:900;letter-spacing:.5px}
+.timer-display.warning{background:#b45309}
+.timer-display.danger{background:#b91c1c;animation:timerPulse 1s infinite}
+@keyframes timerPulse{50%{opacity:.65}}
+.test-session-label{font-size:11px;font-weight:900;color:#d50203;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
+.result-session{margin:12px 0 18px;padding:12px 15px;border-radius:10px;background:#f8fafc;color:#172033;font-weight:800}
+.session-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.session-actions button{border:0;cursor:pointer}
+@media(max-width:800px){.session-grid{grid-template-columns:1fr}.test-top{flex-wrap:wrap}.timer-display{margin-left:auto}}
 </style>
 
 </head>
@@ -1867,6 +1886,31 @@ footer strong {
 <button type="submit" class="btn btn-primary">Start Test</button>
 </div>
 </form>
+
+<div id="sessionPicker" class="session-picker hidden">
+    <h4>Choose Your Test Session</h4>
+    <p>The 236-question bank is divided strategically across three one-hour sessions. Every session is randomised, and together the three sessions cover the complete question bank without repeating questions within the same test cycle.</p>
+    <div class="session-grid">
+        <button type="button" class="session-card" onclick="startSession(1)">
+            <strong>SESSION 1</strong>
+            <span class="session-total">79 Questions</span>
+            <span>24 Rules • 35 Road Signs • 20 Vehicle Controls</span>
+            <em>60:00 countdown</em>
+        </button>
+        <button type="button" class="session-card" onclick="startSession(2)">
+            <strong>SESSION 2</strong>
+            <span class="session-total">78 Questions</span>
+            <span>24 Rules • 35 Road Signs • 19 Vehicle Controls</span>
+            <em>60:00 countdown</em>
+        </button>
+        <button type="button" class="session-card" onclick="startSession(3)">
+            <strong>SESSION 3</strong>
+            <span class="session-total">79 Questions</span>
+            <span>24 Rules • 36 Road Signs • 19 Vehicle Controls</span>
+            <em>60:00 countdown</em>
+        </button>
+    </div>
+</div>
 </div>
 
 
@@ -1879,24 +1923,14 @@ footer strong {
 
 <div class="test-top">
 
-
-<div
-    id="questionCounter"
-    class="question-counter">
-
-    Question 1 of 236
-
+<div>
+<div id="testSessionLabel" class="test-session-label">SESSION 1</div>
+<div id="questionCounter" class="question-counter">Question 1 of 79</div>
 </div>
 
+<div id="scoreDisplay" class="score-display">Score: 0</div>
 
-<div
-    id="scoreDisplay"
-    class="score-display">
-
-    Score: 0
-
-</div>
-
+<div id="timerDisplay" class="timer-display" aria-live="polite">60:00</div>
 
 </div>
 
@@ -1981,17 +2015,14 @@ footer strong {
 <div id="resultStatus" class="result-status">RESULT</div>
 <div id="finalScore" class="result-score">0%</div>
 <p id="resultCandidate" class="result-candidate"></p>
+<div id="sessionResult" class="result-session"></div>
 <p id="resultMessage">Your results will appear here.</p>
 <p id="resultEmailStatus" class="result-email-status"></p>
 
-
-<button
-    class="btn btn-primary"
-    onclick="restartTest()">
-
-    Try Again
-
-</button>
+<div class="session-actions">
+<button class="btn btn-primary" onclick="backToSessionSelection()">Choose Another Session</button>
+<button class="btn btn-secondary" onclick="restartTest()">Start Over</button>
+</div>
 
 
 </div>
@@ -2293,18 +2324,43 @@ let selectedAnswer = null;
 
 let candidateDetails = null;
 let resultSubmitted = false;
+let currentSession = 0;
+let sessionPools = {};
+let timerInterval = null;
+let timeRemaining = 3600;
+let timedOut = false;
+
 const PASS_PERCENTAGE = 80;
 const INSTRUCTOR_EMAIL = "info@uvanofinserv.co.za";
 const RESULT_EMAIL_ENDPOINT = "https://formsubmit.co/ajax/" + INSTRUCTOR_EMAIL;
 
-
-/*
-   IMPORTANT:
-
-   There are 236 questions in your database.
-*/
-
-const TEST_LENGTH = 236;
+const SESSION_TIME = 60 * 60;
+const SESSION_CONFIG = {
+    1: {
+        total: 79,
+        rules: 24,
+        road_signs: 35,
+        motorcycle: 7,
+        light_motor_vehicle: 7,
+        heavy_motor_vehicle: 6
+    },
+    2: {
+        total: 78,
+        rules: 24,
+        road_signs: 35,
+        motorcycle: 7,
+        light_motor_vehicle: 6,
+        heavy_motor_vehicle: 6
+    },
+    3: {
+        total: 79,
+        rules: 24,
+        road_signs: 36,
+        motorcycle: 6,
+        light_motor_vehicle: 7,
+        heavy_motor_vehicle: 6
+    }
+};
 
 
 
@@ -2534,53 +2590,130 @@ async function loadQuestions() {
    START TEST
 ========================================================= */
 
-function startTest() {
+function buildSessionPools() {
+    sessionPools = { 1: [], 2: [], 3: [] };
 
+    [ "rules", "road_signs", "motorcycle", "light_motor_vehicle", "heavy_motor_vehicle" ]
+        .forEach(function(category) {
+            const source = shuffle(
+                allQuestions.filter(function(q) {
+                    return q.category === category;
+                })
+            );
+
+            const a = SESSION_CONFIG[1][category];
+            const b = SESSION_CONFIG[2][category];
+
+            sessionPools[1] = sessionPools[1].concat(source.slice(0, a));
+            sessionPools[2] = sessionPools[2].concat(source.slice(a, a + b));
+            sessionPools[3] = sessionPools[3].concat(source.slice(a + b));
+        });
+
+    sessionPools[1] = shuffle(sessionPools[1]);
+    sessionPools[2] = shuffle(sessionPools[2]);
+    sessionPools[3] = shuffle(sessionPools[3]);
+}
+
+
+function updateTimerDisplay() {
+    const timer = document.getElementById("timerDisplay");
+    if (!timer) return;
+
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+
+    timer.textContent =
+        String(minutes).padStart(2, "0") + ":" +
+        String(seconds).padStart(2, "0");
+
+    timer.classList.remove("warning", "danger");
+
+    if (timeRemaining <= 300) {
+        timer.classList.add("danger");
+    } else if (timeRemaining <= 600) {
+        timer.classList.add("warning");
+    }
+}
+
+
+function stopTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
+
+function startTimer() {
+    stopTimer();
+
+    timeRemaining = SESSION_TIME;
+    timedOut = false;
+    updateTimerDisplay();
+
+    timerInterval = setInterval(function() {
+        timeRemaining--;
+
+        if (timeRemaining <= 0) {
+            timeRemaining = 0;
+            updateTimerDisplay();
+            stopTimer();
+            timedOut = true;
+            finishTest(true);
+            return;
+        }
+
+        updateTimerDisplay();
+    }, 1000);
+}
+
+
+function startSession(sessionNumber) {
     if (!candidateDetails) {
         document.getElementById("candidateArea").classList.remove("hidden");
-        document.getElementById("testArea").classList.add("hidden");
         return;
     }
 
+    if (!sessionPools[sessionNumber] || !sessionPools[sessionNumber].length) {
+        buildSessionPools();
+    }
+
+    currentSession = sessionNumber;
     resultSubmitted = false;
-
-    /*
-       Use all available questions.
-
-       Your database contains 236 questions.
-    */
-
-    testQuestions =
-        shuffle(allQuestions).slice(
-            0,
-            Math.min(
-                TEST_LENGTH,
-                allQuestions.length
-            )
-        );
-
-
     currentQuestion = 0;
-
     score = 0;
-
     selectedAnswer = null;
 
+    testQuestions = shuffle(sessionPools[sessionNumber]);
 
-    document
-        .getElementById("resultArea")
-        .classList
-        .add("hidden");
+    document.getElementById("sessionPicker").classList.add("hidden");
+    document.getElementById("candidateForm").classList.add("hidden");
+    document.getElementById("candidateArea").classList.add("hidden");
+    document.getElementById("resultArea").classList.add("hidden");
+    document.getElementById("testArea").classList.remove("hidden");
 
+    const sessionLabel = document.getElementById("testSessionLabel");
+    if (sessionLabel) {
+        sessionLabel.textContent =
+            "SESSION " + sessionNumber +
+            " • " + testQuestions.length + " QUESTIONS • 60 MINUTES";
+    }
 
-    document
-        .getElementById("testArea")
-        .classList
-        .remove("hidden");
-
-
+    startTimer();
     showQuestion();
+}
 
+
+function startTest() {
+    if (!candidateDetails) {
+        document.getElementById("candidateArea").classList.remove("hidden");
+        return;
+    }
+
+    buildSessionPools();
+
+    document.getElementById("candidateForm").classList.add("hidden");
+    document.getElementById("sessionPicker").classList.remove("hidden");
 }
 
 
@@ -3204,11 +3337,14 @@ function nextQuestion() {
    FINISH TEST
 ========================================================= */
 
-async function finishTest() {
+async function finishTest(expired = false) {
 
     if (resultSubmitted || !candidateDetails || !testQuestions.length) return;
 
     resultSubmitted = true;
+    stopTimer();
+
+    timedOut = timedOut || expired;
 
     document.getElementById("testArea").classList.add("hidden");
     document.getElementById("resultArea").classList.remove("hidden");
@@ -3225,12 +3361,17 @@ async function finishTest() {
     document.getElementById("resultCandidate").textContent =
         candidateDetails.name + " " + candidateDetails.surname;
 
+    document.getElementById("sessionResult").textContent =
+        "Session " + currentSession + " • " +
+        testQuestions.length + " questions • " +
+        (timedOut ? "Time expired" : "Completed before the 60-minute limit");
+
     document.getElementById("resultMessage").textContent =
         "You scored " + score + " out of " + testQuestions.length +
         " (" + percentage + "%). " +
         (passed
-            ? "You have achieved the 80% pass mark."
-            : "You did not reach the 80% pass mark. Please study the manual and try again.");
+            ? "You have achieved the 80% pass mark for this session."
+            : "You did not reach the 80% pass mark for this session. Please study the manual and try again.");
 
     const emailStatus = document.getElementById("resultEmailStatus");
     emailStatus.className = "result-email-status";
@@ -3249,17 +3390,47 @@ async function finishTest() {
    RESTART TEST
 ========================================================= */
 
-function restartTest() {
+function backToSessionSelection() {
+    stopTimer();
+    resultSubmitted = false;
+    timedOut = false;
+    testQuestions = [];
+    currentQuestion = 0;
+    score = 0;
 
+    document.getElementById("resultArea").classList.add("hidden");
+    document.getElementById("testArea").classList.add("hidden");
+    document.getElementById("candidateArea").classList.remove("hidden");
+    document.getElementById("candidateForm").classList.add("hidden");
+    document.getElementById("sessionPicker").classList.remove("hidden");
+
+    document.getElementById("test").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+
+function restartTest() {
+    stopTimer();
     candidateDetails = null;
     resultSubmitted = false;
+    currentSession = 0;
+    sessionPools = {};
+    testQuestions = [];
+    currentQuestion = 0;
+    score = 0;
 
     document.getElementById("resultArea").classList.add("hidden");
     document.getElementById("testArea").classList.add("hidden");
 
     const form = document.getElementById("candidateForm");
-    if (form) form.reset();
+    if (form) {
+        form.reset();
+        form.classList.remove("hidden");
+    }
 
+    document.getElementById("sessionPicker").classList.add("hidden");
     document.getElementById("candidateArea").classList.remove("hidden");
 
     document.getElementById("test").scrollIntoView({
@@ -3293,13 +3464,15 @@ function setupCandidateForm() {
 
         candidateDetails = { name, surname, cellphone, idNumber };
 
-        document.getElementById("candidateArea").classList.add("hidden");
+        buildSessionPools();
+
+        document.getElementById("candidateForm").classList.add("hidden");
         document.getElementById("resultArea").classList.add("hidden");
-        document.getElementById("testArea").classList.remove("hidden");
+        document.getElementById("testArea").classList.add("hidden");
+        document.getElementById("candidateArea").classList.remove("hidden");
+        document.getElementById("sessionPicker").classList.remove("hidden");
 
-        startTest();
-
-        document.getElementById("testArea").scrollIntoView({
+        document.getElementById("test").scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
@@ -3332,7 +3505,11 @@ async function sendTestResultEmail(percentage, passed) {
         percentage: percentage + "%",
         pass_mark: PASS_PERCENTAGE + "%",
         submitted_at: submittedAt,
-        test_type: "Inganathi Driving Academy K53 Learner's Test"
+        test_type: "Inganathi Driving Academy K53 Learner's Test",
+        session: "Session " + currentSession,
+        session_questions: testQuestions.length,
+        time_limit: "60 minutes",
+        time_expired: timedOut ? "YES" : "NO"
     };
 
     try {
