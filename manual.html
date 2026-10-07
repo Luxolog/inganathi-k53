@@ -3,118 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Inganathi Driving Academy K53 Study Manual - rules of the road, road signs, road markings, vehicle controls and hazard awareness.">
+<meta name="description" content="Inganathi Driving Academy K53 study manual with focused road signs, rules, vehicle controls and section practice.">
 <title>Inganathi K53 Study Manual</title>
 <style>
-:root{--ink:#02050e;--red:#d50203;--muted:#687386;--bg:#f5f7fa;--card:#fff;--line:#e1e6ed;--soft:#f8fafc}
+:root{--ink:#02050e;--red:#d50203;--muted:#667085;--bg:#f5f6f8;--card:#fff;--line:#e3e7ed;--soft:#f8fafc;--green:#15803d}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#172033;line-height:1.65}
-a{text-decoration:none;color:inherit}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#172033;line-height:1.55}
 button,input{font:inherit}
-header{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;border-bottom:3px solid var(--red);box-shadow:0 4px 18px #0003}
-.nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.7px}
-.brand img{width:82px;height:46px;background:#fff;object-fit:contain;border-radius:8px;padding:3px}
-nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-nav a{font-size:13px;font-weight:800;color:#fff}
-nav a:hover{color:var(--red)}
-.hero{background:linear-gradient(135deg,#02050e,#250708 60%,#3a0a0b);color:#fff;padding:72px 20px}
-.wrap{max-width:1200px;margin:auto}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:42px;align-items:center}
-.eyebrow{color:#ff5b5b;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
-h1{font-size:clamp(40px,6vw,68px);line-height:1.02;margin-bottom:18px}
-h1 span{color:var(--red)}
-.hero p{max-width:720px;color:#d9e2ef;font-size:18px;margin-bottom:25px}
-.hero-card{background:#ffffff12;border:1px solid #ffffff22;border-radius:20px;padding:28px}
-.hero-card h3{color:#fff;margin-bottom:12px}
-.hero-card li{margin:8px 0;color:#e7edf5}
-.btn{display:inline-block;padding:12px 18px;border-radius:8px;font-weight:900;border:0;cursor:pointer}
-.primary{background:var(--red);color:#fff}.dark{background:var(--ink);color:#fff}.outline{border:1px solid #ffffff55;color:#fff}
-section{padding:65px 20px}
-.section-head{text-align:center;max-width:800px;margin:0 auto 38px}
-.section-head h2{font-size:36px;line-height:1.15;color:var(--ink);margin-bottom:10px}
-.section-head p{color:var(--muted)}
-.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.quick{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px;box-shadow:0 8px 24px #0714260a}
-.quick strong{display:block;color:var(--ink);font-size:18px;margin-bottom:5px}.quick p{font-size:13px;color:var(--muted)}
-.lesson-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:25px}
-.lesson-nav a{background:var(--ink);color:#fff;padding:17px;border-radius:12px;border-bottom:4px solid var(--red);font-weight:900}
-.lesson-nav small{display:block;color:#cbd5e1;font-weight:600;margin-top:3px}
-.module{scroll-margin-top:80px}
-.module.alt{background:#eef2f6}
-.module-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:28px}
-.num{flex:0 0 48px;height:48px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:900}
-.module-head h2{font-size:30px;color:var(--ink);line-height:1.2}.module-head p{color:var(--muted);margin-top:5px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px}
-.card h3{color:var(--ink);font-size:18px;margin-bottom:9px}.card p,.card li{font-size:14px;color:#566174}.card ul{padding-left:19px}.card li{margin:6px 0}
-.rule{border-left:4px solid var(--red);background:var(--soft);padding:13px 15px;border-radius:0 9px 9px 0;margin:12px 0}
-.rule strong{color:var(--ink)}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:20px 0}
-.step{background:var(--ink);color:#fff;border-radius:12px;padding:17px 10px;text-align:center;font-weight:900;font-size:13px;position:relative}
-.step:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:18px;color:var(--red);font-size:20px;font-weight:900}
-.warning{background:#fff7e8;border:1px solid #f2cc83;border-radius:13px;padding:16px;margin:20px 0;color:#6b4b00}.warning strong{display:block;color:var(--ink)}
-.memory{background:var(--ink);color:#fff;border-radius:16px;padding:23px;margin-top:22px}.memory h3{color:#fff;margin-bottom:7px}.memory p{color:#d9e2ef}
-.sign-toolbar{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:18px}
-.sign-filter{border:1px solid #d7dde6;background:#fff;border-radius:999px;padding:8px 13px;font-weight:900;font-size:12px;cursor:pointer}
-.sign-filter.active,.sign-filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-.sign-search{display:block;width:min(600px,100%);margin:0 auto 20px;padding:13px 15px;border:1px solid #d7dde6;border-radius:10px;outline:0}
-.sign-search:focus{border-color:var(--red);box-shadow:0 0 0 3px #d5020314}
-.sign-count{text-align:center;color:var(--muted);font-size:12px;font-weight:800;margin-bottom:20px}
-.sign-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.sign-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px}
-.sign-top{display:flex;justify-content:space-between;gap:8px;margin-bottom:10px}
-.badge{font-size:10px;font-weight:900;text-transform:uppercase;color:#a00000}.qbadge{background:var(--ink);color:#fff;border-radius:999px;padding:4px 7px;font-size:10px;font-weight:900}
-.sign-images{min-height:180px;background:var(--soft);border:1px solid #e5e7eb;border-radius:11px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:9px;margin-bottom:13px}
-.sign-images img{height:165px;max-width:100%;object-fit:contain;border-radius:7px}
-.sign-card h3{font-size:16px;color:var(--ink);margin-bottom:8px}
-.sign-card p{font-size:12px;color:var(--muted)}
-.control-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.control{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px;text-align:center}
-.control-icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;background:var(--ink);color:var(--red);font-size:28px}
-.control h3{font-size:16px;color:var(--ink);margin-bottom:6px}.control p{font-size:12px;color:var(--muted)}
-.quiz-links{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.quiz-link{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px}.quiz-link h3{color:var(--ink);margin-bottom:6px}.quiz-link p{font-size:13px;color:var(--muted);margin-bottom:14px}
-.chapter-quiz{background:#101522;color:#fff;padding:48px 20px;border-top:1px solid #ffffff10;border-bottom:1px solid #ffffff10}
-.quiz-wrap{max-width:1200px;margin:auto}
-.quiz-kicker{color:#ff5b5b;font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}
-.quiz-title{font-size:28px;margin-bottom:8px}
-.quiz-intro{color:#cbd5e1;margin-bottom:24px}
-.quiz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.quiz-card{background:#fff;color:#172033;border-radius:15px;padding:20px;border:1px solid #e1e6ed}
-.quiz-card h3{font-size:15px;color:#02050e;margin-bottom:13px}
-.quiz-options{display:grid;gap:8px}
-.quiz-option{width:100%;text-align:left;background:#f8fafc;border:1px solid #d7dde6;border-radius:9px;padding:10px 12px;cursor:pointer;font-weight:700;color:#243044}
-.quiz-option:hover{border-color:#d50203;background:#fff5f5}
-.quiz-option.correct{background:#e9f8ee;border-color:#25a55b;color:#116534}
-.quiz-option.wrong{background:#fff0f0;border-color:#d50203;color:#9b0000}
-.quiz-option:disabled{cursor:default;opacity:.98}
-.quiz-feedback{display:none;margin-top:12px;padding:10px 12px;border-radius:9px;background:#f1f4f8;color:#536075;font-size:12px}
-.quiz-feedback.show{display:block}
-.visual-study{margin:25px 0 8px}
-.visual-study h3{text-align:center;color:var(--ink);margin-bottom:14px}
-.visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.visual-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:12px}
-.visual-card img{width:100%;height:145px;object-fit:contain;background:var(--soft);border-radius:9px;margin-bottom:9px}
-.visual-card strong{display:block;color:var(--ink);font-size:13px}
-.visual-card span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
-.quiz-score{font-weight:900;color:#fff;margin-top:20px}
-.coverage{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-.coverage-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px}
-.coverage-card .range{display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900;margin-bottom:10px}
-.coverage-card h3{color:var(--ink);font-size:17px;margin-bottom:6px}
-.coverage-card p{font-size:13px;color:var(--muted);margin-bottom:12px}
-.coverage-card a{display:inline-block;background:var(--ink);color:#fff;padding:9px 12px;border-radius:8px;font-size:12px;font-weight:900}
-.control-visuals{margin-top:28px}
-.control-visuals h3{text-align:center;color:var(--ink);margin-bottom:14px}
-.control-diagrams{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.diagram-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
-.diagram-card img{width:100%;height:190px;object-fit:contain;background:var(--soft);border-radius:9px}
-.diagram-card strong{display:block;color:var(--ink);font-size:13px;margin-top:9px}
-.diagram-card span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
-footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}footer p{color:#cbd5e1;font-size:12px;margin:4px}
-@media(max-width:900px){.hero-grid,.cards,.quick-grid,.lesson-nav,.quiz-links,.quiz-grid{grid-template-columns:1fr 1fr}.visual-grid{grid-template-columns:repeat(2,1fr)}.sign-grid{grid-template-columns:repeat(2,1fr)}.control-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}}
-@media(max-width:620px){nav{gap:10px}.hero{padding:52px 18px}.hero-grid,.cards,.quick-grid,.lesson-nav,.quiz-links,.quiz-grid,.visual-grid,.sign-grid,.control-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-head h2{font-size:29px}.step:not(:last-child)::after{display:none}.brand img{width:68px;height:40px}}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;border-bottom:3px solid var(--red)}
+.nav{max-width:1100px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:900;font-size:13px;letter-spacing:.7px}
+.brand img{width:66px;height:40px;object-fit:contain;background:#fff;border-radius:7px;padding:3px}
+nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+nav button,nav a{border:0;background:transparent;color:#fff;padding:9px 11px;border-radius:7px;font-size:12px;font-weight:800;cursor:pointer}
+nav button:hover,nav a:hover{background:#fff;color:var(--ink)}
+main{max-width:1050px;margin:auto;padding:28px 18px 70px}
+.hero{background:var(--ink);color:#fff;border-radius:16px;padding:30px;margin-bottom:18px}
+.hero .eyebrow{color:#ff5b5b;font-size:10px;font-weight:900;letter-spacing:2px;margin-bottom:7px}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.05;margin-bottom:10px}
+.hero h1 span{color:var(--red)}
+.hero p{color:#cbd5e1;max-width:680px;font-size:14px}
+.section-switch{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.switch{border:1px solid var(--line);background:#fff;color:var(--ink);padding:10px 14px;border-radius:8px;font-size:12px;font-weight:900;cursor:pointer}
+.switch.active,.switch:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.panel{display:none}
+.panel.active{display:block}
+.panel-head{margin-bottom:18px}
+.panel-head h2{font-size:30px;color:var(--ink);margin-bottom:4px}
+.panel-head p{color:var(--muted);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{font-size:16px;color:var(--ink);margin-bottom:7px}
+.card p,.card li{font-size:12px;color:#566174}
+.card ul{padding-left:17px}.card li{margin:4px 0}
+.notice{background:#fff8e8;border:1px solid #f0cf8a;border-radius:10px;padding:13px 15px;color:#6b4b00;font-size:12px;margin:16px 0}
+.notice strong{display:block;color:var(--ink);margin-bottom:3px}
+.study-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.study-count{font-size:11px;font-weight:900;color:var(--muted)}
+.sign-viewer{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;max-width:760px;margin:auto}
+.sign-image{height:310px;background:var(--soft);border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;padding:12px;margin-bottom:15px}
+.sign-image img{height:275px;max-width:100%;object-fit:contain}
+.sign-info{text-align:center}
+.sign-info .badge{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:900;margin-bottom:8px}
+.sign-info h3{font-size:21px;color:var(--ink);margin-bottom:7px}
+.sign-info p{font-size:13px;color:var(--muted);max-width:650px;margin:auto}
+.viewer-actions{display:flex;justify-content:center;gap:9px;margin-top:16px}
+.btn{border:0;border-radius:8px;padding:11px 15px;font-size:12px;font-weight:900;cursor:pointer}
+.btn-dark{background:var(--ink);color:#fff}.btn-red{background:var(--red);color:#fff}.btn-light{background:#eef1f5;color:var(--ink)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.practice{margin-top:20px;background:var(--ink);color:#fff;border-radius:14px;padding:20px;display:none}
+.practice.active{display:block}
+.practice-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.practice-head h3{font-size:20px}.practice-head span{font-size:11px;color:#cbd5e1}
+.practice-card{background:#fff;color:#172033;border-radius:11px;padding:18px}
+.practice-meta{font-size:10px;font-weight:900;color:#a00000;margin-bottom:7px}
+.practice-question{font-size:18px;font-weight:900;color:var(--ink);margin-bottom:13px;line-height:1.35}
+.practice-image{background:var(--soft);border:1px solid var(--line);border-radius:9px;min-height:160px;display:flex;align-items:center;justify-content:center;gap:8px;padding:9px;margin-bottom:13px}
+.practice-image img{height:145px;max-width:100%;object-fit:contain}
+.options{display:grid;gap:8px}
+.option{width:100%;text-align:left;border:1px solid #d7dde6;background:#f8fafc;border-radius:8px;padding:11px 12px;cursor:pointer;font-size:12px;font-weight:700;color:#263244}
+.option:hover{border-color:var(--red)}
+.option.selected{border-color:var(--red);background:#fff1f1}
+.option.correct{border-color:#22a45a;background:#effaf3;color:#126334}
+.option.wrong{border-color:var(--red);background:#fff0f0;color:#9a0000}
+.option:disabled{cursor:default}
+.feedback{display:none;margin-top:12px;border-radius:8px;padding:10px;background:#eef3f7;color:#4b5565;font-size:12px}
+.feedback.show{display:block}
+.practice-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px}
+.practice-score{font-size:11px;color:#cbd5e1;font-weight:900}
+.practice-result{display:none;text-align:center;padding:28px;background:#fff;color:var(--ink);border-radius:11px}
+.practice-result.show{display:block}
+.practice-result .big{font-size:48px;font-weight:900;color:var(--red);margin:7px 0}
+.practice-result p{font-size:13px;color:var(--muted);margin-bottom:14px}
+.practice-result .pass{color:var(--green);font-weight:900}
+.controls-note{margin-top:16px}
+footer{background:var(--ink);color:#cbd5e1;text-align:center;padding:24px 18px;font-size:11px}
+@media(max-width:760px){.cards{grid-template-columns:1fr 1fr}.nav{align-items:flex-start}.sign-image{height:250px}.sign-image img{height:220px}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}.hero{padding:24px}.nav{flex-direction:column}.nav nav{justify-content:flex-start}.sign-image{height:220px}.sign-image img{height:190px}.practice-question{font-size:16px}}
 </style>
 </head>
 <body>
@@ -123,388 +90,217 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <a class="brand" href="index.html"><img src="inganathi-logo.jpeg" alt="Inganathi Driving Academy logo"><span>INGANATHI K53</span></a>
 <nav>
 <a href="index.html">Home</a>
-<a href="#study-plan">Study Plan</a>
-<a href="#rules">Rules</a>
-<a href="#signs">Road Signs</a>
-<a href="#controls">Controls</a>
-<a href="index.html#test">Practice Test</a>
+<button onclick="showSection('home')">Study Home</button>
+<button onclick="showSection('rules')">Rules</button>
+<button onclick="showSection('signs')">Road Signs</button>
+<button onclick="showSection('controls')">Controls</button>
+<a href="index.html#test">Full Test</a>
 </nav>
 </div>
 </header>
 
+<main>
 <section class="hero">
-<div class="wrap hero-grid">
-<div>
 <div class="eyebrow">INGANATHI DRIVING ACADEMY</div>
 <h1>K53 <span>Study Manual</span></h1>
-<p>Study the knowledge first. Understand the rule, recognise the sign, learn the control, then test yourself.</p>
-<a class="btn primary" href="#study-plan">Start Studying</a>
-<a class="btn outline" href="index.html#test">Take Practice Test</a>
-</div>
-<div class="hero-card">
-<h3>What you must study</h3>
-<ul>
-<li>Rules of the road</li>
-<li>Road traffic signs</li>
-<li>Road markings and traffic signals</li>
-<li>Motor vehicle controls</li>
-<li>Hazards, observation and safe driving</li>
-</ul>
-</div>
-</div>
+<p>Keep it simple: choose one section, study only that section, then practise only the questions belonging to it.</p>
 </section>
 
-<section id="study-plan">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">YOUR STUDY PLAN</div>
-<h2>Learn it in the right order</h2>
-<p>The official learner-driver framework identifies rules of the road, road traffic signs and vehicle controls as the core study areas. Inganathi adds structured revision and hazard awareness around your supplied question bank.</p>
-</div>
-<div class="quick-grid">
-<div class="quick"><strong>01 — Learn</strong><p>Read the lesson and understand the reason behind the rule.</p></div>
-<div class="quick"><strong>02 — Remember</strong><p>Use the highlighted memory points and procedures.</p></div>
-<div class="quick"><strong>03 — Recognise</strong><p>Study the actual road-sign artwork and markings.</p></div>
-<div class="quick"><strong>04 — Practise</strong><p>Use the question bank to check whether you understand the topic.</p></div>
-<div class="quick"><strong>05 — Revise</strong><p>Return to topics where you make mistakes.</p></div>
-<div class="quick"><strong>06 — Test</strong><p>Take the full Inganathi practice test when you are ready.</p></div>
-</div>
-<div class="lesson-nav">
-<a href="#rules">Rules of the Road<small>Speed, overtaking, intersections, parking and safety</small></a>
-<a href="#signs">Road Traffic Signs<small>Regulatory, warning, information and temporary signs</small></a>
-<a href="#markings">Road Markings<small>Lines, arrows, crossings and painted areas</small></a>
-<a href="#controls">Vehicle Controls<small>Steering, pedals, gears, lights and mirrors</small></a>
-<a href="#hazards">Hazard Awareness<small>Moving, fixed and changing hazards</small></a>
-<a href="#revision">Quick Revision<small>High-value facts from your source material</small></a>
-</div>
+<div class="section-switch">
+<button class="switch active" data-section="home" onclick="showSection('home')">Study Home</button>
+<button class="switch" data-section="rules" onclick="showSection('rules')">Rules of the Road</button>
+<button class="switch" data-section="signs" onclick="showSection('signs')">Road Signs</button>
+<button class="switch" data-section="controls" onclick="showSection('controls')">Vehicle Controls</button>
 </div>
 
-<div class="warning"><strong>How the manual connects to your 236-question test</strong>
-The supplied question bank is organised as Q1–72 Rules of the Road, Q73–178 Road Signs, Q179–198 Motorcycle Controls, Q199–218 Light Motor Vehicle Controls and Q219–236 Heavy Motor Vehicle Controls. Study the relevant chapter before using the full test.</div>
-<div class="coverage">
-<div class="coverage-card"><span class="range">Q1–72</span><h3>Rules of the Road</h3><p>Core rules, lane changes, overtaking, intersections, parking, pedestrians, emergencies, licences and road safety.</p><a href="index.html#test">Open full test</a></div>
-<div class="coverage-card"><span class="range">Q73–178</span><h3>Road Traffic Signs</h3><p>106 sign and road-marking questions, with the corresponding study artwork available above and in the searchable library.</p><a href="#signs">Study signs</a></div>
-<div class="coverage-card"><span class="range">Q179–236</span><h3>Vehicle Controls</h3><p>Motorcycle, light motor vehicle and heavy motor vehicle control questions, including the supplied control diagrams.</p><a href="#controls">Study controls</a></div>
-</div>
-</div>
-</section>
-
-<section id="rules" class="module alt">
-<div class="wrap">
-<div class="module-head"><div class="num">1</div><div><h2>Rules of the Road</h2><p>Know what a driver may, must and must not do on a public road.</p></div></div>
+<section id="panel-home" class="panel active">
+<div class="panel-head"><h2>Study one section at a time</h2><p>The supplied question bank has 236 questions. The manual is now focused so learners do not have to study everything on one screen.</p></div>
 <div class="cards">
-<div class="card"><h3>Speed & conditions</h3><ul><li>Know the applicable speed limit and obey the displayed limit.</li><li>Reduce speed when road, weather, traffic or visibility conditions require it.</li><li>Your document identifies 60 km/h as the general urban-area speed and 120 km/h as the maximum freeway speed in the material.</li></ul></div>
-<div class="card"><h3>Following distance</h3><p>Keep enough space to stop safely if the vehicle ahead slows or stops. Your source teaches the two-second method: choose a fixed point, wait for the vehicle ahead to pass it, then count “1001, 1002”.</p></div>
-<div class="card"><h3>Overtaking</h3><ul><li>Do not overtake where visibility is poor.</li><li>Do not overtake where doing so could create a hazard for approaching traffic.</li><li>Do not pass a vehicle stopped at a pedestrian crossing.</li><li>If another driver is overtaking you, keep as far left as practicable and do not accelerate.</li></ul></div>
-<div class="card"><h3>Changing lanes</h3><p>Changing lanes is only safe when the way is clear. Signal your intention, use mirrors, observe surrounding traffic and check the blind spot before moving.</p><div class="rule"><strong>Memory:</strong> Mirrors → Signal → Observe → Blind spot → Move.</div></div>
-<div class="card"><h3>Intersections</h3><ul><li>Approach every intersection prepared to respond to traffic and signs.</li><li>At a four-way stop, stop as required and proceed only when it is safe.</li><li>When turning, signal in good time and watch pedestrians and other road users.</li></ul></div>
-<div class="card"><h3>Traffic circles</h3><p>Yield according to the applicable traffic rules and road signs. Your source specifically teaches observation toward the right before entering and a blind-spot check, then observation and a left signal before exiting.</p></div>
-<div class="card"><h3>Pedestrians</h3><p>Drivers must pay particular attention at pedestrian crossings. Your source states that a driver must yield right of way to a pedestrian crossing within a pedestrian crossing.</p></div>
-<div class="card"><h3>Emergency vehicles</h3><p>When you become aware of an emergency vehicle sounding a siren, give it right of way when safe to do so. Do not create another hazard while making room.</p></div>
-<div class="card"><h3>Mobile phones</h3><p>Your source warns against holding a cellphone while the vehicle is moving. Even hands-free conversations can distract the driver; the safest choice is to stop legally and safely before dealing with a call.</p></div>
-<div class="card"><h3>Accidents</h3><p>Stop and assess the situation. Your source teaches that accidents should be reported within 24 hours and that, where there are injuries, vehicles should not be moved until instructed by police or traffic officers.</p></div>
-<div class="card"><h3>Towing</h3><ul><li>Your source teaches that a vehicle with defective brakes should not be towed with a rope.</li><li>Use appropriate towing equipment.</li><li>When towing with a rope, the source gives 30 km/h as the maximum speed.</li><li>The source also gives 3.5 m as the maximum distance between vehicles when towing each other.</li></ul></div>
-<div class="card"><h3>Seat belts & passengers</h3><p>Seat belts must be worn as required. Your source places responsibility for children under 14 on the driver, while adults are responsible for themselves.</p></div>
+<div class="card"><h3>Rules of the Road</h3><p>Q1–72. Speed, following distance, overtaking, lane changes, intersections, parking, pedestrians, emergency vehicles and road safety.</p><button class="btn btn-dark" onclick="showSection('rules')">Study Rules</button></div>
+<div class="card"><h3>Road Signs</h3><p>Q73–178. 106 road-sign questions with the supplied PNG artwork. Study the sign one at a time, then practise the same 106-question pool.</p><button class="btn btn-red" onclick="showSection('signs')">Study Road Signs</button></div>
+<div class="card"><h3>Vehicle Controls</h3><p>Q179–236. Motorcycle, light motor vehicle and heavy motor vehicle controls and diagrams.</p><button class="btn btn-dark" onclick="showSection('controls')">Study Controls</button></div>
 </div>
-<div class="steps">
-<div class="step">OBSERVE</div><div class="step">ASSESS</div><div class="step">SIGNAL</div><div class="step">CHECK</div><div class="step">PROCEED SAFELY</div>
-</div>
-</div>
+<div class="notice"><strong>Important</strong>The South African learner-driver manual describes Rules of the Road, Road Traffic Signs, and Vehicle and Motorcycle Controls as its three main sections. It also notes that the manual is guidance and not a precise legal interpretation. cite_placeholder</div>
 </section>
 
-<section class="chapter-quiz" id="quiz-rules">
-<div class="quiz-wrap">
-<div class="quiz-kicker">CHAPTER 1 CHECK</div><h2 class="quiz-title">Test Yourself — Rules of the Road</h2>
-<p class="quiz-intro">Answer without looking back at the lesson. Then use the explanation to correct your mistake.</p>
-<div class="quiz-grid">
-<div class="quiz-card"><h3>1. What is the purpose of the two-second following method?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q1')">To measure your fuel consumption</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'rules','q1')">To help maintain a safe following distance</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q1')">To decide when to use headlights</button>
-</div><div class="quiz-feedback" id="fb-rules-q1">The two-second method helps you judge a safe gap behind the vehicle ahead.</div></div>
-<div class="quiz-card"><h3>2. Before changing lanes, what should be part of your observation?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q2')">Only the rear-view mirror</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'rules','q2')">Mirrors, signal, surrounding traffic and the blind spot</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q2')">Accelerate first, then signal</button>
-</div><div class="quiz-feedback" id="fb-rules-q2">The lesson sequence is Mirrors → Signal → Observe → Blind spot → Move.</div></div>
-<div class="quiz-card"><h3>3. What should you do when an emergency vehicle is sounding a siren?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,true,'rules','q3')">Give it right of way when safe to do so</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q3')">Race ahead of it</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'rules','q3')">Stop in a position that blocks traffic</button>
-</div><div class="quiz-feedback" id="fb-rules-q3">Make room safely and avoid creating another hazard.</div></div>
-</div><div class="quiz-score" id="score-rules">Score: 0 / 3</div>
-<div class="coverage"><div class="coverage-card"><span class="range">FULL TEST: Q1–72</span><h3>Rules question bank</h3><p>After this chapter, revise your mistakes, then attempt the full test. The supplied rules section contains 72 questions.</p><a href="index.html#test">Practise Q1–72 in full test</a></div></div>
-</div>
-</section>
-
-<section id="signs" class="module">
-<div class="wrap">
-<div class="module-head"><div class="num">2</div><div><h2>Road Traffic Signs</h2><p>Learn the meaning and required action — do not rely only on the shape.</p></div></div>
+<section id="panel-rules" class="panel">
+<div class="panel-head"><h2>Rules of the Road</h2><p>Q1–72 only. Study these topics before practising the rules question pool.</p></div>
 <div class="cards">
-<div class="card"><h3>Regulatory / command signs</h3><p>These control what road users must or must not do. Examples in the official sign material include minimum speed, mass restrictions, keep-left/keep-right and direction-only signs. The action shown by the sign must be followed.</p></div>
-<div class="card"><h3>Warning signs</h3><p>Warning signs alert you to hazards or changes ahead. Learn the hazard, not merely the picture: the correct response may be to slow down, prepare to stop, change position or increase observation.</p></div>
-<div class="card"><h3>Information signs</h3><p>Information signs help road users identify routes, destinations, facilities and other useful road information. Learn what information the sign provides and how it affects your journey.</p></div>
-<div class="card"><h3>Temporary signs</h3><p>Your source emphasises that temporary signs indicate that circumstances on the roadway are not normal and that temporary signs have the same legal significance as permanent signs.</p><div class="rule"><strong>Remember:</strong> Temporary does not mean optional.</div></div>
+<div class="card"><h3>Speed & following distance</h3><p>Know the applicable speed limit, adjust for conditions and maintain a safe following distance. Your source teaches the two-second method.</p></div>
+<div class="card"><h3>Overtaking</h3><p>Understand when overtaking is prohibited or unsafe, including poor visibility and situations involving pedestrians and approaching traffic.</p></div>
+<div class="card"><h3>Changing lanes</h3><p>Signal, use mirrors, observe surrounding traffic and check the blind spot before moving.</p></div>
+<div class="card"><h3>Intersections & circles</h3><p>Approach safely, obey signs and signals, yield as required and observe before entering or exiting.</p></div>
+<div class="card"><h3>Pedestrians & emergencies</h3><p>Give appropriate priority to pedestrians and make safe way for emergency vehicles using a siren.</p></div>
+<div class="card"><h3>Accidents, towing & parking</h3><p>Know the required actions after an accident and the rules tested in the supplied question bank.</p></div>
 </div>
-<div class="warning"><strong>Study tip</strong> When you see a sign in the test, ask: <b>What is the sign called? What does it mean? What action must I take?</b></div>
-<input id="signSearch" class="sign-search" placeholder="Search signs by name, meaning or question number…">
-<div id="signFilters" class="sign-toolbar"></div>
-<div id="signCount" class="sign-count">Loading sign library…</div>
-<div class="visual-study">
-<h3>Study These Signs Visually First</h3>
-<div class="visual-grid">
-<div class="visual-card"><img src="assets/road-signs/q140-1.png" alt="No U-turn sign"><strong>No U-turn</strong><span>Q140 — know the prohibited action.</span></div>
-<div class="visual-card"><img src="assets/road-signs/q144-1.png" alt="Stop control sign"><strong>Stop control</strong><span>Q144 — stop correctly before proceeding.</span></div>
-<div class="visual-card"><img src="assets/road-signs/q149-1.png" alt="Temporary roadworks sign"><strong>Temporary sign</strong><span>Q149 — temporary signs are not optional.</span></div>
-<div class="visual-card"><img src="assets/road-signs/q169-1.png" alt="Keep left sign"><strong>Keep left</strong><span>Q169 — follow the mandatory direction.</span></div>
-</div>
-</div>
-<div id="signGrid" class="sign-grid"></div>
-</div>
+<button class="btn btn-red" style="margin-top:16px" onclick="startPractice('rules')">Practise Rules — Q1–72</button>
+<div id="practice-rules" class="practice"></div>
 </section>
 
-<section class="chapter-quiz" id="quiz-signs">
-<div class="quiz-wrap">
-<div class="quiz-kicker">CHAPTER 2 CHECK</div><h2 class="quiz-title">Test Yourself — Road Traffic Signs</h2>
-<p class="quiz-intro">Look at the sign, think about its meaning and identify the action required.</p>
-<div class="quiz-grid">
-<div class="quiz-card"><h3>1. What does a temporary road sign tell you?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q1')">It is only a suggestion</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'signs','q1')">Normal road circumstances have changed and the sign must be obeyed</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q1')">It applies only at night</button>
-</div><div class="quiz-feedback" id="fb-signs-q1">The official sign manual explains that temporary signs indicate a change in normal circumstances and require attention to the specific conditions.</div></div>
-<div class="quiz-card"><h3>2. Which group of signs controls or regulates what road users may or must do?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,true,'signs','q2')">Regulatory signs</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q2')">Information signs only</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q2')">Route guidance signs only</button>
-</div><div class="quiz-feedback" id="fb-signs-q2">Regulatory signs regulate and control the actions of road users.</div></div>
-<div class="quiz-card"><h3>3. When studying a sign for the test, what three questions should you ask?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q3')">What colour is it? How big is it? Who made it?</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'signs','q3')">What is it called? What does it mean? What action must I take?</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'signs','q3')">Where was it printed? Is it old? Is it new?</button>
-</div><div class="quiz-feedback" id="fb-signs-q3">Use the sign name, purpose/meaning and required driver action as your study framework.</div></div>
-</div><div class="quiz-score" id="score-signs">Score: 0 / 3</div>
-<div class="coverage"><div class="coverage-card"><span class="range">FULL TEST: Q73–178</span><h3>106 visual sign questions</h3><p>Use the searchable sign library to study the artwork linked to the question bank, then reinforce your knowledge in the full test.</p><a href="index.html#test">Practise Q73–178 in full test</a></div></div>
+<section id="panel-signs" class="panel">
+<div class="panel-head"><h2>Road Signs</h2><p>Only Road Signs are shown here. The 106-question road-sign pool is Q73–178.</p></div>
+<div class="notice"><strong>Study method</strong>Learn the sign name, meaning and required action. Use the arrows to move through the complete sign library one sign at a time.</div>
+<div class="study-bar"><span id="signStudyCount" class="study-count">Loading 106 signs…</span><span id="signStudyCategory" class="study-count"></span></div>
+<div class="sign-viewer">
+<div id="signImage" class="sign-image"></div>
+<div class="sign-info">
+<span id="signBadge" class="badge">ROAD SIGN</span>
+<h3 id="signName">Loading…</h3>
+<p id="signMeaning">Loading sign study material…</p>
 </div>
+<div class="viewer-actions">
+<button id="prevSign" class="btn btn-light" onclick="changeSign(-1)">← Previous</button>
+<button class="btn btn-red" onclick="startPractice('road_signs')">Practise Road Signs</button>
+<button id="nextSign" class="btn btn-light" onclick="changeSign(1)">Next →</button>
+</div>
+</div>
+<div id="practice-signs" class="practice"></div>
 </section>
 
-<section id="markings" class="module alt">
-<div class="wrap">
-<div class="module-head"><div class="num">3</div><div><h2>Road Markings & Traffic Signals</h2><p>Read the road itself — lines and markings can control movement.</p></div></div>
+<section id="panel-controls" class="panel">
+<div class="panel-head"><h2>Vehicle Controls</h2><p>Q179–236 only. This section covers the control questions in the supplied bank.</p></div>
 <div class="cards">
-<div class="card"><h3>Centre and lane lines</h3><p>Learn to distinguish lines that separate opposing traffic from lines separating lanes travelling in the same direction. Always consider the sign, road marking and surrounding traffic together.</p></div>
-<div class="card"><h3>Barrier / solid lines</h3><p>Where a barrier line or other restriction prevents a manoeuvre, do not cross it simply because the road appears clear. Your question bank tests recognition of these markings.</p></div>
-<div class="card"><h3>Stop lines</h3><p>Where a stop sign or stop control applies, stop at the appropriate stop line before proceeding when it is safe.</p></div>
-<div class="card"><h3>Yield markings</h3><p>Approach a yield control at a speed that allows you to observe other traffic and give way as required before proceeding.</p></div>
-<div class="card"><h3>Pedestrian crossings</h3><p>Watch for pedestrians and vehicles that have stopped at a crossing. Your source specifically tests the prohibition on passing a vehicle stopped at a pedestrian crossing.</p></div>
-<div class="card"><h3>Arrows & painted areas</h3><p>Lane arrows and painted islands can direct traffic or separate traffic streams. Do not drive through an area where the marking or sign requires you to keep clear.</p></div>
+<div class="card"><h3>Motorcycle Controls</h3><p>Q179–198. Study the supplied motorcycle control diagram and the functions tested in these questions.</p><img src="assets/control-diagrams/motorcycle-controls.png" alt="Motorcycle controls diagram" style="width:100%;height:170px;object-fit:contain;background:var(--soft);border-radius:8px;margin-top:10px"></div>
+<div class="card"><h3>Light Motor Vehicle</h3><p>Q199–218. Study the control locations and functions shown in the supplied diagram.</p><img src="assets/control-diagrams/light-motor-controls-212.png" alt="Light motor vehicle controls diagram" style="width:100%;height:170px;object-fit:contain;background:var(--soft);border-radius:8px;margin-top:10px"></div>
+<div class="card"><h3>Heavy Motor Vehicle</h3><p>Q219–236. Study the relevant controls and supplied diagram before practising.</p><img src="assets/control-diagrams/light-motor-controls-230.png" alt="Vehicle controls diagram" style="width:100%;height:170px;object-fit:contain;background:var(--soft);border-radius:8px;margin-top:10px"></div>
 </div>
-</div>
+<button class="btn btn-red" style="margin-top:16px" onclick="startPractice('controls')">Practise Controls — Q179–236</button>
+<div id="practice-controls" class="practice"></div>
 </section>
-
-<section class="chapter-quiz" id="quiz-markings">
-<div class="quiz-wrap">
-<div class="quiz-kicker">CHAPTER 3 CHECK</div><h2 class="quiz-title">Test Yourself — Road Markings & Signals</h2>
-<p class="quiz-intro">Road markings can regulate, control and warn traffic. Learn what the marking requires you to do.</p>
-<div class="quiz-grid">
-<div class="quiz-card"><h3>1. What should you do at a stop line when a stop control applies?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,true,'markings','q1')">Stop at the appropriate line and proceed only when safe</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q1')">Drive over it without stopping</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q1')">Use the shoulder to bypass it</button>
-</div><div class="quiz-feedback" id="fb-markings-q1">A stop control requires the driver to stop at the appropriate stop line before proceeding when safe.</div></div>
-<div class="quiz-card"><h3>2. What is the purpose of lane arrows and painted areas?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q2')">They are only decorative</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'markings','q2')">They can direct traffic or separate traffic streams</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q2')">They cancel all road signs</button>
-</div><div class="quiz-feedback" id="fb-markings-q2">Read the road markings together with signs and surrounding traffic.</div></div>
-<div class="quiz-card"><h3>3. Can you pass a vehicle that has stopped at a pedestrian crossing?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q3')">Yes, if you are in a hurry</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'markings','q3')">No — the source material tests this as prohibited</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'markings','q3')">Yes, if you sound the hooter</button>
-</div><div class="quiz-feedback" id="fb-markings-q3">The supplied Inganathi material specifically tests the prohibition on passing a vehicle stopped at a pedestrian crossing.</div></div>
-</div><div class="quiz-score" id="score-markings">Score: 0 / 3</div>
-</div>
-</section>
-
-<section id="controls" class="module">
-<div class="wrap">
-<div class="module-head"><div class="num">4</div><div><h2>Vehicle Controls</h2><p>Know what every major control does and why it matters for safe driving.</p></div></div>
-<div class="control-grid">
-<div class="control"><div class="control-icon">↔</div><h3>Steering wheel</h3><p>Controls direction. Your source recommends keeping both hands on the wheel as far as possible, using the “quarter to three” or “ten to two” position.</p></div>
-<div class="control"><div class="control-icon">＋</div><h3>Accelerator</h3><p>Controls engine power and allows the vehicle's speed to increase or decrease.</p></div>
-<div class="control"><div class="control-icon">■</div><h3>Service brake</h3><p>Used to slow or stop the vehicle. Emergency braking requires firm control and awareness of the vehicle and road conditions.</p></div>
-<div class="control"><div class="control-icon">C</div><h3>Clutch</h3><p>Disconnects the engine from the transmission / gearbox, as stated in your source material.</p></div>
-<div class="control"><div class="control-icon">R</div><h3>Gear lever</h3><p>Selects the required transmission gear. Use the appropriate gear for the situation.</p></div>
-<div class="control"><div class="control-icon">P</div><h3>Parking brake</h3><p>Helps keep a parked vehicle stationary. Your source also refers to applying the parking brake when stopped at the side of the road.</p></div>
-<div class="control"><div class="control-icon">◉</div><h3>Mirrors</h3><p>Allow the driver to monitor traffic behind and around the vehicle. Mirror observation is essential before manoeuvres.</p></div>
-<div class="control"><div class="control-icon">↪</div><h3>Indicators</h3><p>Signal your intention to other road users. Keep the signal displayed for long enough to communicate the manoeuvre clearly.</p></div>
-<div class="control"><div class="control-icon">☀</div><h3>Headlights</h3><p>Use lighting appropriate to the conditions and visibility. Your source specifically tests when headlights are required because visibility is reduced.</p></div>
-<div class="control"><div class="control-icon">!</div><h3>Hazard lights</h3><p>Warn other road users of a hazard or stopped vehicle where appropriate. Do not use them as a substitute for normal signalling.</p></div>
-<div class="control"><div class="control-icon">W</div><h3>Windscreen wipers</h3><p>Maintain visibility during rain or other conditions that reduce the driver's view.</p></div>
-<div class="control"><div class="control-icon">H</div><h3>Hooter</h3><p>Your source teaches that the hooter must not be used unnecessarily and may be used to help avoid a crash.</p></div>
-</div>
-<div class="control-visuals">
-<h3>Control Diagrams From the Supplied Test</h3>
-<div class="control-diagrams">
-<div class="diagram-card"><img src="assets/control-diagrams/motorcycle-controls.png" alt="Motorcycle control diagram"><strong>Motorcycle controls</strong><span>Questions Q179–198</span></div>
-<div class="diagram-card"><img src="assets/control-diagrams/light-motor-controls-212.png" alt="Light motor vehicle control diagram"><strong>Light motor vehicle controls</strong><span>Questions Q199–218</span></div>
-<div class="diagram-card"><img src="assets/control-diagrams/light-motor-controls-230.png" alt="Heavy motor vehicle control diagram"><strong>Heavy motor vehicle controls</strong><span>Questions Q219–236</span></div>
-</div>
-</div>
-<div class="memory"><h3>Emergency stop — remember the sequence</h3><p>Keep both hands firmly on the steering wheel. Check behind you. Brake hard but progressively without locking the wheels. Do not apply the parking brake until the vehicle has stopped.</p></div>
-</div>
-</section>
-
-<section class="chapter-quiz" id="quiz-controls">
-<div class="quiz-wrap">
-<div class="quiz-kicker">CHAPTER 4 CHECK</div><h2 class="quiz-title">Test Yourself — Vehicle Controls</h2>
-<p class="quiz-intro">You should be able to identify the control and explain its purpose before taking the full test.</p>
-<div class="quiz-grid">
-<div class="quiz-card"><h3>1. What is the main function of the clutch?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,true,'controls','q1')">To disconnect the engine from the transmission / gearbox</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q1')">To steer the vehicle</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q1')">To operate the headlights</button>
-</div><div class="quiz-feedback" id="fb-controls-q1">Your study material defines the clutch as disconnecting the engine from the transmission / gearbox.</div></div>
-<div class="quiz-card"><h3>2. Why do you check mirrors before a manoeuvre?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q2')">Only to check your hairstyle</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'controls','q2')">To monitor traffic behind and around the vehicle</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q2')">To make the vehicle accelerate</button>
-</div><div class="quiz-feedback" id="fb-controls-q2">Mirrors help you monitor traffic behind and around the vehicle.</div></div>
-<div class="quiz-card"><h3>3. When should the parking brake be applied during the emergency-stop sequence taught here?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q3')">Before braking</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'controls','q3')">After the vehicle has stopped</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'controls','q3')">While steering sharply</button>
-</div><div class="quiz-feedback" id="fb-controls-q3">The lesson says not to apply the parking brake until the vehicle has stopped.</div></div>
-</div><div class="quiz-score" id="score-controls">Score: 0 / 3</div>
-<div class="coverage"><div class="coverage-card"><span class="range">FULL TEST: Q179–236</span><h3>Controls question bank</h3><p>Use the diagrams above and learn the function of each numbered control before attempting the vehicle-control questions.</p><a href="index.html#test">Practise Q179–236 in full test</a></div></div>
-</div>
-</section>
-
-<section id="hazards" class="module alt">
-<div class="wrap">
-<div class="module-head"><div class="num">5</div><div><h2>Hazard Awareness</h2><p>Good drivers identify hazards before they become emergencies.</p></div></div>
-<div class="cards">
-<div class="card"><h3>Moving hazards</h3><p>Your source identifies vehicles, people and animals as examples of moving hazards. Their position and behaviour can change quickly.</p></div>
-<div class="card"><h3>Fixed hazards</h3><p>Road layout, intersections, bends, signs, traffic islands and other permanent features can create hazards that should be anticipated before you reach them.</p></div>
-<div class="card"><h3>Changing hazards</h3><p>Your source identifies weather and the road surface as changing or variable hazards. Rain, poor visibility or a slippery surface can increase stopping distance.</p></div>
-<div class="card"><h3>Wet weather</h3><p>Drive more slowly when conditions require it and increase the following distance. Be prepared for reduced grip and visibility.</p></div>
-<div class="card"><h3>Blind spots</h3><p>Mirrors do not show every area around the vehicle. Before changing lanes or moving laterally, check the blind spot as part of your observation.</p></div>
-<div class="card"><h3>Think ahead</h3><p>Do not only react to what is directly in front of you. Scan for developing hazards, traffic behaviour, pedestrians, road signs and changes in road conditions.</p></div>
-</div>
-<div class="steps"><div class="step">SEE</div><div class="step">IDENTIFY</div><div class="step">ANTICIPATE</div><div class="step">ADJUST</div><div class="step">ACT</div></div>
-</div>
-</section>
-
-<section class="chapter-quiz" id="quiz-hazards">
-<div class="quiz-wrap">
-<div class="quiz-kicker">CHAPTER 5 CHECK</div><h2 class="quiz-title">Test Yourself — Hazard Awareness</h2>
-<p class="quiz-intro">Hazard awareness is about seeing risk early and adjusting before the situation becomes an emergency.</p>
-<div class="quiz-grid">
-<div class="quiz-card"><h3>1. Which is an example of a moving hazard?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,true,'hazards','q1')">A vehicle, person or animal</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q1')">Only a road sign</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q1')">Only a fixed building</button>
-</div><div class="quiz-feedback" id="fb-hazards-q1">Moving hazards can change position or behaviour quickly.</div></div>
-<div class="quiz-card"><h3>2. What should you generally do when wet weather reduces grip or visibility?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q2')">Drive faster to finish sooner</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'hazards','q2')">Reduce speed as required and increase following distance</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q2')">Ignore the road surface</button>
-</div><div class="quiz-feedback" id="fb-hazards-q2">Wet conditions can reduce grip and visibility and may increase stopping distance.</div></div>
-<div class="quiz-card"><h3>3. What is the correct hazard-awareness sequence taught in this manual?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q3')">Act → See → Ignore → Accelerate → Stop</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'hazards','q3')">See → Identify → Anticipate → Adjust → Act</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q3')">Signal → Race → Brake → Turn → Stop</button>
-</div><div class="quiz-feedback" id="fb-hazards-q3">The sequence is SEE → IDENTIFY → ANTICIPATE → ADJUST → ACT.</div></div>
-</div><div class="quiz-score" id="score-hazards">Score: 0 / 3</div>
-<div class="coverage"><div class="coverage-card"><span class="range">MAINLY RULES: Q1–72</span><h3>Hazard questions</h3><p>Hazard awareness is reinforced throughout the supplied rules questions, especially around overtaking, following distance, pedestrians, weather and emergencies.</p><a href="index.html#test">Practise the full test</a></div></div>
-</div>
-</section>
-
-<section id="revision" class="module">
-<div class="wrap">
-<div class="module-head"><div class="num">6</div><div><h2>Quick Revision</h2><p>High-value facts drawn from the supplied Inganathi source material. Verify any administrative detail with your DLTC before relying on it.</p></div></div>
-<div class="cards">
-<div class="card"><h3>Core test areas</h3><p>Rules of the road, road traffic signs and vehicle controls are the three official core study areas for the learner's licence test.</p></div>
-<div class="card"><h3>Urban speed</h3><p>Your supplied questionnaire uses 60 km/h as the general urban-area speed. Always obey the actual applicable posted limit.</p></div>
-<div class="card"><h3>Freeway speed</h3><p>Your supplied questionnaire uses 120 km/h as the maximum legal freeway speed. Always obey the applicable sign and conditions.</p></div>
-<div class="card"><h3>Two-second rule</h3><p>Use a fixed roadside point and count “1001, 1002” after the vehicle ahead passes it. If you reach the point before finishing, increase the gap.</p></div>
-<div class="card"><h3>Emergency vehicle</h3><p>Give right of way to an emergency vehicle sounding a siren when it is safe to do so.</p></div>
-<div class="card"><h3>Temporary signs</h3><p>Temporary signs indicate abnormal road circumstances and have the same legal significance as permanent signs according to your source material.</p></div>
-<div class="card"><h3>Cellphone</h3><p>Your source prohibits holding a cellphone while the vehicle is moving and warns that even hands-free conversation can distract you.</p></div>
-<div class="card"><h3>Seat belts</h3><p>Seat belts must be worn as required. Your source places responsibility for children under 14 on the driver and adults on themselves.</p></div>
-<div class="card"><h3>Before a manoeuvre</h3><p>Observe, assess, signal, check mirrors and blind spots, then proceed only when safe.</p></div>
-</div>
-<div class="warning"><strong>Important source note</strong>This study manual is educational preparation, not a legal interpretation of the National Road Traffic Act. The official NATIS learner manual itself says its statements are not precise legal interpretations and directs readers to the Act and Regulations for detailed legal requirements.</div>
-</div>
-</section>
-
-<section class="chapter-quiz" id="quiz-revision">
-<div class="quiz-wrap">
-<div class="quiz-kicker">CHAPTER 6 CHECK</div><h2 class="quiz-title">Test Yourself — Quick Revision</h2>
-<p class="quiz-intro">If you can answer these confidently, move on to the full Inganathi practice test.</p>
-<div class="quiz-grid">
-<div class="quiz-card"><h3>1. What are the three official core study areas identified in the learner-driver manual?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,true,'revision','q1')">Rules of the Road, Road Traffic Signs, and Vehicle Controls</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q1')">Vehicle sales, insurance and fuel economy</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q1')">Only practical driving skills</button>
-</div><div class="quiz-feedback" id="fb-revision-q1">The official learner-driver manual is divided into those three main sections.</div></div>
-<div class="quiz-card"><h3>2. What should you do if your two-second gap is too short?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q2')">Move closer</button>
-<button class="quiz-option" onclick="checkQuiz(this,true,'revision','q2')">Increase the following gap</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q2')">Overtake immediately</button>
-</div><div class="quiz-feedback" id="fb-revision-q2">If you reach the fixed point before finishing the count, increase the gap.</div></div>
-<div class="quiz-card"><h3>3. What is the best next step after repeatedly getting a question wrong?</h3><div class="quiz-options">
-<button class="quiz-option" onclick="checkQuiz(this,true,'revision','q3')">Return to the relevant manual lesson, then practise again</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q3')">Guess faster</button>
-<button class="quiz-option" onclick="checkQuiz(this,false,'revision','q3')">Skip the topic permanently</button>
-</div><div class="quiz-feedback" id="fb-revision-q3">Use the test to identify weak areas, then return to the study material before retesting.</div></div>
-</div><div class="quiz-score" id="score-revision">Score: 0 / 3</div>
-<div class="coverage"><div class="coverage-card"><span class="range">Q1–236</span><h3>Final revision before the full test</h3><p>Review the chapter where you score below 3/3, then return to the complete 236-question Inganathi test.</p><a href="index.html#test">Start 236-question test</a></div></div>
-</div>
-</section>
-
-<section>
-<div class="wrap">
-<div class="section-head"><div class="eyebrow">READY?</div><h2>Now test what you have learned</h2><p>Study first, then use the Inganathi practice test to identify the areas that still need work.</p></div>
-<div style="text-align:center"><a class="btn primary" href="index.html#test">Start the Inganathi Practice Test</a></div>
-</div>
-</section>
+</main>
 
 <footer>
-<p><strong>INGANATHI DRIVING ACADEMY</strong></p>
-<p>K53 Learner's Licence Study & Practice</p>
-<p>Study material prepared from the supplied Inganathi questionnaire/relevant knowledge and official South African learner-driver material.</p>
+Inganathi Driving Academy • K53 Study Manual • Study first, then practise, then take the full 3-session test.
 </footer>
 
 <script>
-let signs=[],active="All",quizScores={rules:0,signs:0,markings:0,controls:0,hazards:0,revision:0},quizAnswered={};
-const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
-function checkQuiz(btn,correct,chapter,q){
- const key=chapter+"-"+q;
- if(quizAnswered[key]) return;
- quizAnswered[key]=true;
- const options=btn.parentElement.querySelectorAll(".quiz-option");
- options.forEach(b=>b.disabled=true);
- btn.classList.add(correct?"correct":"wrong");
- if(!correct){options.forEach(b=>{if(b.getAttribute("onclick")?.includes("true"))b.classList.add("correct")})}
- const fb=document.getElementById("fb-"+chapter+"-"+q); if(fb) fb.classList.add("show");
- if(correct) quizScores[chapter]++;
- const score=document.getElementById("score-"+chapter); if(score) score.textContent="Score: "+quizScores[chapter]+" / 3";
+let signs=[];
+let signIndex=0;
+let questionBank=[];
+const practiceState={};
+
+function escapeHtml(value){
+ return String(value??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
 }
-function render(){
- const grid=document.getElementById("signGrid"), filters=document.getElementById("signFilters"), term=(document.getElementById("signSearch").value||"").toLowerCase().trim();
- const cats=["All",...new Set(signs.map(x=>x.category).filter(Boolean))];
- filters.innerHTML=cats.map(c=>'<button class="sign-filter '+(c===active?"active":"")+'" onclick="setCategory('+JSON.stringify(c)+')">'+esc(c)+' <span>('+signs.filter(x=>c==="All"||x.category===c).length+')</span></button>').join("");
- const filtered=signs.filter(x=>(active==="All"||x.category===active)&&(!term||(JSON.stringify(x).toLowerCase().includes(term))));
- document.getElementById("signCount").textContent="Showing "+filtered.length+" of "+signs.length+" study cards";
- grid.innerHTML=filtered.length?filtered.map(x=>{
-   const imgs=Array.isArray(x.images)?x.images:[];
-   return '<article class="sign-card"><div class="sign-top"><span class="badge">'+esc(x.category)+'</span><span class="qbadge">Q'+esc(x.questionId)+'</span></div><div class="sign-images">'+imgs.map(i=>'<img loading="lazy" src="'+esc(i)+'" alt="Road sign study image for question '+esc(x.questionId)+'">').join("")+'</div><h3>'+esc(x.name)+'</h3><p><strong>What to know:</strong> '+esc(x.studyPoint||x.meaning||"Study the sign and its required action.")+'</p></article>'
- }).join(""):'<div style="grid-column:1/-1;text-align:center;padding:30px;color:#687386">No matching study cards found.</div>';
+
+function showSection(section){
+ document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+ document.querySelectorAll(".switch").forEach(b=>b.classList.toggle("active",b.dataset.section===section));
+ const panel=document.getElementById("panel-"+section);
+ if(panel) panel.classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
 }
-function setCategory(c){active=c;render()}
-fetch("road_signs.json?v="+Date.now()).then(r=>r.json()).then(d=>{signs=Array.isArray(d.signs)?d.signs:[];render()}).catch(()=>{document.getElementById("signCount").textContent="Road-sign library could not be loaded."});
-document.getElementById("signSearch").addEventListener("input",render);
+
+function renderSign(){
+ if(!signs.length)return;
+ const s=signs[signIndex];
+ const imgs=Array.isArray(s.images)&&s.images.length?s.images:(Array.isArray(s.diagramImages)?s.diagramImages:[]);
+ document.getElementById("signStudyCount").textContent="Sign "+(signIndex+1)+" of "+signs.length+" • Question Q"+s.questionId;
+ document.getElementById("signStudyCategory").textContent=s.category||"Road Signs";
+ document.getElementById("signBadge").textContent=(s.category||"ROAD SIGN").toUpperCase();
+ document.getElementById("signName").textContent=s.name||"Road sign";
+ document.getElementById("signMeaning").textContent=s.studyPoint||s.meaning||"Study the sign and its required action.";
+ document.getElementById("signImage").innerHTML=imgs.map(src=>'<img loading="lazy" src="'+escapeHtml(src)+'" alt="Road sign Q'+escapeHtml(s.questionId)+'">').join("");
+ document.getElementById("prevSign").disabled=signIndex===0;
+ document.getElementById("nextSign").disabled=signIndex===signs.length-1;
+}
+
+function changeSign(step){
+ if(!signs.length)return;
+ signIndex=Math.max(0,Math.min(signs.length-1,signIndex+step));
+ renderSign();
+}
+
+function getPracticeQuestions(section){
+ if(section==="road_signs") return questionBank.filter(q=>q.category==="road_signs");
+ if(section==="rules") return questionBank.filter(q=>q.category==="rules");
+ if(section==="controls") return questionBank.filter(q=>["motorcycle","light_motor_vehicle","heavy_motor_vehicle"].includes(q.category));
+ return [];
+}
+
+function shuffle(list){
+ const a=[...list];
+ for(let i=a.length-1;i>0;i--){
+   const j=Math.floor(Math.random()*(i+1));
+   [a[i],a[j]]=[a[j],a[i]];
+ }
+ return a;
+}
+
+function startPractice(section){
+ const source=getPracticeQuestions(section);
+ if(!source.length)return;
+ const key=section;
+ practiceState[key]={questions:shuffle(source),index:0,score:0,answered:false};
+ const box=document.getElementById("practice-"+(section==="road_signs"?"signs":section));
+ box.classList.add("active");
+ renderPractice(section);
+ box.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function renderPractice(section){
+ const state=practiceState[section];
+ const box=document.getElementById("practice-"+(section==="road_signs"?"signs":section));
+ if(!state||!box)return;
+ if(state.index>=state.questions.length){
+   const pct=Math.round((state.score/state.questions.length)*100);
+   box.innerHTML='<div class="practice-result show"><div>Practice complete</div><div class="big">'+pct+'%</div><p>'+state.score+' correct out of '+state.questions.length+' relevant questions.</p><div class="'+(pct>=80?"pass":"")+'">'+(pct>=80?"80% pass mark reached.":"Below 80% — study this section again and practise again.")+'</div><button class="btn btn-red" onclick="startPractice('+JSON.stringify(section)+')">Shuffle & Practise Again</button></div>';
+   return;
+ }
+ const q=state.questions[state.index];
+ const imgs=Array.isArray(q.diagramImages)?q.diagramImages:[];
+ const options=(q.options||[]).map((opt,i)=>'<button class="option" data-i="'+i+'" onclick="answerPractice('+JSON.stringify(section)+','+i+')">'+String.fromCharCode(65+i)+'. '+escapeHtml(opt)+'</button>').join("");
+ box.innerHTML='<div class="practice-head"><h3>'+escapeHtml(section==="road_signs"?"Road Signs Practice":section==="rules"?"Rules Practice":"Controls Practice")+'</h3><span>Question '+(state.index+1)+' of '+state.questions.length+' • Source Q'+q.id+'</span></div>'+
+ '<div class="practice-card">'+
+ '<div class="practice-meta">'+escapeHtml(q.category||"")+' • Q'+escapeHtml(q.id)+'</div>'+
+ '<div class="practice-question">'+escapeHtml(q.question||"Question")+'</div>'+
+ (imgs.length?'<div class="practice-image">'+imgs.map(src=>'<img loading="lazy" src="'+escapeHtml(src)+'" alt="Question diagram Q'+escapeHtml(q.id)+'">').join("")+'</div>':'')+
+ '<div class="options">'+options+'</div>'+
+ '<div id="feedback-'+section+'" class="feedback"></div>'+
+ '<div class="practice-actions"><span class="practice-score">Score: '+state.score+' / '+state.index+'</span><button id="next-'+section+'" class="btn btn-red" disabled onclick="nextPractice('+JSON.stringify(section)+')">Next Question</button></div>'+
+ '</div>';
+}
+
+function answerPractice(section,selected){
+ const state=practiceState[section];
+ if(!state||state.answered)return;
+ state.answered=true;
+ const q=state.questions[state.index];
+ const buttons=document.querySelectorAll("#practice-"+(section==="road_signs"?"signs":section)+" .option");
+ buttons.forEach(b=>b.disabled=true);
+ const correct=Number(q.correct)===selected;
+ if(buttons[selected])buttons[selected].classList.add(correct?"correct":"wrong");
+ if(!correct&&buttons[Number(q.correct)])buttons[Number(q.correct)].classList.add("correct");
+ if(correct)state.score++;
+ const fb=document.getElementById("feedback-"+section);
+ fb.classList.add("show");
+ fb.textContent=correct?"✓ Correct.":"✗ Not correct. The correct answer is "+String.fromCharCode(65+Number(q.correct))+".";
+ const next=document.getElementById("next-"+section);
+ if(next)next.disabled=false;
+ const score=document.querySelector("#practice-"+(section==="road_signs"?"signs":section)+" .practice-score");
+ if(score)score.textContent="Score: "+state.score+" / "+(state.index+1);
+}
+
+function nextPractice(section){
+ const state=practiceState[section];
+ if(!state||!state.answered)return;
+ state.index++;
+ state.answered=false;
+ renderPractice(section);
+}
+
+Promise.all([
+ fetch("road_signs.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.json()),
+ fetch("clean_questions.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.json())
+]).then(([signData,questionData])=>{
+ signs=Array.isArray(signData.signs)?signData.signs:[];
+ questionBank=Array.isArray(questionData.questions)?questionData.questions:[];
+ renderSign();
+}).catch(error=>{
+ console.error(error);
+ document.getElementById("signName").textContent="Study material could not be loaded";
+ document.getElementById("signMeaning").textContent="Please refresh the page and try again.";
+});
 </script>
 </body>
 </html>
