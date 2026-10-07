@@ -99,6 +99,19 @@ section{padding:65px 20px}
 .visual-card strong{display:block;color:var(--ink);font-size:13px}
 .visual-card span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
 .quiz-score{font-weight:900;color:#fff;margin-top:20px}
+.coverage{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.coverage-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px}
+.coverage-card .range{display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900;margin-bottom:10px}
+.coverage-card h3{color:var(--ink);font-size:17px;margin-bottom:6px}
+.coverage-card p{font-size:13px;color:var(--muted);margin-bottom:12px}
+.coverage-card a{display:inline-block;background:var(--ink);color:#fff;padding:9px 12px;border-radius:8px;font-size:12px;font-weight:900}
+.control-visuals{margin-top:28px}
+.control-visuals h3{text-align:center;color:var(--ink);margin-bottom:14px}
+.control-diagrams{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.diagram-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.diagram-card img{width:100%;height:190px;object-fit:contain;background:var(--soft);border-radius:9px}
+.diagram-card strong{display:block;color:var(--ink);font-size:13px;margin-top:9px}
+.diagram-card span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
 footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}footer p{color:#cbd5e1;font-size:12px;margin:4px}
 @media(max-width:900px){.hero-grid,.cards,.quick-grid,.lesson-nav,.quiz-links,.quiz-grid{grid-template-columns:1fr 1fr}.visual-grid{grid-template-columns:repeat(2,1fr)}.sign-grid{grid-template-columns:repeat(2,1fr)}.control-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}}
 @media(max-width:620px){nav{gap:10px}.hero{padding:52px 18px}.hero-grid,.cards,.quick-grid,.lesson-nav,.quiz-links,.quiz-grid,.visual-grid,.sign-grid,.control-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-head h2{font-size:29px}.step:not(:last-child)::after{display:none}.brand img{width:68px;height:40px}}
@@ -165,6 +178,15 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <a href="#revision">Quick Revision<small>High-value facts from your source material</small></a>
 </div>
 </div>
+
+<div class="warning"><strong>How the manual connects to your 236-question test</strong>
+The supplied question bank is organised as Q1–72 Rules of the Road, Q73–178 Road Signs, Q179–198 Motorcycle Controls, Q199–218 Light Motor Vehicle Controls and Q219–236 Heavy Motor Vehicle Controls. Study the relevant chapter before using the full test.</div>
+<div class="coverage">
+<div class="coverage-card"><span class="range">Q1–72</span><h3>Rules of the Road</h3><p>Core rules, lane changes, overtaking, intersections, parking, pedestrians, emergencies, licences and road safety.</p><a href="index.html#test">Open full test</a></div>
+<div class="coverage-card"><span class="range">Q73–178</span><h3>Road Traffic Signs</h3><p>106 sign and road-marking questions, with the corresponding study artwork available above and in the searchable library.</p><a href="#signs">Study signs</a></div>
+<div class="coverage-card"><span class="range">Q179–236</span><h3>Vehicle Controls</h3><p>Motorcycle, light motor vehicle and heavy motor vehicle control questions, including the supplied control diagrams.</p><a href="#controls">Study controls</a></div>
+</div>
+</div>
 </section>
 
 <section id="rules" class="module alt">
@@ -211,6 +233,7 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <button class="quiz-option" onclick="checkQuiz(this,false,'rules','q3')">Stop in a position that blocks traffic</button>
 </div><div class="quiz-feedback" id="fb-rules-q3">Make room safely and avoid creating another hazard.</div></div>
 </div><div class="quiz-score" id="score-rules">Score: 0 / 3</div>
+<div class="coverage"><div class="coverage-card"><span class="range">FULL TEST: Q1–72</span><h3>Rules question bank</h3><p>After this chapter, revise your mistakes, then attempt the full test. The supplied rules section contains 72 questions.</p><a href="index.html#test">Practise Q1–72 in full test</a></div></div>
 </div>
 </section>
 
@@ -261,6 +284,7 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <button class="quiz-option" onclick="checkQuiz(this,false,'signs','q3')">Where was it printed? Is it old? Is it new?</button>
 </div><div class="quiz-feedback" id="fb-signs-q3">Use the sign name, purpose/meaning and required driver action as your study framework.</div></div>
 </div><div class="quiz-score" id="score-signs">Score: 0 / 3</div>
+<div class="coverage"><div class="coverage-card"><span class="range">FULL TEST: Q73–178</span><h3>106 visual sign questions</h3><p>Use the searchable sign library to study the artwork linked to the question bank, then reinforce your knowledge in the full test.</p><a href="index.html#test">Practise Q73–178 in full test</a></div></div>
 </div>
 </section>
 
@@ -319,6 +343,14 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <div class="control"><div class="control-icon">W</div><h3>Windscreen wipers</h3><p>Maintain visibility during rain or other conditions that reduce the driver's view.</p></div>
 <div class="control"><div class="control-icon">H</div><h3>Hooter</h3><p>Your source teaches that the hooter must not be used unnecessarily and may be used to help avoid a crash.</p></div>
 </div>
+<div class="control-visuals">
+<h3>Control Diagrams From the Supplied Test</h3>
+<div class="control-diagrams">
+<div class="diagram-card"><img src="assets/control-diagrams/motorcycle-controls-192.png" alt="Motorcycle control diagram"><strong>Motorcycle controls</strong><span>Questions Q179–198</span></div>
+<div class="diagram-card"><img src="assets/control-diagrams/light-motor-controls-212.png" alt="Light motor vehicle control diagram"><strong>Light motor vehicle controls</strong><span>Questions Q199–218</span></div>
+<div class="diagram-card"><img src="assets/control-diagrams/light-motor-controls-230.png" alt="Heavy motor vehicle control diagram"><strong>Heavy motor vehicle controls</strong><span>Questions Q219–236</span></div>
+</div>
+</div>
 <div class="memory"><h3>Emergency stop — remember the sequence</h3><p>Keep both hands firmly on the steering wheel. Check behind you. Brake hard but progressively without locking the wheels. Do not apply the parking brake until the vehicle has stopped.</p></div>
 </div>
 </section>
@@ -344,6 +376,7 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <button class="quiz-option" onclick="checkQuiz(this,false,'controls','q3')">While steering sharply</button>
 </div><div class="quiz-feedback" id="fb-controls-q3">The lesson says not to apply the parking brake until the vehicle has stopped.</div></div>
 </div><div class="quiz-score" id="score-controls">Score: 0 / 3</div>
+<div class="coverage"><div class="coverage-card"><span class="range">FULL TEST: Q179–236</span><h3>Controls question bank</h3><p>Use the diagrams above and learn the function of each numbered control before attempting the vehicle-control questions.</p><a href="index.html#test">Practise Q179–236 in full test</a></div></div>
 </div>
 </section>
 
@@ -383,6 +416,7 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <button class="quiz-option" onclick="checkQuiz(this,false,'hazards','q3')">Signal → Race → Brake → Turn → Stop</button>
 </div><div class="quiz-feedback" id="fb-hazards-q3">The sequence is SEE → IDENTIFY → ANTICIPATE → ADJUST → ACT.</div></div>
 </div><div class="quiz-score" id="score-hazards">Score: 0 / 3</div>
+<div class="coverage"><div class="coverage-card"><span class="range">MAINLY RULES: Q1–72</span><h3>Hazard questions</h3><p>Hazard awareness is reinforced throughout the supplied rules questions, especially around overtaking, following distance, pedestrians, weather and emergencies.</p><a href="index.html#test">Practise the full test</a></div></div>
 </div>
 </section>
 
@@ -425,6 +459,7 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px 20px}foot
 <button class="quiz-option" onclick="checkQuiz(this,false,'revision','q3')">Skip the topic permanently</button>
 </div><div class="quiz-feedback" id="fb-revision-q3">Use the test to identify weak areas, then return to the study material before retesting.</div></div>
 </div><div class="quiz-score" id="score-revision">Score: 0 / 3</div>
+<div class="coverage"><div class="coverage-card"><span class="range">Q1–236</span><h3>Final revision before the full test</h3><p>Review the chapter where you score below 3/3, then return to the complete 236-question Inganathi test.</p><a href="index.html#test">Start 236-question test</a></div></div>
 </div>
 </section>
 
