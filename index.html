@@ -1946,7 +1946,7 @@ footer strong {
 
         <div class="candidate-field">
             <label for="candidateId">ID Number *</label>
-            <input id="candidateId" name="idNumber" type="text" required inputmode="numeric" autocomplete="off" placeholder="Enter your ID number">
+            <input id="candidateId" name="idNumber" type="text" required inputmode="numeric" pattern="[0-9]{13}" minlength="13" maxlength="13" autocomplete="off" placeholder="Enter your 13-digit ID number" title="ID number must contain exactly 13 digits and no letters">
         </div>
 
         <div class="candidate-notice full">
@@ -3584,6 +3584,18 @@ function setupCandidateForm() {
 
     if (!form) return;
 
+    const idField = document.getElementById("candidateId");
+    if (idField) {
+        idField.addEventListener("input", function() {
+            this.value = this.value.replace(/\\D/g, "").slice(0, 13);
+            this.setCustomValidity(
+                /^\\d{13}$/.test(this.value)
+                    ? ""
+                    : "ID number must contain exactly 13 digits and no letters."
+            );
+        });
+    }
+
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
@@ -3600,6 +3612,16 @@ function setupCandidateForm() {
             form.reportValidity();
             return;
         }
+
+        if (!/^\\d{13}$/.test(idNumber)) {
+            const idField = document.getElementById("candidateId");
+            idField.setCustomValidity("ID number must contain exactly 13 digits and no letters.");
+            idField.reportValidity();
+            idField.focus();
+            return;
+        }
+
+        document.getElementById("candidateId").setCustomValidity("");
 
         candidateDetails = {
             name: name,
