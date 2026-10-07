@@ -1922,35 +1922,7 @@ footer strong {
 
 
 
-<!-- CANDIDATE DETAILS -->
-
-<div id="candidateArea" class="candidate-box hidden">
-<h3>Enter Your Details Before Starting</h3>
-<p>Complete all fields below. Your details will be attached to your test result and sent to the instructor.</p>
-<form id="candidateForm" class="candidate-form" novalidate>
-<div class="candidate-field">
-<label for="candidateName">Name</label>
-<input id="candidateName" name="name" type="text" autocomplete="given-name" required>
-</div>
-<div class="candidate-field">
-<label for="candidateSurname">Surname</label>
-<input id="candidateSurname" name="surname" type="text" autocomplete="family-name" required>
-</div>
-<div class="candidate-field">
-<label for="candidateCellphone">Cellphone</label>
-<input id="candidateCellphone" name="cellphone" type="tel" inputmode="tel" autocomplete="tel" required>
-</div>
-<div class="candidate-field">
-<label for="candidateIdNumber">ID Number</label>
-<input id="candidateIdNumber" name="id_number" type="text" inputmode="numeric" autocomplete="off" minlength="6" maxlength="20" required>
-</div>
-<div class="candidate-field full">
-<div class="candidate-notice">Your information is used to identify your test result. The result email includes your name, surname, cellphone, ID number, score, percentage and PASS/FAIL status.</div>
-</div>
-<div class="candidate-field full candidate-actions">
-<button type="submit" class="btn btn-primary">Start Test</button>
-</div>
-</form>
+<!-- TEST START -->
 
 <div id="sessionPicker" class="session-picker hidden">
     <h4>Your 3-Session K53 Test</h4>
@@ -1981,6 +1953,7 @@ footer strong {
         </button>
     </div>
 </div>
+
 </div>
 
 
@@ -2589,7 +2562,7 @@ async function loadQuestions() {
 
 
         document
-            .getElementById("candidateArea")
+            .getElementById("sessionPicker")
             .classList
             .remove("hidden");
 
@@ -2785,8 +2758,12 @@ function startTimer() {
 
 function startSession(sessionNumber) {
     if (!candidateDetails) {
-        document.getElementById("candidateArea").classList.remove("hidden");
-        return;
+        candidateDetails = {
+            name: "Online",
+            surname: "Learner",
+            cellphone: "Not provided",
+            idNumber: "Not provided"
+        };
     }
 
     if (!sessionPools[sessionNumber] || !sessionPools[sessionNumber].length) {
@@ -2802,8 +2779,6 @@ function startSession(sessionNumber) {
     testQuestions = shuffle(sessionPools[sessionNumber]);
 
     document.getElementById("sessionPicker").classList.add("hidden");
-    document.getElementById("candidateForm").classList.add("hidden");
-    document.getElementById("candidateArea").classList.add("hidden");
     document.getElementById("resultArea").classList.add("hidden");
     document.getElementById("testArea").classList.remove("hidden");
 
@@ -2820,14 +2795,15 @@ function startSession(sessionNumber) {
 
 
 function startTest() {
-    if (!candidateDetails) {
-        document.getElementById("candidateArea").classList.remove("hidden");
-        return;
-    }
+    candidateDetails = {
+        name: "Online",
+        surname: "Learner",
+        cellphone: "Not provided",
+        idNumber: "Not provided"
+    };
 
     buildSessionPools();
 
-    document.getElementById("candidateForm").classList.add("hidden");
     document.getElementById("sessionPicker").classList.remove("hidden");
 }
 
@@ -3505,8 +3481,6 @@ function backToSessionSelection() {
 
     document.getElementById("resultArea").classList.add("hidden");
     document.getElementById("testArea").classList.add("hidden");
-    document.getElementById("candidateArea").classList.remove("hidden");
-    document.getElementById("candidateForm").classList.add("hidden");
     document.getElementById("sessionPicker").classList.remove("hidden");
     updateSessionDashboard();
 
@@ -3537,8 +3511,7 @@ function restartTest() {
         form.classList.remove("hidden");
     }
 
-    document.getElementById("sessionPicker").classList.add("hidden");
-    document.getElementById("candidateArea").classList.remove("hidden");
+    document.getElementById("sessionPicker").classList.remove("hidden");
 
     document.getElementById("test").scrollIntoView({
         behavior: "smooth",
@@ -3552,39 +3525,9 @@ function restartTest() {
 ========================================================= */
 
 function setupCandidateForm() {
-
-    const form = document.getElementById("candidateForm");
-    if (!form) return;
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById("candidateName").value.trim();
-        const surname = document.getElementById("candidateSurname").value.trim();
-        const cellphone = document.getElementById("candidateCellphone").value.trim();
-        const idNumber = document.getElementById("candidateIdNumber").value.trim();
-
-        if (!name || !surname || !cellphone || !idNumber) {
-            alert("Please complete your name, surname, cellphone and ID number before starting the test.");
-            return;
-        }
-
-        candidateDetails = { name, surname, cellphone, idNumber };
-
-        buildSessionPools();
-
-        document.getElementById("candidateForm").classList.add("hidden");
-        document.getElementById("resultArea").classList.add("hidden");
-        document.getElementById("testArea").classList.add("hidden");
-        document.getElementById("candidateArea").classList.remove("hidden");
-        document.getElementById("sessionPicker").classList.remove("hidden");
-
-        document.getElementById("test").scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
+    // Candidate details are intentionally not collected before the practice test.
 }
+
 
 
 async function sendTestResultEmail(percentage, passed) {
