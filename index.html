@@ -1946,7 +1946,7 @@ footer strong {
 <div id="questionCounter" class="question-counter">Question 1 of 79</div>
 </div>
 
-<div id="scoreDisplay" class="score-display">Score: 0</div>
+<div id="scoreDisplay" class="score-display">Answers recorded: 0</div>
 
 <div id="timerDisplay" class="timer-display" aria-live="polite">60:00</div>
 
@@ -3279,9 +3279,12 @@ function selectAnswer(
     answer
 ) {
 
-
     /*
-       Prevent selecting more than once.
+       In the real test, selecting an answer must NOT reveal
+       whether it is correct or incorrect.
+
+       The answer is recorded silently. The score is calculated
+       internally and only displayed when the session is finished.
     */
 
     if (
@@ -3292,58 +3295,36 @@ function selectAnswer(
 
     }
 
-
     selectedAnswer = index;
-
 
     const buttons =
         document.querySelectorAll(
             ".answer"
         );
 
-
     if (
         buttons[index]
     ) {
-
         buttons[index]
             .classList
             .add("selected");
-
     }
 
-    buttons.forEach(function(button, buttonIndex) {
+    buttons.forEach(function(button) {
         button.classList.add("locked");
-
-        if (
-            answersAreCorrect(
-                buttonIndex,
-                testQuestions[currentQuestion]
-            )
-        ) {
-            button.classList.add("correct");
-        }
     });
 
     if (answer.correct) {
-
         score++;
-
-    } else if (buttons[index]) {
-
-        buttons[index]
-            .classList
-            .add("incorrect");
-
     }
-
 
     document
         .getElementById("scoreDisplay")
         .textContent =
-        "Score: " +
-        score;
-
+        "Answers recorded: " +
+        (currentQuestion + 1) +
+        " / " +
+        testQuestions.length;
 
     document
         .getElementById("nextBtn")
@@ -3356,7 +3337,6 @@ function selectAnswer(
     }
 
 }
-
 
 
 /* =========================================================
