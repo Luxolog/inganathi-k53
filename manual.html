@@ -301,6 +301,11 @@ Promise.all([
  document.getElementById("signName").textContent="Study material could not be loaded";
  document.getElementById("signMeaning").textContent="Please refresh the page and try again.";
 });
+
+const requestedSection=(window.location.hash||"").replace("#","");
+if(["home","rules","signs","controls"].includes(requestedSection)){
+ setTimeout(()=>showSection(requestedSection),0);
+}
 </script>
 </body>
 </html>
