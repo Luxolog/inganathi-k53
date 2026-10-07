@@ -1392,6 +1392,19 @@ footer strong {
 .session-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .session-actions button{border:0;cursor:pointer}
 @media(max-width:800px){.session-grid{grid-template-columns:1fr}.test-top{flex-wrap:wrap}.timer-display{margin-left:auto}}
+.session-progress{margin:0 0 20px;padding:16px 18px;background:#fff;border:1px solid #e1e6ee;border-radius:14px}
+.session-progress-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:9px}
+.session-progress-top strong{color:#02050e;font-size:14px}
+.session-progress-top span{color:#687386;font-size:12px;font-weight:800}
+.session-progress-track{height:9px;background:#e9edf3;border-radius:999px;overflow:hidden}
+.session-progress-fill{height:100%;width:0;background:#d50203;border-radius:999px;transition:width .25s ease}
+.session-status{margin-top:8px;color:#687386;font-size:11px}
+.session-card.completed{border-color:#16a34a;background:#f0fdf4}
+.session-card.completed strong{color:#15803d}
+.session-card.completed .session-total{color:#166534}
+.session-card .session-status-badge{display:inline-block;margin-top:10px;padding:5px 8px;border-radius:999px;background:#eef2f7;color:#172033;font-size:10px;font-weight:900}
+.session-card.completed .session-status-badge{background:#dcfce7;color:#166534}
+.session-score-preview{display:block;margin-top:8px;color:#687386;font-size:11px;font-weight:700}
 </style>
 
 </head>
@@ -1888,26 +1901,31 @@ footer strong {
 </form>
 
 <div id="sessionPicker" class="session-picker hidden">
-    <h4>Choose Your Test Session</h4>
-    <p>The 236-question bank is divided strategically across three one-hour sessions. Every session is randomised, and together the three sessions cover the complete question bank without repeating questions within the same test cycle.</p>
+    <h4>Your 3-Session K53 Test</h4>
+    <p>Complete the three sessions strategically. Each session is timed for 60 minutes, and the question order is randomised.</p>
+    <div class="session-progress">
+        <div class="session-progress-top">
+            <strong>Overall Progress</strong>
+            <span id="overallProgressText">0 of 3 sessions completed</span>
+        </div>
+        <div class="session-progress-track"><div id="overallProgressFill" class="session-progress-fill"></div></div>
+        <div id="overallProgressStatus" class="session-status">Start with Session 1.</div>
+    </div>
     <div class="session-grid">
-        <button type="button" class="session-card" onclick="startSession(1)">
-            <strong>SESSION 1</strong>
-            <span class="session-total">79 Questions</span>
-            <span>24 Rules • 35 Road Signs • 20 Vehicle Controls</span>
-            <em>60:00 countdown</em>
+        <button id="sessionCard1" type="button" class="session-card" onclick="startSession(1)">
+            <strong>SESSION 1</strong><span class="session-total">79 Questions</span>
+            <span>24 Rules • 35 Road Signs • 20 Vehicle Controls</span><em>60:00 countdown</em>
+            <span id="sessionStatus1" class="session-status-badge">Not completed</span><span id="sessionScore1" class="session-score-preview"></span>
         </button>
-        <button type="button" class="session-card" onclick="startSession(2)">
-            <strong>SESSION 2</strong>
-            <span class="session-total">78 Questions</span>
-            <span>24 Rules • 35 Road Signs • 19 Vehicle Controls</span>
-            <em>60:00 countdown</em>
+        <button id="sessionCard2" type="button" class="session-card" onclick="startSession(2)">
+            <strong>SESSION 2</strong><span class="session-total">78 Questions</span>
+            <span>24 Rules • 35 Road Signs • 19 Vehicle Controls</span><em>60:00 countdown</em>
+            <span id="sessionStatus2" class="session-status-badge">Not completed</span><span id="sessionScore2" class="session-score-preview"></span>
         </button>
-        <button type="button" class="session-card" onclick="startSession(3)">
-            <strong>SESSION 3</strong>
-            <span class="session-total">79 Questions</span>
-            <span>24 Rules • 36 Road Signs • 19 Vehicle Controls</span>
-            <em>60:00 countdown</em>
+        <button id="sessionCard3" type="button" class="session-card" onclick="startSession(3)">
+            <strong>SESSION 3</strong><span class="session-total">79 Questions</span>
+            <span>24 Rules • 36 Road Signs • 19 Vehicle Controls</span><em>60:00 countdown</em>
+            <span id="sessionStatus3" class="session-status-badge">Not completed</span><span id="sessionScore3" class="session-score-preview"></span>
         </button>
     </div>
 </div>
@@ -2329,6 +2347,7 @@ let sessionPools = {};
 let timerInterval = null;
 let timeRemaining = 3600;
 let timedOut = false;
+let completedSessions = {};
 
 const PASS_PERCENTAGE = 80;
 const INSTRUCTOR_EMAIL = "info@uvanofinserv.co.za";
@@ -2612,6 +2631,50 @@ function buildSessionPools() {
     sessionPools[1] = shuffle(sessionPools[1]);
     sessionPools[2] = shuffle(sessionPools[2]);
     sessionPools[3] = shuffle(sessionPools[3]);
+
+    completedSessions = {};
+    updateSessionDashboard();
+}
+
+
+function updateSessionDashboard() {
+    const numbers = [1, 2, 3];
+    const completed = numbers.filter(function(n) { return completedSessions[n]; }).length;
+
+    const text = document.getElementById("overallProgressText");
+    const fill = document.getElementById("overallProgressFill");
+    const status = document.getElementById("overallProgressStatus");
+
+    if (text) text.textContent = completed + " of 3 sessions completed";
+    if (fill) fill.style.width = ((completed / 3) * 100) + "%";
+    if (status) {
+        status.textContent = completed === 3
+            ? "All three sessions completed. Review your results or repeat a session."
+            : completed === 0
+                ? "Start with Session 1."
+                : "Session " + (completed + 1) + " is ready. You may also revisit a completed session.";
+    }
+
+    numbers.forEach(function(n) {
+        const card = document.getElementById("sessionCard" + n);
+        const badge = document.getElementById("sessionStatus" + n);
+        const scorePreview = document.getElementById("sessionScore" + n);
+        const result = completedSessions[n];
+
+        if (!card || !badge) return;
+        card.classList.toggle("completed", Boolean(result));
+
+        if (result) {
+            badge.textContent = "✓ Completed";
+            scorePreview.textContent =
+                "Last score: " + result.score + "/" + result.total +
+                " (" + result.percentage + "%)" +
+                (result.timedOut ? " • Time expired" : "");
+        } else {
+            badge.textContent = "Not completed";
+            scorePreview.textContent = "";
+        }
+    });
 }
 
 
@@ -3346,6 +3409,14 @@ async function finishTest(expired = false) {
 
     timedOut = timedOut || expired;
 
+    const percentage = Math.round((score / testQuestions.length) * 100);
+    completedSessions[currentSession] = {
+        score: score,
+        total: testQuestions.length,
+        percentage: percentage,
+        timedOut: timedOut
+    };
+
     document.getElementById("testArea").classList.add("hidden");
     document.getElementById("resultArea").classList.remove("hidden");
 
@@ -3379,6 +3450,8 @@ async function finishTest(expired = false) {
 
     await sendTestResultEmail(percentage, passed);
 
+    updateSessionDashboard();
+
     document.getElementById("test").scrollIntoView({
         behavior: "smooth",
         block: "start"
@@ -3403,6 +3476,7 @@ function backToSessionSelection() {
     document.getElementById("candidateArea").classList.remove("hidden");
     document.getElementById("candidateForm").classList.add("hidden");
     document.getElementById("sessionPicker").classList.remove("hidden");
+    updateSessionDashboard();
 
     document.getElementById("test").scrollIntoView({
         behavior: "smooth",
@@ -3417,6 +3491,7 @@ function restartTest() {
     resultSubmitted = false;
     currentSession = 0;
     sessionPools = {};
+    completedSessions = {};
     testQuestions = [];
     currentQuestion = 0;
     score = 0;
