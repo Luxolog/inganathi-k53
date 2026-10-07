@@ -81,7 +81,7 @@ main{max-width:1050px;margin:auto;padding:28px 18px 70px}
 .study-home-within-learning{margin:0 0 24px}
 .study-home-within-learning .panel-head{margin-top:0}
 .study-home-within-learning .cards{margin-top:14px}
-.knowledge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.knowledge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start}
 .knowledge-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .knowledge-card button{width:100%;border:0;background:#fff;text-align:left;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;color:var(--ink);font-weight:900;font-size:14px}
 .knowledge-card button:hover{background:var(--soft)}
@@ -169,8 +169,8 @@ Do not rely on memorising answers alone. Learn the meaning behind the rule, sign
 
 <div class="knowledge-grid">
 
-<div class="knowledge-card open">
-<button onclick="toggleKnowledge(this)">1. Essential information about booking your test <span class="plus">−</span></button>
+<div class="knowledge-card">
+<button onclick="toggleKnowledge(this)">1. Essential information about booking your test <span class="plus">+</span></button>
 <div class="knowledge-content">
 <h4>What test are you preparing for?</h4>
 <p>This manual is primarily designed to prepare learners for the <strong>learner's licence test</strong>. A learner's licence demonstrates that you have basic knowledge of the motor vehicle and the rules of the road. A learner's licence is generally valid for 24 months and cannot be extended.</p>
@@ -334,13 +334,19 @@ Do not rely on memorising answers alone. Learn the meaning behind the rule, sign
 <h4>Recommended study cycle</h4>
 <ol>
 <li>Read the relevant theory in this manual.</li>
-<li>Study manual is now focused so learners do not have to study everything on one screen.</p></div>
+<li>Study one section at a time — Rules, Road Signs or Vehicle Controls.</li>
+<li>Practise the questions belonging to that section and review the explanations.</li>
+<li>When you are confident across all three sections, take the full 3-session test.</li>
+</ol>
 <div class="cards">
 <div class="card"><h3>Rules of the Road</h3><p>Q1–72. Speed, following distance, overtaking, lane changes, intersections, parking, pedestrians, emergency vehicles and road safety.</p><button class="btn btn-dark" onclick="showSection('rules')">Study Rules</button></div>
 <div class="card"><h3>Road Signs</h3><p>Q73–178. 106 road-sign questions with the supplied PNG artwork. Study the sign one at a time, then practise the same 106-question pool.</p><button class="btn btn-red" onclick="showSection('signs')">Study Road Signs</button></div>
 <div class="card"><h3>Vehicle Controls</h3><p>Q179–236. Motorcycle, light motor vehicle and heavy motor vehicle controls and diagrams.</p><button class="btn btn-dark" onclick="showSection('controls')">Study Controls</button></div>
 </div>
 <div class="notice"><strong>Important</strong>The South African learner-driver manual describes Rules of the Road, Road Traffic Signs, and Vehicle and Motorcycle Controls as its three main sections. It also notes that the manual is guidance and not a precise legal interpretation.</div>
+</div>
+</div>
+
 </section>
 
 <section id="panel-rules" class="panel">
