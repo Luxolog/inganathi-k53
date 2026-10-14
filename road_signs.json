@@ -1372,19 +1372,6 @@
     },
     {
       "category": "Road Signs",
-      "name": "Gore exit direction",
-      "meaning": "The road you may use to exit a freeway.",
-      "images": [
-        "assets/road-signs/q178-1.png"
-      ],
-      "questionId": 178,
-      "sourceQuestion": "This sign shows you",
-      "studyPoint": "The road you may use to exit a freeway.",
-      "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 105
-    },
-    {
-      "category": "Road Signs",
       "name": "Motorcycle engine capacity limit",
       "meaning": "Motorcycles with an engine capacity of more than 125 cc are prohibited.",
       "images": [
