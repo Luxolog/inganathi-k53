@@ -451,7 +451,7 @@ function renderSign(){
  document.getElementById("signBadge").textContent=(s.category||"ROAD SIGN").toUpperCase();
  document.getElementById("signName").textContent=s.name||"Road sign";
  document.getElementById("signMeaning").textContent=s.studyPoint||s.meaning||"Study the sign and its required action.";
- document.getElementById("signImage").innerHTML=imgs.map(src=>{const imagePath=String(src||"").replace(/^\\/+/, "");const imageUrl="https://luxolog.github.io/inganathi-k53/"+imagePath;return '<img loading="eager" src="'+escapeHtml(imageUrl)+'" alt="Road sign Q'+escapeHtml(s.questionId)+'" onerror="this.style.display=&quot;none&quot;">';}).join("");
+ document.getElementById("signImage").innerHTML=imgs.map(src=>{const imagePath=String(src||"");const imageUrl="https://luxolog.github.io/inganathi-k53/"+imagePath;return '<img loading="eager" src="'+escapeHtml(imageUrl)+'" alt="Road sign Q'+escapeHtml(s.questionId)+'" onerror="this.style.display=&quot;none&quot;">';}).join("");
  document.getElementById("prevSign").disabled=signIndex===0;
  document.getElementById("nextSign").disabled=signIndex===signs.length-1;
 }
