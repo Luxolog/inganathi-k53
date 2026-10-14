@@ -1097,51 +1097,39 @@
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
-      "category": "Road Signs",
-      "name": "Temporary minimum speed on the third lane",
-      "meaning": "Only vehicles that can exceed the speed indicated can travel on that lane.",
+      "category": "Traffic Signals",
+      "name": "Traffic signal turning indication",
+      "meaning": "You may travel in the direction of the arrow only if it is safe to do so.",
       "images": [
-        "assets/road-signs/q162-1.png"
+        "assets/road-signs/q163-1.png"
       ],
-      "questionId": 162,
-      "sourceQuestion": "This sign commands the driver of a vehicle….?",
-      "studyPoint": "Only vehicles that can exceed the speed indicated can travel on that lane.",
+      "questionId": 163,
+      "sourceQuestion": "This overhead signal shows you…?",
+      "studyPoint": "You may travel in the direction of the arrow only if it is safe to do so.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Traffic Signals",
-      "name": "Traffic signal turning indication",
-      "meaning": "You may travel in the direction of the arrow only if it is safe to do so.",
+      "name": "No crossing at all",
+      "meaning": "No crossing is permitted.",
       "images": [
         "assets/road-signs/q164-1.png"
       ],
       "questionId": 164,
       "sourceQuestion": "This signal indicates…?",
-      "studyPoint": "You may travel in the direction of the arrow only if it is safe to do so.",
-      "source": "Inganathi Driving Academy questionnaire"
-    },
-    {
-      "category": "Road Markings",
-      "name": "No crossing at all",
-      "meaning": "No crossing is permitted.",
-      "images": [
-        "assets/road-signs/q165-1.png"
-      ],
-      "questionId": 165,
-      "sourceQuestion": "When driving behind another vehicle, this road making shows you to …?",
       "studyPoint": "No crossing is permitted.",
       "source": "Inganathi Driving Academy questionnaire",
       "hideStudyPoint": true
     },
     {
-      "category": "Road Signs",
+      "category": "Road Markings",
       "name": "Exit countdown marker",
       "meaning": "Exit countdown marker.",
       "images": [
-        "assets/road-signs/q166-1.png"
+        "assets/road-signs/q165-1.png"
       ],
-      "questionId": 166,
-      "sourceQuestion": "This sign indicates a high speed exit in…?",
+      "questionId": 165,
+      "sourceQuestion": "When driving behind another vehicle, this road making shows you to …?",
       "studyPoint": "Exit countdown marker.",
       "source": "Inganathi Driving Academy questionnaire"
     },
@@ -1150,10 +1138,10 @@
       "name": "Alternative route sign",
       "meaning": "There is an alternative route at the next road to the right.",
       "images": [
-        "assets/road-signs/q167-1.png"
+        "assets/road-signs/q166-1.png"
       ],
-      "questionId": 167,
-      "sourceQuestion": "This sign shows the driver of a vehicle that…?",
+      "questionId": 166,
+      "sourceQuestion": "This sign indicates a high speed exit in…?",
       "studyPoint": "There is an alternative route at the next road to the right.",
       "source": "Inganathi Driving Academy questionnaire"
     },
@@ -1162,10 +1150,10 @@
       "name": "Road to the right is not a through road",
       "meaning": "Do not use this road if you need a through road to your right.",
       "images": [
-        "assets/road-signs/q168-1.png"
+        "assets/road-signs/q167-1.png"
       ],
-      "questionId": 168,
-      "sourceQuestion": "This sign shows you that…?",
+      "questionId": 167,
+      "sourceQuestion": "This sign shows the driver of a vehicle that…?",
       "studyPoint": "Do not use this road if you need a through road to your right.",
       "source": "Inganathi Driving Academy questionnaire"
     },
@@ -1174,10 +1162,10 @@
       "name": "One-way roadway",
       "meaning": "Travel only in the direction of the arrow.",
       "images": [
-        "assets/road-signs/q169-1.png"
+        "assets/road-signs/q168-1.png"
       ],
-      "questionId": 169,
-      "sourceQuestion": "When approaching this sign…?",
+      "questionId": 168,
+      "sourceQuestion": "This sign shows you that…?",
       "studyPoint": "Travel only in the direction of the arrow.",
       "source": "Inganathi Driving Academy questionnaire"
     },
@@ -1186,46 +1174,46 @@
       "name": "Toll route / alternative route sign",
       "meaning": "There is a toll road and an alternative to the toll road.",
       "images": [
-        "assets/road-signs/q170-1.png"
+        "assets/road-signs/q169-1.png"
       ],
-      "questionId": 170,
-      "sourceQuestion": "This sign shows…?",
+      "questionId": 169,
+      "sourceQuestion": "When approaching this sign…?",
       "studyPoint": "There is a toll road and an alternative to the toll road.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
-      "category": "Road Markings",
+      "category": "Road Signs",
       "name": "Disabled parking marking",
       "meaning": "The area is set aside for disabled persons.",
+      "images": [
+        "assets/road-signs/q170-1.png"
+      ],
+      "questionId": 170,
+      "sourceQuestion": "This sign shows…?",
+      "studyPoint": "The area is set aside for disabled persons.",
+      "source": "Inganathi Driving Academy questionnaire"
+    },
+    {
+      "category": "Road Markings",
+      "name": "Information sign",
+      "meaning": "There is a dead end on the road ahead.",
       "images": [
         "assets/road-signs/q171-1.png"
       ],
       "questionId": 171,
       "sourceQuestion": "This road marking indicates…?",
-      "studyPoint": "The area is set aside for disabled persons.",
+      "studyPoint": "There is a dead end on the road ahead.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Information sign",
-      "meaning": "There is a dead end on the road ahead.",
+      "name": "Barrier / no-crossing marking",
+      "meaning": "No overtaking is allowed.",
       "images": [
         "assets/road-signs/q172-1.png"
       ],
       "questionId": 172,
       "sourceQuestion": "This type of sign is known as…?",
-      "studyPoint": "There is a dead end on the road ahead.",
-      "source": "Inganathi Driving Academy questionnaire"
-    },
-    {
-      "category": "Road Markings",
-      "name": "Barrier / no-crossing marking",
-      "meaning": "No overtaking is allowed.",
-      "images": [
-        "assets/road-signs/q173-1.png"
-      ],
-      "questionId": 173,
-      "sourceQuestion": "The road marking warns road users that…?",
       "studyPoint": "No overtaking is allowed.",
       "source": "Inganathi Driving Academy questionnaire"
     },
@@ -1234,10 +1222,10 @@
       "name": "Lane directions",
       "meaning": "The left lane is reducing.",
       "images": [
-        "assets/road-signs/q174-1.png"
+        "assets/road-signs/q173-1.png"
       ],
-      "questionId": 174,
-      "sourceQuestion": "What does this road marking indicate?",
+      "questionId": 173,
+      "sourceQuestion": "The road marking warns road users that…?",
       "studyPoint": "The left lane is reducing.",
       "source": "Inganathi Driving Academy questionnaire"
     },
@@ -1246,35 +1234,47 @@
       "name": "Bus lane only",
       "meaning": "It is for the exclusive use of buses only.",
       "images": [
-        "assets/road-signs/q175-1.png"
+        "assets/road-signs/q174-1.png"
       ],
-      "questionId": 175,
-      "sourceQuestion": "This road marking shows a driver…",
+      "questionId": 174,
+      "sourceQuestion": "What does this road marking indicate?",
       "studyPoint": "It is for the exclusive use of buses only.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
-      "category": "Road Signs",
+      "category": "Road Markings",
       "name": "Direction / route guidance sign",
       "meaning": "A sequence of turnoffs to various centres.",
+      "images": [
+        "assets/road-signs/q175-1.png"
+      ],
+      "questionId": 175,
+      "sourceQuestion": "This road marking shows a driver…",
+      "studyPoint": "A sequence of turnoffs to various centres.",
+      "source": "Inganathi Driving Academy questionnaire"
+    },
+    {
+      "category": "Road Signs",
+      "name": "Additional traffic lane",
+      "meaning": "Lane increase ahead.",
       "images": [
         "assets/road-signs/q176-1.png"
       ],
       "questionId": 176,
       "sourceQuestion": "This Sign shows you that....",
-      "studyPoint": "A sequence of turnoffs to various centres.",
+      "studyPoint": "Lane increase ahead.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "Additional traffic lane",
-      "meaning": "Lane increase ahead.",
+      "name": "Gore exit direction",
+      "meaning": "The road you may use to exit a freeway.",
       "images": [
         "assets/road-signs/q177-1.png"
       ],
       "questionId": 177,
       "sourceQuestion": "What does this line show you?",
-      "studyPoint": "Lane increase ahead.",
+      "studyPoint": "The road you may use to exit a freeway.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
