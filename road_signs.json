@@ -942,38 +942,38 @@
     },
     {
       "category": "Temporary",
-      "name": "Temporary roadworks sign",
-      "meaning": "Has the same legal meaning as a permanent sign.",
+      "name": "Temporary height limit",
+      "meaning": "Temporary height limit.",
       "images": [
         "assets/road-signs/q149-1.png"
       ],
       "questionId": 149,
       "sourceQuestion": "A temporary sign…",
-      "studyPoint": "Has the same legal meaning as a permanent sign.",
+      "studyPoint": "Temporary height limit.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Temporary",
-      "name": "Temporary roadworks sign",
-      "meaning": "Road works within 1km",
+      "name": "Temporary lane layout",
+      "meaning": "Temporary lane layout.",
       "images": [
         "assets/road-signs/q150-1.png"
       ],
       "questionId": 150,
       "sourceQuestion": "This sign indicates to a driver that there is…",
-      "studyPoint": "Road works within 1km",
+      "studyPoint": "Temporary lane layout.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Mandatory direction / keep-left sign",
-      "meaning": "That all traffic must turn right.",
+      "name": "Advanced trailblazers",
+      "meaning": "Advanced trailblazers.",
       "images": [
         "assets/road-signs/q151-1.png"
       ],
       "questionId": 151,
       "sourceQuestion": "This sign indicates…",
-      "studyPoint": "That all traffic must turn right.",
+      "studyPoint": "Advanced trailblazers.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
