@@ -446,7 +446,7 @@ function renderSign(){
  if(!signs.length)return;
  const s=signs[signIndex];
  const imgs=Array.isArray(s.images)&&s.images.length?s.images:(Array.isArray(s.diagramImages)?s.diagramImages:[]);
- document.getElementById("signStudyCount").textContent="Sign "+(signIndex+1)+" of "+signs.length+" • Question Q"+s.questionId;
+ document.getElementById("signStudyCount").textContent="Sign "+(s.signNumber||signIndex+1)+" of 106 • Question Q"+s.questionId;
  document.getElementById("signStudyCategory").textContent=s.category||"Road Signs";
  document.getElementById("signBadge").textContent=(s.category||"ROAD SIGN").toUpperCase();
  document.getElementById("signName").textContent=s.name||"Road sign";
