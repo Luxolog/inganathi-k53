@@ -942,38 +942,38 @@
     },
     {
       "category": "Temporary",
-      "name": "Temporary height limit",
-      "meaning": "Temporary height limit.",
+      "name": "Temporary roadworks sign",
+      "meaning": "Has the same legal meaning as a permanent sign.",
       "images": [
         "assets/road-signs/q149-1.png"
       ],
       "questionId": 149,
       "sourceQuestion": "A temporary sign…",
-      "studyPoint": "Temporary height limit.",
+      "studyPoint": "Has the same legal meaning as a permanent sign.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Temporary",
-      "name": "Temporary lane layout",
-      "meaning": "Temporary lane layout.",
+      "name": "Temporary roadworks sign",
+      "meaning": "Road works within 1km",
       "images": [
         "assets/road-signs/q150-1.png"
       ],
       "questionId": 150,
       "sourceQuestion": "This sign indicates to a driver that there is…",
-      "studyPoint": "Temporary lane layout.",
+      "studyPoint": "Road works within 1km",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Advanced trailblazers",
-      "meaning": "Advanced trailblazers.",
+      "name": "Mandatory direction / keep-left sign",
+      "meaning": "That all traffic must turn right.",
       "images": [
         "assets/road-signs/q151-1.png"
       ],
       "questionId": 151,
       "sourceQuestion": "This sign indicates…",
-      "studyPoint": "Advanced trailblazers.",
+      "studyPoint": "That all traffic must turn right.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -1002,13 +1002,25 @@
     },
     {
       "category": "Temporary",
-      "name": "Left turn ahead prohibited",
-      "meaning": "You may not turn in the direction of the arrow at the next junction.",
+      "name": "Temporary / warning sign colour",
+      "meaning": "Yellow",
       "images": [
         "assets/road-signs/q154-1.png"
       ],
       "questionId": 154,
       "sourceQuestion": "In order to draw attention, the background of a temporary sign is usually..?",
+      "studyPoint": "Yellow",
+      "source": "Inganathi Driving Academy questionnaire"
+    },
+    {
+      "category": "Road Signs",
+      "name": "Left turn ahead prohibited",
+      "meaning": "You may not turn in the direction of the arrow at the next junction.",
+      "images": [
+        "assets/road-signs/q155-1.png"
+      ],
+      "questionId": 155,
+      "sourceQuestion": "What does this sign show you..? You may not turn left at the intersection ahead. There is no sharp curve to the left. There is a one way to the right ahead CHOOSE THE CORRECT COMBINATION",
       "studyPoint": "You may not turn in the direction of the arrow at the next junction.",
       "source": "Inganathi Driving Academy questionnaire"
     },
@@ -1017,23 +1029,11 @@
       "name": "Axle mass-load limit",
       "meaning": "This is the maximum axle mass permitted on this road.",
       "images": [
-        "assets/road-signs/q155-1.png"
-      ],
-      "questionId": 155,
-      "sourceQuestion": "What does this sign show you..? You may not turn left at the intersection ahead. There is no sharp curve to the left. There is a one way to the right ahead CHOOSE THE CORRECT COMBINATION",
-      "studyPoint": "This is the maximum axle mass permitted on this road.",
-      "source": "Inganathi Driving Academy questionnaire"
-    },
-    {
-      "category": "Road Signs",
-      "name": "Axle mass-load sign",
-      "meaning": "An axle mass load",
-      "images": [
         "assets/road-signs/q156-1.png"
       ],
       "questionId": 156,
       "sourceQuestion": "This sign shows the driver of a vehicle",
-      "studyPoint": "An axle mass load",
+      "studyPoint": "This is the maximum axle mass permitted on this road.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -1097,52 +1097,52 @@
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
-      "category": "Traffic Signals",
-      "name": "Traffic signal turning indication",
-      "meaning": "You may travel in the direction of the arrow only if it is safe to do so.",
+      "category": "Road Signs",
+      "name": "Temporary minimum speed on the third lane",
+      "meaning": "Only vehicles that can exceed the speed indicated can travel on that lane.",
       "images": [
-        "assets/road-signs/q163-1.png"
+        "assets/road-signs/q162-1.png"
       ],
-      "questionId": 163,
-      "sourceQuestion": "This overhead signal shows you…?",
-      "studyPoint": "You may travel in the direction of the arrow only if it is safe to do so.",
+      "questionId": 162,
+      "sourceQuestion": "This sign commands the driver of a vehicle….?",
+      "studyPoint": "Only vehicles that can exceed the speed indicated can travel on that lane.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Traffic Signals",
-      "name": "No crossing at all",
-      "meaning": "No crossing is permitted.",
+      "name": "Traffic signal turning indication",
+      "meaning": "You may travel in the direction of the arrow only if it is safe to do so.",
       "images": [
         "assets/road-signs/q164-1.png"
       ],
       "questionId": 164,
       "sourceQuestion": "This signal indicates…?",
-      "studyPoint": "No crossing is permitted.",
-      "source": "Inganathi Driving Academy questionnaire",
-      "hideStudyPoint": true
+      "studyPoint": "You may travel in the direction of the arrow only if it is safe to do so.",
+      "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "Exit countdown marker",
-      "meaning": "Exit countdown marker.",
+      "name": "No crossing at all",
+      "meaning": "No crossing is permitted.",
       "images": [
         "assets/road-signs/q165-1.png"
       ],
       "questionId": 165,
       "sourceQuestion": "When driving behind another vehicle, this road making shows you to …?",
-      "studyPoint": "Exit countdown marker.",
-      "source": "Inganathi Driving Academy questionnaire"
+      "studyPoint": "No crossing is permitted.",
+      "source": "Inganathi Driving Academy questionnaire",
+      "hideStudyPoint": true
     },
     {
       "category": "Road Signs",
-      "name": "High-speed exit distance sign",
-      "meaning": "300m",
+      "name": "Exit countdown marker",
+      "meaning": "Exit countdown marker.",
       "images": [
         "assets/road-signs/q166-1.png"
       ],
       "questionId": 166,
       "sourceQuestion": "This sign indicates a high speed exit in…?",
-      "studyPoint": "300m",
+      "studyPoint": "Exit countdown marker.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -1282,8 +1282,7 @@
       "name": "Gore exit direction",
       "meaning": "The road you may use to exit a freeway.",
       "images": [
-        "assets/road-signs/q178-1.png",
-        "assets/road-signs/q178-2.png"
+        "assets/road-signs/q178-1.png"
       ],
       "questionId": 178,
       "sourceQuestion": "This sign shows you",
