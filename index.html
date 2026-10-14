@@ -3587,9 +3587,9 @@ function setupCandidateForm() {
     const idField = document.getElementById("candidateId");
     if (idField) {
         idField.addEventListener("input", function() {
-            this.value = this.value.replace(/\\D/g, "").slice(0, 13);
+            this.value = this.value.replace(/\D/g, "").slice(0, 13);
             this.setCustomValidity(
-                /^\\d{13}$/.test(this.value)
+                /^\d{13}$/.test(this.value)
                     ? ""
                     : "ID number must contain exactly 13 digits and no letters."
             );
@@ -3613,7 +3613,7 @@ function setupCandidateForm() {
             return;
         }
 
-        if (!/^\\d{13}$/.test(idNumber)) {
+        if (!/^\d{13}$/.test(idNumber)) {
             const idField = document.getElementById("candidateId");
             idField.setCustomValidity("ID number must contain exactly 13 digits and no letters.");
             idField.reportValidity();
