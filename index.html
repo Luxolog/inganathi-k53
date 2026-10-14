@@ -3821,10 +3821,10 @@ function renderSignLibrary() {
 
                 <h4>${escapeHtml(item.name)}</h4>
 
-                <div class="study-point">
+                ${item.hideStudyPoint ? "" : `<div class="study-point">
                     <strong>What to know</strong>
                     <p>${escapeHtml(item.studyPoint || item.meaning)}</p>
-                </div>
+                </div>`}
 
                 <details class="study-question">
                     <summary>View source question</summary>
