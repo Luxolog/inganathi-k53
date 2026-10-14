@@ -72,19 +72,19 @@
     },
     {
       "category": "Road Signs",
-      "name": "Mass restriction sign",
-      "meaning": "Vehicles with a mass of more than 10 tonne may not drive there",
+      "name": "Mass-restriction lane",
+      "meaning": "Vehicles exceeding the mass indicated must use this lane only.",
       "images": [
         "assets/road-signs/q078-1.png"
       ],
       "questionId": 78,
       "sourceQuestion": "If you see this road sign you know that ...",
-      "studyPoint": "Vehicles with a mass of more than 10 tonne may not drive there",
+      "studyPoint": "Vehicles exceeding the mass indicated must use this lane only.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "One-way / lane-direction indication",
+      "name": "Lane-direction indication",
       "meaning": "Will get a freeway ahead",
       "images": [
         "assets/road-signs/q079-1.png"
@@ -96,14 +96,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Curve / bend warning",
-      "meaning": "Can expect a sharp bend to the right",
+      "name": "Turn right only",
+      "meaning": "Turn right only.",
       "images": [
         "assets/road-signs/q080-1.png"
       ],
       "questionId": 80,
       "sourceQuestion": "This road sign shows you that you...",
-      "studyPoint": "Can expect a sharp bend to the right",
+      "studyPoint": "Turn right only.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -120,14 +120,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Reserved-use sign",
-      "meaning": "No vehicles may drive there because only pedestrians may walk there",
+      "name": "Unauthorised vehicle prohibited",
+      "meaning": "Unauthorised vehicles are prohibited.",
       "images": [
         "assets/road-signs/q082-1.png"
       ],
       "questionId": 82,
       "sourceQuestion": "If you see this road sign...",
-      "studyPoint": "No vehicles may drive there because only pedestrians may walk there",
+      "studyPoint": "Unauthorised vehicles are prohibited.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -157,38 +157,49 @@
     {
       "category": "Road Signs",
       "name": "Recommended speed",
-      "meaning": "Recommended speed when your lights are on",
+      "meaning": "Recommended speed during night conditions.",
       "images": [
-        "assets/road-signs/q085-1.png",
-        "assets/road-signs/q085-2.png"
+        "assets/road-signs/q085-1.png"
       ],
       "questionId": 85,
       "sourceQuestion": "This road sign shows you the...",
-      "studyPoint": "Recommended speed when your lights are on",
+      "studyPoint": "Recommended speed during night conditions.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Crossroad / intersection warning",
-      "meaning": "Roads cross ahead and other vehicles from the side must stop or yield at the intersection",
+      "name": "Priority crossroad",
+      "meaning": "Priority crossroad.",
+      "images": [
+        "assets/road-signs/q085-2.png"
+      ],
+      "questionId": 85,
+      "sourceQuestion": "Priority crossroad.",
+      "studyPoint": "Priority crossroad.",
+      "source": "Inganathi Driving Academy questionnaire"
+    },
+    {
+      "category": "Road Signs",
+      "name": "Two-way traffic",
+      "meaning": "Two-way traffic ahead.",
       "images": [
         "assets/road-signs/q086-1.png"
       ],
       "questionId": 86,
       "sourceQuestion": "What does this road sign show you...",
-      "studyPoint": "Roads cross ahead and other vehicles from the side must stop or yield at the intersection",
+      "studyPoint": "Two-way traffic ahead.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "One-way / lane-direction indication",
-      "meaning": "Is two-way traffic ahead on the one-way road you are travelling on",
+      "name": "Concealed driveways (right and left)",
+      "meaning": "Concealed driveways on the right and left.",
       "images": [
         "assets/road-signs/q087-1.png"
       ],
       "questionId": 87,
       "sourceQuestion": "This road sign shows you that there...",
-      "studyPoint": "Is two-way traffic ahead on the one-way road you are travelling on",
+      "studyPoint": "Concealed driveways on the right and left.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -205,14 +216,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Pedestrian / school warning",
-      "meaning": "Possibly pedestrians ahead",
+      "name": "Pedestrian crossing",
+      "meaning": "Pedestrian crossing.",
       "images": [
         "assets/road-signs/q089-1.png"
       ],
       "questionId": 89,
       "sourceQuestion": "This road sign warns you that there is...",
-      "studyPoint": "Possibly pedestrians ahead",
+      "studyPoint": "Pedestrian crossing.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -229,14 +240,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Uneven road warning",
-      "meaning": "The surface of the road is uneven on the left-hand side",
+      "name": "Motor gate (to the left)",
+      "meaning": "Motor gate to the left.",
       "images": [
         "assets/road-signs/q091-1.png"
       ],
       "questionId": 91,
       "sourceQuestion": "When you see this road sign you must slow down because...",
-      "studyPoint": "The surface of the road is uneven on the left-hand side",
+      "studyPoint": "Motor gate to the left.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -253,26 +264,26 @@
     },
     {
       "category": "Temporary",
-      "name": "Temporary / warning sign colour",
-      "meaning": "Warning",
+      "name": "Construction vehicle warning",
+      "meaning": "Construction vehicles may enter or cross the road ahead.",
       "images": [
         "assets/road-signs/q093-1.png"
       ],
       "questionId": 93,
       "sourceQuestion": "All road signs with a yellow background are...signs",
-      "studyPoint": "Warning",
+      "studyPoint": "Construction vehicles may enter or cross the road ahead.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Flood / low-water crossing warning",
-      "meaning": "There is a possibility of a flood ahead",
+      "name": "Jetty edge / river bank",
+      "meaning": "There is a jetty edge or river bank ahead.",
       "images": [
         "assets/road-signs/q094-1.png"
       ],
       "questionId": 94,
       "sourceQuestion": "This road sign shows you that...",
-      "studyPoint": "There is a possibility of a flood ahead",
+      "studyPoint": "There is a jetty edge or river bank ahead.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -374,14 +385,14 @@
     },
     {
       "category": "Road Markings",
-      "name": "Mini-circle marking / procedure",
-      "meaning": "Must stop with all the vehicles and only drive on when it is safe",
+      "name": "Yield line / yield marking",
+      "meaning": "Yield for vehicles that have crossed the yield line before you.",
       "images": [
         "assets/road-signs/q103-1.png"
       ],
       "questionId": 103,
       "sourceQuestion": "If you are driving towards a mini - circle and there are also vehicles from the other three sides you…",
-      "studyPoint": "Must stop with all the vehicles and only drive on when it is safe",
+      "studyPoint": "Yield for vehicles that have crossed the yield line before you.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -410,26 +421,26 @@
     },
     {
       "category": "Road Markings",
-      "name": "Reserved parking / loading marking",
-      "meaning": "Municipal buses",
+      "name": "Mini-buses",
+      "meaning": "Mini-buses.",
       "images": [
         "assets/road-signs/q106-1.png"
       ],
       "questionId": 106,
       "sourceQuestion": "This Road marking shows you that only...may park there",
-      "studyPoint": "Municipal buses",
+      "studyPoint": "Mini-buses.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "Junction warning",
-      "meaning": "There is a T- junction to the left",
+      "name": "Road to the left is not a through road",
+      "meaning": "Do not use this road if you need a through road to the left.",
       "images": [
         "assets/road-signs/q107-1.png"
       ],
       "questionId": 107,
       "sourceQuestion": "This road sign shows you that...",
-      "studyPoint": "There is a T- junction to the left",
+      "studyPoint": "Do not use this road if you need a through road to the left.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -494,14 +505,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Curve / bend warning",
-      "meaning": "Can expect a sharp bend to the left",
+      "name": "Direction at junction",
+      "meaning": "At the junction ahead, you must turn in the direction of the arrow.",
       "images": [
         "assets/road-signs/q113-1.png"
       ],
       "questionId": 113,
       "sourceQuestion": "This road sign shows you that you...",
-      "studyPoint": "Can expect a sharp bend to the left",
+      "studyPoint": "At the junction ahead, you must turn in the direction of the arrow.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -519,14 +530,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Crossroad / intersection warning",
-      "meaning": "Roads cross ahead and you may have to stop or yield at the intersection",
+      "name": "Secondary crossroad",
+      "meaning": "Secondary crossroad.",
       "images": [
         "assets/road-signs/q115-1.png"
       ],
       "questionId": 115,
       "sourceQuestion": "What does this warning sign show?",
-      "studyPoint": "Roads cross ahead and you may have to stop or yield at the intersection",
+      "studyPoint": "Secondary crossroad.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -555,14 +566,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Pothole warning",
-      "meaning": "Potholes are to be found on the road ahead",
+      "name": "Gravel road begins",
+      "meaning": "The surface of the road ahead changes to gravel.",
       "images": [
         "assets/road-signs/q118-1.png"
       ],
       "questionId": 118,
       "sourceQuestion": "This sign shows you that",
-      "studyPoint": "Potholes are to be found on the road ahead",
+      "studyPoint": "The surface of the road ahead changes to gravel.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -591,14 +602,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Winding road warning",
-      "meaning": "Winds",
+      "name": "Slippery road",
+      "meaning": "The road surface is very smooth, especially when wet.",
       "images": [
         "assets/road-signs/q121-1.png"
       ],
       "questionId": 121,
       "sourceQuestion": "This sign shows you that the road...",
-      "studyPoint": "Winds",
+      "studyPoint": "The road surface is very smooth, especially when wet.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -615,14 +626,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Obstruction / keep-pass direction",
-      "meaning": "Obstruction to the right of the road / that you must pass on the left",
+      "name": "Obstruction / hazard on the right — keep left",
+      "meaning": "There is an obstruction or hazard on the right; keep left.",
       "images": [
         "assets/road-signs/q123-1.png"
       ],
       "questionId": 123,
       "sourceQuestion": "This road sign shows that there is a/an...",
-      "studyPoint": "Obstruction to the right of the road / that you must pass on the left",
+      "studyPoint": "There is an obstruction or hazard on the right; keep left.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -700,50 +711,51 @@
     },
     {
       "category": "Road Signs",
-      "name": "Junction warning",
-      "meaning": "A T junction coming up",
+      "name": "Skew T-junction",
+      "meaning": "Skew T-junction.",
       "images": [
         "assets/road-signs/q130-1.png"
       ],
       "questionId": 130,
       "sourceQuestion": "This sign is shown at …",
-      "studyPoint": "A T junction coming up",
+      "studyPoint": "Skew T-junction.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Traffic Signals",
-      "name": "Railway crossing warning / signal",
-      "meaning": "Where a railway line is across a road.",
+      "name": "Traffic lights",
+      "meaning": "Traffic lights.",
       "images": [
         "assets/road-signs/q131-1.png"
       ],
       "questionId": 131,
       "sourceQuestion": "This traffic signal can be found on",
-      "studyPoint": "Where a railway line is across a road.",
-      "source": "Inganathi Driving Academy questionnaire"
+      "studyPoint": "Traffic lights.",
+      "source": "Inganathi Driving Academy questionnaire",
+      "hideStudyPoint": true
     },
     {
       "category": "Road Signs",
-      "name": "Obstruction / keep-pass direction",
-      "meaning": "Pass to the right of the obstruction in the road",
+      "name": "Keep right",
+      "meaning": "You must pass to the right of this sign.",
       "images": [
         "assets/road-signs/q132-1.png"
       ],
       "questionId": 132,
       "sourceQuestion": "When you see this sign…",
-      "studyPoint": "Pass to the right of the obstruction in the road",
+      "studyPoint": "You must pass to the right of this sign.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "Stop-line / pedestrian-line marking",
-      "meaning": "Shows you that you may not stop in front of the two lines",
+      "name": "Pedestrian line marking / pedestrians crossing",
+      "meaning": "Shows that you may have to stop and yield for pedestrians.",
       "images": [
         "assets/road-signs/q133-1.png"
       ],
       "questionId": 133,
       "sourceQuestion": "These road markings",
-      "studyPoint": "Shows you that you may not stop in front of the two lines",
+      "studyPoint": "Shows that you may have to stop and yield for pedestrians.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -833,51 +845,52 @@
     },
     {
       "category": "Road Markings",
-      "name": "Yield line / yield marking",
-      "meaning": "Yield right of way to any vehicles at any yield marking before you",
+      "name": "Traffic circle",
+      "meaning": "Traffic circle.",
       "images": [
         "assets/road-signs/q141-1.png"
       ],
       "questionId": 141,
       "sourceQuestion": "When you come across this road marking…",
-      "studyPoint": "Yield right of way to any vehicles at any yield marking before you",
+      "studyPoint": "Traffic circle.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
       "name": "Minimum / speed control sign",
-      "meaning": "May not drive faster than 60km/h",
+      "meaning": "Do not travel at a speed slower than the minimum speed indicated.",
       "images": [
         "assets/road-signs/q142-1.png"
       ],
       "questionId": 142,
       "sourceQuestion": "The vehicles travelling towards this sign….",
-      "studyPoint": "May not drive faster than 60km/h",
+      "studyPoint": "Do not travel at a speed slower than the minimum speed indicated.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Junction warning",
-      "meaning": "There is a T junction to the right of you.",
+      "name": "Four-way stop",
+      "meaning": "Stop and proceed only when it is safe to do so.",
       "images": [
         "assets/road-signs/q143-1.png"
       ],
       "questionId": 143,
       "sourceQuestion": "This road sign shows you that...",
-      "studyPoint": "There is a T junction to the right of you.",
+      "studyPoint": "Stop and proceed only when it is safe to do so.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Stop control",
-      "meaning": "Must stop behind vehicle A, drive closer if that vehicle has driven off, stop immediately behind the stop line and drive off when it is safe to do so",
+      "name": "No through road to the right",
+      "meaning": "There is no through road to the right.",
       "images": [
         "assets/road-signs/q144-1.png"
       ],
       "questionId": 144,
       "sourceQuestion": "Vehicle B...",
-      "studyPoint": "Must stop behind vehicle A, drive closer if that vehicle has driven off, stop immediately behind the stop line and drive off when it is safe to do so",
-      "source": "Inganathi Driving Academy questionnaire"
+      "studyPoint": "There is no through road to the right.",
+      "source": "Inganathi Driving Academy questionnaire",
+      "hideStudyPoint": true
     },
     {
       "category": "Road Signs",
@@ -929,38 +942,38 @@
     },
     {
       "category": "Temporary",
-      "name": "Temporary roadworks sign",
-      "meaning": "Has the same legal meaning as a permanent sign.",
+      "name": "Temporary height limit",
+      "meaning": "Temporary height limit.",
       "images": [
         "assets/road-signs/q149-1.png"
       ],
       "questionId": 149,
       "sourceQuestion": "A temporary sign…",
-      "studyPoint": "Has the same legal meaning as a permanent sign.",
+      "studyPoint": "Temporary height limit.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Temporary",
-      "name": "Temporary roadworks sign",
-      "meaning": "Road works within 1km",
+      "name": "Temporary lane layout",
+      "meaning": "Temporary lane layout.",
       "images": [
         "assets/road-signs/q150-1.png"
       ],
       "questionId": 150,
       "sourceQuestion": "This sign indicates to a driver that there is…",
-      "studyPoint": "Road works within 1km",
+      "studyPoint": "Temporary lane layout.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Mandatory direction / keep-left sign",
-      "meaning": "That all traffic must turn right.",
+      "name": "Advanced trailblazers",
+      "meaning": "Advanced trailblazers.",
       "images": [
         "assets/road-signs/q151-1.png"
       ],
       "questionId": 151,
       "sourceQuestion": "This sign indicates…",
-      "studyPoint": "That all traffic must turn right.",
+      "studyPoint": "Advanced trailblazers.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -977,38 +990,38 @@
     },
     {
       "category": "Road Signs",
-      "name": "Emergency stopping area sign",
-      "meaning": "You may use this part of the road for stopping if your breaks fail",
+      "name": "Arrestor bed ahead",
+      "meaning": "Arrestor bed ahead.",
       "images": [
         "assets/road-signs/q153-1.png"
       ],
       "questionId": 153,
       "sourceQuestion": "This sign shows you that…",
-      "studyPoint": "You may use this part of the road for stopping if your breaks fail",
+      "studyPoint": "Arrestor bed ahead.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Temporary",
-      "name": "Temporary / warning sign colour",
-      "meaning": "Yellow",
+      "name": "Left turn ahead prohibited",
+      "meaning": "You may not turn in the direction of the arrow at the next junction.",
       "images": [
         "assets/road-signs/q154-1.png"
       ],
       "questionId": 154,
       "sourceQuestion": "In order to draw attention, the background of a temporary sign is usually..?",
-      "studyPoint": "Yellow",
+      "studyPoint": "You may not turn in the direction of the arrow at the next junction.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "No-left-turn / one-way direction",
-      "meaning": "Only (i) and (iii) are correct",
+      "name": "Axle mass-load limit",
+      "meaning": "This is the maximum axle mass permitted on this road.",
       "images": [
         "assets/road-signs/q155-1.png"
       ],
       "questionId": 155,
       "sourceQuestion": "What does this sign show you..? You may not turn left at the intersection ahead. There is no sharp curve to the left. There is a one way to the right ahead CHOOSE THE CORRECT COMBINATION",
-      "studyPoint": "Only (i) and (iii) are correct",
+      "studyPoint": "This is the maximum axle mass permitted on this road.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -1025,110 +1038,99 @@
     },
     {
       "category": "Temporary",
-      "name": "Temporary roadworks sign",
-      "meaning": "A portion of the road is temporary closed to traffic.",
+      "name": "Temporary road closure",
+      "meaning": "The road is temporarily closed at this point. Slow down and use any detour indicated.",
       "images": [
         "assets/road-signs/q157-1.png"
       ],
       "questionId": 157,
       "sourceQuestion": "This sign tells road users that….?",
-      "studyPoint": "A portion of the road is temporary closed to traffic.",
+      "studyPoint": "The road is temporarily closed at this point. Slow down and use any detour indicated.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Reserved-use sign",
-      "meaning": "That only cyclists may use that part of the road.",
+      "name": "Pedal cycles only",
+      "meaning": "Only cyclists may use that part of the road.",
       "images": [
         "assets/road-signs/q158-1.png"
       ],
       "questionId": 158,
       "sourceQuestion": "This sign indicates to the driver of a vehicle…",
-      "studyPoint": "That only cyclists may use that part of the road.",
+      "studyPoint": "Only cyclists may use that part of the road.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "South African road sign / marking",
-      "meaning": "You should stop before the road marking and move off when it is safe.",
+      "name": "Speed humps",
+      "meaning": "You may have to slow down.",
       "images": [
         "assets/road-signs/q159-1.png"
       ],
       "questionId": 159,
       "sourceQuestion": "This road marking warns you that…?",
-      "studyPoint": "You should stop before the road marking and move off when it is safe.",
+      "studyPoint": "You may have to slow down.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "High-speed exit distance sign",
-      "meaning": "200m",
+      "name": "Exit countdown signs",
+      "meaning": "200 m to the exit.",
       "images": [
         "assets/road-signs/q160-1.png"
       ],
       "questionId": 160,
       "sourceQuestion": "The sign indicates to a driver that there is a high speed exit in …?",
-      "studyPoint": "200m",
+      "studyPoint": "200 m to the exit.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "Railway crossing warning / signal",
-      "meaning": "A marked pedestrian crossing sign ahead",
+      "name": "Pedestrian crossing",
+      "meaning": "You may have to stop and yield for pedestrians walking at a pedestrian crossing.",
       "images": [
         "assets/road-signs/q161-1.png"
       ],
       "questionId": 161,
       "sourceQuestion": "Before this road marking you would usually find..?",
-      "studyPoint": "A marked pedestrian crossing sign ahead",
-      "source": "Inganathi Driving Academy questionnaire"
-    },
-    {
-      "category": "Road Signs",
-      "name": "Minimum / speed control sign",
-      "meaning": "The minimum speed in the right hand lane is temporary 80kph",
-      "images": [
-        "assets/road-signs/q162-1.png"
-      ],
-      "questionId": 162,
-      "sourceQuestion": "This sign commands the driver of a vehicle….?",
-      "studyPoint": "The minimum speed in the right hand lane is temporary 80kph",
-      "source": "Inganathi Driving Academy questionnaire"
-    },
-    {
-      "category": "Traffic Signals",
-      "name": "One-way / lane-direction indication",
-      "meaning": "Not to drive in this lane it’s for vehicles from the front",
-      "images": [
-        "assets/road-signs/q163-1.png"
-      ],
-      "questionId": 163,
-      "sourceQuestion": "This overhead signal shows you…?",
-      "studyPoint": "Not to drive in this lane it’s for vehicles from the front",
+      "studyPoint": "You may have to stop and yield for pedestrians walking at a pedestrian crossing.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Traffic Signals",
       "name": "Traffic signal turning indication",
-      "meaning": "The vehicles that want to turn right may do so but other vehicles must stop.",
+      "meaning": "You may travel in the direction of the arrow only if it is safe to do so.",
+      "images": [
+        "assets/road-signs/q163-1.png"
+      ],
+      "questionId": 163,
+      "sourceQuestion": "This overhead signal shows you…?",
+      "studyPoint": "You may travel in the direction of the arrow only if it is safe to do so.",
+      "source": "Inganathi Driving Academy questionnaire"
+    },
+    {
+      "category": "Traffic Signals",
+      "name": "No crossing at all",
+      "meaning": "No crossing is permitted.",
       "images": [
         "assets/road-signs/q164-1.png"
       ],
       "questionId": 164,
       "sourceQuestion": "This signal indicates…?",
-      "studyPoint": "The vehicles that want to turn right may do so but other vehicles must stop.",
-      "source": "Inganathi Driving Academy questionnaire"
+      "studyPoint": "No crossing is permitted.",
+      "source": "Inganathi Driving Academy questionnaire",
+      "hideStudyPoint": true
     },
     {
       "category": "Road Markings",
-      "name": "South African road sign / marking",
-      "meaning": "Slow down and keep a safe following distance behind the slow moving vehicles",
+      "name": "Exit countdown marker",
+      "meaning": "Exit countdown marker.",
       "images": [
         "assets/road-signs/q165-1.png"
       ],
       "questionId": 165,
       "sourceQuestion": "When driving behind another vehicle, this road making shows you to …?",
-      "studyPoint": "Slow down and keep a safe following distance behind the slow moving vehicles",
+      "studyPoint": "Exit countdown marker.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
@@ -1146,146 +1148,158 @@
     {
       "category": "Road Signs",
       "name": "Alternative route sign",
-      "meaning": "There is an alternative route at the next road to the right",
+      "meaning": "There is an alternative route at the next road to the right.",
       "images": [
         "assets/road-signs/q167-1.png"
       ],
       "questionId": 167,
       "sourceQuestion": "This sign shows the driver of a vehicle that…?",
-      "studyPoint": "There is an alternative route at the next road to the right",
+      "studyPoint": "There is an alternative route at the next road to the right.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Junction warning",
-      "meaning": "There is a T Junction to the right",
+      "name": "Road to the right is not a through road",
+      "meaning": "Do not use this road if you need a through road to your right.",
       "images": [
         "assets/road-signs/q168-1.png"
       ],
       "questionId": 168,
       "sourceQuestion": "This sign shows you that…?",
-      "studyPoint": "There is a T Junction to the right",
+      "studyPoint": "Do not use this road if you need a through road to your right.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Mandatory direction / keep-left sign",
-      "meaning": "Keep left",
+      "name": "One-way roadway",
+      "meaning": "Travel only in the direction of the arrow.",
       "images": [
         "assets/road-signs/q169-1.png"
       ],
       "questionId": 169,
       "sourceQuestion": "When approaching this sign…?",
-      "studyPoint": "Keep left",
+      "studyPoint": "Travel only in the direction of the arrow.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
       "name": "Toll route / alternative route sign",
-      "meaning": "A toll road and an alternative to the toll road",
+      "meaning": "There is a toll road and an alternative to the toll road.",
       "images": [
         "assets/road-signs/q170-1.png"
       ],
       "questionId": 170,
       "sourceQuestion": "This sign shows…?",
-      "studyPoint": "A toll road and an alternative to the toll road",
+      "studyPoint": "There is a toll road and an alternative to the toll road.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
       "name": "Disabled parking marking",
-      "meaning": "An area is set aside for disabled persons",
+      "meaning": "The area is set aside for disabled persons.",
       "images": [
         "assets/road-signs/q171-1.png"
       ],
       "questionId": 171,
       "sourceQuestion": "This road marking indicates…?",
-      "studyPoint": "An area is set aside for disabled persons",
+      "studyPoint": "The area is set aside for disabled persons.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Sign classification",
-      "meaning": "A regulatory sign",
+      "name": "Information sign",
+      "meaning": "There is a dead end on the road ahead.",
       "images": [
         "assets/road-signs/q172-1.png"
       ],
       "questionId": 172,
       "sourceQuestion": "This type of sign is known as…?",
-      "studyPoint": "A regulatory sign",
+      "studyPoint": "There is a dead end on the road ahead.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
       "name": "Barrier / no-crossing marking",
-      "meaning": "No overtaking is allowed",
+      "meaning": "No overtaking is allowed.",
       "images": [
         "assets/road-signs/q173-1.png"
       ],
       "questionId": 173,
       "sourceQuestion": "The road marking warns road users that…?",
-      "studyPoint": "No overtaking is allowed",
+      "studyPoint": "No overtaking is allowed.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "Lane direction / lane transition marking",
-      "meaning": "The left lane is reducing",
+      "name": "Lane directions",
+      "meaning": "The left lane is reducing.",
       "images": [
         "assets/road-signs/q174-1.png"
       ],
       "questionId": 174,
       "sourceQuestion": "What does this road marking indicate?",
-      "studyPoint": "The left lane is reducing",
+      "studyPoint": "The left lane is reducing.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "Bus-only / reserved lane marking",
-      "meaning": "It is for the exclusive use for busses only",
+      "name": "Bus lane only",
+      "meaning": "It is for the exclusive use of buses only.",
       "images": [
         "assets/road-signs/q175-1.png"
       ],
       "questionId": 175,
       "sourceQuestion": "This road marking shows a driver…",
-      "studyPoint": "It is for the exclusive use for busses only",
+      "studyPoint": "It is for the exclusive use of buses only.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
       "name": "Direction / route guidance sign",
-      "meaning": "A sequence of turnoffs to various centers",
+      "meaning": "A sequence of turnoffs to various centres.",
       "images": [
         "assets/road-signs/q176-1.png"
       ],
       "questionId": 176,
       "sourceQuestion": "This Sign shows you that....",
-      "studyPoint": "A sequence of turnoffs to various centers",
+      "studyPoint": "A sequence of turnoffs to various centres.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Markings",
-      "name": "Dividing line marking",
-      "meaning": "It’s a dividing line",
+      "name": "Additional traffic lane",
+      "meaning": "Lane increase ahead.",
       "images": [
         "assets/road-signs/q177-1.png"
       ],
       "questionId": 177,
       "sourceQuestion": "What does this line show you?",
-      "studyPoint": "It’s a dividing line",
+      "studyPoint": "Lane increase ahead.",
       "source": "Inganathi Driving Academy questionnaire"
     },
     {
       "category": "Road Signs",
-      "name": "Mandatory direction / keep-left sign",
-      "meaning": "The road you may use to exit a freeway",
+      "name": "Gore exit direction",
+      "meaning": "The road you may use to exit a freeway.",
       "images": [
         "assets/road-signs/q178-1.png",
         "assets/road-signs/q178-2.png"
       ],
       "questionId": 178,
       "sourceQuestion": "This sign shows you",
-      "studyPoint": "The road you may use to exit a freeway",
+      "studyPoint": "The road you may use to exit a freeway.",
+      "source": "Inganathi Driving Academy questionnaire"
+    },
+    {
+      "category": "Road Signs",
+      "name": "Motorcycle engine capacity limit",
+      "meaning": "Motorcycles with an engine capacity of more than 125 cc are prohibited.",
+      "images": [
+        "assets/road-signs/q178-2.png"
+      ],
+      "questionId": 178,
+      "sourceQuestion": "Motorcycle with an engine capacity of more than 125 cc prohibited.",
+      "studyPoint": "Motorcycles with an engine capacity of more than 125 cc are prohibited.",
       "source": "Inganathi Driving Academy questionnaire"
     }
   ]
