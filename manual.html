@@ -45,6 +45,7 @@ main{max-width:1050px;margin:auto;padding:28px 18px 70px}
 .sign-viewer{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;max-width:760px;margin:auto}
 .sign-image{height:310px;background:var(--soft);border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;padding:12px;margin-bottom:15px}
 .sign-image img{height:275px;max-width:100%;object-fit:contain}
+.image-load-error{font-size:12px;color:#b42318;font-weight:800;padding:12px;text-align:center}
 .sign-info{text-align:center}
 .sign-info .badge{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:900;margin-bottom:8px}
 .sign-info h3{font-size:21px;color:var(--ink);margin-bottom:7px}
@@ -450,7 +451,7 @@ function renderSign(){
  document.getElementById("signBadge").textContent=(s.category||"ROAD SIGN").toUpperCase();
  document.getElementById("signName").textContent=s.name||"Road sign";
  document.getElementById("signMeaning").textContent=s.studyPoint||s.meaning||"Study the sign and its required action.";
- document.getElementById("signImage").innerHTML=imgs.map(src=>'<img loading="lazy" src="'+escapeHtml(src)+'" alt="Road sign Q'+escapeHtml(s.questionId)+'">').join("");
+ document.getElementById("signImage").innerHTML=imgs.map(src=>{const imagePath=String(src||"").replace(/^\\/+/, "");const imageUrl="https://luxolog.github.io/inganathi-k53/"+imagePath;return '<img loading="eager" src="'+escapeHtml(imageUrl)+'" alt="Road sign Q'+escapeHtml(s.questionId)+'" onerror="this.style.display=\'none\';const box=this.parentElement;if(box&&!box.querySelector(\'.image-load-error\')){const msg=document.createElement(\'div\');msg.className=\'image-load-error\';msg.textContent=\'Sign image could not load: '+imagePath.replace(/'/g, \'&#39;\')+'\';box.appendChild(msg)}">';}).join("");
  document.getElementById("prevSign").disabled=signIndex===0;
  document.getElementById("nextSign").disabled=signIndex===signs.length-1;
 }
