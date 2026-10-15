@@ -10,6 +10,8 @@ This Android Studio project wraps the live Inganathi K53 site in a lightweight A
 
 ## Build in Android Studio
 
+The repository includes a GitHub Actions workflow that automatically builds a debug APK whenever files under `android/` change.
+
 1. Open Android Studio.
 2. Choose **Open** and select this repository's `android` folder.
 3. Allow Gradle sync to complete; install Android SDK Platform 34 if prompted.
