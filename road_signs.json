@@ -1072,6 +1072,19 @@
     },
     {
       "category": "Road Signs",
+      "name": "Temporary sign background",
+      "meaning": "Temporary road signs generally use a yellow background to distinguish them from permanent signs.",
+      "images": [
+        "assets/road-signs/q154-1.png"
+      ],
+      "questionId": 154,
+      "sourceQuestion": "In order to draw attention, the background of a temporary sign is usually..?",
+      "studyPoint": "Yellow is the usual background colour for temporary road signs.",
+      "source": "Inganathi Driving Academy questionnaire",
+      "signNumber": 82
+    },
+    {
+      "category": "Road Signs",
       "name": "Left turn ahead prohibited",
       "meaning": "You may not turn in the direction of the arrow at the next junction.",
       "images": [
@@ -1081,7 +1094,7 @@
       "sourceQuestion": "What does this sign show you..? You may not turn left at the intersection ahead. There is no sharp curve to the left. There is a one way to the right ahead CHOOSE THE CORRECT COMBINATION",
       "studyPoint": "You may not turn in the direction of the arrow at the next junction.",
       "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 82
+      "signNumber": 83
     },
     {
       "category": "Road Signs",
@@ -1094,7 +1107,7 @@
       "sourceQuestion": "This sign shows the driver of a vehicle",
       "studyPoint": "This is the maximum axle mass permitted on this road.",
       "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 83
+      "signNumber": 84
     },
     {
       "category": "Temporary",
@@ -1107,7 +1120,7 @@
       "sourceQuestion": "This sign tells road users that….?",
       "studyPoint": "The road is temporarily closed at this point. Slow down and use any detour indicated.",
       "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 84
+      "signNumber": 85
     },
     {
       "category": "Road Signs",
@@ -1120,7 +1133,7 @@
       "sourceQuestion": "This sign indicates to the driver of a vehicle…",
       "studyPoint": "Only cyclists may use that part of the road.",
       "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 85
+      "signNumber": 86
     },
     {
       "category": "Road Markings",
@@ -1133,7 +1146,7 @@
       "sourceQuestion": "This road marking warns you that…?",
       "studyPoint": "You may have to slow down.",
       "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 86
+      "signNumber": 87
     },
     {
       "category": "Road Signs",
@@ -1146,7 +1159,7 @@
       "sourceQuestion": "The sign indicates to a driver that there is a high speed exit in …?",
       "studyPoint": "200 m to the exit.",
       "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 87
+      "signNumber": 88
     },
     {
       "category": "Road Markings",
@@ -1159,7 +1172,7 @@
       "sourceQuestion": "Before this road marking you would usually find..?",
       "studyPoint": "You may have to stop and yield for pedestrians walking at a pedestrian crossing.",
       "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 88
+      "signNumber": 89
     },
     {
       "category": "Road Signs",
@@ -1172,7 +1185,7 @@
       "sourceQuestion": "This sign commands the driver of a vehicle….?",
       "studyPoint": "Only vehicles that can exceed the speed indicated can travel on that lane.",
       "source": "Inganathi Driving Academy questionnaire",
-      "signNumber": 89
+      "signNumber": 90
     },
     {
       "category": "Traffic Signals",
