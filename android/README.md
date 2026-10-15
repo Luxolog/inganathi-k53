@@ -4,7 +4,7 @@ This Android Studio project wraps the live Inganathi K53 site in a lightweight A
 
 - Application ID: `co.za.inganathi.driving`
 - Minimum Android version: Android 6.0 (API 23)
-- Compile SDK: 34
+- Compile SDK: 35 (Android 15)
 - Language: Java (no Compose)
 - Brand colors: red `#D50203`, black `#02050E`
 
