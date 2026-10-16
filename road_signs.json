@@ -13,13 +13,13 @@
     {
       "category": "Road Signs",
       "name": "Stop control",
-      "meaning": "Stop and then turn left or drive straight",
+      "meaning": "Stop, but if you want to turn left, you can use it as a yield sign.",
       "images": [
         "assets/road-signs/q073-1.png"
       ],
       "questionId": 73,
       "sourceQuestion": "This road sign shows you that you must ...",
-      "studyPoint": "Stop and then turn left or drive straight",
+      "studyPoint": "Stop, but if you want to turn left, you can use it as a yield sign.",
       "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 1
     },
