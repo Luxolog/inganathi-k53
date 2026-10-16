@@ -208,14 +208,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Series of curves warning",
-      "meaning": "A number of sharp curves ahead",
+      "name": "Concealed entrances on both sides",
+      "meaning": "A concealed entrance to the left is followed by one to the right.",
       "images": [
         "assets/road-signs/q088-1.png"
       ],
       "questionId": 88,
       "sourceQuestion": "What does This road sign show you",
-      "studyPoint": "A number of sharp curves ahead",
+      "studyPoint": "A concealed entrance to the left is followed by one to the right.",
       "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 16
     },
