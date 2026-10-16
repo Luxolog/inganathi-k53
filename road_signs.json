@@ -39,13 +39,13 @@
     {
       "category": "Road Signs",
       "name": "Pedestrian-only / pedestrian priority sign",
-      "meaning": "Know that, that section of the road is for the use of pedestrians only",
+      "meaning": "You must give right of way to pedestrians who would like to enter or cross the road.",
       "images": [
         "assets/road-signs/q075-1.png"
       ],
       "questionId": 75,
       "sourceQuestion": "When you see this road sign you...",
-      "studyPoint": "Know that, that section of the road is for the use of pedestrians only",
+      "studyPoint": "You must give right of way to pedestrians who would like to enter or cross the road.",
       "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 3
     },
