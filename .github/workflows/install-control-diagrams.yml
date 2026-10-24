@@ -1,0 +1,52 @@
+name: Install K53 control diagrams
+
+on:
+  push:
+    paths:
+      - 'assets/control-diagrams/inganathi-control-diagrams-ready.zip'
+      - '.github/workflows/install-control-diagrams.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install-diagrams:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Extract and install replacement images
+        run: |
+          python - <<'PY'
+          import os, zipfile
+          archive = "assets/control-diagrams/inganathi-control-diagrams-ready.zip"
+          target = "assets/control-diagrams"
+          expected = {
+              "motorcycle-controls.jpg",
+              "light-motor-controls-212.jpg",
+              "light-motor-controls-230.jpg",
+          }
+          with zipfile.ZipFile(archive) as z:
+              names = set(z.namelist())
+              missing = expected - names
+              if missing:
+                  raise SystemExit(f"ZIP is missing expected images: {sorted(missing)}")
+              for name in expected:
+                  with z.open(name) as src, open(os.path.join(target, name), "wb") as dst:
+                      dst.write(src.read())
+          print("Installed:", ", ".join(sorted(expected)))
+          PY
+
+      - name: Commit installed images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/control-diagrams/*.jpg
+          if git diff --cached --quiet; then
+            echo "No image changes to commit."
+          else
+            git commit -m "Install replacement vehicle control diagrams"
+            git push
+          fi
