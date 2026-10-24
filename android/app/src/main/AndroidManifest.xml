@@ -6,8 +6,8 @@
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:icon="@drawable/inganathi_logo"
-        android:roundIcon="@drawable/inganathi_logo"
+        android:icon="@mipmap/inganathi_logo"
+        android:roundIcon="@mipmap/inganathi_logo"
         android:usesCleartextTraffic="false"
         android:theme="@style/AppTheme"
         android:supportsRtl="true">
