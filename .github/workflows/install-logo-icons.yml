@@ -1,0 +1,54 @@
+name: Install Inganathi logo icons
+
+on:
+  push:
+    paths:
+      - 'inganathi-logo-pack.zip'
+      - '.github/workflows/install-logo-icons.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install-logo-icons:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install favicon and Android launcher icons
+        run: |
+          python - <<'PY'
+          import os, shutil, zipfile
+          archive = "inganathi-logo-pack.zip"
+          with zipfile.ZipFile(archive) as z:
+              z.extractall("logo-pack")
+          for name in ("favicon.ico", "favicon.png", "favicon-32.png"):
+              src = os.path.join("logo-pack", name)
+              if not os.path.isfile(src):
+                  raise SystemExit(f"Missing required logo asset: {name}")
+              shutil.copy2(src, name)
+          res = "android/app/src/main/res"
+          for density in ("mdpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi"):
+              name = f"mipmap-{density}"
+              src = os.path.join("logo-pack", "android", "app", "src", "main", "res", name, "inganathi_logo.png")
+              if not os.path.isfile(src):
+                  raise SystemExit(f"Missing Android launcher icon: {src}")
+              dst = os.path.join(res, name)
+              os.makedirs(dst, exist_ok=True)
+              shutil.copy2(src, os.path.join(dst, "inganathi_logo.png"))
+          print("Installed favicon and Android launcher icon densities.")
+          PY
+
+      - name: Commit icon assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add favicon.ico favicon.png favicon-32.png android/app/src/main/res/mipmap-*/inganathi_logo.png
+          if git diff --cached --quiet; then
+            echo "No icon changes to commit."
+          else
+            git commit -m "Install Inganathi logo as favicon and Android app icon"
+            git push
+          fi
