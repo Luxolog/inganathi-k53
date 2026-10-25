@@ -969,6 +969,12 @@ section {
     margin-bottom: 10px;
 }
 
+/* Clear layout for statement-combination questions */
+.question-prompt { margin: 0 0 14px; line-height: 1.55; }
+.question-statement-list { display: grid; gap: 10px; margin: 0 0 16px; padding: 0; list-style: none; }
+.question-statement-list li { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 10px; padding: 12px 14px; background: #f8fafc; border: 1px solid #dbe2ea; border-radius: 9px; line-height: 1.5; }
+.question-statement-list .statement-label { font-weight: 800; color: #b00000; }
+.question-instruction { margin: 12px 0 0; padding: 12px 14px; background: #fff4d6; border-left: 4px solid #d50203; border-radius: 7px; font-weight: 800; }
 .question-text {
     font-size: 24px;
 
@@ -2907,10 +2913,7 @@ function showQuestion() {
         (currentQuestion + 1);
 
 
-    document
-        .getElementById("questionText")
-        .textContent =
-        getQuestionText(q);
+    renderQuestionText(q);
 
 
     /*
@@ -3166,6 +3169,82 @@ function answersAreCorrect(index, q) {
     return index === Number(q.correct);
 }
 
+
+function renderQuestionText(q) {
+    const container = document.getElementById("questionText");
+    container.replaceChildren();
+
+    // These source questions have three statements concatenated into one
+    // sentence. Keep the wording intact but display each statement separately.
+    const combinationQuestions = {
+        208: {
+            prompt: "If you only have a learner’s licence for a light motor vehicle:",
+            statements: [
+                "There must be someone with you in the vehicle who holds the same driving licence.",
+                "You are not allowed to drive on a freeway.",
+                "No passengers are allowed with you in the vehicle."
+            ]
+        },
+        225: {
+            prompt: "If you only have a learner’s licence for a heavy motor vehicle:",
+            statements: [
+                "There must be someone with you in the vehicle who holds the same driving licence.",
+                "You are not allowed to drive on a freeway.",
+                "No passengers are allowed with you in the vehicle."
+            ]
+        }
+    };
+
+    const structured = combinationQuestions[Number(q.id)];
+    if (structured) {
+        const prompt = document.createElement("p");
+        prompt.className = "question-prompt";
+        prompt.textContent = structured.prompt;
+        container.appendChild(prompt);
+
+        const lead = document.createElement("p");
+        lead.textContent = "Consider the following statements:";
+        container.appendChild(lead);
+
+        const list = document.createElement("ol");
+        list.className = "question-statement-list";
+        ["(i)", "(ii)", "(iii)"].forEach(function(label, index) {
+            const item = document.createElement("li");
+            const labelNode = document.createElement("span");
+            labelNode.className = "statement-label";
+            labelNode.textContent = label;
+            const statementNode = document.createElement("span");
+            statementNode.textContent = structured.statements[index];
+            item.append(labelNode, statementNode);
+            list.appendChild(item);
+        });
+        container.appendChild(list);
+
+        const instruction = document.createElement("p");
+        instruction.className = "question-instruction";
+        instruction.textContent = "Select ONE correct combination from the answer options below.";
+        container.appendChild(instruction);
+        return;
+    }
+
+    const rawText = getQuestionText(q);
+    const instructionMatch = rawText.match(/\s*(SELECT|CHOOSE) THE CORRECT COMBINATION\.?\s*$/i);
+    if (instructionMatch) {
+        const question = rawText.slice(0, instructionMatch.index).trim();
+        const prompt = document.createElement("p");
+        prompt.className = "question-prompt";
+        prompt.textContent = question;
+        container.appendChild(prompt);
+
+        const instruction = document.createElement("p");
+        instruction.className = "question-instruction";
+        instruction.textContent = "Select ONE correct combination from the answer options below.";
+        container.appendChild(instruction);
+        return;
+    }
+
+    container.textContent = rawText;
+}
 
 function getQuestionText(q) {
 
