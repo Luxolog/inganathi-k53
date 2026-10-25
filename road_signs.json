@@ -387,14 +387,14 @@
       "signNumber": 34
     },
     {
-      "category": "Road Markings",
-      "name": "Road to the left is not a through road",
-      "meaning": "Do not use this road if you need a through road to the left.",
+      "category": "Road Signs",
+      "name": "Cul-de-sac to the left",
+      "meaning": "The road to the left is a dead end; there is no through road in that direction.",
       "images": [
         "assets/road-signs/q107-1.png"
       ],
       "questionId": 107,
-      "studyPoint": "Do not use this road if you need a through road to the left.",
+      "studyPoint": "This green information sign indicates that the road to the left ends. Enter that road only if your destination is there, as you will need to return the same way.",
       "signNumber": 35
     },
     {
