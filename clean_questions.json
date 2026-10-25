@@ -2476,14 +2476,14 @@
     {
       "id": 169,
       "category": "road_signs",
-      "question": "When approaching this sign…?",
+      "question": "What information does this direction sign give about routes to Harrismith?",
       "options": [
-        "It shows a one way roadway to the left",
-        "Keep left",
-        "Turn left"
+        "The N3 is the toll route to Harrismith (105 km), while the R103 is the alternative route (121 km).",
+        "The R103 is the toll route to Harrismith (105 km), while the N3 is the alternative route (121 km).",
+        "Both the N3 and R103 are toll routes with the same distance to Harrismith."
       ],
-      "correct": 1,
-      "correctLetter": "B",
+      "correct": 0,
+      "correctLetter": "A",
       "answerStatus": "diagram_dependent_provisional_inference",
       "diagramImages": [
         "assets/road-signs/q169-1.png"
