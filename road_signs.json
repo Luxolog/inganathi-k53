@@ -946,7 +946,7 @@
       "name": "Temporary road closure",
       "meaning": "The road is temporarily closed at this point. Slow down and use any detour indicated.",
       "images": [
-        "assets/road-signs/q157-1.png"
+        "assets/road-signs/q158-1.png"
       ],
       "questionId": 157,
       "studyPoint": "The road is temporarily closed at this point. Slow down and use any detour indicated.",
@@ -957,7 +957,7 @@
       "name": "Pedal cycles only",
       "meaning": "Only cyclists may use that part of the road.",
       "images": [
-        "assets/road-signs/q158-1.png"
+        "assets/road-signs/q157-1.png"
       ],
       "questionId": 158,
       "studyPoint": "Only cyclists may use that part of the road.",
