@@ -1485,15 +1485,15 @@
     {
       "id": 107,
       "category": "road_signs",
-      "question": "This road sign shows you that...",
+      "question": "What does this road sign mean?",
       "options": [
-        "The road turning to the left ends ahead",
-        "You are not allowed to turn left there",
-        "There is a T- junction to the left"
+        "The road to the left is a dead end (cul-de-sac).",
+        "Turning left is prohibited.",
+        "There is a T-junction to the left."
       ],
-      "correct": 2,
-      "correctLetter": "C",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "verified_against_South_African_Road_Traffic_Signs_Manual_IN6",
       "diagramImages": [
         "assets/road-signs/q107-1.png"
       ]
