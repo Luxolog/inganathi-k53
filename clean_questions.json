@@ -2190,15 +2190,15 @@
     {
       "id": 151,
       "category": "road_signs",
-      "question": "This sign indicates…",
+      "question": "What does this advance trailblazer sign indicate?",
       "options": [
-        "There is a bridge ahead where you can turn right",
-        "That all traffic must turn right.",
-        "The direction to a freeway."
+        "All traffic must turn right at the next junction.",
+        "A bridge ahead where drivers may turn right.",
+        "The direction to join the N17 toll route."
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 2,
+      "correctLetter": "C",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
       "diagramImages": [
         "assets/road-signs/q151-1.png"
       ]
