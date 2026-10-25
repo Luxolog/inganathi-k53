@@ -3,7 +3,7 @@
     {
       "id": 1,
       "category": "rules",
-      "question": "[Question text not present in source]",
+      "question": "Which of the following actions is permitted?",
       "options": [
         "Drive your vehicle on the sidewalk at night.",
         "Reverse your vehicle only if it is safe to do so.",
@@ -3296,25 +3296,29 @@
     {
       "id": 204,
       "category": "light_motor_vehicle",
-      "question": "This road sign shows you that...",
+      "question": "This road sign shows that...",
       "options": [
-        "may not drive there between 06:00 and 09:00",
-        "may not park there for more than three hours",
-        "are only allowed to drive there between 06:00 and 09:00"
+        "You may not drive there between 06:00 and 09:00.",
+        "You may not park there for more than three hours.",
+        "You are only allowed to drive there between 06:00 and 09:00."
       ],
       "correct": 0,
       "correctLetter": "A",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/q204-time-restriction.svg"
+      ],
+      "diagramSource": "Illustrative sign showing a vehicle restriction during the stated hours."
     },
     {
       "id": 205,
       "category": "light_motor_vehicle",
-      "question": "This road sign forbids...",
+      "question": "This road sign prohibits...",
       "options": [
-        "minibuses to drive pass this sign",
-        "all motor vehicles to drive pass this sign",
-        "minibuses to pick up passengers"
+        "Minibuses from proceeding past this sign.",
+        "All motor vehicles from proceeding past this sign.",
+        "Minibuses from picking up passengers."
       ],
       "correct": 0,
       "correctLetter": "A",
@@ -3328,16 +3332,20 @@
     {
       "id": 206,
       "category": "light_motor_vehicle",
-      "question": "This road sign shows you that...",
+      "question": "This road sign shows that...",
       "options": [
-        "no taxis may drive there",
-        "no motor cars may drive there",
-        "you may not park your motor car there"
+        "Taxis may not proceed past this sign.",
+        "Motor cars may not proceed past this sign.",
+        "You may not park your motor car there."
       ],
       "correct": 0,
       "correctLetter": "A",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/q206-no-taxis.svg"
+      ],
+      "diagramSource": "Illustrative no-taxis prohibition sign."
     },
     {
       "id": 207,
@@ -3480,7 +3488,7 @@
     {
       "id": 216,
       "category": "light_motor_vehicle",
-      "question": "To ensure that your parked vehicle, does not move you must use number...",
+      "question": "To ensure that your parked vehicle does not move, you must use number...",
       "options": [
         "7",
         "8",
@@ -3514,7 +3522,7 @@
     {
       "id": 218,
       "category": "light_motor_vehicle",
-      "question": "What controls must you use when you are going to turn sharp",
+      "question": "Which controls must you use when making a sharp turn?",
       "options": [
         "1,3,5,6 and 8 only",
         "3,4,5,9 and 10 only",
@@ -3601,16 +3609,20 @@
     {
       "id": 224,
       "category": "heavy_motor_vehicle",
-      "question": "This road sign shows you that",
+      "question": "This road sign shows that...",
       "options": [
-        "Vehicles longer than 15m may not drive past this sign",
-        "The road is only 15m wide past this sign",
-        "No vehicle with trailers may drive past this sign"
+        "Vehicles longer than 15 m may not proceed past this sign.",
+        "The road is only 15 m wide beyond this sign.",
+        "No vehicle towing a trailer may proceed past this sign."
       ],
       "correct": 0,
       "correctLetter": "A",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/q224-length-limit-15m.svg"
+      ],
+      "diagramSource": "Illustrative maximum vehicle-length restriction sign."
     },
     {
       "id": 225,
@@ -3629,7 +3641,7 @@
     {
       "id": 226,
       "category": "heavy_motor_vehicle",
-      "question": "This Road sign shows you that...",
+      "question": "This road sign warns that...",
       "options": [
         "the road forks ahead on a steep decline and you should slow down",
         "your brakes will be checked at a stop ahead where you must stop",
@@ -3642,7 +3654,7 @@
       "diagramImages": [
         "assets/road-signs/arrestor-bed-ahead.svg"
       ],
-      "diagramSource": "Illustrative replacement artwork for the arrestor-bed-ahead warning sign; confirm against the original questionnaire artwork when available."
+      "diagramSource": "Illustrative arrestor-bed-ahead warning sign; original questionnaire artwork was not available in the repository."
     },
     {
       "id": 227,
