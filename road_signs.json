@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "title": "Inganathi South African Road Sign & Road Marking Study Guide",
-  "note": "Complete source-artwork study guide for the road-sign, road-marking and traffic-signal section of the Inganathi questionnaire (questions 73–178). Images are the source diagrams supplied with the questionnaire. This is an educational study guide, not an official government test specification.",
+  "title": "South African Road Signs and Road Markings",
+  "note": "Study the sign or road marking, understand its meaning, and learn the safe action required. Illustrations should be checked against the applicable South African Road Traffic Signs Manual before use in formal assessments.",
   "categories": [
     "All",
     "Road Signs",
@@ -18,9 +18,7 @@
         "assets/road-signs/q073-1.png"
       ],
       "questionId": 73,
-      "sourceQuestion": "This road sign shows you that you must ...",
       "studyPoint": "Stop, but if you want to turn left, you can use it as a yield sign.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 1
     },
     {
@@ -31,9 +29,7 @@
         "assets/road-signs/q074-1.png"
       ],
       "questionId": 74,
-      "sourceQuestion": "This road sign shows you...",
       "studyPoint": "Stop and drive on when it is safe to do so in the sequence that the vehicles stopped at the stop lines",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 2
     },
     {
@@ -44,9 +40,7 @@
         "assets/road-signs/q075-1.png"
       ],
       "questionId": 75,
-      "sourceQuestion": "When you see this road sign you...",
       "studyPoint": "You must give right of way to pedestrians who would like to enter or cross the road.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 3
     },
     {
@@ -57,9 +51,7 @@
         "assets/road-signs/q076-1.png"
       ],
       "questionId": 76,
-      "sourceQuestion": "This road sign shows you that...",
       "studyPoint": "You are not allowed to enter there",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 4
     },
     {
@@ -70,9 +62,7 @@
         "assets/road-signs/q077-1.png"
       ],
       "questionId": 77,
-      "sourceQuestion": "This road sign shows you the...",
       "studyPoint": "Slowest speed that you may drive",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 5
     },
     {
@@ -83,9 +73,7 @@
         "assets/road-signs/q078-1.png"
       ],
       "questionId": 78,
-      "sourceQuestion": "If you see this road sign you know that ...",
       "studyPoint": "Vehicles exceeding the mass indicated must use this lane only.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 6
     },
     {
@@ -96,9 +84,7 @@
         "assets/road-signs/q079-1.png"
       ],
       "questionId": 79,
-      "sourceQuestion": "This road sign shows you that you...",
       "studyPoint": "Will get a freeway ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 7
     },
     {
@@ -109,9 +95,7 @@
         "assets/road-signs/q080-1.png"
       ],
       "questionId": 80,
-      "sourceQuestion": "This road sign shows you that you...",
       "studyPoint": "Turn right only.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 8
     },
     {
@@ -122,9 +106,7 @@
         "assets/road-signs/q081-1.png"
       ],
       "questionId": 81,
-      "sourceQuestion": "This road sign…",
       "studyPoint": "Prohibits you from using your hooter",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 9
     },
     {
@@ -135,22 +117,18 @@
         "assets/road-signs/q082-1.png"
       ],
       "questionId": 82,
-      "sourceQuestion": "If you see this road sign...",
       "studyPoint": "Unauthorised vehicles are prohibited.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 10
     },
     {
       "category": "Road Signs",
-      "name": "No-left-turn / one-way direction",
-      "meaning": "(i) and (iii) only are correct",
+      "name": "No left turn",
+      "meaning": "Turning left is prohibited at the intersection where the sign is displayed.",
       "images": [
         "assets/road-signs/q083-1.png"
       ],
       "questionId": 83,
-      "sourceQuestion": "What does this road sign show you... You may not turn left ahead You may not turn left there There is a one-way to the right ahead SELECT THE CORRECT COMBINATION",
-      "studyPoint": "(i) and (iii) only are correct",
-      "source": "Inganathi Driving Academy questionnaire",
+      "studyPoint": "Do not turn left where this sign applies.",
       "signNumber": 11
     },
     {
@@ -161,49 +139,41 @@
         "assets/road-signs/q084-1.png"
       ],
       "questionId": 84,
-      "sourceQuestion": "This road sign shows you that...",
       "studyPoint": "No motor vehicles may pass each other",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 12
     },
     {
       "category": "Road Signs",
-      "name": "Recommended speed / Priority crossroad",
-      "meaning": "Recommended speed during night conditions. The second diagram shows a priority crossroad.",
+      "name": "100 km/h maximum speed at night",
+      "meaning": "The maximum speed is 100 km/h during night-time conditions, as indicated by the supplementary plate.",
       "images": [
         "assets/road-signs/q085-1.png",
         "assets/road-signs/q085-2.png"
       ],
       "questionId": 85,
-      "sourceQuestion": "This road sign shows you the...",
-      "studyPoint": "Recommended speed during night conditions. The second diagram shows a priority crossroad.",
-      "source": "Inganathi Driving Academy questionnaire",
+      "studyPoint": "A red-bordered 100 sign sets a maximum speed; the moon-and-stars plate limits the restriction to night-time.",
       "signNumber": 13
     },
     {
       "category": "Road Signs",
-      "name": "Two-way traffic",
-      "meaning": "Two-way traffic ahead.",
+      "name": "Crossroad ahead",
+      "meaning": "A crossroad is ahead. Be alert for traffic entering from either side.",
       "images": [
         "assets/road-signs/q086-1.png"
       ],
       "questionId": 86,
-      "sourceQuestion": "What does this road sign show you...",
-      "studyPoint": "Two-way traffic ahead.",
-      "source": "Inganathi Driving Academy questionnaire",
+      "studyPoint": "The sign warns of a crossroad; it does not by itself say that cross traffic must stop or yield.",
       "signNumber": 14
     },
     {
       "category": "Road Signs",
-      "name": "Concealed driveways (right and left)",
-      "meaning": "Concealed driveways on the right and left.",
+      "name": "Two-way traffic ahead",
+      "meaning": "Traffic will travel in both directions ahead. Keep left and watch for oncoming traffic.",
       "images": [
         "assets/road-signs/q087-1.png"
       ],
       "questionId": 87,
-      "sourceQuestion": "This road sign shows you that there...",
-      "studyPoint": "Concealed driveways on the right and left.",
-      "source": "Inganathi Driving Academy questionnaire",
+      "studyPoint": "Prepare for oncoming traffic; do not assume the road remains one-way.",
       "signNumber": 15
     },
     {
@@ -214,9 +184,7 @@
         "assets/road-signs/q088-1.png"
       ],
       "questionId": 88,
-      "sourceQuestion": "What does This road sign show you",
       "studyPoint": "A concealed entrance to the left is followed by one to the right.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 16
     },
     {
@@ -227,9 +195,7 @@
         "assets/road-signs/q089-1.png"
       ],
       "questionId": 89,
-      "sourceQuestion": "This road sign warns you that there is...",
       "studyPoint": "Pedestrian crossing.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 17
     },
     {
@@ -240,9 +206,7 @@
         "assets/road-signs/q090-1.png"
       ],
       "questionId": 90,
-      "sourceQuestion": "This road sign shows you that...",
       "studyPoint": "It is a special lane for cyclists",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 18
     },
     {
@@ -253,9 +217,7 @@
         "assets/road-signs/q091-1.png"
       ],
       "questionId": 91,
-      "sourceQuestion": "When you see this road sign you must slow down because...",
       "studyPoint": "Motor gate to the left.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 19
     },
     {
@@ -266,9 +228,7 @@
         "assets/road-signs/q092-1.png"
       ],
       "questionId": 92,
-      "sourceQuestion": "What does this road sign show you?",
       "studyPoint": "Only one vehicle can pass through the obstacle ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 20
     },
     {
@@ -279,9 +239,7 @@
         "assets/road-signs/q093-1.png"
       ],
       "questionId": 93,
-      "sourceQuestion": "All road signs with a yellow background are...signs",
       "studyPoint": "Construction vehicles may enter or cross the road ahead.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 21
     },
     {
@@ -292,9 +250,7 @@
         "assets/road-signs/q094-1.png"
       ],
       "questionId": 94,
-      "sourceQuestion": "This road sign shows you that...",
       "studyPoint": "There is a jetty edge or river bank ahead.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 22
     },
     {
@@ -305,9 +261,7 @@
         "assets/road-signs/q095-1.png"
       ],
       "questionId": 95,
-      "sourceQuestion": "This road sign shows you that...",
       "studyPoint": "There is a low water bridge ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 23
     },
     {
@@ -318,9 +272,7 @@
         "assets/road-signs/q096-1.png"
       ],
       "questionId": 96,
-      "sourceQuestion": "When you see this road sign you must...",
       "studyPoint": "Be on the lookout for agricultural vehicles that may be on the road",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 24
     },
     {
@@ -331,9 +283,7 @@
         "assets/road-signs/q097-1.png"
       ],
       "questionId": 97,
-      "sourceQuestion": "This road sign shows you that there is a...",
       "studyPoint": "Temporary obstruction left of the road / Pass on the right of this sign",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 25
     },
     {
@@ -344,9 +294,7 @@
         "assets/road-signs/q098-1.png"
       ],
       "questionId": 98,
-      "sourceQuestion": "When you get to this road sign you must ...",
       "studyPoint": "Be ready to stop and turn left or right",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 26
     },
     {
@@ -358,9 +306,7 @@
         "assets/road-signs/q099-2.png"
       ],
       "questionId": 99,
-      "sourceQuestion": "This road sign shows you that the road",
       "studyPoint": "Winds for 12km",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 27
     },
     {
@@ -371,9 +317,7 @@
         "assets/road-signs/q100-1.png"
       ],
       "questionId": 100,
-      "sourceQuestion": "When this road sign is illuminated, it shows you that...",
       "studyPoint": "This is a lane for traffic coming only from the front",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 28
     },
     {
@@ -384,9 +328,7 @@
         "assets/road-signs/q101-1.png"
       ],
       "questionId": 101,
-      "sourceQuestion": "What is the difference between these road marking",
       "studyPoint": "A single line shows you that you may not pass other vehicles while a double line as well shows you that you may not drive over it to turn into a yard or anything else",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 29
     },
     {
@@ -397,9 +339,7 @@
         "assets/road-signs/q102-1.png"
       ],
       "questionId": 102,
-      "sourceQuestion": "This Road marking is a...",
       "studyPoint": "Painted island where you are not allowed to drive on or stop",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 30
     },
     {
@@ -410,9 +350,7 @@
         "assets/road-signs/q103-1.png"
       ],
       "questionId": 103,
-      "sourceQuestion": "If you are driving towards a mini - circle and there are also vehicles from the other three sides you…",
       "studyPoint": "Yield for vehicles that have crossed the yield line before you.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 31
     },
     {
@@ -423,9 +361,7 @@
         "assets/road-signs/q104-1.png"
       ],
       "questionId": 104,
-      "sourceQuestion": "This Road marking warns you that?",
       "studyPoint": "There is a level crossing with one railway line ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 32
     },
     {
@@ -436,9 +372,7 @@
         "assets/road-signs/q105-1.png"
       ],
       "questionId": 105,
-      "sourceQuestion": "This Road markings shows you that...",
       "studyPoint": "The lane splits into more lanes in the direction of the arrow",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 33
     },
     {
@@ -449,9 +383,7 @@
         "assets/road-signs/q106-1.png"
       ],
       "questionId": 106,
-      "sourceQuestion": "This Road marking shows you that only...may park there",
       "studyPoint": "Mini-buses.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 34
     },
     {
@@ -462,9 +394,7 @@
         "assets/road-signs/q107-1.png"
       ],
       "questionId": 107,
-      "sourceQuestion": "This road sign shows you that...",
       "studyPoint": "Do not use this road if you need a through road to the left.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 35
     },
     {
@@ -475,9 +405,7 @@
         "assets/road-signs/q108-1.png"
       ],
       "questionId": 108,
-      "sourceQuestion": "Road marking GM1 in this sketch …..",
       "studyPoint": "Shows the lanes for road users",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 36
     },
     {
@@ -488,9 +416,7 @@
         "assets/road-signs/q109-1.png"
       ],
       "questionId": 109,
-      "sourceQuestion": "This arrow shows you that you...",
       "studyPoint": "Can turn right or move straight on if it is safe",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 37
     },
     {
@@ -501,9 +427,7 @@
         "assets/road-signs/q110-1.png"
       ],
       "questionId": 110,
-      "sourceQuestion": "When you see road-marking you...",
       "studyPoint": "May not park there at all because it’s a no stopping road marking.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 38
     },
     {
@@ -514,9 +438,7 @@
         "assets/road-signs/q111-1.png"
       ],
       "questionId": 111,
-      "sourceQuestion": "Road marking RTM 1 shows you that ...",
       "studyPoint": "If you are driving in car A, must stop before this line",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 39
     },
     {
@@ -527,9 +449,7 @@
         "assets/road-signs/q112-1.png"
       ],
       "questionId": 112,
-      "sourceQuestion": "Road markings RTM3 in the sketch…",
       "studyPoint": "Show you that you may not stop further than the front one of the two",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 40
     },
     {
@@ -540,9 +460,7 @@
         "assets/road-signs/q113-1.png"
       ],
       "questionId": 113,
-      "sourceQuestion": "This road sign shows you that you...",
       "studyPoint": "At the junction ahead, you must turn in the direction of the arrow.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 41
     },
     {
@@ -554,9 +472,7 @@
         "assets/road-signs/q114-2.png"
       ],
       "questionId": 114,
-      "sourceQuestion": "This sign prohibits you from...",
       "studyPoint": "Parking there at certain hours",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 42
     },
     {
@@ -567,9 +483,7 @@
         "assets/road-signs/q115-1.png"
       ],
       "questionId": 115,
-      "sourceQuestion": "What does this warning sign show?",
       "studyPoint": "Secondary crossroad.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 43
     },
     {
@@ -580,9 +494,7 @@
         "assets/road-signs/q116-1.png"
       ],
       "questionId": 116,
-      "sourceQuestion": "This sign warns you that there is a...",
       "studyPoint": "Sharp curve to the left ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 44
     },
     {
@@ -593,9 +505,7 @@
         "assets/road-signs/q117-1.png"
       ],
       "questionId": 117,
-      "sourceQuestion": "This sign warns you that...",
       "studyPoint": "There is a robot ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 45
     },
     {
@@ -606,9 +516,7 @@
         "assets/road-signs/q118-1.png"
       ],
       "questionId": 118,
-      "sourceQuestion": "This sign shows you that",
       "studyPoint": "The surface of the road ahead changes to gravel.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 46
     },
     {
@@ -619,9 +527,7 @@
         "assets/road-signs/q119-1.png"
       ],
       "questionId": 119,
-      "sourceQuestion": "This sign shows you that...",
       "studyPoint": "There is a narrow bridge ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 47
     },
     {
@@ -632,9 +538,7 @@
         "assets/road-signs/q120-1.png"
       ],
       "questionId": 120,
-      "sourceQuestion": "This sign warns you...",
       "studyPoint": "There are speed humps in the road",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 48
     },
     {
@@ -645,9 +549,7 @@
         "assets/road-signs/q121-1.png"
       ],
       "questionId": 121,
-      "sourceQuestion": "This sign shows you that the road...",
       "studyPoint": "The road surface is very smooth, especially when wet.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 49
     },
     {
@@ -658,9 +560,7 @@
         "assets/road-signs/q122-1.png"
       ],
       "questionId": 122,
-      "sourceQuestion": "What does this road sign show you when it flashes?",
       "studyPoint": "There is danger in the road ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 50
     },
     {
@@ -671,9 +571,7 @@
         "assets/road-signs/q123-1.png"
       ],
       "questionId": 123,
-      "sourceQuestion": "This road sign shows that there is a/an...",
       "studyPoint": "There is an obstruction or hazard on the right; keep left.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 51
     },
     {
@@ -685,9 +583,7 @@
         "assets/road-signs/q124-2.png"
       ],
       "questionId": 124,
-      "sourceQuestion": "What does this road sign show you?",
       "studyPoint": "Potholes are to be found on the road ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 52
     },
     {
@@ -698,9 +594,7 @@
         "assets/road-signs/q125-1.png"
       ],
       "questionId": 125,
-      "sourceQuestion": "This Road marking shows that you must...",
       "studyPoint": "Stop",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 53
     },
     {
@@ -711,9 +605,7 @@
         "assets/road-signs/q126-1.png"
       ],
       "questionId": 126,
-      "sourceQuestion": "This Road marking shows you that...",
       "studyPoint": "Traffic may not overtake or cross it on either side",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 54
     },
     {
@@ -724,9 +616,7 @@
         "assets/road-signs/q127-1.png"
       ],
       "questionId": 127,
-      "sourceQuestion": "This Road marking shows you that only... may park there",
       "studyPoint": "Business vehicles",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 55
     },
     {
@@ -737,9 +627,7 @@
         "assets/road-signs/q128-1.png"
       ],
       "questionId": 128,
-      "sourceQuestion": "This Road marking shows you that only... may park there",
       "studyPoint": "Goods vehicles that loads or unloads",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 56
     },
     {
@@ -750,9 +638,7 @@
         "assets/road-signs/q129-1.png"
       ],
       "questionId": 129,
-      "sourceQuestion": "This road marking shows you that…",
       "studyPoint": "You may not park adjacent to the lines next to the black arrows during certain hours",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 57
     },
     {
@@ -763,9 +649,7 @@
         "assets/road-signs/q130-1.png"
       ],
       "questionId": 130,
-      "sourceQuestion": "This sign is shown at …",
       "studyPoint": "Skew T-junction.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 58
     },
     {
@@ -776,9 +660,7 @@
         "assets/road-signs/q131-1.png"
       ],
       "questionId": 131,
-      "sourceQuestion": "This traffic signal can be found on",
       "studyPoint": "Traffic lights.",
-      "source": "Inganathi Driving Academy questionnaire",
       "hideStudyPoint": true,
       "signNumber": 59
     },
@@ -790,9 +672,7 @@
         "assets/road-signs/q132-1.png"
       ],
       "questionId": 132,
-      "sourceQuestion": "When you see this sign…",
       "studyPoint": "You must pass to the right of this sign.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 60
     },
     {
@@ -803,9 +683,7 @@
         "assets/road-signs/q133-1.png"
       ],
       "questionId": 133,
-      "sourceQuestion": "These road markings",
       "studyPoint": "Shows that you may have to stop and yield for pedestrians.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 61
     },
     {
@@ -816,9 +694,7 @@
         "assets/road-signs/q134-1.png"
       ],
       "questionId": 134,
-      "sourceQuestion": "This sign indicates…",
       "studyPoint": "The roadway to the left ends ahead",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 62
     },
     {
@@ -829,9 +705,7 @@
         "assets/road-signs/q135-1.png"
       ],
       "questionId": 135,
-      "sourceQuestion": "This sign indicates….",
       "studyPoint": "You are entering a freeway",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 63
     },
     {
@@ -842,9 +716,7 @@
         "assets/road-signs/q136-1.png"
       ],
       "questionId": 136,
-      "sourceQuestion": "This sign shows a road user….",
       "studyPoint": "The two lanes are merging",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 64
     },
     {
@@ -855,9 +727,7 @@
         "assets/road-signs/q137-1.png"
       ],
       "questionId": 137,
-      "sourceQuestion": "What is the function of this road marking…",
       "studyPoint": "It is a dividing line that shows the lanes for road users",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 65
     },
     {
@@ -868,9 +738,7 @@
         "assets/road-signs/q138-1.png"
       ],
       "questionId": 138,
-      "sourceQuestion": "This road marking shows…",
       "studyPoint": "The right lane may have approaching traffic at certain times, be on the lookout",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 66
     },
     {
@@ -882,9 +750,7 @@
         "assets/road-signs/q139-2.png"
       ],
       "questionId": 139,
-      "sourceQuestion": "This sign shows you that…",
       "studyPoint": "There is a camera monitoring the traffic light",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 67
     },
     {
@@ -895,9 +761,7 @@
         "assets/road-signs/q140-1.png"
       ],
       "questionId": 140,
-      "sourceQuestion": "This sign indicates to a driver….",
       "studyPoint": "A U-turn prohibited",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 68
     },
     {
@@ -908,9 +772,7 @@
         "assets/road-signs/q141-1.png"
       ],
       "questionId": 141,
-      "sourceQuestion": "When you come across this road marking…",
       "studyPoint": "Traffic circle.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 69
     },
     {
@@ -921,9 +783,7 @@
         "assets/road-signs/q142-1.png"
       ],
       "questionId": 142,
-      "sourceQuestion": "The vehicles travelling towards this sign….",
       "studyPoint": "Do not travel at a speed slower than the minimum speed indicated.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 70
     },
     {
@@ -934,9 +794,7 @@
         "assets/road-signs/q143-1.png"
       ],
       "questionId": 143,
-      "sourceQuestion": "This road sign shows you that...",
       "studyPoint": "Stop and proceed only when it is safe to do so.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 71
     },
     {
@@ -947,9 +805,7 @@
         "assets/road-signs/q144-1.png"
       ],
       "questionId": 144,
-      "sourceQuestion": "Vehicle B...",
       "studyPoint": "There is no through road to the right.",
-      "source": "Inganathi Driving Academy questionnaire",
       "hideStudyPoint": true,
       "signNumber": 72
     },
@@ -961,9 +817,7 @@
         "assets/road-signs/q145-1.png"
       ],
       "questionId": 145,
-      "sourceQuestion": "This sign can be found at…?",
       "studyPoint": "A dual freeway.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 73
     },
     {
@@ -974,9 +828,7 @@
         "assets/road-signs/q146-1.png"
       ],
       "questionId": 146,
-      "sourceQuestion": "When driving on a road with this sign displayed, It tells a driver that…?",
       "studyPoint": "They have right of way at the next intersection.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 74
     },
     {
@@ -987,9 +839,7 @@
         "assets/road-signs/q147-1.png"
       ],
       "questionId": 147,
-      "sourceQuestion": "When seeing this sign…?",
       "studyPoint": "There is an emergency phone 500m ahead in the road.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 75
     },
     {
@@ -1000,9 +850,7 @@
         "assets/road-signs/q148-1.png"
       ],
       "questionId": 148,
-      "sourceQuestion": "This road sign warns a driver that there is…?",
       "studyPoint": "A side road junction from the right ahead.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 76
     },
     {
@@ -1013,9 +861,7 @@
         "assets/road-signs/q149-1.png"
       ],
       "questionId": 149,
-      "sourceQuestion": "A temporary sign…",
       "studyPoint": "Temporary height limit.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 77
     },
     {
@@ -1026,9 +872,7 @@
         "assets/road-signs/q150-1.png"
       ],
       "questionId": 150,
-      "sourceQuestion": "This sign indicates to a driver that there is…",
       "studyPoint": "Temporary lane layout.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 78
     },
     {
@@ -1039,9 +883,7 @@
         "assets/road-signs/q151-1.png"
       ],
       "questionId": 151,
-      "sourceQuestion": "This sign indicates…",
       "studyPoint": "Advanced trailblazers.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 79
     },
     {
@@ -1052,9 +894,7 @@
         "assets/road-signs/q152-1.png"
       ],
       "questionId": 152,
-      "sourceQuestion": "This road marking shows you that.",
       "studyPoint": "Traffic may not pass or cross it from either side.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 80
     },
     {
@@ -1065,9 +905,7 @@
         "assets/road-signs/q153-1.png"
       ],
       "questionId": 153,
-      "sourceQuestion": "This sign shows you that…",
       "studyPoint": "Arrestor bed ahead.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 81
     },
     {
@@ -1078,9 +916,7 @@
         "assets/road-signs/q154-1.png"
       ],
       "questionId": 154,
-      "sourceQuestion": "In order to draw attention, the background of a temporary sign is usually..?",
       "studyPoint": "Yellow is the usual background colour for temporary road signs.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 82
     },
     {
@@ -1091,9 +927,7 @@
         "assets/road-signs/q155-1.png"
       ],
       "questionId": 155,
-      "sourceQuestion": "What does this sign show you..? You may not turn left at the intersection ahead. There is no sharp curve to the left. There is a one way to the right ahead CHOOSE THE CORRECT COMBINATION",
       "studyPoint": "You may not turn in the direction of the arrow at the next junction.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 83
     },
     {
@@ -1104,9 +938,7 @@
         "assets/road-signs/q156-1.png"
       ],
       "questionId": 156,
-      "sourceQuestion": "This sign shows the driver of a vehicle",
       "studyPoint": "This is the maximum axle mass permitted on this road.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 84
     },
     {
@@ -1117,9 +949,7 @@
         "assets/road-signs/q157-1.png"
       ],
       "questionId": 157,
-      "sourceQuestion": "This sign tells road users that….?",
       "studyPoint": "The road is temporarily closed at this point. Slow down and use any detour indicated.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 85
     },
     {
@@ -1130,9 +960,7 @@
         "assets/road-signs/q158-1.png"
       ],
       "questionId": 158,
-      "sourceQuestion": "This sign indicates to the driver of a vehicle…",
       "studyPoint": "Only cyclists may use that part of the road.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 86
     },
     {
@@ -1143,9 +971,7 @@
         "assets/road-signs/q159-1.png"
       ],
       "questionId": 159,
-      "sourceQuestion": "This road marking warns you that…?",
       "studyPoint": "You may have to slow down.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 87
     },
     {
@@ -1156,9 +982,7 @@
         "assets/road-signs/q160-1.png"
       ],
       "questionId": 160,
-      "sourceQuestion": "The sign indicates to a driver that there is a high speed exit in …?",
       "studyPoint": "200 m to the exit.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 88
     },
     {
@@ -1169,9 +993,7 @@
         "assets/road-signs/q161-1.png"
       ],
       "questionId": 161,
-      "sourceQuestion": "Before this road marking you would usually find..?",
       "studyPoint": "You may have to stop and yield for pedestrians walking at a pedestrian crossing.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 89
     },
     {
@@ -1182,9 +1004,7 @@
         "assets/road-signs/q162-1.png"
       ],
       "questionId": 162,
-      "sourceQuestion": "This sign commands the driver of a vehicle….?",
       "studyPoint": "Only vehicles that can exceed the speed indicated can travel on that lane.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 90
     },
     {
@@ -1195,9 +1015,7 @@
         "assets/road-signs/q163-1.png"
       ],
       "questionId": 163,
-      "sourceQuestion": "This overhead signal shows you…?",
       "studyPoint": "You may travel in the direction of the arrow only if it is safe to do so.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 91
     },
     {
@@ -1208,9 +1026,7 @@
         "assets/road-signs/q164-1.png"
       ],
       "questionId": 164,
-      "sourceQuestion": "This signal indicates…?",
       "studyPoint": "No crossing is permitted.",
-      "source": "Inganathi Driving Academy questionnaire",
       "hideStudyPoint": true,
       "signNumber": 92
     },
@@ -1222,9 +1038,7 @@
         "assets/road-signs/q165-1.png"
       ],
       "questionId": 165,
-      "sourceQuestion": "When driving behind another vehicle, this road making shows you to …?",
       "studyPoint": "Exit countdown marker.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 93
     },
     {
@@ -1235,9 +1049,7 @@
         "assets/road-signs/q166-1.png"
       ],
       "questionId": 166,
-      "sourceQuestion": "This sign indicates a high speed exit in…?",
       "studyPoint": "There is an alternative route at the next road to the right.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 94
     },
     {
@@ -1248,9 +1060,7 @@
         "assets/road-signs/q167-1.png"
       ],
       "questionId": 167,
-      "sourceQuestion": "This sign shows the driver of a vehicle that…?",
       "studyPoint": "Do not use this road if you need a through road to your right.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 95
     },
     {
@@ -1261,9 +1071,7 @@
         "assets/road-signs/q168-1.png"
       ],
       "questionId": 168,
-      "sourceQuestion": "This sign shows you that…?",
       "studyPoint": "Travel only in the direction of the arrow.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 96
     },
     {
@@ -1274,9 +1082,7 @@
         "assets/road-signs/q169-1.png"
       ],
       "questionId": 169,
-      "sourceQuestion": "When approaching this sign…?",
       "studyPoint": "There is a toll road and an alternative to the toll road.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 97
     },
     {
@@ -1287,9 +1093,7 @@
         "assets/road-signs/q170-1.png"
       ],
       "questionId": 170,
-      "sourceQuestion": "This sign shows…?",
       "studyPoint": "The area is set aside for disabled persons.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 98
     },
     {
@@ -1300,9 +1104,7 @@
         "assets/road-signs/q171-1.png"
       ],
       "questionId": 171,
-      "sourceQuestion": "This road marking indicates…?",
       "studyPoint": "There is a dead end on the road ahead.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 99
     },
     {
@@ -1313,9 +1115,7 @@
         "assets/road-signs/q172-1.png"
       ],
       "questionId": 172,
-      "sourceQuestion": "This type of sign is known as…?",
       "studyPoint": "No overtaking is allowed.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 100
     },
     {
@@ -1326,9 +1126,7 @@
         "assets/road-signs/q173-1.png"
       ],
       "questionId": 173,
-      "sourceQuestion": "The road marking warns road users that…?",
       "studyPoint": "The left lane is reducing.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 101
     },
     {
@@ -1339,22 +1137,18 @@
         "assets/road-signs/q174-1.png"
       ],
       "questionId": 174,
-      "sourceQuestion": "What does this road marking indicate?",
       "studyPoint": "It is for the exclusive use of buses only.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 102
     },
     {
       "category": "Road Markings",
-      "name": "Direction / route guidance sign",
-      "meaning": "A sequence of turnoffs to various centres.",
+      "name": "Bus-only lane marking",
+      "meaning": "The lane is reserved for buses, subject to the applicable road signs and markings.",
       "images": [
-        "assets/road-signs/q175-1.png"
+        "assets/road-signs/q175-bus-lane-marking.svg"
       ],
       "questionId": 175,
-      "sourceQuestion": "This road marking shows a driver…",
-      "studyPoint": "A sequence of turnoffs to various centres.",
-      "source": "Inganathi Driving Academy questionnaire",
+      "studyPoint": "Do not use a bus-only lane unless you are permitted to do so.",
       "signNumber": 103
     },
     {
@@ -1365,22 +1159,18 @@
         "assets/road-signs/q176-1.png"
       ],
       "questionId": 176,
-      "sourceQuestion": "This Sign shows you that....",
       "studyPoint": "Lane increase ahead.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 104
     },
     {
       "category": "Road Markings",
-      "name": "Gore exit direction",
-      "meaning": "The road you may use to exit a freeway.",
+      "name": "Dividing line",
+      "meaning": "A dividing line separates traffic lanes or opposing traffic streams, according to the road layout and line type.",
       "images": [
-        "assets/road-signs/q177-1.png"
+        "assets/road-signs/q177-dividing-line.svg"
       ],
       "questionId": 177,
-      "sourceQuestion": "What does this line show you?",
-      "studyPoint": "The road you may use to exit a freeway.",
-      "source": "Inganathi Driving Academy questionnaire",
+      "studyPoint": "Observe the line type: a broken line and a solid line have different crossing rules.",
       "signNumber": 105
     },
     {
@@ -1391,9 +1181,7 @@
         "assets/road-signs/q178-2.png"
       ],
       "questionId": 178,
-      "sourceQuestion": "Motorcycle with an engine capacity of more than 125 cc prohibited.",
       "studyPoint": "Motorcycles with an engine capacity of more than 125 cc are prohibited.",
-      "source": "Inganathi Driving Academy questionnaire",
       "signNumber": 106
     }
   ]
