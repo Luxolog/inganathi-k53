@@ -535,7 +535,7 @@ function startPractice(section){
  const source=getPracticeQuestions(section);
  if(!source.length)return;
  const key=section;
- practiceState[key]={questions:shuffle(source),index:0,score:0,answered:false};
+ practiceState[key]={questions:shuffle(source),index:0,score:0,selectedAnswers:{},selectedAnswer:null,displayedOptions:[]};
  const box=document.getElementById("practice-"+(section==="road_signs"?"signs":section));
  box.classList.add("active");
  renderPractice(section);
@@ -547,13 +547,16 @@ function renderPractice(section){
  const box=document.getElementById("practice-"+(section==="road_signs"?"signs":section));
  if(!state||!box)return;
  if(state.index>=state.questions.length){
+   state.score=state.questions.reduce((total,q,i)=>total+(state.selectedAnswers[i]&&state.selectedAnswers[i].correct?1:0),0);
    const pct=Math.round((state.score/state.questions.length)*100);
    box.innerHTML='<div class="practice-result show"><div>Practice complete</div><div class="big">'+pct+'%</div><p>'+state.score+' correct out of '+state.questions.length+' relevant questions.</p><div class="'+(pct>=80?"pass":"")+'">'+(pct>=80?"80% pass mark reached.":"Below 80% — study this section again and practise again.")+'</div><button class="btn btn-red" onclick="startPractice('+JSON.stringify(section)+')">Shuffle & Practise Again</button></div>';
    return;
  }
  const q=state.questions[state.index];
  const imgs=Array.isArray(q.diagramImages)?q.diagramImages:[];
- const options=(q.options||[]).map((opt,i)=>'<button class="option" data-i="'+i+'" onclick="answerPractice('+JSON.stringify(section)+','+i+')">'+String.fromCharCode(65+i)+'. '+escapeHtml(opt)+'</button>').join("");
+ state.displayedOptions=shuffle((q.options||[]).map((opt,i)=>({text:opt,correct:i===Number(q.correct)})));
+ state.selectedAnswer=null;
+ const options=state.displayedOptions.map((opt,i)=>'<button type="button" class="option" data-i="'+i+'" aria-pressed="false" onclick="answerPractice('+JSON.stringify(section)+','+i+')">'+String.fromCharCode(65+i)+'. '+escapeHtml(opt.text)+'</button>').join("");
  box.innerHTML='<div class="practice-head"><h3>'+escapeHtml(section==="road_signs"?"Road Signs Practice":section==="rules"?"Rules Practice":"Controls Practice")+'</h3><span>Question '+(state.index+1)+' of '+state.questions.length+' • Source Q'+q.id+'</span></div>'+
  '<div class="practice-card">'+
  '<div class="practice-meta">'+escapeHtml(q.category||"")+' • Q'+escapeHtml(q.id)+'</div>'+
@@ -561,35 +564,34 @@ function renderPractice(section){
  (imgs.length?'<div class="practice-image">'+imgs.map(src=>'<img loading="lazy" src="'+escapeHtml(src)+'" alt="Question diagram Q'+escapeHtml(q.id)+'">').join("")+'</div>':'')+
  '<div class="options">'+options+'</div>'+
  '<div id="feedback-'+section+'" class="feedback"></div>'+
- '<div class="practice-actions"><span class="practice-score">Score: '+state.score+' / '+state.index+'</span><button id="next-'+section+'" class="btn btn-red" disabled onclick="nextPractice('+JSON.stringify(section)+')">Next Question</button></div>'+
+ '<div class="practice-actions"><span class="practice-score">Answers recorded: '+Object.keys(state.selectedAnswers).length+' / '+state.questions.length+'</span><button id="next-'+section+'" class="btn btn-red" disabled onclick="nextPractice('+JSON.stringify(section)+')">'+(state.index===state.questions.length-1?"Finish Practice":"Next Question")+'</button></div>'+
  '</div>';
 }
 
 function answerPractice(section,selected){
  const state=practiceState[section];
- if(!state||state.answered)return;
- state.answered=true;
- const q=state.questions[state.index];
- const buttons=document.querySelectorAll("#practice-"+(section==="road_signs"?"signs":section)+" .option");
- buttons.forEach(b=>b.disabled=true);
- const correct=Number(q.correct)===selected;
- if(buttons[selected])buttons[selected].classList.add(correct?"correct":"wrong");
- if(!correct&&buttons[Number(q.correct)])buttons[Number(q.correct)].classList.add("correct");
- if(correct)state.score++;
+ if(!state||!state.displayedOptions||!state.displayedOptions[selected])return;
+ state.selectedAnswer=selected;
+ state.selectedAnswers[state.index]=state.displayedOptions[selected];
+ const box=document.getElementById("practice-"+(section==="road_signs"?"signs":section));
+ const buttons=box.querySelectorAll(".option");
+ buttons.forEach((b,i)=>{
+   b.classList.toggle("selected",i===selected);
+   b.classList.remove("correct","wrong","locked");
+   b.setAttribute("aria-pressed",i===selected?"true":"false");
+ });
  const fb=document.getElementById("feedback-"+section);
- fb.classList.add("show");
- fb.innerHTML=(correct?"<strong>✓ Correct.</strong> ":"<strong>✗ Not correct.</strong> The correct answer is <strong>"+String.fromCharCode(65+Number(q.correct))+"</strong>.")+(q.explanation?"<br><br><strong>Why:</strong> "+escapeHtml(q.explanation):"");
+ if(fb){fb.classList.remove("show");fb.innerHTML="";}
  const next=document.getElementById("next-"+section);
  if(next)next.disabled=false;
- const score=document.querySelector("#practice-"+(section==="road_signs"?"signs":section)+" .practice-score");
- if(score)score.textContent="Score: "+state.score+" / "+(state.index+1);
+ const score=box.querySelector(".practice-score");
+ if(score)score.textContent="Answers recorded: "+Object.keys(state.selectedAnswers).length+" / "+state.questions.length;
 }
 
 function nextPractice(section){
  const state=practiceState[section];
- if(!state||!state.answered)return;
+ if(!state||state.selectedAnswer===null||!Object.prototype.hasOwnProperty.call(state.selectedAnswers,state.index))return;
  state.index++;
- state.answered=false;
  renderPractice(section);
 }
 
