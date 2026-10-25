@@ -1373,15 +1373,15 @@
     {
       "id": 100,
       "category": "road_signs",
-      "question": "When this road sign is illuminated, it shows you that...",
+      "question": "What does this road sign indicate?",
       "options": [
-        "There is no throughway there",
+        "There is no throughway ahead.",
         "There is an unguarded railway crossing ahead",
-        "This is a lane for traffic coming only from the front"
+        "This lane is for traffic approaching from the opposite direction."
       ],
-      "correct": 2,
-      "correctLetter": "C",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "corrected_from_user_sign_review",
       "diagramImages": [
         "assets/road-signs/q100-1.png"
       ]
