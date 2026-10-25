@@ -3327,11 +3327,11 @@
     {
       "id": 227,
       "category": "heavy_motor_vehicle",
-      "question": "This road sign prohibits all...driving there vehicles conveying dangerous goods goods vehicles abnormal vehicles heavy vehicles SELECT THE CORRECT COMBINATION",
+      "question": "Which of the following vehicles are prohibited by the road sign shown?",
       "options": [
-        "all of the above are correct",
-        "only (i) is correct",
-        "only (iii) and (iv) are correct"
+        "All of statements (i), (ii), (iii) and (iv) are correct.",
+        "Only statement (i) is correct.",
+        "Only statements (iii) and (iv) are correct."
       ],
       "correct": 0,
       "correctLetter": "A",
