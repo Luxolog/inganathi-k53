@@ -2582,8 +2582,9 @@
       "correctLetter": "A",
       "answerStatus": "diagram_dependent_provisional_inference",
       "diagramImages": [
-        "assets/road-signs/q175-1.png"
-      ]
+        "assets/road-signs/q175-bus-lane-marking.svg"
+      ],
+      "diagramSource": "Illustrative road-surface bus-lane marking."
     },
     {
       "id": 176,
