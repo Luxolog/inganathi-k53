@@ -521,13 +521,13 @@
     },
     {
       "category": "Road Signs",
-      "name": "Narrow road / narrow bridge warning",
-      "meaning": "There is a narrow bridge ahead",
+      "name": "Road narrows from both sides",
+      "meaning": "The road becomes narrower on both the left and right sides ahead.",
       "images": [
         "assets/road-signs/q119-1.png"
       ],
       "questionId": 119,
-      "studyPoint": "There is a narrow bridge ahead",
+      "studyPoint": "Reduce speed and be prepared for a narrower roadway. Keep a safe position and watch for oncoming traffic.",
       "signNumber": 47
     },
     {
