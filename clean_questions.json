@@ -692,7 +692,7 @@
       "question": "What is a driver's duty towards pedestrians at a pedestrian crossing?",
       "options": [
         "A driver must stop only for a pedestrian waiting to enter the road at a pedestrian signal.",
-        "A driver must give way to a pedestrian crossing at a pedestrian crossing.",
+        "A driver must give way to pedestrians who are crossing at a pedestrian crossing.",
         "A driver must give way to every pedestrian who wishes to cross the roadway."
       ],
       "correct": 1,
@@ -2393,7 +2393,8 @@
       "correct": 2,
       "correctLetter": "C",
       "answerStatus": "diagram_dependent_provisional_inference",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramMode": "none"
     },
     {
       "id": 150,
@@ -2479,7 +2480,8 @@
       "correct": 0,
       "correctLetter": "A",
       "answerStatus": "diagram_dependent_provisional_inference",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramMode": "none"
     },
     {
       "id": 155,
