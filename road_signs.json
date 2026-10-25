@@ -632,13 +632,13 @@
     },
     {
       "category": "Road Markings",
-      "name": "No-stopping / parking restriction marking",
-      "meaning": "You may not park adjacent to the lines next to the black arrows during certain hours",
+      "name": "Broken yellow no-parking line",
+      "meaning": "Parking is prohibited alongside this broken yellow line during the times indicated on the relevant road sign. This is not the same as a red no-stopping line.",
       "images": [
         "assets/road-signs/q129-1.png"
       ],
       "questionId": 129,
-      "studyPoint": "You may not park adjacent to the lines next to the black arrows during certain hours",
+      "studyPoint": "A broken yellow line indicates a no-parking restriction during the times shown on the applicable sign. Check the sign for the restricted hours.",
       "signNumber": 57
     },
     {
