@@ -2252,17 +2252,17 @@
     {
       "id": 155,
       "category": "road_signs",
-      "question": "What does this sign show you..? You may not turn left at the intersection ahead. There is no sharp curve to the left. There is a one way to the right ahead CHOOSE THE CORRECT COMBINATION",
+      "question": "What does this regulatory sign mean?",
       "options": [
-        "Only (i) and (iii) are correct",
-        "Only (i) is correct",
-        "Only (ii) and (iii) are correct"
+        "You may not turn left at the indicated junction.",
+        "You must turn left at the next junction.",
+        "A sharp curve to the left is ahead."
       ],
       "correct": 0,
       "correctLetter": "A",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
       "diagramImages": [
-        "assets/road-signs/q155-1.png"
+        "assets/road-signs/q155-no-left-turn.svg"
       ]
     },
     {
