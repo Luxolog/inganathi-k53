@@ -2436,6 +2436,8 @@ let currentQuestion = 0;
 let score = 0;
 
 let selectedAnswer = null;
+let currentDisplayedAnswers = [];
+let selectedAnswers = {};
 
 let candidateDetails = null;
 let resultSubmitted = false;
@@ -2848,6 +2850,9 @@ function startSession(sessionNumber) {
     currentQuestion = 0;
     score = 0;
     selectedAnswer = null;
+    currentDisplayedAnswers = [];
+    selectedAnswers = {};
+    timedOut = false;
 
     testQuestions = shuffle(sessionPools[sessionNumber]);
 
@@ -2880,146 +2885,54 @@ function startTest() {
 ========================================================= */
 
 function showQuestion() {
-
     selectedAnswer = null;
 
-
-    const q =
-        testQuestions[currentQuestion];
-
-
+    const q = testQuestions[currentQuestion];
     if (!q) {
-
         finishTest();
-
         return;
-
     }
 
-
-    document
-        .getElementById("questionCounter")
-        .textContent =
-        "Question " +
-        (currentQuestion + 1) +
-        " of " +
-        testQuestions.length;
-
-
-    document
-        .getElementById("questionNumber")
-        .textContent =
-        "QUESTION " +
-        (currentQuestion + 1);
-
+    document.getElementById("questionCounter").textContent =
+        "Question " + (currentQuestion + 1) + " of " + testQuestions.length;
+    document.getElementById("questionNumber").textContent =
+        "QUESTION " + (currentQuestion + 1);
 
     renderQuestionText(q);
-
-
-    /*
-       SHOW ROAD SIGN / DIAGRAM
-    */
-
     showQuestionDiagram(q);
 
-
-    const answers =
-        getAnswers(q);
-
-
-    const answerContainer =
-        document.getElementById("answers");
-
-
+    // Shuffle answer choices independently for every question while keeping
+    // the correct-answer flag attached to its original option.
+    currentDisplayedAnswers = shuffle(getAnswers(q));
+    const answerContainer = document.getElementById("answers");
     answerContainer.innerHTML = "";
 
+    currentDisplayedAnswers.forEach(function(answer, index) {
+        const button = document.createElement("button");
+        button.className = "answer";
+        button.type = "button";
+        button.setAttribute("aria-pressed", "false");
+        button.textContent = String.fromCharCode(65 + index) + ". " + answer.text;
+        button.onclick = function() {
+            selectAnswer(index, answer);
+        };
+        answerContainer.appendChild(button);
+    });
 
-    answers.forEach(
-        function(answer, index) {
+    const nextButton = document.getElementById("nextBtn");
+    nextButton.disabled = true;
+    nextButton.textContent = currentQuestion === testQuestions.length - 1
+        ? "Finish Test"
+        : "Next Question";
 
+    document.getElementById("scoreDisplay").textContent =
+        "Answers recorded: " + Object.keys(selectedAnswers).length + " / " + testQuestions.length;
 
-            const button =
-                document.createElement("button");
-
-
-            button.className =
-                "answer";
-
-
-            button.type =
-                "button";
-
-
-            button.textContent =
-                String.fromCharCode(
-                    65 + index
-                ) +
-                ". " +
-                answer.text;
-
-
-            button.onclick =
-                function() {
-
-                    selectAnswer(
-                        index,
-                        answer
-                    );
-
-                };
-
-
-            answerContainer
-                .appendChild(button);
-
-
-        }
-    );
-
-
-    document
-        .getElementById("nextBtn")
-        .disabled = true;
-
-
-    document
-        .getElementById("nextBtn")
-        .textContent =
-        currentQuestion ===
-        testQuestions.length - 1
-
-            ? "Finish Test"
-
-            : "Next Question";
-
-
-    document
-        .getElementById("scoreDisplay")
-        .textContent =
-        "Score: " +
-        score;
-
-
-    const progress =
-        testQuestions.length > 0
-
-            ? (
-                (currentQuestion + 1) /
-                testQuestions.length
-            ) * 100
-
-            : 0;
-
-
-    document
-        .getElementById("progressBar")
-        .style
-        .width =
-        progress + "%";
-
+    const progress = testQuestions.length > 0
+        ? ((currentQuestion + 1) / testQuestions.length) * 100
+        : 0;
+    document.getElementById("progressBar").style.width = progress + "%";
 }
-
-
 
 /* =========================================================
    QUESTION DIAGRAM ENGINE
@@ -3659,106 +3572,44 @@ function getAnswers(q) {
    SELECT ANSWER
 ========================================================= */
 
-function selectAnswer(
-    index,
-    answer
-) {
+function selectAnswer(index, answer) {
+    if (!answer || !Array.isArray(currentDisplayedAnswers)) return;
 
-    /*
-       In the real test, selecting an answer must NOT reveal
-       whether it is correct or incorrect.
-
-       The answer is recorded silently. The score is calculated
-       internally and only displayed when the session is finished.
-    */
-
-    if (
-        selectedAnswer !== null
-    ) {
-
-        return;
-
-    }
-
+    // Learners can change their choice until they move to the next question.
     selectedAnswer = index;
+    selectedAnswers[currentQuestion] = answer;
 
-    const buttons =
-        document.querySelectorAll(
-            ".answer"
-        );
-
-    if (
-        buttons[index]
-    ) {
-        buttons[index]
-            .classList
-            .add("selected");
-    }
-
-    buttons.forEach(function(button) {
-        button.classList.add("locked");
+    const buttons = document.querySelectorAll(".answer");
+    buttons.forEach(function(button, buttonIndex) {
+        button.classList.toggle("selected", buttonIndex === index);
+        button.classList.remove("correct", "incorrect", "locked");
+        button.setAttribute("aria-pressed", buttonIndex === index ? "true" : "false");
     });
 
-    if (answer.correct) {
-        score++;
-    }
+    // Do not reveal correctness or calculate a visible score during the test.
+    document.getElementById("scoreDisplay").textContent =
+        "Answers recorded: " + Object.keys(selectedAnswers).length + " / " + testQuestions.length;
 
-    document
-        .getElementById("scoreDisplay")
-        .textContent =
-        "Answers recorded: " +
-        (currentQuestion + 1) +
-        " / " +
-        testQuestions.length;
-
-    document
-        .getElementById("nextBtn")
-        .disabled = false;
-
-    if (currentQuestion === testQuestions.length - 1) {
-        setTimeout(function() {
-            finishTest();
-        }, 350);
-    }
-
+    document.getElementById("nextBtn").disabled = false;
 }
-
 
 /* =========================================================
    NEXT QUESTION
 ========================================================= */
 
 function nextQuestion() {
-
-
-    if (
-        selectedAnswer === null
-    ) {
-
+    if (selectedAnswer === null || !selectedAnswers.hasOwnProperty(currentQuestion)) {
         return;
-
     }
 
+    if (currentQuestion >= testQuestions.length - 1) {
+        finishTest();
+        return;
+    }
 
     currentQuestion++;
-
-
-    if (
-        currentQuestion >=
-        testQuestions.length
-    ) {
-
-        finishTest();
-
-        return;
-
-    }
-
-
     showQuestion();
-
 }
-
 
 
 /* =========================================================
@@ -3773,6 +3624,12 @@ async function finishTest(expired = false) {
     stopTimer();
 
     timedOut = timedOut || expired;
+
+    // Score every recorded response only when the test ends.
+    score = testQuestions.reduce(function(total, question, index) {
+        const chosen = selectedAnswers[index];
+        return total + (chosen && chosen.correct ? 1 : 0);
+    }, 0);
 
     const percentage = Math.round((score / testQuestions.length) * 100);
     completedSessions[currentSession] = {
