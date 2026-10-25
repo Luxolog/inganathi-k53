@@ -3638,7 +3638,11 @@
       "correct": 2,
       "correctLetter": "C",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/arrestor-bed-ahead.svg"
+      ],
+      "diagramSource": "Illustrative replacement artwork for the arrestor-bed-ahead warning sign; confirm against the original questionnaire artwork when available."
     },
     {
       "id": 227,
