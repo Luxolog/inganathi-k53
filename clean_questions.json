@@ -1035,15 +1035,15 @@
     {
       "id": 79,
       "category": "road_signs",
-      "question": "This road sign shows you that you...",
+      "question": "What instruction does this road sign give?",
       "options": [
-        "Must only drive straight on",
-        "Will get a freeway ahead",
-        "Will get a one-way road ahead"
+        "You must proceed straight ahead only.",
+        "A freeway begins ahead.",
+        "A one-way road begins ahead."
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "verified_against_South_African_Road_Traffic_Signs_Manual_R107",
       "diagramImages": [
         "assets/road-signs/q079-1.png"
       ]
