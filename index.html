@@ -3052,7 +3052,7 @@ function showQuestionDiagram(q) {
         diagramImages = q.images.filter(Boolean);
     }
 
-    if (!diagramImages.length && Array.isArray(roadSignLibrary) && q.category === "road_signs") {
+    if (!diagramImages.length && q.diagramMode !== "none" && Array.isArray(roadSignLibrary) && q.category === "road_signs") {
         const sign = roadSignLibrary.find(function(item) {
             return Number(item.questionId) === Number(q.id) ||
                    Number(item.id) === Number(q.id);
@@ -3079,7 +3079,9 @@ function showQuestionDiagram(q) {
         diagramImages.forEach(function(src) {
 
             const img = document.createElement("img");
-            const imageUrl = new URL(src, document.baseURI);\n            imageUrl.searchParams.set("v", "20261025-audit2");\n            img.src = imageUrl.href;
+            const imageUrl = new URL(src, document.baseURI);
+            imageUrl.searchParams.set("v", "20261025-audit3");
+            img.src = imageUrl.href;
             img.alt =
                 "Road sign or road marking diagram for question " +
                 q.id;
