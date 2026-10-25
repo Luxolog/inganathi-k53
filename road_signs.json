@@ -965,24 +965,24 @@
     },
     {
       "category": "Road Markings",
-      "name": "Speed humps",
-      "meaning": "You may have to slow down.",
+      "name": "Stop line",
+      "meaning": "Stop before the stop line and move off only when it is safe.",
       "images": [
-        "assets/road-signs/q159-1.png"
+        "assets/road-signs/q159-stop-line.svg"
       ],
       "questionId": 159,
-      "studyPoint": "You may have to slow down.",
+      "studyPoint": "Stop before the stop line and move off only when it is safe.",
       "signNumber": 87
     },
     {
       "category": "Road Signs",
-      "name": "Exit countdown signs",
-      "meaning": "200 m to the exit.",
+      "name": "Exit countdown marker — 200 m",
+      "meaning": "A high-speed exit is 200 metres ahead.",
       "images": [
-        "assets/road-signs/q160-1.png"
+        "assets/road-signs/q159-1.png"
       ],
       "questionId": 160,
-      "studyPoint": "200 m to the exit.",
+      "studyPoint": "The exit is 200 metres ahead; prepare to leave the freeway safely if you intend to take it.",
       "signNumber": 88
     },
     {
