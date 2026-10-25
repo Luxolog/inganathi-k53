@@ -2853,9 +2853,9 @@
         "2 and 7",
         "1 and 2"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/motorcycle-controls.jpg"
       ]
@@ -2869,9 +2869,9 @@
         "2 and 7",
         "1 and 2"
       ],
-      "correct": 0,
-      "correctLetter": "A",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 2,
+      "correctLetter": "C",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/motorcycle-controls.jpg"
       ]
@@ -2885,9 +2885,9 @@
         "4",
         "8"
       ],
-      "correct": 2,
-      "correctLetter": "C",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/motorcycle-controls.jpg"
       ]
@@ -2901,9 +2901,9 @@
         "1,2,4 and 8 only",
         "1,2,3,4,6 and 8 only"
       ],
-      "correct": 2,
-      "correctLetter": "C",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/motorcycle-controls.jpg"
       ]
@@ -3111,9 +3111,9 @@
         "5 & 8",
         "6 & 8"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 2,
+      "correctLetter": "C",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/light-motor-controls-212.jpg"
       ]
@@ -3127,9 +3127,9 @@
         "8",
         "7"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/light-motor-controls-212.jpg"
       ]
@@ -3143,9 +3143,9 @@
         "6",
         "8"
       ],
-      "correct": 0,
-      "correctLetter": "A",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 2,
+      "correctLetter": "C",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/light-motor-controls-212.jpg"
       ]
@@ -3159,9 +3159,9 @@
         "5",
         "10"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/light-motor-controls-212.jpg"
       ]
@@ -3175,9 +3175,9 @@
         "8",
         "9"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/light-motor-controls-212.jpg"
       ]
@@ -3375,9 +3375,9 @@
         "5 & 8",
         "6 & 8"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 2,
+      "correctLetter": "C",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/light-motor-controls-230.jpg"
       ]
@@ -3391,9 +3391,9 @@
         "8",
         "7"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/light-motor-controls-230.jpg"
       ]
@@ -3423,9 +3423,9 @@
         "8",
         "9"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "checked_against_numbered_control_diagram",
       "diagramImages": [
         "assets/control-diagrams/light-motor-controls-230.jpg"
       ]
