@@ -964,14 +964,14 @@
       "signNumber": 86
     },
     {
-      "category": "Road Markings",
-      "name": "Stop line",
-      "meaning": "Stop before the stop line and move off only when it is safe.",
+      "category": "Road Signs",
+      "name": "Exit countdown marker — 200 m",
+      "meaning": "Two white diagonal bars on a permanent blue countdown sign indicate a high-speed exit is approximately 200 metres ahead.",
       "images": [
-        "assets/road-signs/q159-stop-line.svg"
+        "assets/road-signs/q160-1.png"
       ],
       "questionId": 159,
-      "studyPoint": "Stop before the stop line and move off only when it is safe.",
+      "studyPoint": "Each white bar represents about 100 metres. Two bars mean the exit is approximately 200 metres ahead; prepare for the exit safely if you intend to use it.",
       "signNumber": 87
     },
     {
