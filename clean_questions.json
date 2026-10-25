@@ -1710,15 +1710,15 @@
     {
       "id": 121,
       "category": "road_signs",
-      "question": "This sign shows you that the road...",
+      "question": "What does this road sign warn you about?",
       "options": [
-        "Winds",
-        "Is untarred",
-        "Is slippery"
+        "A winding road ahead",
+        "An untarred road ahead",
+        "A slippery road ahead"
       ],
-      "correct": 0,
-      "correctLetter": "A",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 2,
+      "correctLetter": "C",
+      "answerStatus": "verified_against_South_African_Road_Traffic_Signs_Manual_W333",
       "diagramImages": [
         "assets/road-signs/q121-1.png"
       ]
