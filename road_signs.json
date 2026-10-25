@@ -877,13 +877,13 @@
     },
     {
       "category": "Road Signs",
-      "name": "Advanced trailblazers",
-      "meaning": "Advanced trailblazers.",
+      "name": "Advance trailblazer — N17 toll route",
+      "meaning": "This sign directs you to join the N17 toll route by following the arrow to the right. It is route guidance, not an instruction for all traffic to turn right.",
       "images": [
         "assets/road-signs/q151-1.png"
       ],
       "questionId": 151,
-      "studyPoint": "Advanced trailblazers.",
+      "studyPoint": "Follow the arrow to reach the N17 toll route. Trailblazer signs guide you towards a route you have not yet joined.",
       "signNumber": 79
     },
     {
