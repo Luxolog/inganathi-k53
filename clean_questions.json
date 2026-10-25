@@ -2023,7 +2023,7 @@
     {
       "id": 129,
       "category": "road_signs",
-      "question": "This road marking shows you that…",
+      "question": "What does this road marking indicate?",
       "options": [
         "The road is under construction.",
         "You may not stop adjacent to the lines next to the black arrows",
@@ -2846,11 +2846,11 @@
     {
       "id": 175,
       "category": "road_signs",
-      "question": "This road marking shows a driver…",
+      "question": "This road marking shows that the lane is for…",
       "options": [
-        "It is for the exclusive use for busses only",
-        "You can drive there to pick up someone",
-        "Any vehicle picking up or dropping passengers may drive there"
+        "Buses only.",
+        "Vehicles picking up passengers.",
+        "Any vehicle picking up or dropping off passengers."
       ],
       "correct": 0,
       "correctLetter": "A",
@@ -2882,7 +2882,7 @@
     {
       "id": 177,
       "category": "road_signs",
-      "question": "What does this line show you?",
+      "question": "What does this road marking indicate?",
       "options": [
         "It’s a dividing line",
         "The road splits ahead",
@@ -2893,9 +2893,9 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q177-1.png"
+        "assets/road-signs/q177-dividing-line.svg"
       ],
-      "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
+      "diagramSource": "Illustrative dividing-line marking, replacing an unrelated directional road sign."
     },
     {
       "id": 178,
