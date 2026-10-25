@@ -78,13 +78,13 @@
     },
     {
       "category": "Road Signs",
-      "name": "Lane-direction indication",
-      "meaning": "Will get a freeway ahead",
+      "name": "Proceed straight only",
+      "meaning": "You must continue straight ahead. Turning left or right is not permitted at this point.",
       "images": [
         "assets/road-signs/q079-1.png"
       ],
       "questionId": 79,
-      "studyPoint": "Will get a freeway ahead",
+      "studyPoint": "This blue circular command sign means you must proceed straight ahead. Do not turn left or right at the intersection where the sign applies.",
       "signNumber": 7
     },
     {
