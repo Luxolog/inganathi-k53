@@ -3804,21 +3804,13 @@ function setupCandidateForm() {
 
 
 async function sendTestResultEmail(percentage, passed) {
-
     const emailStatus = document.getElementById("resultEmailStatus");
-
     const submittedAt = new Date().toLocaleString("en-ZA", {
         dateStyle: "full",
         timeStyle: "medium"
     });
 
     const payload = {
-        _subject: "Inganathi K53 Test Result - " +
-            candidateDetails.name + " " + candidateDetails.surname,
-        _template: "table",
-        _captcha: "true",
-        _honey: "",
-        _url: window.location.href,
         name: candidateDetails.name,
         surname: candidateDetails.surname,
         cellphone: candidateDetails.cellphone,
@@ -3832,36 +3824,34 @@ async function sendTestResultEmail(percentage, passed) {
         session: "Session " + currentSession,
         session_questions: testQuestions.length,
         time_limit: "60 minutes",
-        time_expired: timedOut ? "YES" : "NO"
+        time_expired: timedOut ? "YES" : "NO",
+        page_url: window.location.href
     };
 
+    emailStatus.className = "result-email-status";
+    emailStatus.textContent = "Submitting your result email...";
+
     try {
-        const response = await fetch(RESULT_EMAIL_ENDPOINT, {
+        // Apps Script web apps accept a simple text/plain POST. no-cors means
+        // the browser cannot read the response, so this confirms submission attempt,
+        // not delivery to the instructor's inbox.
+        await fetch(RESULT_EMAIL_ENDPOINT, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify(payload)
         });
 
-        const data = await response.json().catch(function() { return {}; });
-
-        if (!response.ok || data.success === false) {
-            throw new Error(data.message || "The result email could not be submitted.");
-        }
-
         emailStatus.classList.add("success");
-        emailStatus.textContent = "✓ Result sent to the instructor.";
-
+        emailStatus.textContent =
+            "✓ Result submission sent. Email delivery is not confirmed here; please contact the instructor if needed.";
     } catch (error) {
         console.error("Test result email error:", error);
         emailStatus.classList.add("error");
         emailStatus.textContent =
-            "⚠ Your result is displayed above, but the email could not be confirmed. Please contact the instructor.";
+            "⚠ Your result is displayed above, but the email request could not be sent. Please contact the instructor.";
     }
 }
-
 
 /* =========================================================
    ROAD SIGN LIBRARY
