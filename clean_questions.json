@@ -1517,15 +1517,15 @@
     {
       "id": 109,
       "category": "road_signs",
-      "question": "This arrow shows you that you...",
+      "question": "What movements are permitted from this lane, according to the arrow marking?",
       "options": [
-        "Must turn right from the lane",
-        "Can turn right or move straight on if it is safe",
-        "Can still change lanes if you want to go on straight"
+        "You must turn right.",
+        "You may turn right or continue straight ahead.",
+        "You may change lanes and continue straight ahead."
       ],
       "correct": 1,
       "correctLetter": "B",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "answerStatus": "verified_against_South_African_Road_Traffic_Signs_Manual_RM8",
       "diagramImages": [
         "assets/road-signs/q109-1.png"
       ]
