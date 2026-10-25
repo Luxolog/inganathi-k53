@@ -437,11 +437,11 @@
     {
       "id": 32,
       "category": "rules",
-      "question": "When you were involved in an accident you... Must immediately stop your vehicle Must see if someone is injured May use a bit of alcohol for the shock SELECT THE CORRECT COMBINATION",
+      "question": "If you are involved in a road accident, you must stop immediately, check whether anyone is injured, and must not drink alcohol to calm yourself after the shock. Select the correct combination.",
       "options": [
-        "(i) and (ii) only are correct",
-        "(ii) only is correct",
-        "All of the above are correct"
+        "Only (i) and (ii) are correct.",
+        "Only (ii) is correct.",
+        "All of the above are correct."
       ],
       "correct": 0,
       "correctLetter": "A",
@@ -689,11 +689,11 @@
     {
       "id": 50,
       "category": "rules",
-      "question": "What is the duty of a driver, about pedestrians at a pedestrian crossing…?",
+      "question": "What is a driver's duty towards pedestrians at a pedestrian crossing?",
       "options": [
-        "A driver must only stop for a pedestrian waiting to enter the road at a pedestrian signal.",
-        "A driver must yield right of way to a pedestrian crossing a pedestrian crossing.",
-        "A driver must yield to all pedestrians wishing to cross over the road way"
+        "A driver must stop only for a pedestrian waiting to enter the road at a pedestrian signal.",
+        "A driver must give way to a pedestrian crossing at a pedestrian crossing.",
+        "A driver must give way to every pedestrian who wishes to cross the roadway."
       ],
       "correct": 1,
       "correctLetter": "B",
@@ -2393,11 +2393,7 @@
       "correct": 2,
       "correctLetter": "C",
       "answerStatus": "diagram_dependent_provisional_inference",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
-      "diagramImages": [
-        "assets/road-signs/q149-1.png"
-      ],
-      "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
     },
     {
       "id": 150,
@@ -2474,7 +2470,7 @@
     {
       "id": 154,
       "category": "road_signs",
-      "question": "In order to draw attention, the background of a temporary sign is usually..?",
+      "question": "To draw attention, what colour is the background of a temporary road sign usually?",
       "options": [
         "Yellow",
         "White",
@@ -2483,11 +2479,7 @@
       "correct": 0,
       "correctLetter": "A",
       "answerStatus": "diagram_dependent_provisional_inference",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
-      "diagramImages": [
-        "assets/road-signs/q154-1.png"
-      ],
-      "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
     },
     {
       "id": 155,
@@ -2809,9 +2801,9 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "source": "NEW CLLT QUESTIONARE_090106(1).docx",
       "diagramImages": [
-        "assets/road-signs/q172-1.png"
+        "assets/road-signs/q172-regulatory-sign.svg"
       ],
-      "diagramSource": "Supplied Inganathi questionnaire artwork, converted to PNG."
+      "diagramSource": "Clear illustrative regulatory sign used to identify the sign category."
     },
     {
       "id": 173,
@@ -2939,16 +2931,20 @@
     {
       "id": 180,
       "category": "motorcycle",
-      "question": "This road sign prohibits…\t.",
+      "question": "This road sign prohibits…",
       "options": [
-        "all motor cycle riders to ride there",
-        "motor cycles with an engine capacity of 125 cc and less to be there",
-        "motor cycles with an engine capacity of more than 125 cc to be there"
+        "All motorcycles from using the road.",
+        "Motorcycles with an engine capacity of 125 cc or less from using the road.",
+        "Motorcycles with an engine capacity greater than 125 cc from using the road."
       ],
-      "correct": 2,
-      "correctLetter": "C",
+      "correct": 1,
+      "correctLetter": "B",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/q180-motorcycles-up-to-125cc-prohibited.svg"
+      ],
+      "diagramSource": "Illustrative prohibition sign for motorcycles up to 125 cc; verify against the official source artwork."
     },
     {
       "id": 181,
@@ -2976,7 +2972,11 @@
       "correct": 0,
       "correctLetter": "A",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/q182-motorcycles-keep-left.svg"
+      ],
+      "diagramSource": "Illustrative mandatory keep-left sign to match the question wording."
     },
     {
       "id": 183,
@@ -3004,12 +3004,16 @@
       "correct": 0,
       "correctLetter": "A",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/q184-motorcycle-only.svg"
+      ],
+      "diagramSource": "Illustrative mandatory motorcycle-only sign to match the question wording."
     },
     {
       "id": 185,
       "category": "motorcycle",
-      "question": "When is it an offence when you are the holder of a learners licence for a motor cycle? you ride on your own motor cycle next to your instructor you keep only one hand on the handle bars you ride at 80 km/h outside built up areas SELECT THE CORRECT COMBINATION",
+      "question": "When is it an offence for a holder of a motorcycle learner's licence to do the following? Select the correct combination.",
       "options": [
         "None of the above are correct",
         "(i) is correct",
@@ -3254,11 +3258,11 @@
     {
       "id": 201,
       "category": "light_motor_vehicle",
-      "question": "The lights of your vehicle parked on a public road between sunset and sunrise need not be kept lighted when the vehicle is parked... 10m from a lighted street lamp next to the roadway of the road in a demarcated parking area SELECT THE CORRECT COMBINATION",
+      "question": "When may the lights of a vehicle parked on a public road between sunset and sunrise be left unlit? Select the correct combination.",
       "options": [
-        "All of the above are correct",
-        "Only (i) and (iii) are correct",
-        "Only (ii) and (iii) are correct"
+        "In all of the situations listed.",
+        "Only (i) and (iii) are correct.",
+        "Only (ii) and (iii) are correct."
       ],
       "correct": 1,
       "correctLetter": "B",
