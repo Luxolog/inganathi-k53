@@ -933,12 +933,12 @@
     {
       "category": "Road Signs",
       "name": "Axle mass-load limit",
-      "meaning": "This is the maximum axle mass permitted on this road.",
+      "meaning": "The sign sets the maximum permitted mass on any axle shown by the value in tonnes. Vehicles exceeding that axle limit must use another route.",
       "images": [
-        "assets/road-signs/q156-1.png"
+        "assets/road-signs/q156-axle-mass-limit.svg"
       ],
       "questionId": 156,
-      "studyPoint": "This is the maximum axle mass permitted on this road.",
+      "studyPoint": "The sign sets the maximum permitted mass on any axle shown by the value in tonnes. Vehicles exceeding that axle limit must use another route.",
       "signNumber": 84
     },
     {
