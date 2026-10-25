@@ -986,14 +986,14 @@
       "signNumber": 88
     },
     {
-      "category": "Road Markings",
-      "name": "Pedestrian crossing",
-      "meaning": "You may have to stop and yield for pedestrians walking at a pedestrian crossing.",
+      "category": "Temporary",
+      "name": "Temporary lane-use sign — minimum speed of 80 km/h in the right-hand lane",
+      "meaning": "This temporary lane-use control sign shows three lanes carrying traffic in the same direction. The 80 km/h minimum-speed requirement applies to the right-hand lane only.",
       "images": [
         "assets/road-signs/q161-1.png"
       ],
       "questionId": 161,
-      "studyPoint": "You may have to stop and yield for pedestrians walking at a pedestrian crossing.",
+      "studyPoint": "Keep to a lane appropriate for your vehicle and traffic conditions. The 80 km/h figure is a minimum speed for the indicated lane, not a maximum speed applying to all three lanes.",
       "signNumber": 89
     },
     {
