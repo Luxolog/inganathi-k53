@@ -410,13 +410,13 @@
     },
     {
       "category": "Road Markings",
-      "name": "Lane direction / lane transition marking",
-      "meaning": "Can turn right or move straight on if it is safe",
+      "name": "Mandatory direction arrow — right or straight ahead",
+      "meaning": "From this lane, you may turn right or continue straight ahead. You must follow one of the directions shown by the arrow.",
       "images": [
         "assets/road-signs/q109-1.png"
       ],
       "questionId": 109,
-      "studyPoint": "Can turn right or move straight on if it is safe",
+      "studyPoint": "The yellow arrow is a mandatory direction marking. From this lane, you may turn right or continue straight ahead; you may not use the lane to make a different movement.",
       "signNumber": 37
     },
     {
