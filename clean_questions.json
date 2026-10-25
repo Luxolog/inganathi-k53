@@ -2952,16 +2952,16 @@
     },
     {
       "id": 201,
-      "category": "light_motor_vehicle",
-      "question": "When may the lights of a vehicle parked on a public road between sunset and sunrise be left unlit? Select the correct combination.",
+      "category": "rules",
+      "question": "Under South African road traffic regulations, when may a motor vehicle parked between sunset and sunrise be left without its head, rear and number-plate lamps lit?",
       "options": [
-        "In all of the situations listed.",
-        "Only (i) and (iii) are correct.",
-        "Only (ii) and (iii) are correct."
+        "Only when it is parked off the roadway, in a parking place marked by appropriate traffic signs, or within 12 metres of a lighted street lamp illuminating the road.",
+        "Whenever it is parked on a public road, provided the driver leaves the hazard lights on.",
+        "Only when it is parked in a private driveway."
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "source_supported_or_inferred_from_source"
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "verified_against_National_Road_Traffic_Regulations_157_1_b"
     },
     {
       "id": 202,
