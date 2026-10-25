@@ -913,7 +913,7 @@
       "name": "Temporary sign background",
       "meaning": "Temporary road signs generally use a yellow background to distinguish them from permanent signs.",
       "images": [
-        "assets/road-signs/q154-1.png"
+        "assets/road-signs/q154-temporary-yellow.svg"
       ],
       "questionId": 154,
       "studyPoint": "Yellow is the usual background colour for temporary road signs.",
