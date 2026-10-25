@@ -1813,9 +1813,9 @@
         "Business vehicles",
         "Minibuses"
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
       "diagramImages": [
         "assets/road-signs/q127-1.png"
       ]
