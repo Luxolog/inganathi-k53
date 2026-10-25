@@ -222,13 +222,13 @@
     },
     {
       "category": "Road Signs",
-      "name": "Narrow road / narrow bridge warning",
-      "meaning": "Only one vehicle can pass through the obstacle ahead",
+      "name": "One-vehicle-width structure ahead",
+      "meaning": "A narrow structure ahead may only allow one vehicle to pass through at a time.",
       "images": [
         "assets/road-signs/q092-1.png"
       ],
       "questionId": 92,
-      "studyPoint": "Only one vehicle can pass through the obstacle ahead",
+      "studyPoint": "Slow down and be prepared to give way to oncoming traffic if the structure cannot accommodate two vehicles.",
       "signNumber": 20
     },
     {
@@ -255,13 +255,13 @@
     },
     {
       "category": "Road Signs",
-      "name": "Flood / low-water crossing warning",
-      "meaning": "There is a low water bridge ahead",
+      "name": "Low-water bridge ahead",
+      "meaning": "A low-water bridge or crossing is ahead. Water may flow over the crossing.",
       "images": [
         "assets/road-signs/q095-1.png"
       ],
       "questionId": 95,
-      "studyPoint": "There is a low water bridge ahead",
+      "studyPoint": "Approach carefully. Never enter a flooded crossing if the depth or current makes it unsafe.",
       "signNumber": 23
     },
     {
@@ -299,14 +299,14 @@
     },
     {
       "category": "Road Signs",
-      "name": "Winding road warning",
-      "meaning": "Winds for 12km",
+      "name": "Winding road ahead — 80 km/h advisory speed for 12 km",
+      "meaning": "A winding section lies ahead for 12 km. The 80 km/h plate gives an advisory speed, not by itself a regulatory speed limit.",
       "images": [
         "assets/road-signs/q099-1.png",
         "assets/road-signs/q099-2.png"
       ],
       "questionId": 99,
-      "studyPoint": "Winds for 12km",
+      "studyPoint": "Reduce speed to suit the curves and conditions. The advisory speed is guidance; obey any separate posted speed limit.",
       "signNumber": 27
     },
     {
@@ -321,14 +321,14 @@
       "signNumber": 28
     },
     {
-      "category": "Road Markings",
-      "name": "Barrier / no-crossing marking",
-      "meaning": "A single line shows you that you may not pass other vehicles while a double line as well shows you that you may not drive over it to turn into a yard or anything else",
+      "category": "Traffic Signals",
+      "name": "Overhead lane-direction control signal — red cross",
+      "meaning": "Do not drive in the lane beneath the red cross. The lane may be open to traffic travelling in the opposite direction.",
       "images": [
         "assets/road-signs/q101-1.png"
       ],
       "questionId": 101,
-      "studyPoint": "A single line shows you that you may not pass other vehicles while a double line as well shows you that you may not drive over it to turn into a yard or anything else",
+      "studyPoint": "Follow the signal above your lane. A green downward arrow permits use of that lane; a red cross prohibits use.",
       "signNumber": 29
     },
     {
