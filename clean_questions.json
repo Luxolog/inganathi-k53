@@ -2270,15 +2270,15 @@
       "category": "road_signs",
       "question": "This sign shows the driver of a vehicle",
       "options": [
-        "The maximum mass load of all axles.",
-        "The minimum mass load of all axles",
-        "An axle mass load"
+        "The maximum total mass of the vehicle and its load.",
+        "The minimum mass load of all axles.",
+        "The axle mass-load limit shown on the sign."
       ],
       "correct": 2,
       "correctLetter": "C",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
       "diagramImages": [
-        "assets/road-signs/q156-1.png"
+        "assets/road-signs/q156-axle-mass-limit.svg"
       ]
     },
     {
