@@ -3319,7 +3319,11 @@
       "correct": 0,
       "correctLetter": "A",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/r225-no-minibuses.svg"
+      ],
+      "diagramSource": "South African R225 regulatory sign: minibuses prohibited."
     },
     {
       "id": 206,
