@@ -921,13 +921,13 @@
     },
     {
       "category": "Road Signs",
-      "name": "Left turn ahead prohibited",
-      "meaning": "You may not turn in the direction of the arrow at the next junction.",
+      "name": "No left turn",
+      "meaning": "Left turns are prohibited at the indicated junction.",
       "images": [
-        "assets/road-signs/q155-1.png"
+        "assets/road-signs/q155-no-left-turn.svg"
       ],
       "questionId": 155,
-      "studyPoint": "You may not turn in the direction of the arrow at the next junction.",
+      "studyPoint": "Left turns are prohibited at the indicated junction.",
       "signNumber": 83
     },
     {
