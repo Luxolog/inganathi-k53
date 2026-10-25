@@ -277,13 +277,13 @@
     },
     {
       "category": "Temporary",
-      "name": "Obstruction / keep-pass direction",
-      "meaning": "Temporary obstruction left of the road / Pass on the right of this sign",
+      "name": "Temporary obstruction marker — keep right",
+      "meaning": "The yellow background identifies this as a temporary road sign. It warns of an obstruction on the left; pass to the right of the sign, following any temporary traffic directions.",
       "images": [
         "assets/road-signs/q097-1.png"
       ],
       "questionId": 97,
-      "studyPoint": "Temporary obstruction left of the road / Pass on the right of this sign",
+      "studyPoint": "Yellow backgrounds are used for temporary road signs. This marker indicates an obstruction on the left, so pass to the right of the sign and remain alert for roadworks or a changed traffic layout.",
       "signNumber": 25
     },
     {
