@@ -564,11 +564,17 @@ function renderPractice(section){
  (imgs.length?'<div class="practice-image">'+imgs.map(src=>'<img loading="lazy" src="'+escapeHtml(src)+'" alt="Question diagram Q'+escapeHtml(q.id)+'">').join("")+'</div>':'')+
  '<div class="options">'+options+'</div>'+
  '<div id="feedback-'+section+'" class="feedback"></div>'+
- '<div class="practice-actions"><span class="practice-score">Answers recorded: '+Object.keys(state.selectedAnswers).length+' / '+state.questions.length+'</span><button id="next-'+section+'" class="btn btn-red" disabled onclick="nextPractice('+JSON.stringify(section)+')">'+(state.index===state.questions.length-1?"Finish Practice":"Next Question")+'</button></div>'+
+ '<div class="practice-actions"><span class="practice-score">Answers recorded: '+Object.keys(state.selectedAnswers).length+' / '+state.questions.length+'</span><button id="next-'+section+'" class="btn btn-red" type="button" disabled>'+(state.index===state.questions.length-1?"Finish Practice":"Next Question")+'</button></div>'+
  '</div>';
  box.querySelectorAll(".option").forEach((button,index)=>{
-   button.addEventListener("click",()=>answerPractice(section,index));
+   button.addEventListener("click",function(){ answerPractice(section,index); });
  });
+ const nextButton=box.querySelector("#next-"+section);
+ if(nextButton){
+   nextButton.addEventListener("click",function(){
+     nextPractice(section);
+   });
+ }
 }
 
 function answerPractice(section,selected){
@@ -593,9 +599,21 @@ function answerPractice(section,selected){
 
 function nextPractice(section){
  const state=practiceState[section];
- if(!state||state.selectedAnswer===null||!Object.prototype.hasOwnProperty.call(state.selectedAnswers,state.index))return;
- state.index++;
+ if(!state){
+   console.error("Practice state missing for section:",section);
+   return;
+ }
+ if(state.selectedAnswer===null || !Object.prototype.hasOwnProperty.call(state.selectedAnswers,state.index)){
+   console.warn("Select an answer before moving to the next practice question.");
+   return;
+ }
+ if(state.index >= state.questions.length){
+   return;
+ }
+ state.index += 1;
  renderPractice(section);
+ const box=document.getElementById("practice-"+(section==="road_signs"?"signs":section));
+ if(box) box.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
 Promise.all([
