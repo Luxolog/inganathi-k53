@@ -3662,7 +3662,10 @@
       "correct": 1,
       "correctLetter": "B",
       "answerStatus": "source_supported_or_inferred_from_source",
-      "source": "NEW CLLT QUESTIONARE_090106(1).docx"
+      "source": "NEW CLLT QUESTIONARE_090106(1).docx",
+      "diagramImages": [
+        "assets/road-signs/r204-height-limit-4-42.svg"
+      ]
     },
     {
       "id": 229,
