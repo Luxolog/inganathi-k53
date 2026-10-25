@@ -610,13 +610,13 @@
     },
     {
       "category": "Road Markings",
-      "name": "Reserved parking / loading marking",
-      "meaning": "Business vehicles",
+      "name": "Exclusive bus parking bay",
+      "meaning": "The B marking reserves the parking bay for buses. Other vehicles may not park or stop in the bay; the reservation applies to buses operating on a fixed route.",
       "images": [
         "assets/road-signs/q127-1.png"
       ],
       "questionId": 127,
-      "studyPoint": "Business vehicles",
+      "studyPoint": "B means bus. Use the marked bay only if your vehicle qualifies for this bus reservation.",
       "signNumber": 55
     },
     {
