@@ -1244,11 +1244,11 @@
     {
       "id": 92,
       "category": "road_signs",
-      "question": "What does this road sign show you?",
+      "question": "What does this warning sign indicate?",
       "options": [
-        "The road temporarily narrows from both sides",
-        "The freeway temporarily ends ahead",
-        "Only one vehicle can pass through the obstacle ahead"
+        "The road narrows from both sides.",
+        "A narrow bridge is ahead.",
+        "A one-vehicle-width structure is ahead; only one vehicle can pass through at a time."
       ],
       "correct": 2,
       "correctLetter": "C",
@@ -1292,7 +1292,7 @@
     {
       "id": 95,
       "category": "road_signs",
-      "question": "This road sign shows you that...",
+      "question": "What does this warning sign indicate?",
       "options": [
         "There is a possibility of a flood ahead",
         "The road ends because of water ahead",
@@ -1356,11 +1356,11 @@
     {
       "id": 99,
       "category": "road_signs",
-      "question": "This road sign shows you that the road",
+      "question": "The winding-road warning sign with an 80 km/h advisory-speed plate and a 'For 12 km' plate indicates that…",
       "options": [
-        "Winds for 12km",
-        "Winds 12km from there",
-        "Is slippery for 12km"
+        "A winding section lies ahead for 12 km, with an advisory speed of 80 km/h.",
+        "The legal speed limit is 80 km/h for the next 12 km in all conditions.",
+        "The road is slippery for the next 12 km."
       ],
       "correct": 0,
       "correctLetter": "A",
@@ -1388,16 +1388,16 @@
     },
     {
       "id": 101,
-      "category": "road_signs",
-      "question": "What is the difference between these road marking",
+      "category": "traffic_signals",
+      "question": "What does a steady red cross displayed above a traffic lane mean?",
       "options": [
-        "There is no difference between the two and both show you that you may not pass other vehicles",
-        "Both shows you that you may not pass other vehicles but you will find a single line on all roads and a double lines on freeways only",
-        "A single line shows you that you may not pass other vehicles while a double line as well shows you that you may not drive over it to turn into a yard or anything else"
+        "You must not drive in the lane below the red cross; it may be open to traffic travelling in the opposite direction.",
+        "You may use the lane if you drive slowly.",
+        "The lane is open to traffic travelling in your direction."
       ],
-      "correct": 2,
-      "correctLetter": "C",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "verified_against_department_of_transport_lane_control_signal_definition",
       "diagramImages": [
         "assets/road-signs/q101-1.png"
       ]
@@ -2583,8 +2583,7 @@
       "answerStatus": "diagram_dependent_provisional_inference",
       "diagramImages": [
         "assets/road-signs/q175-bus-lane-marking.svg"
-      ],
-      "diagramSource": "Illustrative road-surface bus-lane marking."
+      ]
     },
     {
       "id": 176,
