@@ -2412,15 +2412,15 @@
     {
       "id": 165,
       "category": "road_signs",
-      "question": "When driving behind another vehicle, this road making shows you to …?",
+      "question": "What distance to the high-speed exit is indicated by this blue countdown marker with three white bars?",
       "options": [
-        "Pass only when no traffic is approaching from the front",
-        "Slow down and keep a safe following distance behind the slow moving vehicles",
-        "Slow down and when it is safe pass the slow moving traffic."
+        "Approximately 100 metres.",
+        "Approximately 200 metres.",
+        "Approximately 300 metres."
       ],
-      "correct": 1,
-      "correctLetter": "B",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 2,
+      "correctLetter": "C",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
       "diagramImages": [
         "assets/road-signs/q165-1.png"
       ]
