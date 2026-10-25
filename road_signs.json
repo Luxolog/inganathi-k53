@@ -900,12 +900,12 @@
     {
       "category": "Road Signs",
       "name": "Arrestor bed ahead",
-      "meaning": "Arrestor bed ahead.",
+      "meaning": "An arrestor bed is a gravel escape ramp for a vehicle whose brakes fail, usually on a descent.",
       "images": [
-        "assets/road-signs/q153-1.png"
+        "assets/road-signs/q153-arrestor-bed-illustration.svg"
       ],
       "questionId": 153,
-      "studyPoint": "Arrestor bed ahead.",
+      "studyPoint": "If your brakes fail, steer straight into the arrestor bed. Do not use it unless it is an emergency.",
       "signNumber": 81
     },
     {
