@@ -757,11 +757,11 @@
     {
       "id": 59,
       "category": "rules",
-      "question": "The driver of a vehicle shall not cross a public road unless…?",
+      "question": "When entering or crossing a public road from a private road or driveway, a driver must not proceed unless…",
       "options": [
-        "They put on the indicator and then enter the road.",
-        "They look in the rear view mirror, engage a gear and go.",
-        "The road is clear of traffic for a safe distance, without obstructing or endangering other traffic."
+        "They switch on the indicator and then enter the road.",
+        "They check the rear-view mirror, engage a gear and move off.",
+        "The road is clear for a safe distance and they can enter without obstructing or endangering other traffic."
       ],
       "correct": 2,
       "correctLetter": "C",
