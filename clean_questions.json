@@ -1781,9 +1781,9 @@
         "Look out for school kids",
         "Give right of way to all users of the road and possibly also trains"
       ],
-      "correct": 0,
-      "correctLetter": "A",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 2,
+      "correctLetter": "C",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
       "diagramImages": [
         "assets/road-signs/q125-1.png"
       ]
