@@ -1678,15 +1678,15 @@
     {
       "id": 119,
       "category": "road_signs",
-      "question": "This sign shows you that...",
+      "question": "What does this warning sign indicate?",
       "options": [
-        "The road narrows from both sides",
+        "The road narrows from both sides.",
         "The freeway ends",
-        "There is a narrow bridge ahead"
+        "There is a narrow bridge ahead."
       ],
-      "correct": 2,
-      "correctLetter": "C",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "correct": 0,
+      "correctLetter": "A",
+      "answerStatus": "corrected_from_user_sign_review",
       "diagramImages": [
         "assets/road-signs/q119-1.png"
       ]
