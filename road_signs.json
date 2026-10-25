@@ -1145,7 +1145,7 @@
       "name": "Bus-only lane marking",
       "meaning": "The lane is reserved for buses, subject to the applicable road signs and markings.",
       "images": [
-        "assets/road-signs/q175-1.png"
+        "assets/road-signs/q175-bus-lane-marking.svg"
       ],
       "questionId": 175,
       "studyPoint": "Do not use a bus-only lane unless you are permitted to do so.",
