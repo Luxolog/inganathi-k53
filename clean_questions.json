@@ -2348,15 +2348,15 @@
     {
       "id": 161,
       "category": "road_signs",
-      "question": "Before this road marking you would usually find..?",
+      "question": "What does this temporary lane-use sign indicate?",
       "options": [
-        "A marked pedestrian crossing sign ahead",
-        "You must be on the lookout for cyclists on the road ahead",
-        "Level crossing ahead where you must stop."
+        "The minimum permitted speed in the right-hand lane is 80 km/h.",
+        "The maximum speed in all three lanes is 80 km/h.",
+        "A pedestrian crossing is ahead."
       ],
       "correct": 0,
       "correctLetter": "A",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "answerStatus": "verified_against_sartsm_lane_use_control",
       "diagramImages": [
         "assets/road-signs/q161-1.png"
       ]
