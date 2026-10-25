@@ -2316,17 +2316,17 @@
     {
       "id": 159,
       "category": "road_signs",
-      "question": "This road marking warns you that…?",
+      "question": "What does this blue countdown sign with two white diagonal bars indicate?",
       "options": [
-        "You should stop before the road marking and move off when it is safe.",
-        "You should move to the right lane.",
-        "You should drive slowly because of a speed hump"
+        "A high-speed exit is approximately 200 metres ahead.",
+        "A high-speed exit is approximately 100 metres ahead.",
+        "A high-speed exit is approximately 300 metres ahead."
       ],
       "correct": 0,
       "correctLetter": "A",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
       "diagramImages": [
-        "assets/road-signs/q159-stop-line.svg"
+        "assets/road-signs/q160-1.png"
       ]
     },
     {
