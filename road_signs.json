@@ -588,13 +588,13 @@
     },
     {
       "category": "Road Markings",
-      "name": "Stop / yield road marking",
-      "meaning": "Stop",
+      "name": "Give-way (yield) road marking",
+      "meaning": "Give way to traffic and other road users crossing your path. Slow down and stop if necessary; do not proceed until it is safe.",
       "images": [
         "assets/road-signs/q125-1.png"
       ],
       "questionId": 125,
-      "studyPoint": "Stop",
+      "studyPoint": "Give way to traffic and other road users crossing your path. Slow down and stop if necessary; do not proceed until it is safe.",
       "signNumber": 53
     },
     {
