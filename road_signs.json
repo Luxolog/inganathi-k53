@@ -544,12 +544,12 @@
     {
       "category": "Road Signs",
       "name": "Slippery road",
-      "meaning": "The road surface is very smooth, especially when wet.",
+      "meaning": "The road ahead may be unusually slippery, especially when wet. Slow down and avoid sudden braking or sharp steering.",
       "images": [
         "assets/road-signs/q121-1.png"
       ],
       "questionId": 121,
-      "studyPoint": "The road surface is very smooth, especially when wet.",
+      "studyPoint": "This sign warns of unusually slippery road conditions ahead. Reduce speed and avoid sudden braking or sharp steering, as these actions may cause the vehicle to skid.",
       "signNumber": 49
     },
     {
