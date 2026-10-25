@@ -516,9 +516,9 @@ function changeSign(step){
 }
 
 function getPracticeQuestions(section){
- if(section==="road_signs") return questionBank.filter(q=>q.category==="road_signs");
+ if(section==="road_signs") return questionBank.filter(q=>q.category==="road_signs" || (Number(q.id)===206 && /road sign/i.test(q.question||"")));
  if(section==="rules") return questionBank.filter(q=>q.category==="rules");
- if(section==="controls") return questionBank.filter(q=>["motorcycle","light_motor_vehicle","heavy_motor_vehicle"].includes(q.category));
+ if(section==="controls") return questionBank.filter(q=>["motorcycle","light_motor_vehicle","heavy_motor_vehicle"].includes(q.category) && !(Number(q.id)===206 && /road sign/i.test(q.question||"")));
  return [];
 }
 
@@ -556,7 +556,7 @@ function renderPractice(section){
  const imgs=Array.isArray(q.diagramImages)?q.diagramImages:[];
  state.displayedOptions=shuffle((q.options||[]).map((opt,i)=>({text:opt,correct:i===Number(q.correct)})));
  state.selectedAnswer=null;
- const options=state.displayedOptions.map((opt,i)=>'<button type="button" class="option" data-i="'+i+'" aria-pressed="false" onclick="answerPractice('+JSON.stringify(section)+','+i+')">'+String.fromCharCode(65+i)+'. '+escapeHtml(opt.text)+'</button>').join("");
+ const options=state.displayedOptions.map((opt,i)=>'<button type="button" class="option" data-i="'+i+'" aria-pressed="false">'+String.fromCharCode(65+i)+'. '+escapeHtml(opt.text)+'</button>').join("");
  box.innerHTML='<div class="practice-head"><h3>'+escapeHtml(section==="road_signs"?"Road Signs Practice":section==="rules"?"Rules Practice":"Controls Practice")+'</h3><span>Question '+(state.index+1)+' of '+state.questions.length+' • Source Q'+q.id+'</span></div>'+
  '<div class="practice-card">'+
  '<div class="practice-meta">'+escapeHtml(q.category||"")+' • Q'+escapeHtml(q.id)+'</div>'+
@@ -566,6 +566,9 @@ function renderPractice(section){
  '<div id="feedback-'+section+'" class="feedback"></div>'+
  '<div class="practice-actions"><span class="practice-score">Answers recorded: '+Object.keys(state.selectedAnswers).length+' / '+state.questions.length+'</span><button id="next-'+section+'" class="btn btn-red" disabled onclick="nextPractice('+JSON.stringify(section)+')">'+(state.index===state.questions.length-1?"Finish Practice":"Next Question")+'</button></div>'+
  '</div>';
+ box.querySelectorAll(".option").forEach((button,index)=>{
+   button.addEventListener("click",()=>answerPractice(section,index));
+ });
 }
 
 function answerPractice(section,selected){
