@@ -1031,14 +1031,14 @@
       "signNumber": 92
     },
     {
-      "category": "Road Markings",
-      "name": "Exit countdown marker",
-      "meaning": "Exit countdown marker.",
+      "category": "Road Signs",
+      "name": "Exit countdown marker — 300 m",
+      "meaning": "Three white diagonal bars on a blue exit countdown marker indicate that the high-speed exit is approximately 300 metres ahead.",
       "images": [
         "assets/road-signs/q165-1.png"
       ],
       "questionId": 165,
-      "studyPoint": "Exit countdown marker.",
+      "studyPoint": "Each bar represents approximately 100 metres. Three bars mean the exit is about 300 metres ahead. Prepare to exit safely if you intend to use it.",
       "signNumber": 93
     },
     {
