@@ -1842,12 +1842,12 @@
       "question": "What does this road marking indicate?",
       "options": [
         "The road is under construction.",
-        "You may not stop adjacent to the lines next to the black arrows",
-        "You may not park adjacent to the lines next to the black arrows during certain hours"
+        "You may not stop adjacent to the marked lines.",
+        "You may not park alongside the broken yellow line during the times indicated on the relevant sign."
       ],
       "correct": 2,
       "correctLetter": "C",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "answerStatus": "source_supported_or_directly_inferred_from_source",
       "diagramImages": [
         "assets/road-signs/q129-1.png"
       ]
