@@ -311,13 +311,13 @@
     },
     {
       "category": "Road Signs",
-      "name": "One-way / lane-direction indication",
-      "meaning": "This is a lane for traffic coming only from the front",
+      "name": "No throughway",
+      "meaning": "Through traffic is not permitted beyond this point. Follow any posted diversion or turn-around instructions.",
       "images": [
         "assets/road-signs/q100-1.png"
       ],
       "questionId": 100,
-      "studyPoint": "This is a lane for traffic coming only from the front",
+      "studyPoint": "Do not continue straight through. Follow the road signs and any diversion instructions to choose a permitted route.",
       "signNumber": 28
     },
     {
