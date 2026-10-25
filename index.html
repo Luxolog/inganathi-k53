@@ -3079,7 +3079,7 @@ function showQuestionDiagram(q) {
         diagramImages.forEach(function(src) {
 
             const img = document.createElement("img");
-            img.src = src;
+            const imageUrl = new URL(src, document.baseURI);\n            imageUrl.searchParams.set("v", "20261025-audit");\n            img.src = imageUrl.href;
             img.alt =
                 "Road sign or road marking diagram for question " +
                 q.id;
@@ -3177,20 +3177,215 @@ function renderQuestionText(q) {
     // These source questions have three statements concatenated into one
     // sentence. Keep the wording intact but display each statement separately.
     const combinationQuestions = {
-        208: {
-            prompt: "If you only have a learner’s licence for a light motor vehicle:",
+        2: {
+            prompt: "When changing lanes, you must:",
             statements: [
-                "There must be someone with you in the vehicle who holds the same driving licence.",
+                "Change lanes only when it is safe to do so.",
+                "Signal in good time to show other road users what you intend to do.",
+                "Use your mirrors to check the traffic around you."
+            ]
+        },
+        3: {
+            prompt: "When may you not overtake another vehicle?",
+            statements: [
+                "When you are nearing the top of a hill.",
+                "When you are nearing a curve.",
+                "When dust over the road limits your visibility to about 100 metres."
+            ]
+        },
+        4: {
+            prompt: "When are you allowed to drive on the shoulder of a road?",
+            statements: [
+                "At any time, if you want to let another vehicle pass.",
+                "During the day, when you want to let another vehicle pass and it is safe to do so.",
+                "On a freeway with four lanes in each direction, when you want to travel slower than 120 km/h.",
+                "When you have a flat tyre and need to stop to change it."
+            ]
+        },
+        5: {
+            prompt: "You may not obtain a learner’s licence if:",
+            statements: [
+                "You already hold a licence authorising you to drive the same class of vehicle.",
+                "You have been declared unfit to obtain a driving licence for a period, and that period has not expired.",
+                "Your driving licence has been suspended and the suspension period has not expired."
+            ]
+        },
+        11: {
+            prompt: "If you see that someone wants to overtake you, you must:",
+            statements: [
+                "Avoid increasing your speed.",
+                "Keep as far to the left as it is safe to do so.",
+                "Give hand signals to allow the person to pass safely."
+            ]
+        },
+        17: {
+            prompt: "You may pass another vehicle on the left-hand side if it:",
+            statements: [
+                "Indicates that it is going to turn right.",
+                "Is travelling on the right-hand side of a road where there is a shoulder and it is safe to pass.",
+                "Is travelling in the right-hand lane of a town road with two lanes moving in the same direction."
+            ]
+        },
+        18: {
+            prompt: "You may overtake another vehicle on the left-hand side:",
+            statements: [
+                "When that vehicle is turning right and the road is wide enough that you do not need to use the shoulder.",
+                "Where the road has two lanes of traffic moving in the same direction.",
+                "When a police officer instructs you to do so."
+            ]
+        },
+        29: {
+            prompt: "Your vehicle’s headlights must be switched on:",
+            statements: [
+                "Whenever you cannot see people and vehicles 150 metres ahead.",
+                "From sunset to sunrise.",
+                "When it is raining and you cannot see vehicles 100 metres ahead."
+            ]
+        },
+        31: {
+            prompt: "If you are involved in a road accident, you:",
+            statements: [
+                "Must stop your vehicle immediately.",
+                "Must determine the damage caused to the vehicles.",
+                "May refuse to give your name and address to anyone except the police."
+            ]
+        },
+        32: {
+            prompt: "If you are involved in a road accident, you:",
+            statements: [
+                "Must stop your vehicle immediately.",
+                "Must check whether anyone has been injured.",
+                "May drink a little alcohol to calm yourself after the shock."
+            ]
+        },
+        33: {
+            prompt: "When do you have the right of way?",
+            statements: [
+                "When you are already within a traffic circle.",
+                "When you were the first to stop at a four-way stop.",
+                "When you want to turn right at an intersection on a two-way road."
+            ]
+        },
+        38: {
+            prompt: "You may not:",
+            statements: [
+                "Leave your vehicle’s engine running unattended.",
+                "Use your vehicle without a fuel-tank cap.",
+                "Spin your vehicle’s wheels when pulling away."
+            ]
+        },
+        41: {
+            prompt: "You must stop your vehicle:",
+            statements: [
+                "On a public road when signalled to stop by a person driving sheep.",
+                "On a freeway when directed to stop by a traffic officer.",
+                "On any road when necessary to avoid an accident."
+            ]
+        },
+        83: {
+            prompt: "What does this road sign show you?",
+            statements: [
+                "You may not turn left ahead.",
+                "You may not turn left at that point.",
+                "There is a one-way road to the right ahead."
+            ]
+        },
+        155: {
+            prompt: "What does this road sign show you?",
+            statements: [
+                "You may not turn left at the intersection ahead.",
+                "There is no sharp curve to the left.",
+                "There is a one-way road to the right ahead."
+            ]
+        },
+        185: {
+            prompt: "When is it an offence for a motorcycle learner’s-licence holder to:",
+            statements: [
+                "Ride their motorcycle alongside their instructor.",
+                "Ride with only one hand on the handlebars.",
+                "Ride at 80 km/h outside a built-up area."
+            ]
+        },
+        191: {
+            prompt: "The distance needed to stop a motorcycle is:",
+            statements: [
+                "Longer on a wet road than on a dry road.",
+                "Longer when travelling at a higher speed.",
+                "Longer when the motorcycle is loaded."
+            ]
+        },
+        199: {
+            prompt: "Which of the following towing practices are allowed?",
+            statements: [
+                "A motor car tows another motor car with a rope while travelling at 40 km/h.",
+                "You tow another vehicle using a tow-bar.",
+                "A tractor tows a trailer carrying 10 passengers at 30 km/h."
+            ]
+        },
+        201: {
+            prompt: "When may the lights of a vehicle parked on a public road between sunset and sunrise be left off?",
+            statements: [
+                "When it is parked within 10 metres of a lighted street lamp beside the roadway.",
+                "When it is parked next to the roadway.",
+                "When it is parked in a demarcated parking area."
+            ]
+        },
+        207: {
+            prompt: "Which statements about seat belts are true?",
+            statements: [
+                "If a vehicle has seat belts in the rear, they must be worn.",
+                "You do not need to wear a seat belt when reversing.",
+                "Children younger than 14 do not need seat belts if the front seat has a seat belt.",
+                "Your only passenger may not sit in the back where no seat belt is fitted."
+            ]
+        },
+        208: {
+            prompt: "If you hold only a learner’s licence for a light motor vehicle:",
+            statements: [
+                "A person with the appropriate driving licence must accompany you.",
                 "You are not allowed to drive on a freeway.",
-                "No passengers are allowed with you in the vehicle."
+                "You may not carry passengers in the vehicle."
+            ]
+        },
+        211: {
+            prompt: "The distance needed to stop a motor vehicle is:",
+            statements: [
+                "Longer on a wet road than on a dry road.",
+                "Longer when the vehicle is travelling at a higher speed.",
+                "Longer when the vehicle is loaded."
+            ]
+        },
+        221: {
+            prompt: "When may passengers be carried in a vehicle that is being towed?",
+            statements: [
+                "When the vehicles travel at only 35 km/h.",
+                "When the vehicle being towed is a semi-trailer.",
+                "Only when the vehicle doing the towing is a tractor."
             ]
         },
         225: {
-            prompt: "If you only have a learner’s licence for a heavy motor vehicle:",
+            prompt: "If you hold only a learner’s licence for a heavy motor vehicle:",
             statements: [
-                "There must be someone with you in the vehicle who holds the same driving licence.",
+                "A person with the appropriate driving licence must accompany you.",
                 "You are not allowed to drive on a freeway.",
-                "No passengers are allowed with you in the vehicle."
+                "You may not carry passengers in the vehicle."
+            ]
+        },
+        227: {
+            prompt: "This road sign prohibits the following vehicles from driving there:",
+            statements: [
+                "Vehicles conveying dangerous goods.",
+                "Goods vehicles.",
+                "Abnormal vehicles.",
+                "Heavy vehicles."
+            ]
+        },
+        229: {
+            prompt: "The distance needed to stop a motor vehicle is:",
+            statements: [
+                "Longer on a wet road than on a dry road.",
+                "Longer when the vehicle is travelling at a higher speed.",
+                "Longer when the vehicle is loaded."
             ]
         }
     };
@@ -3208,7 +3403,7 @@ function renderQuestionText(q) {
 
         const list = document.createElement("ol");
         list.className = "question-statement-list";
-        ["(i)", "(ii)", "(iii)"].forEach(function(label, index) {
+        ["(i)", "(ii)", "(iii)", "(iv)"].slice(0, structured.statements.length).forEach(function(label, index) {
             const item = document.createElement("li");
             const labelNode = document.createElement("span");
             labelNode.className = "statement-label";
