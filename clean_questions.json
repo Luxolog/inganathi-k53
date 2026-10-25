@@ -1324,15 +1324,15 @@
     {
       "id": 97,
       "category": "road_signs",
-      "question": "This road sign shows you that there is a...",
+      "question": "What does this temporary road sign indicate?",
       "options": [
-        "Curve to the left ahead",
-        "Temporary obstruction left of the road / Pass on the right of this sign",
-        "Temporary detour to the left"
+        "A permanent bend to the left.",
+        "A temporary obstruction on the left; pass to the right of the sign.",
+        "A temporary detour to the left."
       ],
       "correct": 1,
       "correctLetter": "B",
-      "answerStatus": "diagram_dependent_provisional_inference",
+      "answerStatus": "verified_against_South_African_Road_Traffic_Signs_Manual",
       "diagramImages": [
         "assets/road-signs/q097-1.png"
       ]
