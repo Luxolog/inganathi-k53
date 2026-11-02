@@ -1501,6 +1501,38 @@ footer strong {
 .session-card .session-status-badge{display:inline-block;margin-top:10px;padding:5px 8px;border-radius:999px;background:#eef2f7;color:#172033;font-size:10px;font-weight:900}
 .session-card.completed .session-status-badge{background:#dcfce7;color:#166534}
 .session-score-preview{display:block;margin-top:8px;color:#687386;font-size:11px;font-weight:700}
+
+/* POST-TEST LEARNING REVIEW */
+.review-section{margin:28px 0 8px;text-align:left}
+.review-heading{font-size:clamp(21px,3vw,28px);font-weight:900;margin:0 0 8px;color:#101827}
+.review-intro{color:#596579;margin:0 0 18px;line-height:1.55}
+.review-summary{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.review-stat{flex:1 1 110px;padding:13px;border:1px solid #e1e6ee;border-radius:12px;background:#f8fafc}
+.review-stat strong{display:block;font-size:22px;color:#101827}
+.review-stat span{font-size:12px;color:#64748b;font-weight:700}
+.review-list{display:grid;gap:12px}
+.review-item{border:1px solid #dce2ea;border-radius:14px;background:#fff;overflow:hidden}
+.review-item summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px;cursor:pointer;list-style:none;font-weight:800}
+.review-item summary::-webkit-details-marker{display:none}
+.review-item summary:after{content:'＋';font-size:18px;color:#64748b}
+.review-item[open] summary:after{content:'−'}
+.review-question-label{display:block;font-size:11px;color:#64748b;font-weight:900;letter-spacing:.06em;margin-bottom:4px}
+.review-state{flex:none;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:900;text-transform:uppercase}
+.review-state.correct{background:#dcfce7;color:#166534}
+.review-state.incorrect{background:#fee2e2;color:#991b1b}
+.review-state.unanswered{background:#f1f5f9;color:#475569}
+.review-content{padding:0 15px 17px;line-height:1.55}
+.review-question{font-weight:800;color:#172033;margin:0 0 12px}
+.review-answer{padding:11px 12px;border-radius:9px;margin:8px 0;font-size:14px}
+.review-answer.chosen{background:#fff7ed;border:1px solid #fed7aa}
+.review-answer.correct-answer{background:#f0fdf4;border:1px solid #bbf7d0}
+.review-answer strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.review-diagram{margin:12px 0;padding:12px;border:1px solid #e2e8f0;border-radius:12px;text-align:center;background:#f8fafc}
+.review-diagram img{display:block;max-width:100%;max-height:230px;object-fit:contain;margin:8px auto;border-radius:8px}
+.review-diagram-missing{font-size:12px;color:#64748b;padding:12px}
+.review-study-note{font-size:13px;color:#475569;background:#f8fafc;border-left:3px solid #d50203;padding:10px 12px;margin-top:12px}
+@media(max-width:560px){.review-item summary{align-items:flex-start}.review-content{padding:0 12px 14px}}
+
 </style>
 
 </head>
@@ -2153,6 +2185,13 @@ footer strong {
 <div id="sessionResult" class="result-session"></div>
 <p id="resultMessage">Your results will appear here.</p>
 <p id="resultEmailStatus" class="result-email-status"></p>
+
+<div class="review-section" id="testReviewSection">
+    <h3 class="review-heading">Your question-by-question review</h3>
+    <p class="review-intro">Review every answer from this session. Correct answers are shown here only after you submit the test.</p>
+    <div id="reviewSummary" class="review-summary"></div>
+    <div id="testReviewList" class="review-list" aria-live="polite"></div>
+</div>
 
 <div class="session-actions">
 <button class="btn btn-primary" onclick="backToSessionSelection()">Choose Another Session</button>
@@ -3581,7 +3620,11 @@ function selectAnswer(index, answer) {
 
     // Learners can change their choice until they move to the next question.
     selectedAnswer = index;
-    selectedAnswers[currentQuestion] = answer;
+    selectedAnswers[currentQuestion] = {
+        text: answer.text,
+        correct: Boolean(answer.correct),
+        displayLetter: String.fromCharCode(65 + index)
+    };
 
     const buttons = document.querySelectorAll(".answer");
     buttons.forEach(function(button, buttonIndex) {
@@ -3663,6 +3706,8 @@ async function finishTest(expired = false) {
         testQuestions.length + " questions • " +
         (timedOut ? "Time expired" : "Completed before the 60-minute limit");
 
+    renderTestReview();
+
     document.getElementById("resultMessage").textContent =
         "You scored " + score + " out of " + testQuestions.length +
         " (" + percentage + "%). " +
@@ -3682,6 +3727,75 @@ async function finishTest(expired = false) {
         behavior: "smooth",
         block: "start"
     });
+}
+
+
+/* =========================================================
+   POST-TEST ANSWER REVIEW
+========================================================= */
+function renderTestReview() {
+    const list = document.getElementById("testReviewList");
+    const summary = document.getElementById("reviewSummary");
+    if (!list || !summary) return;
+
+    const correctCount = testQuestions.reduce(function(total, q, index) {
+        const response = selectedAnswers[index];
+        return total + (response && response.correct ? 1 : 0);
+    }, 0);
+    const answeredCount = testQuestions.reduce(function(total, q, index) {
+        return total + (selectedAnswers[index] ? 1 : 0);
+    }, 0);
+    const incorrectCount = answeredCount - correctCount;
+    const unansweredCount = testQuestions.length - answeredCount;
+
+    summary.innerHTML =
+        '<div class="review-stat"><strong>' + correctCount + '</strong><span>Correct</span></div>' +
+        '<div class="review-stat"><strong>' + incorrectCount + '</strong><span>Incorrect</span></div>' +
+        '<div class="review-stat"><strong>' + unansweredCount + '</strong><span>Unanswered</span></div>' +
+        '<div class="review-stat"><strong>' + testQuestions.length + '</strong><span>Total questions</span></div>';
+
+    function safe(value) {
+        return String(value == null ? "" : value)
+            .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    list.innerHTML = testQuestions.map(function(q, index) {
+        const response = selectedAnswers[index] || null;
+        const options = getAnswers(q);
+        const correctOption = options.find(function(option) { return option.correct; });
+        const state = !response ? "unanswered" : (response.correct ? "correct" : "incorrect");
+        const stateLabel = state === "correct" ? "Correct" : (state === "incorrect" ? "Incorrect" : "Not answered");
+        let images = Array.isArray(q.diagramImages) ? q.diagramImages.filter(Boolean) : [];
+        if (!images.length && Array.isArray(q.images)) images = q.images.filter(Boolean);
+        if (!images.length && Array.isArray(roadSignLibrary) && (q.category === "road_signs" || q.diagramMode === "road_sign")) {
+            const linked = roadSignLibrary.find(function(item) {
+                return Number(item.questionId) === Number(q.id);
+            });
+            if (linked && Array.isArray(linked.images)) images = linked.images.filter(Boolean);
+        }
+        const diagram = images.length
+            ? '<div class="review-diagram"><strong>Question diagram</strong>' + images.map(function(src, imageIndex) {
+                const resolved = new URL(src, document.baseURI).href;
+                return '<img src="' + safe(resolved) + '" alt="Diagram for question ' + (index + 1) + ', image ' + (imageIndex + 1) + '" loading="lazy" onerror="this.style.display=\'none\'">';
+            }).join("") + '</div>'
+            : (q.category === "road_signs" || q.category === "heavy_motor_vehicle" || q.category === "light_motor_vehicle"
+                ? '<div class="review-diagram review-diagram-missing">The source diagram for this question is not yet available in the question bank.</div>'
+                : "");
+        const chosen = response
+            ? '<div class="review-answer chosen"><strong>Your answer' + (response.displayLetter ? " (" + safe(response.displayLetter) + ")" : "") + '</strong>' + safe(response.text) + '</div>'
+            : '<div class="review-answer chosen"><strong>Your answer</strong>No answer was recorded before the test ended.</div>';
+        const correct = correctOption
+            ? '<div class="review-answer correct-answer"><strong>Correct answer</strong>' + safe(correctOption.text) + '</div>'
+            : '<div class="review-answer"><strong>Answer key</strong>Needs instructor verification. This question does not have a valid correct option recorded.</div>';
+        return '<details class="review-item" ' + (state !== "correct" ? "open" : "") + '>' +
+            '<summary><span><span class="review-question-label">QUESTION ' + (index + 1) + ' · SOURCE ID ' + safe(q.id) + '</span>' + safe(q.question) + '</span>' +
+            '<span class="review-state ' + state + '">' + stateLabel + '</span></summary>' +
+            '<div class="review-content"><p class="review-question">' + safe(q.question) + '</p>' + diagram + chosen + correct +
+            (state === "correct" ? '<p class="review-study-note">Well done. Your selected answer matches the answer key.</p>' : '<p class="review-study-note">Study this question again and compare the correct answer with the road rule, sign or vehicle requirement in your learning material.</p>') +
+            '</div></details>';
+    }).join("");
 }
 
 
