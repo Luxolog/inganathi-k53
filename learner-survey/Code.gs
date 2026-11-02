@@ -6,8 +6,8 @@
  */
 const PROP_SHEET_ID = "INGANATHI_SURVEY_SHEET_ID";
 const HEADERS = [
-  "Submitted At","First Name","Surname","Cellphone","Email","Area","Age Group","Licence Interest",
-  "Learner Status","Challenges","Next Step","Study Interest","Support Requested","Start Timing",
+  "Submitted At","First Name","Surname","Cellphone","Email","Area","Age Group","Work Sector","Company / Organisation","Employment Goal","Licence Interest",
+  "Learner Status","Learner Permit (Driver Path)","Driving Needs","Challenges","Next Step","Study Interest","Support Requested","Start Timing",
   "Other Challenge","Referred By","Would Recommend","Wants To Refer","Referred Person Name",
   "Referred Person Phone","Contact Preference","Processing Consent","Marketing Consent"
 ];
@@ -58,8 +58,8 @@ function doPost(e) {
     const sheet = ss.getSheetByName("Survey Responses") || ss.getSheets()[0];
     const row = [
       new Date(), safe_(data.firstName), safe_(data.surname), safe_(data.phone), safe_(data.email),
-      safe_(data.area), safe_(data.ageGroup), safe_(data.licenceType), safe_(data.learnerStatus),
-      safe_(list_(data.challenges)), safe_(data.nextStep), safe_(data.studyInterest), safe_(list_(data.support)),
+      safe_(data.area), safe_(data.ageGroup), safe_(data.workSector), safe_(data.companyName), safe_(data.employmentGoal), safe_(data.licenceType),
+      safe_(data.learnerStatus), safe_(data.driverLearnerPermit), safe_(list_(data.drivingNeeds)), safe_(list_(data.challenges)), safe_(data.nextStep), safe_(data.studyInterest), safe_(list_(data.support)),
       safe_(data.startWhen), safe_(data.challengeOther), safe_(data.referrerName), safe_(data.recommend),
       safe_(data.hasReferral), safe_(data.friendName), safe_(data.friendPhone), safe_(data.contactPreference),
       "Yes", data.marketingConsent === true ? "Yes" : "No"
