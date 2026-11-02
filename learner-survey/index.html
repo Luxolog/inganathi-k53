@@ -29,7 +29,10 @@
 <div class="field"><label for="email">Email address (optional)</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120"></div>
 <div class="field"><label for="area">Area / town <span class="req">*</span></label><input id="area" name="area" placeholder="e.g. Benoni" required maxlength="100"></div>
 <div class="field"><label for="ageGroup">Age group</label><select id="ageGroup" name="ageGroup"><option value="">Prefer not to say</option><option>Under 18</option><option>18–24</option><option>25–34</option><option>35–44</option><option>45+</option></select></div>
+<div class="field"><label for="workSector">Which sector best describes your current situation? <span class="req">*</span></label><select id="workSector" name="workSector" required><option value="">Select one</option><option>Retail</option><option>Education</option><option>Healthcare</option><option>Hospitality</option><option>Transport and logistics</option><option>Construction and trades</option><option>Security</option><option>Manufacturing</option><option>Office and administration</option><option>Self-employed</option><option>Student</option><option>Unemployed / looking for work</option><option>Other</option><option>Prefer not to say</option></select></div>
+<div class="field"><label for="companyName">Company / organisation name (optional)</label><input id="companyName" name="companyName" maxlength="120" placeholder="Where you work or study"></div>
 </div>
+<div class="field"><span class="legend">Are you hoping to use a driver’s licence to improve your job prospects or secure employment? <span class="req">*</span></span><div class="choices"><label class="choice"><input type="radio" name="employmentGoal" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="employmentGoal" value="No"> No</label><label class="choice"><input type="radio" name="employmentGoal" value="Not sure"> Not sure yet</label></div></div>
 <div class="field"><span class="legend">Which licence are you interested in? <span class="req">*</span></span><div class="choices">
 <label class="choice"><input type="radio" name="licenceType" value="Learner's licence" required> Learner's licence</label>
 <label class="choice"><input type="radio" name="licenceType" value="Driver's licence"> Driver's licence</label>
@@ -37,21 +40,34 @@
 </div></div>
 </section>
 <section class="step hidden" data-step="1">
-<h2>Where are you on your journey?</h2><p class="hint">Choose the answer that best describes your current situation.</p>
+<h2>Your licence journey</h2><p class="hint">We’ll only show questions that match the licence support you’re looking for.</p>
+<div id="learnerPath">
 <div class="field"><span class="legend">Have you written your learner's licence test? <span class="req">*</span></span><div class="choices">
-<label class="choice"><input type="radio" name="learnerStatus" value="Not written yet" required> No, I have not written it yet</label>
+<label class="choice"><input type="radio" name="learnerStatus" value="Not written yet"> No, I have not written it yet</label>
 <label class="choice"><input type="radio" name="learnerStatus" value="Passed"> Yes, I passed</label>
 <label class="choice"><input type="radio" name="learnerStatus" value="Failed"> Yes, but I did not pass</label>
 <label class="choice"><input type="radio" name="learnerStatus" value="Booked"> My test is booked</label>
 </div></div>
-<div class="field hidden" id="failReason"><span class="legend">What would help you prepare better?</span><div class="choices">
+<div class="field hidden" id="failReason"><span class="legend">What would help you prepare better? (optional)</span><div class="choices">
 <label class="choice"><input type="checkbox" name="challenges" value="Road signs"> Understanding road signs</label>
 <label class="choice"><input type="checkbox" name="challenges" value="Road rules"> Understanding road rules</label>
 <label class="choice"><input type="checkbox" name="challenges" value="K53 questions"> Practising K53 questions</label>
 <label class="choice"><input type="checkbox" name="challenges" value="Confidence"> Confidence / test anxiety</label>
 <label class="choice"><input type="checkbox" name="challenges" value="Study guidance"> Knowing what and how to study</label>
+</div></div></div>
+<div id="driverPath" class="hidden">
+<div class="field"><span class="legend">Do you currently have a learner's licence? <span class="req">*</span></span><div class="choices">
+<label class="choice"><input type="radio" name="driverLearnerPermit" value="Yes"> Yes</label>
+<label class="choice"><input type="radio" name="driverLearnerPermit" value="No"> No</label>
+<label class="choice"><input type="radio" name="driverLearnerPermit" value="Test booked"> My learner's test is booked</label>
 </div></div>
-<div class="field hidden" id="passedFollow"><span class="legend">Since passing, what is your next step?</span><div class="choices">
+<div class="field"><span class="legend">What driving support are you looking for? (optional)</span><div class="choices">
+<label class="choice"><input type="checkbox" name="drivingNeeds" value="Beginner driving lessons"> Beginner driving lessons</label>
+<label class="choice"><input type="checkbox" name="drivingNeeds" value="Confidence behind the wheel"> Building confidence behind the wheel</label>
+<label class="choice"><input type="checkbox" name="drivingNeeds" value="Test preparation"> Preparing for the driving test</label>
+<label class="choice"><input type="checkbox" name="drivingNeeds" value="Refresher lessons"> Refresher lessons</label>
+</div></div></div>
+<div class="field hidden" id="passedFollow"><span class="legend">Since passing your learner's test, what is your next step?</span><div class="choices">
 <label class="choice"><input type="radio" name="nextStep" value="Start driving lessons"> I want to start driving lessons</label>
 <label class="choice"><input type="radio" name="nextStep" value="Already taking lessons"> I am already taking lessons</label>
 <label class="choice"><input type="radio" name="nextStep" value="Not decided"> I have not decided yet</label>
@@ -64,12 +80,9 @@
 <label class="choice"><input type="radio" name="studyInterest" value="Need more information"> I would like more information first</label>
 <label class="choice"><input type="radio" name="studyInterest" value="Not right now"> Not right now</label>
 </div></div>
-<div class="field"><span class="legend">What type of support are you interested in?</span><div class="choices">
-<label class="choice"><input type="checkbox" name="support" value="K53 learner preparation"> K53 learner's licence preparation</label>
-<label class="choice"><input type="checkbox" name="support" value="Driving lessons"> Practical driving lessons</label>
-<label class="choice"><input type="checkbox" name="support" value="Test preparation guidance"> Guidance before booking a test</label>
-<label class="choice"><input type="checkbox" name="support" value="Not sure yet"> I am not sure yet</label>
-</div></div>
+<div class="field" id="learnerSupport"><span class="legend">What learner support would interest you? (optional)</span><div class="choices"><label class="choice"><input type="checkbox" name="support" value="K53 learner preparation"> K53 learner's licence preparation</label><label class="choice"><input type="checkbox" name="support" value="Test preparation guidance"> Guidance before booking a learner's test</label></div></div>
+<div class="field hidden" id="driverSupport"><span class="legend">What driving support would interest you? (optional)</span><div class="choices"><label class="choice"><input type="checkbox" name="support" value="Practical driving lessons"> Practical driving lessons</label><label class="choice"><input type="checkbox" name="support" value="Driving test preparation"> Driving test preparation</label></div></div>
+<div class="field"><label class="choice"><input type="checkbox" name="support" value="Not sure yet"> I am not sure which programme I need yet</label></div>
 <div class="field"><span class="legend">When would you like to get started?</span><div class="choices">
 <label class="choice"><input type="radio" name="startWhen" value="As soon as possible"> As soon as possible</label>
 <label class="choice"><input type="radio" name="startWhen" value="Within a month"> Within a month</label>
@@ -112,21 +125,23 @@ const SURVEY_ENDPOINT = "PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 const steps=[...document.querySelectorAll(".step")];let current=0;
 const $=id=>document.getElementById(id);
 function selected(name){return document.querySelector('input[name="'+name+'"]:checked')?.value||""}
+function showConditional(el,show){el.classList.toggle("hidden",!show);el.querySelectorAll("input,select,textarea").forEach(x=>{x.disabled=!show;if(!show){if(x.type==="radio"||x.type==="checkbox")x.checked=false;else x.value="";}})}
+function updateJourney(){const type=selected("licenceType"),status=selected("learnerStatus"),learner=type==="Learner's licence"||type==="Both",driver=type==="Driver's licence"||type==="Both";showConditional($("learnerPath"),learner);showConditional($("driverPath"),type==="Driver's licence");showConditional($("failReason"),learner&&(status==="Failed"||status==="Not written yet"));showConditional($("passedFollow"),learner&&status==="Passed"&&driver);showConditional($("learnerSupport"),learner);showConditional($("driverSupport"),driver&&(type==="Driver's licence"||status==="Passed"));document.querySelectorAll('input[name="learnerStatus"]').forEach(x=>x.required=learner);document.querySelectorAll('input[name="driverLearnerPermit"]').forEach(x=>x.required=type==="Driver's licence")}
 function showStep(){steps.forEach((s,i)=>s.classList.toggle("hidden",i!==current));$("progress").style.width=((current+1)/steps.length*100)+"%";$("stepmeta").textContent="Step "+(current+1)+" of "+steps.length;$("backBtn").disabled=current===0;$("nextBtn").classList.toggle("hidden",current===steps.length-1);$("submitBtn").classList.toggle("hidden",current!==steps.length-1);$("formError").textContent="";window.scrollTo({top:0,behavior:"smooth"})}
 function validateStep(){const step=steps[current];const required=[...step.querySelectorAll("[required]")];for(const el of required){if(el.type==="radio"){if(!selected(el.name)){document.querySelector('input[name="'+el.name+'"]')?.focus();return false}}else if(el.type==="checkbox"?!el.checked:!el.value.trim()){el.focus();return false}}if(current===0){const phone=$("phone").value.trim();if(!/^[+\d][\d\s()\-]{6,22}$/.test(phone)){ $("phone").setCustomValidity("Enter a valid cellphone number.");$("phone").reportValidity();return false}else $("phone").setCustomValidity("");const email=$("email");if(email.value&&!email.checkValidity()){email.reportValidity();return false}}return true}
 $("backBtn").addEventListener("click",()=>{if(current>0){current--;showStep()}});
 $("nextBtn").addEventListener("click",()=>{if(!validateStep()){$("formError").textContent="Please complete the required fields before continuing.";return}current++;showStep()});
-document.querySelectorAll('input[name="learnerStatus"]').forEach(el=>el.addEventListener("change",()=>{const v=selected("learnerStatus");$("failReason").classList.toggle("hidden",v!=="Failed"&&v!=="Not written yet");$("passedFollow").classList.toggle("hidden",v!=="Passed")}));
+document.querySelectorAll('input[name="licenceType"]').forEach(el=>el.addEventListener("change",updateJourney));document.querySelectorAll('input[name="learnerStatus"]').forEach(el=>el.addEventListener("change",updateJourney));
 document.querySelectorAll('input[name="hasReferral"]').forEach(el=>el.addEventListener("change",()=>{$("referralFields").classList.toggle("hidden",selected("hasReferral")!=="Yes")}));
 function val(name){return selected(name)}
 function checks(name){return [...document.querySelectorAll('input[name="'+name+'"]:checked')].map(x=>x.value)}
 $("surveyForm").addEventListener("submit",async e=>{e.preventDefault();if(!validateStep()){$("formError").textContent="Please accept the required consent before submitting.";return}if(SURVEY_ENDPOINT.includes("PASTE_")){$("formError").textContent="The survey is not connected yet. Please contact the academy administrator.";return}
-const f=new FormData(e.currentTarget);const payload={type:"learner_survey",firstName:f.get("firstName"),surname:f.get("surname"),phone:f.get("phone"),email:f.get("email"),area:f.get("area"),ageGroup:f.get("ageGroup"),licenceType:val("licenceType"),learnerStatus:val("learnerStatus"),challenges:checks("challenges"),nextStep:val("nextStep"),studyInterest:val("studyInterest"),support:checks("support"),startWhen:val("startWhen"),challengeOther:f.get("challengeOther"),referrerName:f.get("referrerName"),recommend:val("recommend"),hasReferral:val("hasReferral"),friendName:f.get("friendName"),friendPhone:f.get("friendPhone"),contactPreference:val("contactPreference"),contactConsent:f.get("contactConsent")==="Yes",marketingConsent:f.get("marketingConsent")==="Yes",website:f.get("website"),submittedAt:new Date().toISOString()};
+const f=new FormData(e.currentTarget);const payload={type:"learner_survey",firstName:f.get("firstName"),surname:f.get("surname"),phone:f.get("phone"),email:f.get("email"),area:f.get("area"),ageGroup:f.get("ageGroup"),licenceType:val("licenceType"),workSector:f.get("workSector"),companyName:f.get("companyName"),employmentGoal:val("employmentGoal"),learnerStatus:val("learnerStatus"),driverLearnerPermit:val("driverLearnerPermit"),drivingNeeds:checks("drivingNeeds"),challenges:checks("challenges"),nextStep:val("nextStep"),studyInterest:val("studyInterest"),support:checks("support"),startWhen:val("startWhen"),challengeOther:f.get("challengeOther"),referrerName:f.get("referrerName"),recommend:val("recommend"),hasReferral:val("hasReferral"),friendName:f.get("friendName"),friendPhone:f.get("friendPhone"),contactPreference:val("contactPreference"),contactConsent:f.get("contactConsent")==="Yes",marketingConsent:f.get("marketingConsent")==="Yes",website:f.get("website"),submittedAt:new Date().toISOString()};
 if(payload.hasReferral==="Yes"&&(payload.friendName||payload.friendPhone)&&!payload.friendName){$("formError").textContent="Please add the referred person's name, or remove their details.";return}
 const btn=$("submitBtn");btn.disabled=true;btn.textContent="Submitting…";
 try{await fetch(SURVEY_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)});$("surveyPanel").classList.add("hidden");$("successPanel").classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"})}catch(err){$("formError").textContent="We could not send your response. Please check your connection and try again.";btn.disabled=false;btn.textContent="Submit survey"}
 });
 $("shareBtn").addEventListener("click",async()=>{const data={title:"Inganathi Learner Survey",text:"Tell Inganathi Driving Academy where you are on your learner's or driver's licence journey.",url:location.href};if(navigator.share){try{await navigator.share(data)}catch(e){}}else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);$("shareBtn").textContent="Link copied"}});
-showStep();
+updateJourney();showStep();
 </script>
 </body></html>
