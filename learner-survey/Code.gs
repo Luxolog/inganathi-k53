@@ -39,8 +39,14 @@ function doPost(e) {
     if (!raw) return json_({ ok: false, error: "Empty request" });
     const data = JSON.parse(raw);
     if (data.website) return json_({ ok: true }); // honeypot
-    const required = ["firstName","surname","phone","area","licenceType","learnerStatus","studyInterest"];
+    const required = ["firstName","surname","phone","area","workSector","employmentGoal","licenceType","studyInterest"];
     required.forEach(k => { if (!String(data[k] || "").trim()) throw new Error("Missing required field: " + k); });
+    if (data.licenceType === "Learner's licence" || data.licenceType === "Both") {
+      if (!String(data.learnerStatus || "").trim()) throw new Error("Learner status is required for learner's licence enquiries.");
+    }
+    if (data.licenceType === "Driver's licence" && !String(data.driverLearnerPermit || "").trim()) {
+      throw new Error("Learner's licence status is required for driving lesson enquiries.");
+    }
     if (data.contactConsent !== true) throw new Error("Consent is required.");
     const phone = String(data.phone).replace(/[^+\d]/g, "");
     if (phone.length < 7 || phone.length > 16) throw new Error("Invalid cellphone number.");
