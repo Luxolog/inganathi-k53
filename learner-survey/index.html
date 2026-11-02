@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="Tell Inganathi Driving Academy where you are on your learner's and driver's licence journey.">
+<title>Learner Survey | Inganathi Driving Academy</title>
+<style>
+:root{--ink:#080d18;--red:#d71920;--muted:#657084;--line:#e3e8ef;--paper:#f5f7fa}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:#172033;font:16px/1.55 Arial,Helvetica,sans-serif}a{color:inherit}.top{background:var(--ink);color:#fff;border-bottom:4px solid var(--red);padding:17px 20px}.topin{max-width:900px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:900;letter-spacing:.2px}.brand span{color:#ff454b}.top a{font-size:13px;text-decoration:none;color:#fff}.wrap{max-width:760px;margin:36px auto;padding:0 16px 50px}.intro{background:linear-gradient(135deg,#080d18,#351014);color:white;padding:30px;border-radius:18px;margin-bottom:20px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:1.4px;color:#ff666b;text-transform:uppercase}.intro h1{font-size:clamp(28px,6vw,42px);line-height:1.08;margin:10px 0}.intro p{color:#e1e5ec;margin:0;max-width:600px}.meta{display:flex;gap:15px;flex-wrap:wrap;margin-top:18px;color:#fff;font-size:12px}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:25px;box-shadow:0 8px 26px #10203b0b}.progressline{height:7px;background:#edf0f4;border-radius:10px;overflow:hidden;margin:0 0 9px}.progressline span{display:block;height:100%;width:0;background:var(--red);transition:width .2s}.stepmeta{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:22px}.step h2{font-size:22px;margin:0 0 5px;color:var(--ink)}.hint{color:var(--muted);font-size:13px;margin:0 0 20px}.field{margin:17px 0}.field label,.legend{display:block;font-size:14px;font-weight:800;margin-bottom:7px}.req{color:var(--red)}input,select,textarea{width:100%;padding:13px 14px;border:1px solid #ccd4df;border-radius:9px;font:inherit;background:#fff;color:#172033}input:focus,select:focus,textarea:focus{outline:3px solid #d7192020;border-color:var(--red)}.choices{display:grid;gap:9px}.choice{display:flex;align-items:flex-start;gap:10px;padding:12px;border:1px solid var(--line);border-radius:10px;cursor:pointer;font-size:14px}.choice:has(input:checked){border-color:var(--red);background:#fff8f8}.choice input{width:auto;margin:3px 0 0;accent-color:var(--red)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:26px}.btn{border:0;border-radius:9px;padding:13px 20px;font-weight:800;cursor:pointer;font-size:14px}.primary{background:var(--red);color:white}.secondary{background:#edf0f4;color:var(--ink)}.btn:disabled{opacity:.5;cursor:not-allowed}.hidden{display:none!important}.note{background:#fff8e9;border-left:4px solid #d99a20;padding:12px 14px;font-size:12px;color:#5f4a20;border-radius:0 8px 8px 0}.consent{font-size:12px;color:var(--muted)}.success{text-align:center;padding:20px 5px}.tick{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#e8f7ee;color:#187344;font-size:30px;margin:0 auto 14px}.success h2{font-size:27px;color:var(--ink)}.footer{text-align:center;color:#7b8492;font-size:11px;padding:20px}.error{color:#b42318;font-size:13px;margin-top:10px}.hp{position:absolute;left:-9999px;opacity:0}
+@media(max-width:600px){.wrap{margin:18px auto}.intro{padding:23px}.panel{padding:19px}.grid{grid-template-columns:1fr}.actions .btn{flex:1}}
+</style>
+</head>
+<body>
+<header class="top"><div class="topin"><div class="brand">INGANATHI <span>DRIVING ACADEMY</span></div><a href="../index.html">← Back to K53 Academy</a></div></header>
+<main class="wrap">
+<section class="intro"><div class="eyebrow">Learner & community survey</div><h1>Your driving journey starts here.</h1><p>Tell us where you are on your learner's or driver's licence journey. Your answers help Inganathi understand what learners need and how we can support future students.</p><div class="meta"><span>⏱ About 3–5 minutes</span><span>🔒 Your details are kept private</span></div></section>
+<section class="panel" id="surveyPanel">
+<div class="progressline"><span id="progress"></span></div><div class="stepmeta" id="stepmeta">Step 1 of 4</div>
+<form id="surveyForm" novalidate>
+<div class="hp" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<section class="step" data-step="0">
+<h2>Let's get to know you</h2><p class="hint">Please provide a few details so our team can follow up if you ask us to.</p>
+<div class="grid">
+<div class="field"><label for="firstName">First name <span class="req">*</span></label><input id="firstName" name="firstName" autocomplete="given-name" required maxlength="70"></div>
+<div class="field"><label for="surname">Surname <span class="req">*</span></label><input id="surname" name="surname" autocomplete="family-name" required maxlength="70"></div>
+<div class="field"><label for="phone">WhatsApp / cellphone number <span class="req">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 071 234 5678" required maxlength="25"></div>
+<div class="field"><label for="email">Email address (optional)</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120"></div>
+<div class="field"><label for="area">Area / town <span class="req">*</span></label><input id="area" name="area" placeholder="e.g. Benoni" required maxlength="100"></div>
+<div class="field"><label for="ageGroup">Age group</label><select id="ageGroup" name="ageGroup"><option value="">Prefer not to say</option><option>Under 18</option><option>18–24</option><option>25–34</option><option>35–44</option><option>45+</option></select></div>
+</div>
+<div class="field"><span class="legend">Which licence are you interested in? <span class="req">*</span></span><div class="choices">
+<label class="choice"><input type="radio" name="licenceType" value="Learner's licence" required> Learner's licence</label>
+<label class="choice"><input type="radio" name="licenceType" value="Driver's licence"> Driver's licence</label>
+<label class="choice"><input type="radio" name="licenceType" value="Both"> Both learner's and driver's licence</label>
+</div></div>
+</section>
+<section class="step hidden" data-step="1">
+<h2>Where are you on your journey?</h2><p class="hint">Choose the answer that best describes your current situation.</p>
+<div class="field"><span class="legend">Have you written your learner's licence test? <span class="req">*</span></span><div class="choices">
+<label class="choice"><input type="radio" name="learnerStatus" value="Not written yet" required> No, I have not written it yet</label>
+<label class="choice"><input type="radio" name="learnerStatus" value="Passed"> Yes, I passed</label>
+<label class="choice"><input type="radio" name="learnerStatus" value="Failed"> Yes, but I did not pass</label>
+<label class="choice"><input type="radio" name="learnerStatus" value="Booked"> My test is booked</label>
+</div></div>
+<div class="field hidden" id="failReason"><span class="legend">What would help you prepare better?</span><div class="choices">
+<label class="choice"><input type="checkbox" name="challenges" value="Road signs"> Understanding road signs</label>
+<label class="choice"><input type="checkbox" name="challenges" value="Road rules"> Understanding road rules</label>
+<label class="choice"><input type="checkbox" name="challenges" value="K53 questions"> Practising K53 questions</label>
+<label class="choice"><input type="checkbox" name="challenges" value="Confidence"> Confidence / test anxiety</label>
+<label class="choice"><input type="checkbox" name="challenges" value="Study guidance"> Knowing what and how to study</label>
+</div></div>
+<div class="field hidden" id="passedFollow"><span class="legend">Since passing, what is your next step?</span><div class="choices">
+<label class="choice"><input type="radio" name="nextStep" value="Start driving lessons"> I want to start driving lessons</label>
+<label class="choice"><input type="radio" name="nextStep" value="Already taking lessons"> I am already taking lessons</label>
+<label class="choice"><input type="radio" name="nextStep" value="Not decided"> I have not decided yet</label>
+</div></div>
+</section>
+<section class="step hidden" data-step="2">
+<h2>How can Inganathi help?</h2><p class="hint">This helps us understand demand and contact you about relevant services.</p>
+<div class="field"><span class="legend">Would you be interested in studying with Inganathi Driving Academy? <span class="req">*</span></span><div class="choices">
+<label class="choice"><input type="radio" name="studyInterest" value="Yes, interested" required> Yes, I am interested</label>
+<label class="choice"><input type="radio" name="studyInterest" value="Need more information"> I would like more information first</label>
+<label class="choice"><input type="radio" name="studyInterest" value="Not right now"> Not right now</label>
+</div></div>
+<div class="field"><span class="legend">What type of support are you interested in?</span><div class="choices">
+<label class="choice"><input type="checkbox" name="support" value="K53 learner preparation"> K53 learner's licence preparation</label>
+<label class="choice"><input type="checkbox" name="support" value="Driving lessons"> Practical driving lessons</label>
+<label class="choice"><input type="checkbox" name="support" value="Test preparation guidance"> Guidance before booking a test</label>
+<label class="choice"><input type="checkbox" name="support" value="Not sure yet"> I am not sure yet</label>
+</div></div>
+<div class="field"><span class="legend">When would you like to get started?</span><div class="choices">
+<label class="choice"><input type="radio" name="startWhen" value="As soon as possible"> As soon as possible</label>
+<label class="choice"><input type="radio" name="startWhen" value="Within a month"> Within a month</label>
+<label class="choice"><input type="radio" name="startWhen" value="Within 3 months"> Within 3 months</label>
+<label class="choice"><input type="radio" name="startWhen" value="Just researching"> I am just researching</label>
+</div></div>
+<div class="field"><label for="challengeOther">What is your biggest challenge right now? (optional)</label><textarea id="challengeOther" name="challengeOther" rows="3" maxlength="500" placeholder="Tell us briefly..."></textarea></div>
+</section>
+<section class="step hidden" data-step="3">
+<h2>Let's grow the Inganathi community</h2><p class="hint">If you know someone who wants to get a learner's or driver's licence, you can tell them about us.</p>
+<div class="field"><label for="referrerName">Who referred you to Inganathi? (optional)</label><input id="referrerName" name="referrerName" maxlength="100" placeholder="Name or referral source"></div>
+<div class="field"><span class="legend">Would you recommend Inganathi to someone you know?</span><div class="choices">
+<label class="choice"><input type="radio" name="recommend" value="Yes"> Yes</label><label class="choice"><input type="radio" name="recommend" value="Maybe"> Maybe</label><label class="choice"><input type="radio" name="recommend" value="Not sure"> Not sure</label>
+</div></div>
+<div class="field"><span class="legend">Would you like to refer a friend or family member? (optional)</span><div class="choices">
+<label class="choice"><input type="radio" name="hasReferral" value="Yes"> Yes</label><label class="choice"><input type="radio" name="hasReferral" value="No"> No</label>
+</div></div>
+<div id="referralFields" class="hidden">
+<div class="grid"><div class="field"><label for="friendName">Their name</label><input id="friendName" name="friendName" maxlength="100"></div><div class="field"><label for="friendPhone">Their cellphone number</label><input id="friendPhone" name="friendPhone" type="tel" maxlength="25"></div></div>
+<p class="note">Only share another person's contact details if they have agreed that Inganathi may contact them. You can simply share our survey link with them instead.</p>
+</div>
+<div class="field"><span class="legend">How would you prefer us to contact you if you request information?</span><div class="choices">
+<label class="choice"><input type="radio" name="contactPreference" value="WhatsApp" checked> WhatsApp</label><label class="choice"><input type="radio" name="contactPreference" value="Phone call"> Phone call</label><label class="choice"><input type="radio" name="contactPreference" value="Email"> Email</label>
+</div></div>
+<div class="field"><label class="choice"><input type="checkbox" name="contactConsent" value="Yes" required> I agree that Inganathi may use the information I submit to respond to my enquiry and manage this survey. <span class="req">*</span></label></div>
+<div class="field"><label class="choice"><input type="checkbox" name="marketingConsent" value="Yes"> I would also like to receive occasional Inganathi news, study programme information and offers. I understand I can opt out at any time.</label></div>
+<p class="consent">We collect only the information needed for this survey and follow-up. Your details are kept in a private Inganathi-controlled Google Sheet and are not displayed publicly. Marketing messages are optional. You may ask us to correct or delete your information by contacting Inganathi Driving Academy. Do not enter another person's details unless they have agreed.</p>
+<div class="note">Please review your answers before submitting. Submitting this survey does not register you for lessons or guarantee a place in a programme.</div>
+</section>
+<div class="error" id="formError" role="alert"></div>
+<div class="actions"><button class="btn secondary" type="button" id="backBtn" disabled>Back</button><button class="btn primary" type="button" id="nextBtn">Continue</button><button class="btn primary hidden" type="submit" id="submitBtn">Submit survey</button></div>
+</form>
+</section>
+<section class="panel success hidden" id="successPanel"><div class="tick">✓</div><h2>Thank you for sharing your journey!</h2><p>Your survey has been submitted to Inganathi Driving Academy. If you requested follow-up, our team can use your preferred contact details to get in touch.</p><p style="margin-top:18px"><a class="btn primary" href="../index.html" style="display:inline-block;text-decoration:none">Visit Inganathi K53 Academy</a></p><p class="consent" style="margin-top:18px">Know someone else preparing for a licence? Share this survey link with them.</p><button class="btn secondary" type="button" id="shareBtn">Share survey</button></section>
+<footer class="footer">Inganathi Driving Academy · Built by Ekhaya Technologies</footer>
+</main>
+<script>
+/* Set this to the deployed Google Apps Script Web App URL after setup. */
+const SURVEY_ENDPOINT = "PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const steps=[...document.querySelectorAll(".step")];let current=0;
+const $=id=>document.getElementById(id);
+function selected(name){return document.querySelector('input[name="'+name+'"]:checked')?.value||""}
+function showStep(){steps.forEach((s,i)=>s.classList.toggle("hidden",i!==current));$("progress").style.width=((current+1)/steps.length*100)+"%";$("stepmeta").textContent="Step "+(current+1)+" of "+steps.length;$("backBtn").disabled=current===0;$("nextBtn").classList.toggle("hidden",current===steps.length-1);$("submitBtn").classList.toggle("hidden",current!==steps.length-1);$("formError").textContent="";window.scrollTo({top:0,behavior:"smooth"})}
+function validateStep(){const step=steps[current];const required=[...step.querySelectorAll("[required]")];for(const el of required){if(el.type==="radio"){if(!selected(el.name)){document.querySelector('input[name="'+el.name+'"]')?.focus();return false}}else if(el.type==="checkbox"?!el.checked:!el.value.trim()){el.focus();return false}}if(current===0){const phone=$("phone").value.trim();if(!/^[+\d][\d\s()\-]{6,22}$/.test(phone)){ $("phone").setCustomValidity("Enter a valid cellphone number.");$("phone").reportValidity();return false}else $("phone").setCustomValidity("");const email=$("email");if(email.value&&!email.checkValidity()){email.reportValidity();return false}}return true}
+$("backBtn").addEventListener("click",()=>{if(current>0){current--;showStep()}});
+$("nextBtn").addEventListener("click",()=>{if(!validateStep()){$("formError").textContent="Please complete the required fields before continuing.";return}current++;showStep()});
+document.querySelectorAll('input[name="learnerStatus"]').forEach(el=>el.addEventListener("change",()=>{const v=selected("learnerStatus");$("failReason").classList.toggle("hidden",v!=="Failed"&&v!=="Not written yet");$("passedFollow").classList.toggle("hidden",v!=="Passed")}));
+document.querySelectorAll('input[name="hasReferral"]').forEach(el=>el.addEventListener("change",()=>{$("referralFields").classList.toggle("hidden",selected("hasReferral")!=="Yes")}));
+function val(name){return selected(name)}
+function checks(name){return [...document.querySelectorAll('input[name="'+name+'"]:checked')].map(x=>x.value)}
+$("surveyForm").addEventListener("submit",async e=>{e.preventDefault();if(!validateStep()){$("formError").textContent="Please accept the required consent before submitting.";return}if(SURVEY_ENDPOINT.includes("PASTE_")){$("formError").textContent="The survey is not connected yet. Please contact the academy administrator.";return}
+const f=new FormData(e.currentTarget);const payload={type:"learner_survey",firstName:f.get("firstName"),surname:f.get("surname"),phone:f.get("phone"),email:f.get("email"),area:f.get("area"),ageGroup:f.get("ageGroup"),licenceType:val("licenceType"),learnerStatus:val("learnerStatus"),challenges:checks("challenges"),nextStep:val("nextStep"),studyInterest:val("studyInterest"),support:checks("support"),startWhen:val("startWhen"),challengeOther:f.get("challengeOther"),referrerName:f.get("referrerName"),recommend:val("recommend"),hasReferral:val("hasReferral"),friendName:f.get("friendName"),friendPhone:f.get("friendPhone"),contactPreference:val("contactPreference"),contactConsent:f.get("contactConsent")==="Yes",marketingConsent:f.get("marketingConsent")==="Yes",website:f.get("website"),submittedAt:new Date().toISOString()};
+if(payload.hasReferral==="Yes"&&(payload.friendName||payload.friendPhone)&&!payload.friendName){$("formError").textContent="Please add the referred person's name, or remove their details.";return}
+const btn=$("submitBtn");btn.disabled=true;btn.textContent="Submitting…";
+try{await fetch(SURVEY_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)});$("surveyPanel").classList.add("hidden");$("successPanel").classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"})}catch(err){$("formError").textContent="We could not send your response. Please check your connection and try again.";btn.disabled=false;btn.textContent="Submit survey"}
+});
+$("shareBtn").addEventListener("click",async()=>{const data={title:"Inganathi Learner Survey",text:"Tell Inganathi Driving Academy where you are on your learner's or driver's licence journey.",url:location.href};if(navigator.share){try{await navigator.share(data)}catch(e){}}else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);$("shareBtn").textContent="Link copied"}});
+showStep();
+</script>
+</body></html>
