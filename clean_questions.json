@@ -2745,7 +2745,10 @@
       ],
       "correct": 2,
       "correctLetter": "C",
-      "answerStatus": "source_supported_or_inferred_from_source"
+      "answerStatus": "source_supported_or_inferred_from_source",
+      "diagramImages": [
+        "assets/road-signs/q186-speed-motorcycle.svg"
+      ]
     },
     {
       "id": 187,
@@ -3074,7 +3077,10 @@
       ],
       "correct": 0,
       "correctLetter": "A",
-      "answerStatus": "source_supported_or_inferred_from_source"
+      "answerStatus": "source_supported_or_inferred_from_source",
+      "diagramImages": [
+        "assets/road-signs/q209-car-only.svg"
+      ]
     },
     {
       "id": 210,
@@ -3087,7 +3093,10 @@
       ],
       "correct": 0,
       "correctLetter": "A",
-      "answerStatus": "source_supported_or_inferred_from_source"
+      "answerStatus": "source_supported_or_inferred_from_source",
+      "diagramImages": [
+        "assets/road-signs/q210-car-parking.svg"
+      ]
     },
     {
       "id": 211,
@@ -3238,7 +3247,10 @@
       ],
       "correct": 2,
       "correctLetter": "C",
-      "answerStatus": "source_supported_or_inferred_from_source"
+      "answerStatus": "source_supported_or_inferred_from_source",
+      "diagramImages": [
+        "assets/road-signs/q220-gvm-10t.svg"
+      ]
     },
     {
       "id": 221,
@@ -3264,7 +3276,10 @@
       ],
       "correct": 2,
       "correctLetter": "C",
-      "answerStatus": "source_supported_or_inferred_from_source"
+      "answerStatus": "source_supported_or_inferred_from_source",
+      "diagramImages": [
+        "assets/road-signs/q222-dangerous-goods-time.svg"
+      ]
     },
     {
       "id": 223,
