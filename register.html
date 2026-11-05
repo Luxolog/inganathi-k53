@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create learner account | Inganathi Driving Academy</title>
+<link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body class="preview">
+<main class="preview-wrap">
+<a class="brand" href="index.html"><span class="brand-mark">I</span><div><strong>INGANATHI</strong><small>DRIVING ACADEMY</small></div></a>
+<section class="hero">
+<p class="eyebrow">LEARNER PORTAL</p><h1>Start your<br><em>K53 journey.</em></h1>
+<p class="intro">Create your learner account to sign in and access your academy study space.</p>
+<form id="registerForm" class="login-form">
+<label>Full name<input id="fullName" autocomplete="name" required maxlength="120" placeholder="Your full name"></label>
+<label>Username<input id="username" autocomplete="username" required minlength="3" maxlength="40" pattern="[A-Za-z0-9._-]+" placeholder="Choose a username"></label>
+<label>Email address<input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+<label>Password<input id="password" type="password" autocomplete="new-password" required minlength="8" placeholder="At least 8 characters"></label>
+<button class="btn primary" type="submit">Create account</button>
+<p id="registerMessage" role="status" aria-live="polite"></p>
+</form>
+<p class="notice">Your account begins with a 21-day access window. If email confirmation is enabled in Supabase, confirm your email before signing in.</p>
+<p>Already registered? <a href="login.html">Sign in</a></p>
+</section><footer>Inganathi Driving Academy · K53 Learner Portal</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase-client.js"></script>
+<script>
+document.getElementById('registerForm').addEventListener('submit', async (event) => {
+ event.preventDefault();
+ const message=document.getElementById('registerMessage');
+ const fullName=document.getElementById('fullName').value.trim();
+ const username=document.getElementById('username').value.trim().toLowerCase();
+ const email=document.getElementById('email').value.trim().toLowerCase();
+ const password=document.getElementById('password').value;
+ if(!/^[a-z0-9._-]{3,40}$/.test(username)){message.textContent='Use 3–40 letters, numbers, dots, underscores or hyphens for your username.';return;}
+ message.textContent='Creating your account…';
+ const {data,error}=await window.inganathiSupabase.auth.signUp({
+  email,password,options:{data:{full_name:fullName,username}}
+ });
+ if(error){message.textContent=error.message;return;}
+ if(data.session){location.href='learner-dashboard.html';}
+ else {message.textContent='Account request received. Check your email to confirm the account, then sign in.';}
+});
+</script>
+</body></html>
