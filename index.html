@@ -2040,6 +2040,10 @@ footer strong {
 
         <div class="candidate-notice full">
             <strong>Required before the test:</strong> Name, surname, cellphone number and ID number must all be completed before you can choose a test session.
+            <br><strong>Privacy:</strong> Your ID number is personal information. It is used to associate your practice-test result with you and may be included in the result email. Do not continue if you do not understand this use. Read the <a href="privacy-policy.html" target="_blank" rel="noopener">Inganathi Privacy Notice</a>.
+        </div>
+        <div class="candidate-notice full">
+            <label style="display:flex;gap:10px;align-items:flex-start"><input id="candidatePrivacyAck" type="checkbox" required style="width:18px;flex:0 0 18px;margin-top:3px"><span>I have read the Privacy Notice and understand how my name, cellphone number and ID number will be used for this practice test and result administration. *</span></label>
         </div>
 
         <div class="candidate-actions full">
@@ -3909,7 +3913,9 @@ function setupCandidateForm() {
             name: name,
             surname: surname,
             cellphone: cellphone,
-            idNumber: idNumber
+            idNumber: idNumber,
+            privacyNoticeVersion: "2026-11-16",
+            privacyNoticeAcknowledgedAt: new Date().toISOString()
         };
 
         buildSessionPools();
