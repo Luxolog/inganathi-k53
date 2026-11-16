@@ -3939,6 +3939,8 @@ async function sendTestResultEmail(percentage, passed) {
         surname: candidateDetails.surname,
         cellphone: candidateDetails.cellphone,
         id_number: candidateDetails.idNumber,
+        privacy_notice_version: candidateDetails.privacyNoticeVersion,
+        privacy_notice_acknowledged_at: candidateDetails.privacyNoticeAcknowledgedAt,
         result: passed ? "PASS" : "FAIL",
         score: score + " / " + testQuestions.length,
         percentage: percentage + "%",
