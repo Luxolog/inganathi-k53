@@ -3369,7 +3369,7 @@ function renderQuestionText(q) {
             const item = document.createElement("li");
             const labelNode = document.createElement("span");
             labelNode.className = "statement-label";
-            labelNode.textContent = String(index + 1) + ".";
+            labelNode.textContent = label;
             const statementNode = document.createElement("span");
             statementNode.textContent = structured.statements[index];
             item.append(labelNode, statementNode);
@@ -3451,7 +3451,7 @@ function getAnswers(q) {
 
                 return {
 
-                    text: String(option).replace(/\(i\)/gi, "statement 1").replace(/\(ii\)/gi, "statement 2").replace(/\(iii\)/gi, "statement 3").replace(/\(iv\)/gi, "statement 4"),
+                    text: String(option),
 
                     correct:
                         index ===
