@@ -926,14 +926,14 @@
     {
       "id": 72,
       "category": "rules",
-      "question": "How far must you be parked from either side of a fire hydrant 1.5 meter",
+      "question": "How far must you park from either side of a fire hydrant?",
       "options": [
-        "750mm",
-        "1 meter",
-        "THE END OF THE RULES QUESTIONS"
+        "1.5 metres",
+        "1 metre",
+        "750 mm"
       ],
-      "correct": 2,
-      "correctLetter": "C",
+      "correct": 0,
+      "correctLetter": "A",
       "answerStatus": "source_supported_or_directly_inferred_from_source"
     },
     {
